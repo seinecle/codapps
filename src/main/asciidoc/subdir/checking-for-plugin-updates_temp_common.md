@@ -18,13 +18,14 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 == 1. Notifications for updates
-//ST: 1. Installing NetBeans
+//ST: 1. Notifications for updates
 //ST: !
 
 The Codename One plugin is the tool that enables us to apps with NetBeans.
 
 You have installed the plugin, but the creators of the plugin continue to make it evolve, adding new functionalities to it.
 
+//ST: !
 It is important to have the latest version of the plugin installed.
 
 When you open NetBeans, it actually checks for you if there is any update available:
