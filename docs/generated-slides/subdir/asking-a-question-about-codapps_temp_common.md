@@ -8,7 +8,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
@@ -70,7 +69,7 @@ Once you are logged in Github, simply go here:
 https://github.com/seinecle/codapps/issues
 
 - You will see the list of questions already asked and the answers. You can search for questions with the search bar!
-- You can ask a new question by hitting the green button "New issue"
+- *You can ask a new question by hitting the green button "New issue"*
 
 //ST: !
 You must use a precise title (not just "it does not work"), and describe the problem in as much details as you can. Adding screenshots often helps!
@@ -84,8 +83,7 @@ You will be notified by email when somebody replies to you!
 //ST: !
 Do you feel like helping out fellow participants in CODAPPS? You surely can!
 
-If you spot an question you have the answer for, or if you know the question has already been asked and answered, you are free to provide sonme help!
-
+If you spot a question you have the answer for, or if you know the question has already been asked and answered, you are free to provide some help!
 
 
 == The end
