@@ -31,7 +31,7 @@ When you open NetBeans, it actually checks for you if there is any update availa
 
 ==  !
 [.stretch]
-image::Update-available---notification.png[align="center",title="Update available - notification"]
+image::Update-available.png[align="center",title="Update available"]
 
 
 ==  !
@@ -65,7 +65,7 @@ Here is how to make sure you have everything correctly setup (explanations follo
 
 ==  !
 [.stretch]
-image::Putting-the-correct-web-address-for-plugin-updates.png[align="center",title="Putting the correct web address for plugin updates"]
+image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
 
 
 ==  !

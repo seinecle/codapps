@@ -25,7 +25,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 - Click on the second icon from the left:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vQQnWWwWKfW7PKGXfx9D1zmYwwqf13bcbrEZV5u9QaT3FA1hPlqKqLWyVVRPzQdvmiYa1w7bF4eektO/pub?w=1189&h=669[align="center",title="Clicking on the icon for new projects"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vSvRqMTjZdYdJNiPxPV3EKeQnouO1Nea5Ug4LBQE7sfIKe2vrhCuiVDMxWP8xNOcF1BRDjcXXqizlrx/pub?w=999&h=623[align="center",title="Clicking on the icon for new projects"]
 
 //ST: !
 - Select a « CodenameOne project »:
@@ -38,41 +38,88 @@ image::nb-codenameone-project.png[align="center",title="Selecting a Codename One
 Then click on `Next` to move to the next screen.
 
 //ST: !
-- Choose a name and a location for your project:
-
-//ST: !
-image::nb-codenameone-project-name.png[align="center",title="Choosing the name and location of your project"]
-
-//ST: !
+- Choose a name and a location for your project. Since the app will be about one of your interests / hobbies, choose in accordance!
 
 [WARNING]
 ====
+*Put no space in the name of your app*
 - No special characters like - _# »& @
 - No accent marks like é ù à or ñ, etc.
 ====
+
+//ST: !
+image::nb-codenameone-project-name.png[align="center",title="Choosing the name and location of your project"]
 
 //ST: !
 This will be the administrative name of your app on the app store so please choose it carefully !
 
 Then click on `Next` to move to the next screen:
 
-
+//ST: !
+image::https://docs.google.com/drawings/d/e/2PACX-1vScQAHg2o2koZ0pcTn32YYw_AloTy6nineYPiusdo5ogQuGbRZol0Ljix9t2paUpqbps3-CUGu2zYDR/pub?w=1440&h=1080[align="center",title="Choosing the name and location of your project"]
 
 //ST: !
-A “theme” is how your app will look like (you’ll be able to modify that later).
+We will explain in turn what package name, theme and template you should choose:
 
+//ST: !
+==== 1. The "package name"
+
+This is the official id of your app. Basically, this is the way for Google or Apple to give an ID card to your app.
+
+It should be unique: one package name for each different app you create.
+
+//ST: !
+The package name should contain at least three parts separated by dots. The default value suggested `com.mycompany.myapp`
+
+[WARNING]
+====
+*You should change this default value*.
+====
+
+//ST: !
+How can we find a unique package name for an app?
+
+The convention is to take the name of your website and reverse it:
+
+-> if you build apps for emlyon (www.em-lyon.com), you’d have a package name like : com.emlyon.myfirstapp
+
+//ST: !
+If you don’t own a website, you can use the reverse of your email address. If your email is barackobama@gmail.com, your package name could be:
+
+`com.gmail.barackobama.myfirstapp`
+
+//ST: !
+==== 2. The "theme"
+
+This defines the general colors and appearance of your app, how it will look like (you’ll be able to modify that later).
+
+//ST: !
 Please choose `Native` in the dropdown menu: this means that your app will have an Apple look on iOS, look like Android style on Android phones, etc.
 
 //ST: !
+==== 3. The "template"
 
-6.	In the template, choose « Hello World (Bare Bones) ».
-This means that we are going to design our app with the help of the mouse, and also use just a bit of programming (coding!) when necessary.
+In the dropdown menu, choose the template « Hello World (Bare Bones) ».
 
+This template allows us to design our app both with by drawing on screen and by programming (coding!).
 
-If you dont know which app to create, you can choose one that features one of your hobbies.
+Other templates would provide us with apps already prebuilt in some ways, we don't use them.
 
 //ST: !
-An idea for the name of your app would be « FirstName LastName My Passion »
+Click on `Finish` and your app will be created.
+
+//ST: !
+==== 4. Done! Preview your app.
+
+//ST: !
+image::https://docs.google.com/drawings/d/e/2PACX-1vTq1eyMFdbYtX7AP5x5C9oKeK3uuxe9j_JqYQqjHV1hzjaqpdGsvQmKRniQFFa4x1GEQ2LYfbsrtMNP/pub?w=1076&h=760[align="center",title="Previewing your app"]
+
+//ST: !
+1. The files of your app appear on the left of your screen in NetBeans.
+2. You can launch the preview of your app by clicking on the green arrow.
+
+//ST: !
+It should show a blank screen with "Hi World": in the next lesson, we will add a new screen, text and pictures!
 
 
 == The end

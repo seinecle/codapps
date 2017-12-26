@@ -31,7 +31,7 @@ It is important to have the latest version of the plugin installed.
 When you open NetBeans, it actually checks for you if there is any update available:
 
 //ST: !
-image::Update-available---notification.png[align="center",title="Update available - notification"]
+image::Update-available.png[align="center",title="Update available"]
 {nbsp} +
 
 //ST: !
@@ -66,7 +66,7 @@ In this case, NetBeans will never find updates and you’ll be stuck with an old
 Here is how to make sure you have everything correctly setup (explanations follow the picture below)
 
 //ST: !
-image::Putting-the-correct-web-address-for-plugin-updates.png[align="center",title="Putting the correct web address for plugin updates"]
+image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
 {nbsp} +
 
 //ST: !
