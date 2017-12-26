@@ -132,10 +132,14 @@ It should show a blank screen with "Hi World": in the next lesson, we will add a
 
 
 ==  The end
-==  !
 
+==  !
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+
+==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
 
+==  !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).
 You are free to:
 

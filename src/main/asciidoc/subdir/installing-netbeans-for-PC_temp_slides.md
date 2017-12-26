@@ -61,10 +61,14 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 Congratulations, you are ready to create your first mobile app!
 
 ==  The end
-==  !
 
+==  !
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+
+==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
 
+==  !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).
 You are free to:
 
