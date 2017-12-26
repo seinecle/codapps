@@ -1,0 +1,98 @@
+= CODAPPS: Creating a project and previewing your first app
+Clément Levallois <levallois@em-lyon.com>
+2017-12-26
+
+last modified: {docdate}
+
+:icons!:
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+ifndef::imagesdir[:imagesdir: ../images]
+ifndef::sourcedir[:sourcedir: ../../../main/java]
+
+:title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
+
+image::EMLyon_logo_corp.png[width="242" align="center"]
+
+//ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
+
+== 1. Creating a project
+//ST: 1. Creating a project
+
+//ST: !
+- Open NetBeans
+- Click on the second icon from the left:
+
+//ST: !
+image::https://docs.google.com/drawings/d/e/2PACX-1vQQnWWwWKfW7PKGXfx9D1zmYwwqf13bcbrEZV5u9QaT3FA1hPlqKqLWyVVRPzQdvmiYa1w7bF4eektO/pub?w=1189&h=669[align="center",title="Clicking on the icon for new projects"]
+
+//ST: !
+- Select a « CodenameOne project »:
+
+image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
+//ST: !
+
+
+//ST: !
+Then click on `Next` to move to the next screen.
+
+//ST: !
+- Choose a name and a location for your project:
+
+//ST: !
+image::nb-codenameone-project-name.png[align="center",title="Choosing the name and location of your project"]
+
+//ST: !
+
+[WARNING]
+====
+- No special characters like - _# »& @
+- No accent marks like é ù à or ñ, etc.
+====
+
+//ST: !
+This will be the administrative name of your app on the app store so please choose it carefully !
+
+Then click on `Next` to move to the next screen:
+
+
+
+//ST: !
+A “theme” is how your app will look like (you’ll be able to modify that later).
+
+Please choose `Native` in the dropdown menu: this means that your app will have an Apple look on iOS, look like Android style on Android phones, etc.
+
+//ST: !
+
+6.	In the template, choose « Hello World (Bare Bones) ».
+This means that we are going to design our app with the help of the mouse, and also use just a bit of programming (coding!) when necessary.
+
+
+If you dont know which app to create, you can choose one that features one of your hobbies.
+
+//ST: !
+An idea for the name of your app would be « FirstName LastName My Passion »
+
+
+== The end
+//ST: The end
+//ST: !
+
+Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+
+Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).
+You are free to:
+
+- copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+
+=> for any purpose, even commercially.
+
+//ST: !
+image:round_portrait_mini_150.png[align="center", role="right"]
+This course is designed by Clement Levallois.
+
+Discover my other courses in data / tech for business: http://www.clementlevallois.net
+
+Or get in touch via Twitter: https://www.twitter.com/seinecle[@seinecle]
