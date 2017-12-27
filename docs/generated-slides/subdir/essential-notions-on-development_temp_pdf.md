@@ -68,24 +68,18 @@ When building software like mobile apps, it is important to give precise names t
 Often, these names don't make intuitive sense, and this creates an impression of technical difficulty:
 
 //ST: !
-
+image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
 {nbsp} +
 
 //ST: !
-It is not to be annoying, but to make sure we actually don't confuse things and get the proper tool when we need it.
-Every domain of specialty, not just programmers, do this.
+It is not to be annoying, but to make sure we actually get the proper tool when we need it. Every domain of specialty, not just programmers, do this.
 
 //ST: !
-For instance, the screen of our mobile application is not simply called a screen... why?
+For instance, the screen showing our mobile application is not simply called a screen... why?
 
 //ST: !
-1. To build a mobile app, the first Component we need  is an empty region, the size of the screen of the phone, where we will place all other Components.
-2. This Component is not called a `Screen`, why ??
-
-//ST: !
-[start=3]
-3. Because `screen` is a name already taken, to name the phone's actual physical screen (the one that breaks when your phone falls on the ground)
-4. So, what name should be given instead to the area an app takes on the screen of the phone: "ScreenApp"? "Region"? "FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings"? None of this.
+1. Because `screen` is a name already taken, to name the phone's actual physical screen (the one that breaks when your phone falls on the ground)
+2. So, what name should be given instead to the area an app takes on the screen of the phone: "ScreenApp"? "Region"? "FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings"? None of this.
 
 ->  The designers of the tool chose the name `*Form*`.
 
@@ -147,7 +141,7 @@ There are different benefits to both approaches:
 
 
 //ST: !
-==== b. An example: creating a form by writing code, or with a GUI.
+==== b. An example: creating a form by writing some code (DYI approach)
 
 //ST: !
 You write the code in NetBeans, in the files of your app. These files are visible here:
@@ -183,14 +177,20 @@ public void start() {
         current.show();
         return;
     }
-    Form hi = new Form("Hi World", BoxLayout.y()); <1>
-    hi.add(new Label("Hi World"));
-    hi.show(); <2>
+    Form hi = new Form("Hi World", BoxLayout.y()); // <1>
+    hi.add(new Label("Hi World")); // <2>
+    hi.show(); // <3>
 }
 ----
-<1> This line of code creates the screen
-<2> This other line of code causes the screen to appear (otherwise it would remain hidden)
+<1> This line creates the screen with a title and an horizontal layout
+<2> This line adds a piece of text saying ("Hi World"). It could have been removed.
+<3> This line causes the screen to appear (otherwise it would remain hidden)
 
+//ST: !
+==== c. Another example: creating a form without code - with the GUI (the Ikea approach)
+
+//ST: !
+(in progress)
 
 
 == The end
