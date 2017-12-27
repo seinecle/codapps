@@ -9,6 +9,7 @@ last modified: {docdate}
 :revnumber: 1.0
 :example-caption!:
 :sourcedir: ../../../../main/java
+:source-highlighter:rouge
 
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
@@ -24,7 +25,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 ==== a. Components
 
 //ST: !
-A mobile app can include many things:
+A mobile app can *include* many things. These are like the Lego blocks of our app:
 
 //ST: !
 - pictures
@@ -37,7 +38,7 @@ A mobile app can include many things:
 //ST: !
 [IMPORTANT]
 ====
-We will call these things *Components*
+Things included in an app are called *Components*
 ====
 
 //ST: !
@@ -67,7 +68,7 @@ When building software like mobile apps, it is important to give precise names t
 Often, these names don't make intuitive sense, and this creates an impression of technical difficulty:
 
 //ST: !
-image::fun/Zach-Galifianakis-maths.gif[align="center",title="Getting annoyed by the technical vocabulary"]
+image::fun/Zach-Galifianakis-maths.gif[align="center",title="Getting confused by the technical vocabulary"]
 {nbsp} +
 
 //ST: !
@@ -75,21 +76,18 @@ It is not to be annoying, but to make sure we actually don't confuse things and 
 Every domain of specialty, not just programmers, do this.
 
 //ST: !
-Like: to cut fabric, do you need a rotary cutter, scissors or shears?
-
-image::fun/sewing-tools.jpg[align="center",title="Tools need precise names"]
-{nbsp} +
+For instance, the screen of our mobile application is not simply called a screen... why?
 
 //ST: !
-Back to mobile app development:
-
-- To build a mobile app, the first Component we need  is an empty region, the size of the screen of the phone, where we will place all other Components.
-- Is this Component going to be named a `Screen`, simply?
+1. To build a mobile app, the first Component we need  is an empty region, the size of the screen of the phone, where we will place all other Components.
+2. This Component is not called a `Screen`, why ??
 
 //ST: !
-- no, because `screen` is a name already taken, to name the phone's actual physical screen (the one that breaks when your phone falls on the ground)
-- So, what name should be given instead? ScreenApp? Region? FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings? None of this.
-- The designers of the tool chose the name `*Form*`.
+[start=3]
+3. Because `screen` is a name already taken, to name the phone's actual physical screen (the one that breaks when your phone falls on the ground)
+4. So, what name should be given instead to the area an app takes on the screen of the phone: "ScreenApp"? "Region"? "FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings"? None of this.
+
+->  The designers of the tool chose the name `*Form*`.
 
 //ST: !
 [IMPORTANT]
@@ -106,8 +104,8 @@ Because of this need for precise names, you will see that:
 - adding pictures to the app, we will use a Component named `*Image*` (not Picture)
 - adding buttons to the app, we will use a `*Button*` Component (this one is intuitive!)
 
-== 3. Two approaches to designing mobile apps
-//ST: 3. Two approaches to designing mobile apps
+== 3. Two approaches to work on mobile apps
+//ST: 3. Two approaches to work on mobile apps
 
 //ST: !
 To sum up what we have seen so far:
@@ -117,24 +115,21 @@ To sum up what we have seen so far:
 - Then we can attach actions to each of these components (a "click action" on a button, etc)
 
 //ST: !
-How do we do that in practice? There are two ways.
+How will you do that in practice? There are two ways.
 
 //ST: !
 ==== a. DIY or the Ikea way?
 
 //ST: !
-Building a new mobile app is like building a new piece of furniture :
-
-- "Do it yourself (DIY)": buy wooden planks and nails, cut and design everything at the right size, and assemble the pieces.
-- "The Ikea way": buy a furniture in detached pieces already at the right size, and do the assembly yourself with the aid of a user guide.
+Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.
 
 //ST: !
-Codename One, the framewok we use, gives you these two options: DYI or Ikea.
+Codename One, the framewok we use, gives you these two options: Do It YourSelf (DYI) or Ikea.
 
 - DYI: write the code to create everything in the app.
 - IKEA: use a *"Graphical User Interface" (GUI)*, which means you drag and drop things to build the app with a minimum of code to write.
 
-There are benefits to both approaches:
+There are different benefits to both approaches:
 
 //ST: !
 [cols=3*,options="header"]
@@ -155,6 +150,47 @@ There are benefits to both approaches:
 ==== b. An example: creating a form by writing code, or with a GUI.
 
 //ST: !
+You write the code in NetBeans, in the files of your app. These files are visible here:
+
+//ST: !
+image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The files of your app visible in NetBeans"]
+{nbsp} +
+
+//ST: !
+Double click on the file `MyApplication.java` to see its content on the right panel in NetBeans:
+
+//ST: !
+image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
+{nbsp} +
+
+//ST: !
+When we created the project, an empty screen was added to it by default.
+
+You can see this empty screen by previewing your app (click on the green arrow in NetBeans, or get back to the lesson here)
+
+
+//ST: !
+How was this empty screen added to the app?
+
+Simply with these 2 lines of code in the file `MyApplication.java` (scroll down a bit in NetBeans, as they are in the middle of the file):
+
+//ST: !
+.MyApplication.java
+[source,java]
+----
+public void start() {
+    if(current != null){
+        current.show();
+        return;
+    }
+    Form hi = new Form("Hi World", BoxLayout.y()); <1>
+    hi.add(new Label("Hi World")); <2>
+    hi.show(); <3>
+}
+----
+<1> This line of code creates the screen with a title "Hi World" and an horizontal layout
+<2> This line adds a piece of text saying ("Hi World"). It could have been removed.
+<3> This other line of code causes the screen to appear (otherwise it would remain hidden)
 
 
 

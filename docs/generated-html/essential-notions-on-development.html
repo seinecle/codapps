@@ -536,7 +536,7 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#_2_the_difficulty_of_naming_things">2. The difficulty of naming things</a></li>
-<li><a href="#_3_two_approaches_to_designing_mobile_apps">3. Two approaches to designing mobile apps</a>
+<li><a href="#_3_two_approaches_to_work_on_mobile_apps">3. Two approaches to work on mobile apps</a>
 <ul class="sectlevel3">
 <li><a href="#_a_diy_or_the_ikea_way">a. DIY or the Ikea way?</a></li>
 <li><a href="#_b_an_example_creating_a_form_by_writing_code_or_with_a_gui">b. An example: creating a form by writing code, or with a GUI.</a></li>
@@ -551,6 +551,9 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sectionbody">
 <div class="paragraph">
 <p>last modified: 2017-12-27</p>
+</div>
+<div class="paragraph">
+<p>:source-highlighter:rouge</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -568,7 +571,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect3">
 <h4 id="_a_components">a. Components</h4>
 <div class="paragraph">
-<p>A mobile app can include many things:</p>
+<p>A mobile app can <strong>include</strong> many things. These are like the Lego blocks of our app:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -600,7 +603,7 @@ table.CodeRay td.code>pre{padding:0}
 </td>
 <td class="content">
 <div class="paragraph">
-<p>We will call these things <strong>Components</strong></p>
+<p>Things included in an app are called <strong>Components</strong></p>
 </div>
 </td>
 </tr>
@@ -661,7 +664,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/fun/Zach-Galifianakis-maths.gif" alt="Zach Galifianakis maths">
 </div>
-<div class="title">Figure 1. Getting annoyed by the technical vocabulary</div>
+<div class="title">Figure 1. Getting confused by the technical vocabulary</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -671,42 +674,30 @@ table.CodeRay td.code>pre{padding:0}
 Every domain of specialty, not just programmers, do this.</p>
 </div>
 <div class="paragraph">
-<p>Like: to cut fabric, do you need a rotary cutter, scissors or shears?</p>
+<p>For instance, the screen of our mobile application is not simply called a screen&#8230;&#8203; why?</p>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/fun/sewing-tools.jpg" alt="sewing tools">
-</div>
-<div class="title">Figure 2. Tools need precise names</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Back to mobile app development:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>To build a mobile app, the first Component we need  is an empty region, the size of the screen of the phone, where we will place all other Components.</p>
 </li>
 <li>
-<p>Is this Component going to be named a <code>Screen</code>, simply?</p>
+<p>This Component is not called a <code>Screen</code>, why ??</p>
 </li>
-</ul>
+</ol>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic" start="3">
 <li>
-<p>no, because <code>screen</code> is a name already taken, to name the phone&#8217;s actual physical screen (the one that breaks when your phone falls on the ground)</p>
+<p>Because <code>screen</code> is a name already taken, to name the phone&#8217;s actual physical screen (the one that breaks when your phone falls on the ground)</p>
 </li>
 <li>
-<p>So, what name should be given instead? ScreenApp? Region? FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings? None of this.</p>
+<p>So, what name should be given instead to the area an app takes on the screen of the phone: "ScreenApp"? "Region"? "FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings"? None of this.</p>
 </li>
-<li>
-<p>The designers of the tool chose the name <code><strong>Form</strong></code>.</p>
-</li>
-</ul>
+</ol>
+</div>
+<div class="paragraph">
+<p>&#8594;  The designers of the tool chose the name <code><strong>Form</strong></code>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -744,7 +735,7 @@ Every domain of specialty, not just programmers, do this.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_two_approaches_to_designing_mobile_apps">3. Two approaches to designing mobile apps</h2>
+<h2 id="_3_two_approaches_to_work_on_mobile_apps">3. Two approaches to work on mobile apps</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To sum up what we have seen so far:</p>
@@ -763,25 +754,15 @@ Every domain of specialty, not just programmers, do this.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>How do we do that in practice? There are two ways.</p>
+<p>How will you do that in practice? There are two ways.</p>
 </div>
 <div class="sect3">
 <h4 id="_a_diy_or_the_ikea_way">a. DIY or the Ikea way?</h4>
 <div class="paragraph">
-<p>Building a new mobile app is like building a new piece of furniture :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Do it yourself (DIY)": buy wooden planks and nails, cut and design everything at the right size, and assemble the pieces.</p>
-</li>
-<li>
-<p>"The Ikea way": buy a furniture in detached pieces already at the right size, and do the assembly yourself with the aid of a user guide.</p>
-</li>
-</ul>
+<p>Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.</p>
 </div>
 <div class="paragraph">
-<p>Codename One, the framewok we use, gives you these two options: DYI or Ikea.</p>
+<p>Codename One, the framewok we use, gives you these two options: Do It YourSelf (DYI) or Ikea.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -794,7 +775,7 @@ Every domain of specialty, not just programmers, do this.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>There are benefits to both approaches:</p>
+<p>There are different benefits to both approaches:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -834,7 +815,72 @@ Every domain of specialty, not just programmers, do this.</p>
 </div>
 <div class="sect3">
 <h4 id="_b_an_example_creating_a_form_by_writing_code_or_with_a_gui">b. An example: creating a form by writing code, or with a GUI.</h4>
-
+<div class="paragraph">
+<p>You write the code in NetBeans, in the files of your app. These files are visible here:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/The-files-of-your-app-visible-in-NetBeans.png" alt="The files of your app visible in NetBeans">
+</div>
+<div class="title">Figure 2. The files of your app visible in NetBeans</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Double click on the file <code>MyApplication.java</code> to see its content on the right panel in NetBeans:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Opening-the-content-of-MyApplication.java-for-editing.png" alt="Opening the content of MyApplication.java for editing">
+</div>
+<div class="title">Figure 3. Opening the content of MyApplication.java for editing</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>When we created the project, an empty screen was added to it by default.</p>
+</div>
+<div class="paragraph">
+<p>You can see this empty screen by previewing your app (click on the green arrow in NetBeans, or get back to the lesson here)</p>
+</div>
+<div class="paragraph">
+<p>How was this empty screen added to the app?</p>
+</div>
+<div class="paragraph">
+<p>Simply with these 2 lines of code in the file <code>MyApplication.java</code> (scroll down a bit in NetBeans, as they are in the middle of the file):</p>
+</div>
+<div class="listingblock">
+<div class="title">MyApplication.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+    <span class="keyword">if</span>(current != <span class="predefined-constant">null</span>){
+        current.show();
+        <span class="keyword">return</span>;
+    }
+    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y()); <i class="conum" data-value="1"></i><b>(1)</b>
+    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>)); <i class="conum" data-value="2"></i><b>(2)</b>
+    hi.show(); <i class="conum" data-value="3"></i><b>(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This line of code creates the screen with a title "Hi World" and an horizontal layout</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This line adds a piece of text saying ("Hi World"). It could have been removed.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>This other line of code causes the screen to appear (otherwise it would remain hidden)</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -897,7 +943,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-12-27 14:40:19 CET
+Last updated 2017-12-27 16:08:34 CET
 </div>
 </div>
 </body>
