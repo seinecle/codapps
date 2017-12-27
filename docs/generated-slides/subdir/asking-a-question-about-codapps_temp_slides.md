@@ -45,8 +45,8 @@ Actually, many employers ask to see your "Github profile" to better evaluate you
 All the content of Codapps (this course) is hosted on Github: pdfs, pictures, slides... and the code of the apps we build as well.
 
 ==  !
-Among many other features, Github has a forum for Q&As.
-You will be able to use this forum to search for information or ask new questions about the lessons of CODAPPS.
+*Among many other features, Github has a forum for Q&As.
+You will be able to use this forum to search for information or ask new questions about the lessons of CODAPPS.*
 
 ==  2. You need a (free) Github account
 
