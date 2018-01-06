@@ -1,3 +1,2 @@
-net\clementlevallois\mainclasses\TableOfContentGenerator.class
-fo\Properties.class
 net\clementlevallois\mainclasses\AsciidocAssembler.class
+net\clementlevallois\mainclasses\ResetFiles.class

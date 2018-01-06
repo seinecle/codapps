@@ -1,0 +1,56 @@
+= CODAPPS: Checking for plugin updates
+== 1. Notifications for updates
+
+The Codename One plugin is the tool that enables us to apps with NetBeans.
+
+You have installed the plugin, but the creators of the plugin continue to make it evolve, adding new functionalities to it.
+
+It is important to have the latest version of the plugin installed.
+
+When you open NetBeans, it actually checks for you if there is any update available:
+
+image::Update-available.png[align="center",title="Update available"]
+{nbsp} +
+
+If there is a notification, it means updates are available. Click on the bubble and follow the instructions to download and install the updates.
+
+You can have updates for the Codename One plugin, but also for other components of NetBeans you are not familiar with.
+
+I advise you to install all the updates available.
+
+== 2. Propagating the update to existing projects
+
+Now, what if you already had created an app in NetBeans? *It will not automatically benefit from the updated plugin*.
+
+Follow these steps:
+
+a.	Right click on the project’s name, select 'Properties'
+b.	In the window that opens, click on “Update project libs”. Close the window
+c.	Right click again on the project’s name. Click on “Clean and Build”. You should be good to go!
+
+== 3. Rare case: the check for updates fails
+
+It sometimes happens that the address that NetBeans checks for plugin updates is incorrect.
+
+In this case, NetBeans will never find updates and you’ll be stuck with an old version of the plugin!
+
+Here is how to make sure you have everything correctly setup (explanations follow the picture below)
+
+image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
+{nbsp} +
+
+- In the NetBeans menu, click on Tools -> Plugin
+- In the window that opens, click on tab “Settings” (last tab on the right)
+** Select the line “CodenameOnePlugin Update Center”, it should be highlighted
+** Verify that the url (web address) on the right is:
+`https://www.codenameone.com/files/netbeans/updates.xml`
+
+** If it’s not, then click on “edit” and put this address above instead.
+** By default, updates are checked every week. Change this for “every startup”.
+
+That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself!
+
+Just check if there is a bubble at the bottom right corner when you open NetBeans.
+
+
+<<<

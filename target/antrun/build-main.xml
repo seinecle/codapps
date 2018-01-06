@@ -2,7 +2,10 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <delete includeemptydirs="true">
-    <fileset excludes="*.pdf" dir="D:\files\Google Drive\open\codapps\docs/docs/generated-pdf"/>
+    <fileset dir="D:\files\Google Drive\open\codapps\docs/src/main/asciidoc/book"/>
+  </delete>
+  <delete includeemptydirs="true">
+    <fileset dir="D:\files\Google Drive\open\codapps\docs/src/main/asciidoc/en/book"/>
   </delete>
 </target>
 </project>

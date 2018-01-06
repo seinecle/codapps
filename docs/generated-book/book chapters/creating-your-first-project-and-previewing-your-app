@@ -1,0 +1,89 @@
+= CODAPPS: Creating a project and previewing your first app
+== 1. Creating a project
+
+- Open NetBeans
+- Click on the second icon from the left:
+
+image::Clicking-on-the-icon-for-new-projects.png[align="center",title="Clicking on the icon for new projects"]
+{nbsp} +
+
+- Select a « CodenameOne project »:
+
+image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
+{nbsp} +
+
+
+Then click on `Next` to move to the next screen.
+
+- Choose a name and a location for your project. Since the app will be about one of your interests / hobbies, choose in accordance!
+
+[WARNING]
+====
+*Put no space in the name of your app*
+- No special characters like - _# »& @
+- No accent marks like é ù à or ñ, etc.
+====
+
+image::nb-codenameone-project-name.png[align="center",title="Choosing the name and location of your project"]
+{nbsp} +
+
+This will be the administrative name of your app on the app store so please choose it carefully !
+
+Then click on `Next` to move to the next screen:
+
+image::Choosing-the-name-and-location-of-your-project.png[align="center",title="Choosing the name and location of your project"]
+{nbsp} +
+
+We will explain in turn what package name, theme and template you should choose:
+
+==== 1. The "package name"
+
+This is the official id of your app. Basically, this is the way for Google or Apple to give an ID card to your app.
+
+It should be unique: one package name for each different app you create.
+
+The package name should contain at least three parts separated by dots. The default value suggested `com.mycompany.myapp`
+
+[WARNING]
+====
+*You should change this default value*.
+====
+
+How can we find a unique package name for an app?
+
+The convention is to take the name of your website and reverse it:
+
+-> if you build apps for emlyon (www.em-lyon.com), you’d have a package name like : com.emlyon.myfirstapp
+
+If you don’t own a website, you can use the reverse of your email address. If your email is barackobama@gmail.com, your package name could be:
+
+`com.gmail.barackobama.myfirstapp`
+
+==== 2. The "theme"
+
+This defines the general colors and appearance of your app, how it will look like (you’ll be able to modify that later).
+
+Please choose `Native` in the dropdown menu: this means that your app will have an Apple look on iOS, look like Android style on Android phones, etc.
+
+==== 3. The "template"
+
+In the dropdown menu, choose the template « Hello World (Bare Bones) ».
+
+This template allows us to design our app both with by drawing on screen and by programming (coding!).
+
+Other templates would provide us with apps already prebuilt in some ways, we don't use them.
+
+Click on `Finish` and your app will be created.
+
+==== 4. Done! Preview your app.
+
+image::Previewing-your-app.png[align="center",title="Previewing your app"]
+{nbsp} +
+
+1. The files of your app appear on the left of your screen in NetBeans.
+2. You can launch the preview of your app by clicking on the green arrow.
+
+It should show a blank screen with "Hi World": in the next lesson, we will add a new screen, text and pictures!
+
+
+<<<
