@@ -1,19 +1,15 @@
 = CODAPPS: How to ask a question about the course and get an answer?
 Clément Levallois <levallois@em-lyon.com>
-2017-12-26
-
+:revnumber: 1.0
+:revdate: 30-12-2017
 last modified: {docdate}
-
 :icons!:
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
 :sourcedir: ../../../main/java
 
-:title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
-image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -28,7 +24,7 @@ It is very famous in the community of programmers.
 //ST: !
 Github's icon is a cat which is also an octopus:
 
-image::Octocat.png[align="center",title="Github's mascot"]
+image::Octocat.png[align="center",title="Github's mascot", pdfwidth=30%]
 {nbsp} +
 
 //ST: !

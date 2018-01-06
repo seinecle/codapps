@@ -1,6 +1,5 @@
 = = Learn how to build your first mobile app, for beginners
 = = = How to ask a question about the course and get an answer?
-== 1. What is Github
 
 Github is a website specializing in hosting content (mostly code but not only), providing tools for teams to collaborate easily on this content and share it.
 
@@ -8,8 +7,9 @@ It is very famous in the community of programmers.
 
 Github's icon is a cat which is also an octopus:
 
+[.stretch]
 image::Octocat.png[align="center",title="Github's mascot", pdfwidth=30%]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -27,17 +27,16 @@ All the content of Codapps (this course) is hosted on Github: pdfs, pictures, sl
 *Among many other features, Github has a forum for Q&As.
 You will be able to use this forum to search for information or ask new questions about the lessons of CODAPPS.*
 
-== 2. You need a (free) Github account
 
 If you don't already have a Github account, you sign in for one here: https://github.com
 
+[.stretch]
 image::creating-an-account-on-Github.png[align="center",title="creating an account on Github"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
 
-== 3. Asking a question on Github
 
 [NOTE]
 *A question on Github is called an "issue"*
@@ -53,7 +52,6 @@ You must use a precise title (not just "it does not work"), and describe the pro
 
 You will be notified by email when somebody replies to you!
 
-== 4. Answering questions
 
 Do you feel like helping out fellow participants in CODAPPS? You surely can!
 
@@ -63,15 +61,15 @@ If you spot a question you have the answer for, or if you know the question has 
 <<<
 
 = = = How to install NetBeans and the Codename One plugin on a PC
-== 1. Installing NetBeans
 
 
 - Go to http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
 - Click on “Accept License Agreement”.
 - There are two different files for Windows. Which one should you choose?
 
+[.stretch]
 image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBeans for PC"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -87,7 +85,6 @@ Note:: you might need administrator rights to install software on your PC!
 
 Now that we have NetBeans installed, let’s add the Codename One plugin.
 
-== 2. Adding the plugin "Codename One" to NetBeans
 
 - Open NetBeans. In the menu, select Tools -> Plugins.
 - In the windows opening, select “Available plugins”.
@@ -98,14 +95,12 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 - Select the Codename One plugin by ticking the box on the left.
 - Click on “Install” and follow the instructions.
 
-== 3. Restart NetBeans to finish the installation
 
 Congratulations, you are ready to create your first mobile app!
 
 <<<
 
 = = = How to install NetBeans and the Codename One plugin on a MAC
-== 1. Installing NetBeans
 
 
 - Your MAC needs to run OS X 10.7 (Lion) or a more recent version.
@@ -115,8 +110,9 @@ https://support.apple.com/en-us/HT201260[Find out the OS X version of your MAC].
 - Click on “Accept License Agreement”.
 - Download the file “jdk-8u151-nb-8_2-macosx-x64.dmg” (see below)
 
+[.stretch]
 image::Downloading-NetBeans-for-a-MAC.png[align="center",title="Downloading NetBeans for a MAC"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -127,7 +123,6 @@ Note:: you might need administrator rights to install software on your MAC!
 
 Now that we have NetBeans installed, let’s add the Codename One plugin.
 
-== 2. Adding the plugin "Codename One" to NetBeans
 
 Open NetBeans. In the menu, select Tools -> Plugins.
 
@@ -139,14 +134,12 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 - Select the Codename One plugin by ticking the box on the left.
 - Click on “Install” and follow the instructions.
 
-== 3. Restart NetBeans to finish the installation
 
 Congratulations, you are ready to create your first mobile app!
 
 <<<
 
 = = = Checking for plugin updates
-== 1. Notifications for updates
 
 The Codename One plugin is the tool that enables us to apps with NetBeans.
 
@@ -156,8 +149,9 @@ It is important to have the latest version of the plugin installed.
 
 When you open NetBeans, it actually checks for you if there is any update available:
 
+[.stretch]
 image::Update-available.png[align="center",title="Update available"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -168,7 +162,6 @@ You can have updates for the Codename One plugin, but also for other components 
 
 I advise you to install all the updates available.
 
-== 2. Propagating the update to existing projects
 
 Now, what if you already had created an app in NetBeans? *It will not automatically benefit from the updated plugin*.
 
@@ -178,7 +171,6 @@ a.	Right click on the project’s name, select 'Properties'
 b.	In the window that opens, click on “Update project libs”. Close the window
 c.	Right click again on the project’s name. Click on “Clean and Build”. You should be good to go!
 
-== 3. Rare case: the check for updates fails
 
 It sometimes happens that the address that NetBeans checks for plugin updates is incorrect.
 
@@ -186,8 +178,9 @@ In this case, NetBeans will never find updates and you’ll be stuck with an old
 
 Here is how to make sure you have everything correctly setup (explanations follow the picture below)
 
+[.stretch]
 image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -209,21 +202,22 @@ Just check if there is a bubble at the bottom right corner when you open NetBean
 <<<
 
 = = = Creating a project and previewing your first app
-== 1. Creating a project
 
 - Open NetBeans
 - Click on the second icon from the left:
 
+[.stretch]
 image::Clicking-on-the-icon-for-new-projects.png[align="center",title="Clicking on the icon for new projects"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
 
 - Select a « CodenameOne project »:
 
+[.stretch]
 image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -240,8 +234,9 @@ Then click on `Next` to move to the next screen.
 - No accent marks like é ù à or ñ, etc.
 ====
 
+[.stretch]
 image::nb-codenameone-project-name.png[align="center",title="Choosing the name and location of your project"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -250,8 +245,9 @@ This will be the administrative name of your app on the app store so please choo
 
 Then click on `Next` to move to the next screen:
 
+[.stretch]
 image::Choosing-the-name-and-location-of-your-project.png[align="center",title="Choosing the name and location of your project"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -299,8 +295,9 @@ Click on `Finish` and your app will be created.
 
 ==== 4. Done! Preview your app.
 
+[.stretch]
 image::Previewing-your-app.png[align="center",title="Previewing your app"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -314,7 +311,6 @@ It should show a blank screen with "Hi World": in the next lesson, we will add a
 <<<
 
 = = = Essential vocabulary and preliminary notions
-== 1. A note on components and actions
 
 ==== a. Components
 
@@ -347,14 +343,14 @@ And the app is also supposed to *do* many things, for example:
 All an app can "do", we will call these *Actions*
 ====
 
-== 2. The difficulty of naming things
 
 When building software like mobile apps, it is important to give precise names to the tools we use.
 
 Often, these names don't make intuitive sense, and this creates an impression of technical difficulty:
 
+[.stretch]
 image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -381,7 +377,6 @@ Because of this need for precise names, you will see that:
 - adding pictures to the app, we will use a Component named `*Image*` (not Picture)
 - adding buttons to the app, we will use a `*Button*` Component (this one is intuitive!)
 
-== 3. Two approaches to work on mobile apps
 
 To sum up what we have seen so far:
 
@@ -419,16 +414,18 @@ There are different benefits to both approaches:
 
 You write the code in NetBeans, in the files of your app. These files are visible here:
 
+[.stretch]
 image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The files of your app visible in NetBeans"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
 
 Double click on the file `MyApplication.java` to see its content on the right panel in NetBeans:
 
+[.stretch]
 image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
-{nbsp} +
+
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -467,3 +464,20 @@ public void start() {
 <<<
 <<<
 <<<
+pass:[    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11592657;
+        var sc_invisible = 1;
+        var sc_security = "11592657";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11592657/0/11592657/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->]
