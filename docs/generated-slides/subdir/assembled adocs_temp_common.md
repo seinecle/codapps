@@ -1,5 +1,5 @@
-= Learn how to build your first mobile app, for beginners
-= = How to ask a question about the course and get an answer?
+= = Learn how to build your first mobile app, for beginners
+= = = How to ask a question about the course and get an answer?
 == 1. What is Github
 
 Github is a website specializing in hosting content (mostly code but not only), providing tools for teams to collaborate easily on this content and share it.
@@ -9,6 +9,7 @@ It is very famous in the community of programmers.
 Github's icon is a cat which is also an octopus:
 
 image::Octocat.png[align="center",title="Github's mascot", pdfwidth=30%]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -31,6 +32,7 @@ You will be able to use this forum to search for information or ask new question
 If you don't already have a Github account, you sign in for one here: https://github.com
 
 image::creating-an-account-on-Github.png[align="center",title="creating an account on Github"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -60,7 +62,7 @@ If you spot a question you have the answer for, or if you know the question has 
 
 <<<
 
-= = How to install NetBeans and the Codename One plugin on a PC
+= = = How to install NetBeans and the Codename One plugin on a PC
 == 1. Installing NetBeans
 
 
@@ -69,6 +71,7 @@ If you spot a question you have the answer for, or if you know the question has 
 - There are two different files for Windows. Which one should you choose?
 
 image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBeans for PC"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -101,7 +104,7 @@ Congratulations, you are ready to create your first mobile app!
 
 <<<
 
-= = How to install NetBeans and the Codename One plugin on a MAC
+= = = How to install NetBeans and the Codename One plugin on a MAC
 == 1. Installing NetBeans
 
 
@@ -113,6 +116,7 @@ https://support.apple.com/en-us/HT201260[Find out the OS X version of your MAC].
 - Download the file “jdk-8u151-nb-8_2-macosx-x64.dmg” (see below)
 
 image::Downloading-NetBeans-for-a-MAC.png[align="center",title="Downloading NetBeans for a MAC"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -141,7 +145,7 @@ Congratulations, you are ready to create your first mobile app!
 
 <<<
 
-= = Checking for plugin updates
+= = = Checking for plugin updates
 == 1. Notifications for updates
 
 The Codename One plugin is the tool that enables us to apps with NetBeans.
@@ -153,6 +157,7 @@ It is important to have the latest version of the plugin installed.
 When you open NetBeans, it actually checks for you if there is any update available:
 
 image::Update-available.png[align="center",title="Update available"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -185,6 +190,7 @@ image::Putting-the-correct-web-address.png[align="center",title="Putting the cor
 {nbsp} +
 {nbsp} +
 {nbsp} +
+{nbsp} +
 
 - In the NetBeans menu, click on Tools -> Plugin
 - In the window that opens, click on tab “Settings” (last tab on the right)
@@ -202,7 +208,7 @@ Just check if there is a bubble at the bottom right corner when you open NetBean
 
 <<<
 
-= = Creating a project and previewing your first app
+= = = Creating a project and previewing your first app
 == 1. Creating a project
 
 - Open NetBeans
@@ -212,10 +218,12 @@ image::Clicking-on-the-icon-for-new-projects.png[align="center",title="Clicking 
 {nbsp} +
 {nbsp} +
 {nbsp} +
+{nbsp} +
 
 - Select a « CodenameOne project »:
 
 image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -236,12 +244,14 @@ image::nb-codenameone-project-name.png[align="center",title="Choosing the name a
 {nbsp} +
 {nbsp} +
 {nbsp} +
+{nbsp} +
 
 This will be the administrative name of your app on the app store so please choose it carefully !
 
 Then click on `Next` to move to the next screen:
 
 image::Choosing-the-name-and-location-of-your-project.png[align="center",title="Choosing the name and location of your project"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -293,6 +303,7 @@ image::Previewing-your-app.png[align="center",title="Previewing your app"]
 {nbsp} +
 {nbsp} +
 {nbsp} +
+{nbsp} +
 
 1. The files of your app appear on the left of your screen in NetBeans.
 2. You can launch the preview of your app by clicking on the green arrow.
@@ -302,7 +313,7 @@ It should show a blank screen with "Hi World": in the next lesson, we will add a
 
 <<<
 
-= = Essential vocabulary and preliminary notions
+= = = Essential vocabulary and preliminary notions
 == 1. A note on components and actions
 
 ==== a. Components
@@ -343,6 +354,7 @@ When building software like mobile apps, it is important to give precise names t
 Often, these names don't make intuitive sense, and this creates an impression of technical difficulty:
 
 image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -411,10 +423,12 @@ image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The f
 {nbsp} +
 {nbsp} +
 {nbsp} +
+{nbsp} +
 
 Double click on the file `MyApplication.java` to see its content on the right panel in NetBeans:
 
 image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
+{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -450,5 +464,6 @@ public void start() {
 (in progress)
 
 
+<<<
 <<<
 <<<

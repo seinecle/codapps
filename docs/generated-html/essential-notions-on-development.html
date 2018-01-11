@@ -536,13 +536,7 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#_2_the_difficulty_of_naming_things">2. The difficulty of naming things</a></li>
-<li><a href="#_3_two_approaches_to_work_on_mobile_apps">3. Two approaches to work on mobile apps</a>
-<ul class="sectlevel3">
-<li><a href="#_a_diy_or_the_ikea_way">a. DIY or the Ikea way?</a></li>
-<li><a href="#_b_an_example_creating_a_form_by_writing_some_code_dyi_approach">b. An example: creating a form by writing some code (DYI approach)</a></li>
-<li><a href="#_c_another_example_creating_a_form_without_code_with_the_gui_the_ikea_approach">c. Another example: creating a form without code - with the GUI (the Ikea approach)</a></li>
-</ul>
-</li>
+<li><a href="#_3_two_approaches_to_work_on_mobile_apps">3. Two approaches to work on mobile apps</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -551,7 +545,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2017-12-27</p>
+<p>last modified: 2018-01-11</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -671,7 +665,17 @@ table.CodeRay td.code>pre{padding:0}
 <p>It is not to be annoying, but to make sure we actually get the proper tool when we need it. Every domain of specialty, not just programmers, do this.</p>
 </div>
 <div class="paragraph">
-<p>For instance, the screen showing our mobile application is not simply called a screen&#8230;&#8203; why?</p>
+<p>For instance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>we will design the screens of our first mobile application.</p>
+</li>
+<li>
+<p>these screens, showing the content of our app, are not simply called "screen"&#8230;&#8203; why?</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -684,7 +688,7 @@ table.CodeRay td.code>pre{padding:0}
 </ol>
 </div>
 <div class="paragraph">
-<p>&#8594;  The designers of the tool chose the name <code><strong>Form</strong></code>.</p>
+<p>&#8594;  The name chosen is <code><strong>Form</strong></code>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -697,7 +701,7 @@ table.CodeRay td.code>pre{padding:0}
 <p><strong>A Form is the first Component we need when creating a mobile app.</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>It is the empty region of the app where we will place all other Components</strong>.</p>
+<p><strong>It is the empty region taking all the space of the phone&#8217;s screen, where we will draw the app (text, buttons, etc.)</strong></p>
 </div>
 </td>
 </tr>
@@ -741,12 +745,7 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </div>
 <div class="paragraph">
-<p>How will you do that in practice? There are two ways.</p>
-</div>
-<div class="sect3">
-<h4 id="_a_diy_or_the_ikea_way">a. DIY or the Ikea way?</h4>
-<div class="paragraph">
-<p>Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.</p>
+<p>How will you do that in practice? Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.</p>
 </div>
 <div class="paragraph">
 <p>Codename One, the framewok we use, gives you these two options: Do It YourSelf (DYI) or Ikea.</p>
@@ -757,7 +756,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>DYI: write the code to create everything in the app.</p>
 </li>
 <li>
-<p>IKEA: use a <strong>"Graphical User Interface" (GUI)</strong>, which means you drag and drop things to build the app with a minimum of code to write.</p>
+<p>IKEA: use a <strong>"Graphical User Interface" (GUI)</strong>, which means we "draw" our app by click and point (a bit like in Photoshop), with a minimum of code to write.</p>
 </li>
 </ul>
 </div>
@@ -795,85 +794,12 @@ table.CodeRay td.code>pre{padding:0}
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Inconvenients</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">You need to learn how to code. Slow since you write everything yourself.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You get stuck at some point: to add features to your mobile app, not everything is in the GUI. Writing code is going to be necessary.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You get stuck at some point: some features you need for you mobile app are too specific to be available. Writing code is going to be necessary.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect3">
-<h4 id="_b_an_example_creating_a_form_by_writing_some_code_dyi_approach">b. An example: creating a form by writing some code (DYI approach)</h4>
 <div class="paragraph">
-<p>You write the code in NetBeans, in the files of your app. These files are visible here:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/The-files-of-your-app-visible-in-NetBeans.png" alt="The files of your app visible in NetBeans">
-</div>
-<div class="title">Figure 2. The files of your app visible in NetBeans</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Double click on the file <code>MyApplication.java</code> to see its content on the right panel in NetBeans:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Opening-the-content-of-MyApplication.java-for-editing.png" alt="Opening the content of MyApplication.java for editing">
-</div>
-<div class="title">Figure 3. Opening the content of MyApplication.java for editing</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>When we created the project, an empty screen was added to it by default.</p>
-</div>
-<div class="paragraph">
-<p>You can see this empty screen by previewing your app (click on the green arrow in NetBeans, or get back to the lesson here)</p>
-</div>
-<div class="paragraph">
-<p>How was this empty screen added to the app?</p>
-</div>
-<div class="paragraph">
-<p>Simply with these 2 lines of code in the file <code>MyApplication.java</code> (scroll down a bit in NetBeans, as they are in the middle of the file):</p>
-</div>
-<div class="listingblock">
-<div class="title">MyApplication.java</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
-    <span class="keyword">if</span>(current != <span class="predefined-constant">null</span>){
-        current.show();
-        <span class="keyword">return</span>;
-    }
-    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y()); <i class="conum" data-value="1"></i><b>(1)</b>
-    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>)); <i class="conum" data-value="2"></i><b>(2)</b>
-    hi.show(); <i class="conum" data-value="3"></i><b>(3)</b>
-}</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This line creates the screen with a title and an horizontal layout</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This line adds a piece of text saying ("Hi World"). It could have been removed.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>This line causes the screen to appear (otherwise it would remain hidden)</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_c_another_example_creating_a_form_without_code_with_the_gui_the_ikea_approach">c. Another example: creating a form without code - with the GUI (the Ikea approach)</h4>
-<div class="paragraph">
-<p>(in progress)</p>
-</div>
+<p>In the next lesson of this module, we are going how to see how to create a Form for our app, using the two methods alternatively: by writing code or by using the Graphical User Interface.</p>
 </div>
 </div>
 </div>
@@ -936,7 +862,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-12-27 21:53:21 CET
+Last updated 2018-01-11 21:37:27 CET
 </div>
 </div>
 </body>

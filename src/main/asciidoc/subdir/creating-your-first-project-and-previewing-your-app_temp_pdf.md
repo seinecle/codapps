@@ -124,8 +124,22 @@ image::Previewing-your-app.png[align="center",title="Previewing your app"]
 2. You can launch the preview of your app by clicking on the green arrow.
 
 //ST: !
-It should show a blank screen with "Hi World": in the next lesson, we will add a new screen, text and pictures!
+It should show a blank screen with "Hi World": congratulations, you started creating your first app and you can already preview it!
 
+//ST: !
+*This is the end of the first module. You should now be able to:*
+
+//ST: !
+1. install NetBeans, on Mac or PC (we did not cover Linux but this should work as well)
+2. install the Codename One plugin in NetBeans
+3. check that the Codename One plugin is up-to-date, if not you should be able to update it.
+
+//ST: !
+4. create a first project (your first empty app)
+5. launch the preview of your app from NetBeans
+
+//ST: !
+*In the next module, we will review some basic notions of software development, and we will learn how to create a new screen for our app!*
 
 == The end
 //ST: The end
