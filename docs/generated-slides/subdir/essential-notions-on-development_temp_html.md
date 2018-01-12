@@ -113,13 +113,7 @@ To sum up what we have seen so far:
 - Then we can attach actions to each of these components (a "click action" on a button, etc)
 
 //ST: !
-How will you do that in practice? There are two ways.
-
-//ST: !
-==== a. DIY or the Ikea way?
-
-//ST: !
-Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.
+How will you do that in practice? Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.
 
 //ST: !
 Codename One, the framewok we use, gives you these two options: Do It YourSelf (DYI) or Ikea.

@@ -186,11 +186,13 @@ Now, launching the app preview will show our Form1!
 3. understand what a Form is.
 
 ==  !
+[start=4]
 4. create a Form using simple lines of code.
 5. create a Form using the Graphical User Interface (GUI)
 6. understand what are the different panels of the GUI.
 
 ==  !
+[start=7]
 7. trigger with a couple lines of code the opening of the Form you created with the GUI.
 
 ==  !

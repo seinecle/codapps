@@ -46,6 +46,7 @@ Then click on `Next` to move to the next screen.
 [WARNING]
 ====
 *Put no space in the name of your app*
+
 - No special characters like - _# »& @
 - No accent marks like é ù à or ñ, etc.
 ====
@@ -128,7 +129,16 @@ image::Previewing-your-app.png[align="center",title="Previewing your app"]
 2. You can launch the preview of your app by clicking on the green arrow.
 
 ==  !
-It should show a blank screen with "Hi World": congratulations, you started creating your first app and you can already preview it!
+It should show a blank screen with "Hi World" in the title, and "Hi World" again in the screen:
+
+==  !
+[.stretch]
+image::Previewing-your-app.png[align="center",title="Previewing your app"]
+
+
+
+==  !
+Congratulations, you started creating your first app and you can already preview it! 🎉
 
 ==  !
 *This is the end of the first module. You should now be able to:*
@@ -139,6 +149,7 @@ It should show a blank screen with "Hi World": congratulations, you started crea
 3. check that the Codename One plugin is up-to-date, if not you should be able to update it.
 
 ==  !
+[start=4]
 4. create a first project (your first empty app)
 5. launch the preview of your app from NetBeans
 
