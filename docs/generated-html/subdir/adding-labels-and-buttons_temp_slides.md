@@ -212,6 +212,7 @@ this.gui_Label.setText("pressed!");
 So that it looks like:
 
 ==  !
+[[anchor-set-text-label-in-code]]
 .Form1.java
 [source,java]
 ----

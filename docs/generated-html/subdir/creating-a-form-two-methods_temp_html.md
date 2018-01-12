@@ -70,7 +70,7 @@ public void start() {
     hi.show(); // <3>
 }
 ----
-<1> This line creates the screen with a title "Hi World". The 'BoxLayout' part is not important at the moment.
+<1> This line creates the screen with a title "Hi World".
 <2> This line adds a Label saying ("Hi World") in the Form!
 <3> The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!
 
@@ -98,10 +98,6 @@ image::Creating-a-Form-with-the-GUI---third-step.png[align="center",title="Creat
 {nbsp} +
 
 //ST: !
-image::Creating-a-Form-with-the-GUI---fourth-step.png[align="center",title="Creating a Form with the GUI - fourth step"]
-{nbsp} +
-
-//ST: !
 *Clicking on 'Finish' did not show you any 'Form', so what happened?* Where do I find my 'Form' and how do I use it?
 
 //ST: !
@@ -119,7 +115,7 @@ image::Save-before-you-quit!.png[align="center",title="Save before you quit!"]
 //ST: !
 And... that's almost it! Whatever you create with the GUI Builder will be included in your app.
 
-*Except that* if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don't see your screen at all. Why?
+*Except that* if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don't see your screen but another one that says "Hi World". Why?
 
 //ST: !
 Even if you can create a Form with the GUI Builder, so without coding, *you still need a couple of lines of code to trigger the opening of the Form when the app launches*.
@@ -135,14 +131,11 @@ public void start() {
         current.show();
         return;
     }
-    Form hi = new Form("Hi World", BoxLayout.y()); // <1>
-    hi.add(new Label("Hi World")); // <2>
-    hi.show(); // <3>
+    Form hi = new Form("Hi World", BoxLayout.y());
+    hi.add(new Label("Hi World"));
+    hi.show();
 }
 ----
-<1> This line creates a Form with a title "Hi World". The 'BoxLayout' part is not important at the moment.
-<2> This line adds a Label saying ("Hi World") in the Form!
-<3> The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!
 
 //ST: !
 As you see, at no point is Form1 (the Form we created with the GUI builder) mentioned. No wonder it is not used in our app!
@@ -168,28 +161,39 @@ Form1 myForm1 = new Form1();
 myForm1.show();
 ----
 
-Now, launching the app preview will show our Form1!
+//ST: !
+Now, launching the app preview will show our Form1! It still empty but it is a good start! 🎉🎉
+
+//ST: !
+image::Previewing-the-Form-you-created!.png[align="center",title="Previewing the Form you created!"]
+{nbsp} +
+
+
+
+
 
 //ST: !
 *This is the end of the second module. You should now be able to:*
 
 //ST: !
 1. understand what a Component is.
-2. understand what an Action is (just the concept, we did not go into the details yet on this one)
+2. understand what an Action is.
 3. understand what a Form is.
 
 //ST: !
 [start=4]
 4. create a Form using simple lines of code.
-5. create a Form using the Graphical User Interface (GUI)
+5. create a Form using the Graphical User Interface (GUI).
 6. understand what are the different panels of the GUI.
 
 //ST: !
 [start=7]
 7. trigger with a couple lines of code the opening of the Form you created with the GUI.
+8. create a Label
+9. create a Button and attach an action to it.
 
 //ST: !
-*In the next module, we are going to learn how to add Components to make a lively interface: Buttons, text, pictures, and more!*
+*In the next module, we are going to learn how to style Components so that you can design your app exactly as you desire!*
 
 == The end
 //ST: The end
