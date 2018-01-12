@@ -539,7 +539,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-01-11</p>
+<p>last modified: 2018-01-12</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -622,7 +622,7 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This line creates the screen with a title "Hi World". The 'BoxLayout' part is not important at the moment.</td>
+<td>This line creates the screen with a title "Hi World".</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -675,15 +675,6 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Creating-a-Form-with-the-GUI---fourth-step.png" alt="Creating a Form with the GUI   fourth step">
-</div>
-<div class="title">Figure 6. Creating a Form with the GUI - fourth step</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
 <div class="paragraph">
 <p><strong>Clicking on 'Finish' did not show you any 'Form', so what happened?</strong> Where do I find my 'Form' and how do I use it?</p>
 </div>
@@ -691,7 +682,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/Opening-the-Form-we-created-to-work-on-it.png" alt="Opening the Form we created to work on it">
 </div>
-<div class="title">Figure 7. Opening the Form we created to work on it</div>
+<div class="title">Figure 6. Opening the Form we created to work on it</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -700,7 +691,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/Discovering-the-GUI-Builder.png" alt="Discovering the GUI Builder">
 </div>
-<div class="title">Figure 8. Discovering the GUI Builder</div>
+<div class="title">Figure 7. Discovering the GUI Builder</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -709,7 +700,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/Save-before-you-quit!.png" alt="Save before you quit!">
 </div>
-<div class="title">Figure 9. Save before you quit!</div>
+<div class="title">Figure 8. Save before you quit!</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -718,7 +709,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>And&#8230;&#8203; that&#8217;s almost it! Whatever you create with the GUI Builder will be included in your app.</p>
 </div>
 <div class="paragraph">
-<p><strong>Except that</strong> if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don&#8217;t see your screen at all. Why?</p>
+<p><strong>Except that</strong> if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don&#8217;t see your screen but another one that says "Hi World". Why?</p>
 </div>
 <div class="paragraph">
 <p>Even if you can create a Form with the GUI Builder, so without coding, <strong>you still need a couple of lines of code to trigger the opening of the Form when the app launches</strong>.</p>
@@ -734,27 +725,11 @@ table.CodeRay td.code>pre{padding:0}
         current.show();
         <span class="keyword">return</span>;
     }
-    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y()); <i class="conum" data-value="1"></i><b>(1)</b>
-    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>)); <i class="conum" data-value="2"></i><b>(2)</b>
-    hi.show(); <i class="conum" data-value="3"></i><b>(3)</b>
+    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y());
+    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>));
+    hi.show();
 }</code></pre>
 </div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This line creates a Form with a title "Hi World". The 'BoxLayout' part is not important at the moment.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This line adds a Label saying ("Hi World") in the Form!</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>As you see, at no point is Form1 (the Form we created with the GUI builder) mentioned. No wonder it is not used in our app!</p>
@@ -782,7 +757,16 @@ myForm1.show();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Now, launching the app preview will show our Form1!</p>
+<p>Now, launching the app preview will show our Form1! It still empty but it is a good start! 🎉🎉</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Previewing-the-Form-you-created!.png" alt="Previewing the Form you created!">
+</div>
+<div class="title">Figure 9. Previewing the Form you created!</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
 </div>
 <div class="paragraph">
 <p><strong>This is the end of the second module. You should now be able to:</strong></p>
@@ -793,7 +777,7 @@ myForm1.show();</code></pre>
 <p>understand what a Component is.</p>
 </li>
 <li>
-<p>understand what an Action is (just the concept, we did not go into the details yet on this one)</p>
+<p>understand what an Action is.</p>
 </li>
 <li>
 <p>understand what a Form is.</p>
@@ -806,7 +790,7 @@ myForm1.show();</code></pre>
 <p>create a Form using simple lines of code.</p>
 </li>
 <li>
-<p>create a Form using the Graphical User Interface (GUI)</p>
+<p>create a Form using the Graphical User Interface (GUI).</p>
 </li>
 <li>
 <p>understand what are the different panels of the GUI.</p>
@@ -818,10 +802,16 @@ myForm1.show();</code></pre>
 <li>
 <p>trigger with a couple lines of code the opening of the Form you created with the GUI.</p>
 </li>
+<li>
+<p>create a Label</p>
+</li>
+<li>
+<p>create a Button and attach an action to it.</p>
+</li>
 </ol>
 </div>
 <div class="paragraph">
-<p><strong>In the next module, we are going to learn how to add Components to make a lively interface: Buttons, text, pictures, and more!</strong></p>
+<p><strong>In the next module, we are going to learn how to style Components so that you can design your app exactly as you desire!</strong></p>
 </div>
 </div>
 </div>
@@ -884,7 +874,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-01-11 21:40:04 CET
+Last updated 2018-01-12 15:11:22 CET
 </div>
 </div>
 </body>

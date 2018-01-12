@@ -232,7 +232,7 @@ image::Previewing-the-button-and-its-action.png[align="center",title="Previewing
 
 
 ==  !
-Congratulations! You learned how to place a Label (some text), a Button and  how to make it perform an action. This is a huge step! 🎉🎉🎉
+We have learned how to place a Label (some text) in our app. We also learned how to add a Button in the app, and how to make it perform an action.
 
 ==  !
 In the next lesson of this module, we are going to learn how to insert a picture in the app.

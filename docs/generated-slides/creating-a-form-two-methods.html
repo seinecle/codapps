@@ -86,7 +86,7 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Creating a Form with two different approaches</h2><div class="preamble"><div class="paragraph"><p>last modified: 2018-01-11</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Creating a Form with two different approaches</h2><div class="preamble"><div class="paragraph"><p>last modified: 2018-01-12</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section><div class="paragraph"><p>Not sure what a Form is? Have a look at the previous lesson!</p></div></section>
@@ -109,20 +109,19 @@ table.CodeRay td.code>pre{padding:0}
     hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>)); <b>(2)</b>
     hi.show(); <b>(3)</b>
 }</code></pre></div></div>
-<div class="colist arabic"><ol><li><p>This line creates the screen with a title "Hi World". The 'BoxLayout' part is not important at the moment.</p></li><li><p>This line adds a Label saying ("Hi World") in the Form!</p></li><li><p>The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!</p></li></ol></div></section>
+<div class="colist arabic"><ol><li><p>This line creates the screen with a title "Hi World".</p></li><li><p>This line adds a Label saying ("Hi World") in the Form!</p></li><li><p>The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!</p></li></ol></div></section>
 <section><div class="paragraph"><p>So this is how you add a Form by writing some code in a file. But in this course, <strong>we will first use almost no coding at all</strong>. We will use instead a simpler approach:</p></div></section>
 <section><div class="paragraph"><p>In the previous lesson we had called this method the "Ikea approach": we just assemble pre-existing blocks, without designing the whole furniture ourself.</p></div>
 <div class="paragraph"><p>Let&#8217;s see how it works:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-Form-with-the-GUI---first-step.png" alt="Creating a Form with the GUI   first step" height="100%" /></div><div class="title">Figure 3. Creating a Form with the GUI - first step</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-Form-with-the-GUI---second-step.png" alt="Creating a Form with the GUI   second step" height="100%" /></div><div class="title">Figure 4. Creating a Form with the GUI - second step</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-Form-with-the-GUI---third-step.png" alt="Creating a Form with the GUI   third step" height="100%" /></div><div class="title">Figure 5. Creating a Form with the GUI - third step</div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-Form-with-the-GUI---fourth-step.png" alt="Creating a Form with the GUI   fourth step" height="100%" /></div><div class="title">Figure 6. Creating a Form with the GUI - fourth step</div></section>
 <section><div class="paragraph"><p><strong>Clicking on 'Finish' did not show you any 'Form', so what happened?</strong> Where do I find my 'Form' and how do I use it?</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-the-Form-we-created-to-work-on-it.png" alt="Opening the Form we created to work on it" height="100%" /></div><div class="title">Figure 7. Opening the Form we created to work on it</div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Discovering-the-GUI-Builder.png" alt="Discovering the GUI Builder" height="100%" /></div><div class="title">Figure 8. Discovering the GUI Builder</div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Save-before-you-quit!.png" alt="Save before you quit!" height="100%" /></div><div class="title">Figure 9. Save before you quit!</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-the-Form-we-created-to-work-on-it.png" alt="Opening the Form we created to work on it" height="100%" /></div><div class="title">Figure 6. Opening the Form we created to work on it</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Discovering-the-GUI-Builder.png" alt="Discovering the GUI Builder" height="100%" /></div><div class="title">Figure 7. Discovering the GUI Builder</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Save-before-you-quit!.png" alt="Save before you quit!" height="100%" /></div><div class="title">Figure 8. Save before you quit!</div></section>
 <section><div class="paragraph"><p>And&#8230;&#8203; that&#8217;s almost it! Whatever you create with the GUI Builder will be included in your app.</p></div>
-<div class="paragraph"><p><strong>Except that</strong> if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don&#8217;t see your screen at all. Why?</p></div></section>
+<div class="paragraph"><p><strong>Except that</strong> if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don&#8217;t see your screen but another one that says "Hi World". Why?</p></div></section>
 <section><div class="paragraph"><p>Even if you can create a Form with the GUI Builder, so without coding, <strong>you still need a couple of lines of code to trigger the opening of the Form when the app launches</strong>.</p></div>
 <div class="paragraph"><p>Where should these lines of code be written? As we have seen <a href="#anchor-1">just above</a>, it happens in the file 'MyApplication.java'. Here is how it looks by default:</p></div></section>
 <section><div class="listingblock"><div class="title">MyApplication.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
@@ -130,11 +129,10 @@ table.CodeRay td.code>pre{padding:0}
         current.show();
         <span class="keyword">return</span>;
     }
-    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y()); <b>(1)</b>
-    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>)); <b>(2)</b>
-    hi.show(); <b>(3)</b>
-}</code></pre></div></div>
-<div class="colist arabic"><ol><li><p>This line creates a Form with a title "Hi World". The 'BoxLayout' part is not important at the moment.</p></li><li><p>This line adds a Label saying ("Hi World") in the Form!</p></li><li><p>The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!</p></li></ol></div></section>
+    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y());
+    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>));
+    hi.show();
+}</code></pre></div></div></section>
 <section><div class="paragraph"><p>As you see, at no point is Form1 (the Form we created with the GUI builder) mentioned. No wonder it is not used in our app!</p></div>
 <div class="paragraph"><p>We just need to replace the Form currently mentioned in the code, by our Form called 'Form1'.</p></div></section>
 <section><div class="paragraph"><p>So, <strong>replace</strong> this 3 lines:</p></div>
@@ -143,13 +141,14 @@ hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</spa
 hi.show();</code></pre></div></div></section>
 <section><div class="paragraph"><p>with these 2 lines:</p></div>
 <div class="listingblock"><div class="content"><pre class="CodeRay"><code class="java language-java">Form1 myForm1 = <span class="keyword">new</span> Form1();
-myForm1.show();</code></pre></div></div>
-<div class="paragraph"><p>Now, launching the app preview will show our Form1!</p></div></section>
+myForm1.show();</code></pre></div></div></section>
+<section><div class="paragraph"><p>Now, launching the app preview will show our Form1! It still empty but it is a good start! 🎉🎉</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Previewing-the-Form-you-created!.png" alt="Previewing the Form you created!" height="100%" /></div><div class="title">Figure 9. Previewing the Form you created!</div></section>
 <section><div class="paragraph"><p><strong>This is the end of the second module. You should now be able to:</strong></p></div></section>
-<section><div class="olist arabic"><ol class="arabic"><li><p>understand what a Component is.</p></li><li><p>understand what an Action is (just the concept, we did not go into the details yet on this one)</p></li><li><p>understand what a Form is.</p></li></ol></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>create a Form using simple lines of code.</p></li><li><p>create a Form using the Graphical User Interface (GUI)</p></li><li><p>understand what are the different panels of the GUI.</p></li></ol></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="7"><li><p>trigger with a couple lines of code the opening of the Form you created with the GUI.</p></li></ol></div></section>
-<section><div class="paragraph"><p><strong>In the next module, we are going to learn how to add Components to make a lively interface: Buttons, text, pictures, and more!</strong></p></div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>understand what a Component is.</p></li><li><p>understand what an Action is.</p></li><li><p>understand what a Form is.</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>create a Form using simple lines of code.</p></li><li><p>create a Form using the Graphical User Interface (GUI).</p></li><li><p>understand what are the different panels of the GUI.</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="7"><li><p>trigger with a couple lines of code the opening of the Form you created with the GUI.</p></li><li><p>create a Label</p></li><li><p>create a Button and attach an action to it.</p></li></ol></div></section>
+<section><div class="paragraph"><p><strong>In the next module, we are going to learn how to style Components so that you can design your app exactly as you desire!</strong></p></div></section>
 <section id="_the_end"><h2>The end</h2></section>
 <section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p></div></section>
 <section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>
