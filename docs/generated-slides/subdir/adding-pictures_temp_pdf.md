@@ -134,7 +134,7 @@ image::Setting-an-image-as-the-background-of-the-Form.png[align="center",title="
 //ST: !
 To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow in NetBeans.).
 
-You should get sommething like:
+You should get something like:
 
 //ST: !
 image::background-preview-1.png[align="center",title="Background of the app - but with the top remaining blank"]
