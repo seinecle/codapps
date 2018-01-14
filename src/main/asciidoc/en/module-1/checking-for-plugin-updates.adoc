@@ -79,7 +79,7 @@ image::https://docs.google.com/drawings/d/e/2PACX-1vQ85UQ5q6B3EXlwkBLtNlPy1dgHeL
 ** By default, updates are checked every week. Change this for “every startup”.
 
 //ST: !
-That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself!
+That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself! 🎉
 
 Just check if there is a bubble at the bottom right corner when you open NetBeans.
 

@@ -81,7 +81,7 @@ image::Putting-the-correct-web-address.png[align="center",title="Putting the cor
 ** By default, updates are checked every week. Change this for “every startup”.
 
 //ST: !
-That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself!
+That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself! 🎉
 
 Just check if there is a bubble at the bottom right corner when you open NetBeans.
 

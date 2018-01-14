@@ -1,4 +1,4 @@
-= CODAPPS: Adding Labels and Buttons to a Form
+= CODAPPS: Adding Pictures to a Form
 Clément Levallois <levallois@em-lyon.com>
 2018-01-12
 
@@ -21,215 +21,178 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 
 //ST: !
-== 1. Some preparations
+== 1. Importing a picture into the app
+
+Before a picture can be shown on the screen of your app, you must add the picture to the files of your app.
+
+Importing a picture in the files of the app should be done from the GUI Builder, in one click:
 
 //ST: !
-Not sure what a Form is? Have a look at the previous lessons!
-
-To start this lesson, we will assume that you already created a Form called "Form1" and that you opened it in the GUI Builder, like this:
-
-//ST: !
-image::Opening-the-Form-we-created-to-work-on-it.png[align="center",title="Opening the Form we created to work on it"]
+image::Importing-from-the-GUI-Builder---does-not-work-at-the-moment.png[align="center",title="Importing from the GUI Builder - does not work at the moment"]
 {nbsp} +
 
 //ST: !
-So that you should now have the GUI Builder open to design your Form. Here is a recall of the different panels that compose the GUI Builder:
+But this simple way does not work at the moment (it will probably be fixed soon).
 
 //ST: !
-image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI Builder"]
-{nbsp} +
-
-
-== 2. Adding a Label to your Form
+So the alternative is to go somewhere else: in a place that used to be important to create the app, but which is now rarely used, except for cases like this.
 
 //ST: !
-==== a. A piece of text is called a *Label*. Why?
+- in the files of your project in NetBeans, spot the file named "theme.res" and double click on it:
 
 //ST: !
-As mentioned in a previous lesson, in coding and software development, things don't have intuitive names:
-
-- For example, a "screen" is called a Form (we have explained this one before).
-- Another example: every element to be put on the Form is going to be called a *"Component"*, so make sure you memorize this.
-
-And a Component that shows some text is going to be called... a *Label*. Not "Text". Why?
-
-//ST: !
-*Simply because calling it "Text" would be misleading*. When you show some text on screen there is the text itself, *but also its size, color, id, etc*.
-
--> so *"Label"* is more accurate: a *Label* is made of a piece of text *and* a color, a size, some decorations (maybe bold? italic?), etc.
-
-With these explanations and clarifications made, we can now add a Label in our app!
-
-//ST: !
-==== b. Concrete steps to add a Label to the Form
-
-//ST: !
-Start by opening the 'Core Components' menu on the top right:
-
-//ST: !
-image::Opening-the-Core-Components-menu.png[align="center",title="Opening the Core Components menu"]
+image::Clicking-on-the-file-theme.res.png[align="center",title="Clicking on the file theme.res"]
 {nbsp} +
 
 //ST: !
-Then *drag and drop a Label onto the Form*. Place it where you prefer:
+-> It launches a new window. Be patient, it takes a bit of time to open!
+
+Here is how the new window should look:
 
 //ST: !
-image::Drag---dropping-a-Label.png[align="center",title="Drag - dropping a Label"]
+image::A-new-window-opened.png[align="center",title="A new window opened"]
 {nbsp} +
 
 //ST: !
-==== c. Label or Span Label?
+There, just go in the top menu, select 'Images' and choose "Add images":
 
 //ST: !
-You may have noticed that a Component called "Span Label" also exists, right next to Label:
-
-//ST: !
-image::A-Span-Label.png[align="center",title="A Span Label"]
+image::Selecting-Add-Images.png[align="center",title="Selecting Add Images"]
 {nbsp} +
 
 //ST: !
-Span Labels are like regular Labels, *but their text can stretch on many lines*, not just one. Even if this is a tiny difference, you have cases when one is more practical than the other.
+Simply choose the image that you would like to insert in your app. Guidelines:
 
-
-== 3. Adding a Button to your Form - and your first Action!
-
-//ST: !
-==== a. Adding the button
+- choose an image in '.jpg' or '.png' format
+- *choose a small sized image*: a file not bigger than 300kb.
 
 //ST: !
-Adding a Button is easy: just like we did for Labels, *we just need to drag and drop the Button* onto the Form:
+Done! Save (File -> Save) before you close this window, as we don't need it anymore.
+
+You are now ready to use this pic in your app. Let's see how to add it onto a Form:
+
+== 2. Adding a picture to a Form
+
+The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.
+
+Let's try this with a Label. Open the GUI Builder of the Form, then place a Label on the Form:
 
 //ST: !
-image::Drag---dropping-a-Button.png[align="center",title="Drag - dropping a Button"]
+image::Dragging-a-Label-onto-the-Form.png[align="center",title="Dragging a Label onto the Form"]
 {nbsp} +
 
 //ST: !
-==== b. Making the button do something
+If you have clicked on this little icon, you should now see many properties of the Label that you can modify:
 
 //ST: !
-Of course the button, alone, is not interesting: it should do something when the user of the app touches it.
-
-You can launch the preview of your app (big green arrow in the NetBeans menu): you see in the preview that the button can be pressed, but nothing happens. *We need to attach an Action to the button*.
-
-//ST: !
-Actions can be very complex: for example, a gaming app has buttons making characters jump or run. Or a store app has buttons that select products and make payments...
-
--> *All these actions happen through lines of code that need to be written*.
-
-//ST: !
-We are going to create a very simple action to illustrate the principle: *pressing the button will change the text of the Label*
-
-//ST: !
-==== c. Step-by-step creation of an action attached
-
-//ST: !
-[WARNING]
-====
-*This is not completely stable. If the creation of the action does not work well:*
-
-- Delete your button and create a new one
-- Follow the steps carefully, without taking shortcuts
-- Only if you have tried several times and things still don't work, then you can report https://github.com/seinecle/codapps/issues[an issue here].
-====
-
-
-//ST: !
-*1.* Make sure you have a Label on the Form - since we want to change its text with the Button!
-
-(you should have one as we created one, above in this lesson).
-
-//ST: !
-[start=2]
-*2.* Select the button with your mouse and click on the three dots in the properties:
-
-//ST: !
-image::Selecting-the-Button.png[align="center",title="Selecting the Button"]
+image::Discovering-how-to-change-the-style-of-a-Label.png[align="center",title="Discovering how to change the style of a Label"]
 {nbsp} +
 
 //ST: !
-This opens a new window.
+So many properties that we can change! Feel free to explore them. For the moment, we want to add a picture:
 
 //ST: !
-[start=3]
-*3.* Give a name to the action and to the button
+- Click on 'Bg Image'.
+- If you imported correctly your image in the previous step (see above), you should see your picture available.
+- Select it
+- Click on its name at the bottom of the menu to close the window.
 
 //ST: !
-image::Giving-a-name-to-the-action-and-to-the-button.png[align="center",title="Giving a name to the action and to the button"]
+You should now see your picture on the Form:
+
+//ST: !
+image::Resizing-and-fitting-the-picture.png[align="center",title="Resizing and fitting the picture"]
+{nbsp} +
+
+== 3. Setting a picture as the background of a Form
+
+//ST: !
+So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:
+
+image::Nexus_4-smaller.png[align="center",title="An example of an app with a colored background"]
 {nbsp} +
 
 //ST: !
-[WARNING]
-====
-*Common issue at this stage*
-
-At this step *if you clicked on "Cancel" without having given a name or a display name*, the Button can get resized - becomes much bigger! (sometimes taking even the whole space of the Form, making it hard to spot since it covers everything).
-
-Solution: spot the "resize handles" of the Button and use them to drag the borders of the Button back to a smaller size.
-
-====
-
+In this case, we could create a Label and then resize it to take the entire space of the Form, but there is a better way:
 
 //ST: !
-[start=4]
-*4.* The GUI Builder should have switched automatically back to NetBeans (don't worry the GUI Builder has not been closed)
-
-- The lines of code for an action have been automatically written in the file of your Form, which is called "Form1.java" if your Form is named Form1.
-- These lines of code should look like:
+We can simply set the picture we want to the background of the Form itself. In the following, I am using a picture by https://www.flickr.com/photos/zooboing/5405160553[user Patrick Hoesly on Flickr]:
 
 //ST: !
-.Form1.java
+image::green_background-smaller.png[align="center",title="a green background"]
+{nbsp} +
+
+//ST: !
+Just like we have seen, we need first to import this picture through the file 'theme.res' (see the top of this lesson for how to).
+
+Then, set this picture as the "Bg Image" of the Form:
+
+//ST: !
+image::Setting-an-image-as-the-background-of-the-Form.png[align="center",title="Setting an image as the background of the Form"]
+{nbsp} +
+
+//ST: !
+To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow in NetBeans.).
+
+You should get something like:
+
+//ST: !
+image::background-preview-1.png[align="center",title="Background of the app - but with the top remaining blank"]
+{nbsp} +
+
+//ST: !
+This is quite good but we see that some room on the top of the app is not covered, because it is reserved space for the title of the Form.
+
+//ST: !
+We can remove this white space on the top by adding two lines of code to the file 'MyApplication.java'.
+
+In the file 'MyApplication.java', spot the lines that say:
+
+//ST: !
+[[anchor-2]]
+.MyApplication.java
 [source,java]
 ----
-//-- DON'T EDIT ABOVE THIS LINE!!!
-    public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) { // <1>
-
-    } //<2>
-}
-----
-<1> This line is complicated but you can notice that the name of our Action appears in it ("UpdateLabelText").
-Notice also the *opening curly brace* at the end of the line: *{*
-<2> This is a *closing curly brace*.
-
-//ST: !
-Everything you write between the opening curly brace *{* and the closing curly brace *}* will be performed when the user touches the button.
-
-So let's write the instruction to change the text of the Label!
-
-//ST: !
-We are going to write just one line of code between the curly braces:
-
-//ST: !
-[source,java]
-----
-this.gui_Label.setText("pressed!");
-----
-
-So that it looks like:
-
-//ST: !
-.Form1.java
-[source,java]
-----
-//-- DON'T EDIT ABOVE THIS LINE!!!
-    public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) {
-      this.gui_Label.setText("pressed!"); // <1>
+public void start() {
+    if (current != null) {
+        current.show();
+        return;
     }
+    Form1 myForm1 = new Form1();
+    myForm1.show();
 }
 ----
-<1> the line we added between the curly braces.
 
 //ST: !
-You can now preview your app (big green arrow in NetBeans). Press the button in the preview, the effect should be:
+Just add two lines of code precisely like this:
 
 //ST: !
-image::Previewing-the-button-and-its-action.png[align="center",title="Previewing the button and its action"]
+[[anchor-2]]
+.MyApplication.java
+[source,java]
+----
+public void start() {
+    if (current != null) {
+        current.show();
+        return;
+    }
+    Form1 myForm1 = new Form1();
+    myForm1.getToolbar().setUIID("Container");
+    myForm1.getToolbar().hideToolbar();
+    myForm1.show();
+}
+----
+
+//ST: !
+Now, if you launch the preview, your background should nicely cover the entire space of your screen:
+
+//ST: !
+image::background-preview-2.png[align="center",title="Background of the app - covering the entire screen"]
 {nbsp} +
 
 //ST: !
-Congratulations! You learned how to place a Label (some text), a Button and  how to make it perform an action. This is a huge step! 🎉🎉🎉
+Congratulations! You learned how to place a picture onto a Form, and how to set a picture as the background of your app. It will look great! 🎉🎉🎉
 
-//ST: !
-In the next lesson of this module, we are going to learn how to insert a picture in the app.
 
 == The end
 //ST: The end

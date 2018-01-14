@@ -58,7 +58,7 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 
 ==  3. Restart NetBeans to finish the installation
 
-Congratulations, you are ready to create your first mobile app!
+Congratulations, you are ready to create your first mobile app! 🎉
 
 ==  The end
 

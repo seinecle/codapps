@@ -72,6 +72,9 @@ You must use a precise title (not just "it does not work"), and describe the pro
 ==  !
 You will be notified by email when somebody replies to you!
 
+==  !
+IMPORTANT: when your issue receives an answer which solves your problem, *click on the CLOSE button* to put an end to the issue.
+
 ==  4. Answering questions
 
 ==  !

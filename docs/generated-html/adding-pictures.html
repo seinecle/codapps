@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="author" content="Clément Levallois">
-<title>CODAPPS: Adding Labels and Buttons to a Form</title>
+<title>CODAPPS: Adding Pictures to a Form</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -520,7 +520,7 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article">
 <div id="header">
-<h1>CODAPPS: Adding Labels and Buttons to a Form</h1>
+<h1>CODAPPS: Adding Pictures to a Form</h1>
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
@@ -529,21 +529,9 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_1_some_preparations">1. Some preparations</a></li>
-<li><a href="#_2_adding_a_label_to_your_form">2. Adding a Label to your Form</a>
-<ul class="sectlevel3">
-<li><a href="#_a_a_piece_of_text_is_called_a_strong_label_strong_why">a. A piece of text is called a <strong>Label</strong>. Why?</a></li>
-<li><a href="#_b_concrete_steps_to_add_a_label_to_the_form">b. Concrete steps to add a Label to the Form</a></li>
-<li><a href="#_c_label_or_span_label">c. Label or Span Label?</a></li>
-</ul>
-</li>
-<li><a href="#_3_adding_a_button_to_your_form_and_your_first_action">3. Adding a Button to your Form - and your first Action!</a>
-<ul class="sectlevel3">
-<li><a href="#_a_adding_the_button">a. Adding the button</a></li>
-<li><a href="#_b_making_the_button_do_something">b. Making the button do something</a></li>
-<li><a href="#_c_step_by_step_creation_of_an_action_attached">c. Step-by-step creation of an action attached</a></li>
-</ul>
-</li>
+<li><a href="#_1_importing_a_picture_into_the_app">1. Importing a picture into the app</a></li>
+<li><a href="#_2_adding_a_picture_to_a_form">2. Adding a picture to a Form</a></li>
+<li><a href="#_3_setting_a_picture_as_the_background_of_a_form">3. Setting a picture as the background of a Form</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -552,7 +540,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-01-12</p>
+<p>last modified: 2018-01-14</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -565,31 +553,150 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_1_some_preparations">1. Some preparations</h2>
+<h2 id="_1_importing_a_picture_into_the_app">1. Importing a picture into the app</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Not sure what a Form is? Have a look at the previous lessons!</p>
+<p>Before a picture can be shown on the screen of your app, you must add the picture to the files of your app.</p>
 </div>
 <div class="paragraph">
-<p>To start this lesson, we will assume that you already created a Form called "Form1" and that you opened it in the GUI Builder, like this:</p>
+<p>Importing a picture in the files of the app should be done from the GUI Builder, in one click:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Opening-the-Form-we-created-to-work-on-it.png" alt="Opening the Form we created to work on it">
+<img src="images/Importing-from-the-GUI-Builder---does-not-work-at-the-moment.png" alt="Importing from the GUI Builder   does not work at the moment">
 </div>
-<div class="title">Figure 1. Opening the Form we created to work on it</div>
+<div class="title">Figure 1. Importing from the GUI Builder - does not work at the moment</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>So that you should now have the GUI Builder open to design your Form. Here is a recall of the different panels that compose the GUI Builder:</p>
+<p>But this simple way does not work at the moment (it will probably be fixed soon).</p>
+</div>
+<div class="paragraph">
+<p>So the alternative is to go somewhere else: in a place that used to be important to create the app, but which is now rarely used, except for cases like this.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>in the files of your project in NetBeans, spot the file named "theme.res" and double click on it:</p>
+</li>
+</ul>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Discovering-the-GUI-Builder.png" alt="Discovering the GUI Builder">
+<img src="images/Clicking-on-the-file-theme.res.png" alt="Clicking on the file theme.res">
 </div>
-<div class="title">Figure 2. Discovering the GUI Builder</div>
+<div class="title">Figure 2. Clicking on the file theme.res</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>&#8594; It launches a new window. Be patient, it takes a bit of time to open!</p>
+</div>
+<div class="paragraph">
+<p>Here is how the new window should look:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/A-new-window-opened.png" alt="A new window opened">
+</div>
+<div class="title">Figure 3. A new window opened</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>There, just go in the top menu, select 'Images' and choose "Add images":</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Selecting-Add-Images.png" alt="Selecting Add Images">
+</div>
+<div class="title">Figure 4. Selecting Add Images</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Simply choose the image that you would like to insert in your app. Guidelines:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>choose an image in '.jpg' or '.png' format</p>
+</li>
+<li>
+<p><strong>choose a small sized image</strong>: a file not bigger than 300kb.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Done! Save (File &#8594; Save) before you close this window, as we don&#8217;t need it anymore.</p>
+</div>
+<div class="paragraph">
+<p>You are now ready to use this pic in your app. Let&#8217;s see how to add it onto a Form:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_adding_a_picture_to_a_form">2. Adding a picture to a Form</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s try this with a Label. Open the GUI Builder of the Form, then place a Label on the Form:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Dragging-a-Label-onto-the-Form.png" alt="Dragging a Label onto the Form">
+</div>
+<div class="title">Figure 5. Dragging a Label onto the Form</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>If you have clicked on this little icon, you should now see many properties of the Label that you can modify:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Discovering-how-to-change-the-style-of-a-Label.png" alt="Discovering how to change the style of a Label">
+</div>
+<div class="title">Figure 6. Discovering how to change the style of a Label</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>So many properties that we can change! Feel free to explore them. For the moment, we want to add a picture:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on 'Bg Image'.</p>
+</li>
+<li>
+<p>If you imported correctly your image in the previous step (see above), you should see your picture available.</p>
+</li>
+<li>
+<p>Select it</p>
+</li>
+<li>
+<p>Click on its name at the bottom of the menu to close the window.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You should now see your picture on the Form:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Resizing-and-fitting-the-picture.png" alt="Resizing and fitting the picture">
+</div>
+<div class="title">Figure 7. Resizing and fitting the picture</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -597,290 +704,119 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_adding_a_label_to_your_form">2. Adding a Label to your Form</h2>
+<h2 id="_3_setting_a_picture_as_the_background_of_a_form">3. Setting a picture as the background of a Form</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_a_a_piece_of_text_is_called_a_strong_label_strong_why">a. A piece of text is called a <strong>Label</strong>. Why?</h4>
 <div class="paragraph">
-<p>As mentioned in a previous lesson, in coding and software development, things don&#8217;t have intuitive names:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For example, a "screen" is called a Form (we have explained this one before).</p>
-</li>
-<li>
-<p>Another example: every element to be put on the Form is going to be called a <strong>"Component"</strong>, so make sure you memorize this.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>And a Component that shows some text is going to be called&#8230;&#8203; a <strong>Label</strong>. Not "Text". Why?</p>
-</div>
-<div class="paragraph">
-<p><strong>Simply because calling it "Text" would be misleading</strong>. When you show some text on screen there is the text itself, <strong>but also its size, color, id, etc</strong>.</p>
-</div>
-<div class="paragraph">
-<p>&#8594; so <strong>"Label"</strong> is more accurate: a <strong>Label</strong> is made of a piece of text <strong>and</strong> a color, a size, some decorations (maybe bold? italic?), etc.</p>
-</div>
-<div class="paragraph">
-<p>With these explanations and clarifications made, we can now add a Label in our app!</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_b_concrete_steps_to_add_a_label_to_the_form">b. Concrete steps to add a Label to the Form</h4>
-<div class="paragraph">
-<p>Start by opening the 'Core Components' menu on the top right:</p>
+<p>So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Opening-the-Core-Components-menu.png" alt="Opening the Core Components menu">
+<img src="images/Nexus_4-smaller.png" alt="Nexus 4 smaller">
 </div>
-<div class="title">Figure 3. Opening the Core Components menu</div>
+<div class="title">Figure 8. An example of an app with a colored background</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>Then <strong>drag and drop a Label onto the Form</strong>. Place it where you prefer:</p>
+<p>In this case, we could create a Label and then resize it to take the entire space of the Form, but there is a better way:</p>
+</div>
+<div class="paragraph">
+<p>We can simply set the picture we want to the background of the Form itself. In the following, I am using a picture by <a href="https://www.flickr.com/photos/zooboing/5405160553">user Patrick Hoesly on Flickr</a>:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Drag---dropping-a-Label.png" alt="Drag   dropping a Label">
+<img src="images/green_background-smaller.png" alt="green background smaller">
 </div>
-<div class="title">Figure 4. Drag - dropping a Label</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_c_label_or_span_label">c. Label or Span Label?</h4>
-<div class="paragraph">
-<p>You may have noticed that a Component called "Span Label" also exists, right next to Label:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/A-Span-Label.png" alt="A Span Label">
-</div>
-<div class="title">Figure 5. A Span Label</div>
+<div class="title">Figure 9. a green background</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>Span Labels are like regular Labels, <strong>but their text can stretch on many lines</strong>, not just one. Even if this is a tiny difference, you have cases when one is more practical than the other.</p>
+<p>Just like we have seen, we need first to import this picture through the file 'theme.res' (see the top of this lesson for how to).</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_adding_a_button_to_your_form_and_your_first_action">3. Adding a Button to your Form - and your first Action!</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_a_adding_the_button">a. Adding the button</h4>
 <div class="paragraph">
-<p>Adding a Button is easy: just like we did for Labels, <strong>we just need to drag and drop the Button</strong> onto the Form:</p>
+<p>Then, set this picture as the "Bg Image" of the Form:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Drag---dropping-a-Button.png" alt="Drag   dropping a Button">
+<img src="images/Setting-an-image-as-the-background-of-the-Form.png" alt="Setting an image as the background of the Form">
 </div>
-<div class="title">Figure 6. Drag - dropping a Button</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_b_making_the_button_do_something">b. Making the button do something</h4>
-<div class="paragraph">
-<p>Of course the button, alone, is not interesting: it should do something when the user of the app touches it.</p>
-</div>
-<div class="paragraph">
-<p>You can launch the preview of your app (big green arrow in the NetBeans menu): you see in the preview that the button can be pressed, but nothing happens. <strong>We need to attach an Action to the button</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Actions can be very complex: for example, a gaming app has buttons making characters jump or run. Or a store app has buttons that select products and make payments&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>&#8594; <strong>All these actions happen through lines of code that need to be written</strong>.</p>
-</div>
-<div class="paragraph">
-<p>We are going to create a very simple action to illustrate the principle: <strong>pressing the button will change the text of the Label</strong></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_c_step_by_step_creation_of_an_action_attached">c. Step-by-step creation of an action attached</h4>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><strong>This is not completely stable. If the creation of the action does not work well:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Delete your button and create a new one</p>
-</li>
-<li>
-<p>Follow the steps carefully, without taking shortcuts</p>
-</li>
-<li>
-<p>Only if you have tried several times and things still don&#8217;t work, then you can report <a href="https://github.com/seinecle/codapps/issues">an issue here</a>.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>1.</strong> Make sure you have a Label on the Form - since we want to change its text with the Button!</p>
-</div>
-<div class="paragraph">
-<p>(you should have one as we created one, above in this lesson).</p>
-</div>
-<div class="paragraph">
-<p><strong>2.</strong> Select the button with your mouse and click on the three dots in the properties:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Selecting-the-Button.png" alt="Selecting the Button">
-</div>
-<div class="title">Figure 7. Selecting the Button</div>
+<div class="title">Figure 10. Setting an image as the background of the Form</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>This opens a new window.</p>
+<p>To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow in NetBeans.).</p>
 </div>
 <div class="paragraph">
-<p><strong>3.</strong> Give a name to the action and to the button</p>
+<p>You should get something like:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Giving-a-name-to-the-action-and-to-the-button.png" alt="Giving a name to the action and to the button">
+<img src="images/background-preview-1.png" alt="background preview 1">
 </div>
-<div class="title">Figure 8. Giving a name to the action and to the button</div>
+<div class="title">Figure 11. Background of the app - but with the top remaining blank</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
 <div class="paragraph">
-<p><strong>Common issue at this stage</strong></p>
+<p>This is quite good but we see that some room on the top of the app is not covered, because it is reserved space for the title of the Form.</p>
 </div>
 <div class="paragraph">
-<p>At this step <strong>if you clicked on "Cancel" without having given a name or a display name</strong>, the Button can get resized - becomes much bigger! (sometimes taking even the whole space of the Form, making it hard to spot since it covers everything).</p>
+<p>We can remove this white space on the top by adding two lines of code to the file 'MyApplication.java'.</p>
 </div>
 <div class="paragraph">
-<p>Solution: spot the "resize handles" of the Button and use them to drag the borders of the Button back to a smaller size.</p>
+<p>In the file 'MyApplication.java', spot the lines that say:</p>
 </div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>4.</strong> The GUI Builder should have switched automatically back to NetBeans (don&#8217;t worry the GUI Builder has not been closed)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The lines of code for an action have been automatically written in the file of your Form, which is called "Form1.java" if your Form is named Form1.</p>
-</li>
-<li>
-<p>These lines of code should look like:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Form1.java</div>
+<div id="anchor-2" class="listingblock">
+<div class="title">MyApplication.java</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">//-- DON'T EDIT ABOVE THIS LINE!!!</span>
-    <span class="directive">public</span> <span class="type">void</span> onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) { <i class="conum" data-value="1"></i><b>(1)</b>
-
-    } <i class="conum" data-value="2"></i><b>(2)</b>
-}</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This line is complicated but you can notice that the name of our Action appears in it ("UpdateLabelText").
-Notice also the <strong>opening curly brace</strong> at the end of the line: <strong>{</strong></td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This is a <strong>closing curly brace</strong>.</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Everything you write between the opening curly brace <strong>{</strong> and the closing curly brace <strong>}</strong> will be performed when the user touches the button.</p>
-</div>
-<div class="paragraph">
-<p>So let&#8217;s write the instruction to change the text of the Label!</p>
-</div>
-<div class="paragraph">
-<p>We are going to write just one line of code between the curly braces:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="local-variable">this</span>.gui_Label.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">pressed!</span><span class="delimiter">&quot;</span></span>);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>So that it looks like:</p>
-</div>
-<div class="listingblock">
-<div class="title">Form1.java</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">//-- DON'T EDIT ABOVE THIS LINE!!!</span>
-    <span class="directive">public</span> <span class="type">void</span> onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) {
-      <span class="local-variable">this</span>.gui_Label.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">pressed!</span><span class="delimiter">&quot;</span></span>); <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+    <span class="keyword">if</span> (current != <span class="predefined-constant">null</span>) {
+        current.show();
+        <span class="keyword">return</span>;
     }
+    Form1 myForm1 = <span class="keyword">new</span> Form1();
+    myForm1.show();
 }</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>the line we added between the curly braces.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Just add two lines of code precisely like this:</p>
+</div>
+<div id="anchor-2" class="listingblock">
+<div class="title">MyApplication.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+    <span class="keyword">if</span> (current != <span class="predefined-constant">null</span>) {
+        current.show();
+        <span class="keyword">return</span>;
+    }
+    Form1 myForm1 = <span class="keyword">new</span> Form1();
+    myForm1.getToolbar().setUIID(<span class="string"><span class="delimiter">&quot;</span><span class="content">Container</span><span class="delimiter">&quot;</span></span>);
+    myForm1.getToolbar().hideToolbar();
+    myForm1.show();
+}</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>You can now preview your app (big green arrow in NetBeans). Press the button in the preview, the effect should be:</p>
+<p>Now, if you launch the preview, your background should nicely cover the entire space of your screen:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Previewing-the-button-and-its-action.png" alt="Previewing the button and its action">
+<img src="images/background-preview-2.png" alt="background preview 2">
 </div>
-<div class="title">Figure 9. Previewing the button and its action</div>
+<div class="title">Figure 12. Background of the app - covering the entire screen</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>Congratulations! You learned how to place a Label (some text), a Button and  how to make it perform an action. This is a huge step! 🎉🎉🎉</p>
-</div>
-<div class="paragraph">
-<p>In the next lesson of this module, we are going to learn how to insert a picture in the app.</p>
-</div>
+<p>Congratulations! You learned how to place a picture onto a Form, and how to set a picture as the background of your app. It will look great! 🎉🎉🎉</p>
 </div>
 </div>
 </div>
@@ -943,7 +879,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-01-12 15:11:50 CET
+Last updated 2018-01-14 20:42:26 CET
 </div>
 </div>
 </body>

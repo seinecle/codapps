@@ -8,7 +8,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
@@ -81,7 +80,7 @@ image::Putting-the-correct-web-address.png[align="center",title="Putting the cor
 ** By default, updates are checked every week. Change this for “every startup”.
 
 //ST: !
-That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself!
+That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself! 🎉
 
 Just check if there is a bubble at the bottom right corner when you open NetBeans.
 

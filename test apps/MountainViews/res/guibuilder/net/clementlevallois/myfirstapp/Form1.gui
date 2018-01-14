@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="0.0" layeredLayoutPreferredHeightMM="0.0"  autolayout="true" title="Form1" name="Form1">
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="0.0" layeredLayoutPreferredHeightMM="0.0"  autolayout="true" styles="transparency:0; opacity:169; bgType:image_scaled_fill; bgImage:green_background.jpg;" unselectedStyles="bgType:image_scaled_fill;" title="Form1" name="Form1">
+  <component type="Label" text="" styles="fgColor:0; opacity:245; bgType:image_scaled; bgImage:risoul.jpg;" preferredSize="20.63492mm 9.259259mm" name="Label_1">
+    <layoutConstraint insets="19.401197% 41.94831% auto auto" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+  </component>
 </component>

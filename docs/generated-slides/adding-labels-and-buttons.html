@@ -86,10 +86,9 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Adding Labels and Buttons to a Form</h2><div class="preamble"><div class="paragraph"><p>last modified: 2018-01-12</p></div>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Adding Labels and Buttons to a Form</h2><div class="preamble"><div class="paragraph"><p>last modified: 2018-01-14</p></div>
 <div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
-<section></section>
 <section><div class="paragraph"><p>Not sure what a Form is? Have a look at the previous lessons!</p></div>
 <div class="paragraph"><p>To start this lesson, we will assume that you already created a Form called "Form1" and that you opened it in the GUI Builder, like this:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-the-Form-we-created-to-work-on-it.png" alt="Opening the Form we created to work on it" height="100%" /></div><div class="title">Figure 1. Opening the Form we created to work on it</div></section>
@@ -136,10 +135,9 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="paragraph"><p><strong>4.</strong> The GUI Builder should have switched automatically back to NetBeans (don&#8217;t worry the GUI Builder has not been closed)</p></div>
 <div class="ulist"><ul><li><p>The lines of code for an action have been automatically written in the file of your Form, which is called "Form1.java" if your Form is named Form1.</p></li><li><p>These lines of code should look like:</p></li></ul></div></section>
 <section><div class="listingblock"><div class="title">Form1.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="comment">//-- DON'T EDIT ABOVE THIS LINE!!!</span>
-    <span class="directive">public</span> <span class="type">void</span> onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) { <b>(1)</b>
+<span class="directive">public</span> <span class="type">void</span> onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) { <b>(1)</b>
 
-    } <b>(2)</b>
-}</code></pre></div></div>
+} <b>(2)</b></code></pre></div></div>
 <div class="colist arabic"><ol><li><p>This line is complicated but you can notice that the name of our Action appears in it ("UpdateLabelText").
 Notice also the <strong>opening curly brace</strong> at the end of the line: <strong>{</strong></p></li><li><p>This is a <strong>closing curly brace</strong>.</p></li></ol></div></section>
 <section><div class="paragraph"><p>Everything you write between the opening curly brace <strong>{</strong> and the closing curly brace <strong>}</strong> will be performed when the user touches the button.</p></div>
@@ -148,9 +146,8 @@ Notice also the <strong>opening curly brace</strong> at the end of the line: <st
 <section><div class="listingblock"><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="local-variable">this</span>.gui_Label.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">pressed!</span><span class="delimiter">&quot;</span></span>);</code></pre></div></div>
 <div class="paragraph"><p>So that it looks like:</p></div></section>
 <section><div class="listingblock" id="anchor-set-text-label-in-code"><div class="title">Form1.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="comment">//-- DON'T EDIT ABOVE THIS LINE!!!</span>
-    <span class="directive">public</span> <span class="type">void</span> onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) {
+<span class="directive">public</span> <span class="type">void</span> onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) {
       <span class="local-variable">this</span>.gui_Label.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">pressed!</span><span class="delimiter">&quot;</span></span>); <b>(1)</b>
-    }
 }</code></pre></div></div>
 <div class="colist arabic"><ol><li><p>the line we added between the curly braces.</p></li></ol></div></section>
 <section><div class="paragraph"><p>You can now preview your app (big green arrow in NetBeans). Press the button in the preview, the effect should be:</p></div></section>

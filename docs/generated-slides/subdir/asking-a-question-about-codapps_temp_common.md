@@ -7,7 +7,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../main/java
 
 
 
@@ -73,6 +72,9 @@ You must use a precise title (not just "it does not work"), and describe the pro
 
 //ST: !
 You will be notified by email when somebody replies to you!
+
+//ST: !
+IMPORTANT: when your issue receives an answer which solves your problem, *click on the CLOSE button* to put an end to the issue.
 
 == 4. Answering questions
 //ST: 4. Answering questions

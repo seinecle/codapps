@@ -8,7 +8,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../../main/java
 
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
@@ -60,7 +59,7 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 == 3. Restart NetBeans to finish the installation
 //ST: 3. Restart NetBeans to finish the installation
 
-Congratulations, you are ready to create your first mobile app!
+Congratulations, you are ready to create your first mobile app! 🎉
 
 == The end
 //ST: The end

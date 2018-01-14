@@ -37,6 +37,8 @@ public class MyApplication {
             return;
         }
         Form1 myForm1 = new Form1();
+        myForm1.getToolbar().setUIID("Container");
+        myForm1.getToolbar().hideToolbar();
         myForm1.show();
 
     }

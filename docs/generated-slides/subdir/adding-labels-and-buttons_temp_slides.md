@@ -22,7 +22,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 ==  !
 
-==  !
 Not sure what a Form is? Have a look at the previous lessons!
 
 To start this lesson, we will assume that you already created a Form called "Form1" and that you opened it in the GUI Builder, like this:
@@ -170,7 +169,6 @@ image::Giving-a-name-to-the-action-and-to-the-button.png[align="center",title="G
 At this step *if you clicked on "Cancel" without having given a name or a display name*, the Button can get resized - becomes much bigger! (sometimes taking even the whole space of the Form, making it hard to spot since it covers everything).
 
 Solution: spot the "resize handles" of the Button and use them to drag the borders of the Button back to a smaller size.
-
 ====
 
 
@@ -186,10 +184,9 @@ Solution: spot the "resize handles" of the Button and use them to drag the borde
 [source,java]
 ----
 //-- DON'T EDIT ABOVE THIS LINE!!!
-    public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) { // <1>
+public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) { // <1>
 
-    } //<2>
-}
+} //<2>
 ----
 <1> This line is complicated but you can notice that the name of our Action appears in it ("UpdateLabelText").
 Notice also the *opening curly brace* at the end of the line: *{*
@@ -212,14 +209,15 @@ this.gui_Label.setText("pressed!");
 So that it looks like:
 
 ==  !
+[[anchor-set-text-label-in-code]]
 .Form1.java
 [source,java]
 ----
 //-- DON'T EDIT ABOVE THIS LINE!!!
-    public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) {
+public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com.codename1.ui.Command cmd) {
       this.gui_Label.setText("pressed!"); // <1>
-    }
 }
+
 ----
 <1> the line we added between the curly braces.
 
