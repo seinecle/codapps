@@ -224,7 +224,7 @@ Congratulations! You learned how to place a picture onto a Form, and how to set 
 9. create a Button and attach an action to it.
 
 ==  !
-[start=7]
+[start=10]
 10. add a picture to the files of your app through theme.res
 11. add a picture onto a Form
 12. set a picture as the background of a Form.
