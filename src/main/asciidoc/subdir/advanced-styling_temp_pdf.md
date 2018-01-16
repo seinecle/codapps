@@ -37,7 +37,7 @@ image::preview-before-advanced-styling.png[align="center","An app promoting the 
 (note: the arrow next to "Go for a tour!" was added thanks to the "Icon" property of the Button, where I selected the pic "arrow" "from Material Icon")
 
 //ST: !
-I could change the color of the text of the Button by accessing the styling parameters available here:
+The color of the text of the Button can be changed by accessing the property "Fg Color" available here:
 
 //ST: !
 image::Styling-the-Components-from-the-GUI-Builder.png[align="center",title="Styling the Components from the GUI Builder"]
@@ -46,12 +46,12 @@ image::Styling-the-Components-from-the-GUI-Builder.png[align="center",title="Sty
 //ST: !
 But there are two limitations:
 
-- some parameters, even when you choose them in the properties, don't apply. For the Button, I tried to select a bold and italic "font name" in the properties and a blue font color, but they did not show on the preview.
+- some parameters, even when you choose them in the properties, don't apply. For the Button, try to select a bold and italic "font name" in the properties: it will not work (the Button will remain as it is).
 
 //ST: !
 - some parameters are simply not available in the GUI Builder. I'd like to put the phrase "Discover the beautiful landscapes... " at the center of the screen but the properties of the Label in the GUI Builder don't offer this possibility.
 
-TIP: The GUI Builder is constantly improving so it might change in the near future!
+TIP: The GUI Builder is constantly improving. When you will download an updated version of the plugin, things might be fixed!
 
 //ST: !
 When these situations arise, the solution is to work from a different location to apply your styles. Let's see how:
@@ -200,7 +200,7 @@ Again, *make sure theme.res is saved*. You can keep the window open.
 image::Refreshing-the-theme-to-see-the-changes-in-the-GUI-Builder.png[align="center",title="Refreshing the theme to see the changes in the GUI Builder"]
 {nbsp} +
 
-== 4. The case of Span Labels and Span Buttons
+== 5. The case of designing Span Labels and Span Buttons
 
 [[anchor-1]]
 
@@ -216,7 +216,7 @@ image::Difference-between-Label-and-SpanLabel.png[align="center",title="Differen
 {nbsp} +
 
 //ST: !
-When you want to apply a style that you have created to a Span Label or a Span Button, *you should be careful to shift to *advanced properties* to find the correct UIID property to change*:
+When you want to apply a style that you have created to a Span Label or a Span Button, *you should be careful to shift to [underline]#advanced properties# to find the correct UIID property to change*:
 
 //ST: !
 image::Switching-to-the-advanced-properties-of-the-Span-Label.png[align="center",title="Switching to the advanced properties of the Span Label"]

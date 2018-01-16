@@ -177,31 +177,6 @@ image::Previewing-the-Form-you-created!.png[align="center",title="Previewing the
 
 
 
-
-
-==  !
-*This is the end of the second module. You should now be able to:*
-
-==  !
-1. understand what a Component is.
-2. understand what an Action is.
-3. understand what a Form is.
-
-==  !
-[start=4]
-4. create a Form using simple lines of code.
-5. create a Form using the Graphical User Interface (GUI).
-6. understand what are the different panels of the GUI.
-
-==  !
-[start=7]
-7. trigger with a couple lines of code the opening of the Form you created with the GUI.
-8. create a Label
-9. create a Button and attach an action to it.
-
-==  !
-*In the next module, we are going to learn how to style Components so that you can design your app exactly as you desire!*
-
 ==  The end
 
 ==  !

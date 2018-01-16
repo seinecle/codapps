@@ -9,7 +9,6 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:sourcedir: ../../../../main/java
 
 
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
@@ -92,7 +91,7 @@ image::Discovering-how-to-change-the-style-of-a-Label.png[align="center",title="
 So many properties that we can change! Feel free to explore them. For the moment, we want to add a picture:
 
 //ST: !
-- Click on 'Bg Image'.
+- Click on the right of the line of 'Bg Image', where there are 3 dots.
 - If you imported correctly your image in the previous step (see above), you should see your picture available.
 - Select it
 - Click on its name at the bottom of the menu to close the window.
@@ -224,7 +223,7 @@ Congratulations! You learned how to place a picture onto a Form, and how to set 
 You are now well equipped to build apps with beautiful UI (user interface). Go and create something beautiful!
 
 //ST: !
-*In the next module, we are going to learn how test and release your app for Android an iPhones!
+*In the next module, we are going to learn how test and release your app for Android an iPhones!*
 
 == The end
 //ST: The end

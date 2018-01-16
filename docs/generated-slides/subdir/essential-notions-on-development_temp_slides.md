@@ -1,33 +1,9 @@
-= CODAPPS: Essential vocabulary and preliminary notions
-Clément Levallois <levallois@em-lyon.com>
-2017-12-26
+= Essential vocabulary and preliminary notions
 
-last modified: {docdate}
-
-:icons!:
-:source-highlighter: rouge
-:iconsfont:   font-awesome
-:revnumber: 1.0
-:example-caption!:
-
-
-:title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
-
-[.stretch]
-image::EMLyon_logo_corp.png[width="242" align="center"]
-
-
-==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
-
-==  1. A note on components and actions
-
-==  !
 ==== a. Components
 
-==  !
 A mobile app can *include* many things. These are like the Lego blocks of our app:
 
-==  !
 - pictures
 - buttons to press
 - videos
@@ -35,19 +11,15 @@ A mobile app can *include* many things. These are like the Lego blocks of our ap
 - a menu to navigate the app
 - etc.
 
-==  !
 [IMPORTANT]
 ====
 Things included in an app are called *Components*
 ====
 
-==  !
 ==== b. Actions
 
-==  !
 And the app is also supposed to *do* many things, for example:
 
-==  !
 - open a web page when the user clicks a button
 - change the picture when the user swaps left
 - zoom in when the user double taps on the screen
@@ -59,110 +31,119 @@ And the app is also supposed to *do* many things, for example:
 All an app can "do", we will call these *Actions*
 ====
 
-==  2. The difficulty of naming things
 
-==  !
 When building software like mobile apps, it is important to give precise names to the tools we use.
 
 Often, these names don't make intuitive sense, and this creates an impression of technical difficulty:
 
-==  !
 [.stretch]
-image::Zach-Galifianakis-maths.gif[align="center",title="Getting confused by the technical vocabulary"]
+image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
 
+{nbsp} +
 
-==  !
 It is not to be annoying, but to make sure we actually get the proper tool when we need it. Every domain of specialty, not just programmers, do this.
 
-==  !
-For instance:
+For instance, the screen showing our mobile application is not simply called a screen... why?
 
-- we will design the screens of our first mobile application.
-- these screens, showing the content of our app, are not simply called "screen"... why?
-
-==  !
 1. Because `screen` is a name already taken, to name the phone's actual physical screen (the one that breaks when your phone falls on the ground)
 2. So, what name should be given instead to the area an app takes on the screen of the phone: "ScreenApp"? "Region"? "FullSizeAppRegion? EmptyScreenOfTheAppWhereToPutThings"? None of this.
 
-->  The name chosen is `*Form*`.
+->  The designers of the tool chose the name `*Form*`.
 
-==  !
 [IMPORTANT]
 ====
 *A Form is the first Component we need when creating a mobile app.*
 
-*It is the empty region taking all the space of the phone's screen, where we will draw the app (text, buttons, etc.)*
+*It is the empty region of the app where we will place all other Components*.
 ====
 
-==  !
 Because of this need for precise names, you will see that:
 
 - adding text to the app, we will use a Component named `*Label*` (not Text)
 - adding pictures to the app, we will use a Component named `*Image*` (not Picture)
 - adding buttons to the app, we will use a `*Button*` Component (this one is intuitive!)
 
-==  3. Two approaches to work on mobile apps
 
-==  !
 To sum up what we have seen so far:
 
 - when we start designing an app, we need to create a `Form` first.
 - Then we will place Components in the Form: Buttons, Labels, Images, etc.
 - Then we can attach actions to each of these components (a "click action" on a button, etc)
 
-==  !
-How will you do that in practice? Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.
+How will you do that in practice? There are two ways.
 
-==  !
+==== a. DIY or the Ikea way?
+
+Building a new mobile app is like building a new piece of furniture : you can build it yourself from scratch, or buy it at Ikea and just assemble it.
+
 Codename One, the framewok we use, gives you these two options: Do It YourSelf (DYI) or Ikea.
 
 - DYI: write the code to create everything in the app.
-- IKEA: use a *"Graphical User Interface" (GUI)*, which means we "draw" our app by click and point (a bit like in Photoshop), with a minimum of code to write.
+- IKEA: use a *"Graphical User Interface" (GUI)*, which means you drag and drop things to build the app with a minimum of code to write.
 
 There are different benefits to both approaches:
 
-==  !
 [cols=3*,options="header"]
 |===
 |                         | Do It Yourself / writing code| Ikea approach / using a Graphical User Interface (GUI)
 
 | *Benefits*                |Very flexible! You control every parameter since you write everything yourself | Quick and easy! You just drag and drop things, click and point with the mouse, no need to learn how to code.
 |===
-
-==  !
 |===
 
-|*Inconvenients* | You need to learn how to code. Slow since you write everything yourself. | You get stuck at some point: some features you need for you mobile app are too specific to be available. Writing code is going to be necessary.
+|*Inconvenients* | You need to learn how to code. Slow since you write everything yourself. | You get stuck at some point: to add features to your mobile app, not everything is in the GUI. Writing code is going to be necessary.
 
 |===
 
-==  !
-In the next lesson of this module, we are going how to see how to create a Form for our app, using the two methods alternatively: by writing code or by using the Graphical User Interface.
 
-==  The end
+==== b. An example: creating a form by writing some code (DYI approach)
 
-==  !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+You write the code in NetBeans, in the files of your app. These files are visible here:
 
-==  !
-Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+[.stretch]
+image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The files of your app visible in NetBeans"]
 
-==  !
-Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).
-You are free to:
+{nbsp} +
 
-- copy and redistribute the material in any medium or format
-- Adapt — remix, transform, and build upon the material
+Double click on the file `MyApplication.java` to see its content on the right panel in NetBeans:
 
-=> for any purpose, even commercially.
+[.stretch]
+image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
 
-==  !
-image:round_portrait_mini_150.png[align="center", role="right"]
-This course is designed by Clement Levallois.
+{nbsp} +
 
-Discover my other courses in data / tech for business: http://www.clementlevallois.net
+When we created the project, an empty screen was added to it by default.
 
-Or get in touch via Twitter: https://www.twitter.com/seinecle[@seinecle]
+You can see this empty screen by previewing your app (click on the green arrow in NetBeans, or get back to the lesson here)
+
+
+How was this empty screen added to the app?
+
+Simply with these 2 lines of code in the file `MyApplication.java` (scroll down a bit in NetBeans, as they are in the middle of the file):
+
+.MyApplication.java
+[source,java]
+----
+public void start() {
+    if(current != null){
+        current.show();
+        return;
+    }
+    Form hi = new Form("Hi World", BoxLayout.y()); // <1>
+    hi.add(new Label("Hi World")); // <2>
+    hi.show(); // <3>
+}
+----
+<1> This line creates the screen with a title and an horizontal layout
+<2> This line adds a piece of text saying ("Hi World"). It could have been removed.
+<3> This line causes the screen to appear (otherwise it would remain hidden)
+
+==== c. Another example: creating a form without code - with the GUI (the Ikea approach)
+
+(in progress)
+
+
+<<<
 pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11592657;

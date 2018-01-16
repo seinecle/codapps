@@ -203,7 +203,7 @@
                                         <statcounter-security>${statcounter-security}</statcounter-security>
                                         <asciimath>asciimath</asciimath>
                                         <doc-to-process>${doc-to-process}</doc-to-process>
-                                        <refresh-pics>${refresh-pics}</refresh-pics>
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
                                     </attributes>
                                     <extensions>
                                         <extension>
@@ -231,8 +231,7 @@
                                         <pagenums/>
                                         <toc/>
                                         <doc-to-process>${doc-to-process}</doc-to-process>
-                                        <refresh-pics>${refresh-pics}</refresh-pics>
-
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
                                     </attributes>
                                     <extensions>
                                         <extension>
@@ -272,7 +271,7 @@
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
                                         <doc-to-process>${doc-to-process}</doc-to-process> 
-                                        <refresh-pics>${refresh-pics}</refresh-pics>
+                                        <refresh-pics>${refresh.pics}</refresh-pics>
                                     </attributes>
                                 </configuration>
                             </execution>
