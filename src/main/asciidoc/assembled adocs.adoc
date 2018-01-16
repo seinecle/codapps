@@ -1,0 +1,23 @@
+= CODAPPS: Learn how to build your first mobile app, for beginners
+Clément Levallois <levallois@em-lyon.com>
+:revnumber: 1.0 
+:revdate: 30-12-2017
+last modified: {docdate}
+:icons!:
+:iconsfont:   font-awesome
+:revnumber: 1.0
+:example-caption!:
+ifndef::imagesdir[:imagesdir: ../images]
+
+
+include::book chapters/asking-a-question-about-codapps.adoc[]
+
+include::book chapters/installing-netbeans-for-PC.adoc[]
+
+include::book chapters/installing-netbeans-for-MAC.adoc[]
+
+include::book chapters/checking-for-plugin-updates.adoc[]
+
+include::book chapters/creating-your-first-project-and-previewing-your-app.adoc[]
+
+include::book chapters/essential-notions-on-development.adoc[]
