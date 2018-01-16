@@ -1,2 +1,0 @@
-statcounter-project=11592657
-statcounter-security=5154b75d
