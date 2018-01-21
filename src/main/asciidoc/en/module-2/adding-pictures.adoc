@@ -22,6 +22,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 //ST: !
 == 1. Importing a picture into the app
+//ST: 1. Importing a picture into the app
 
 Before a picture can be shown on the screen of your app, you must add the picture to the files of your app.
 
@@ -68,6 +69,7 @@ Done! Save (File -> Save) before you close this window, as we don't need it anym
 You are now ready to use this pic in your app. Let's see how to add it onto a Form:
 
 == 2. Adding a picture to a Form
+//ST: 2. Adding a picture to a Form
 
 The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.
 
@@ -98,6 +100,7 @@ You should now see your picture on the Form:
 image::https://docs.google.com/drawings/d/e/2PACX-1vRvxzfaqv8_IT2OOVQnGQd5W4W_b86tcgQkk6dZlZv4JcD-jjPGDk2eJc_qsfEje5OhX_kMuNGLIcN3/pub?w=1440&h=1080[align="center",title="Resizing and fitting the picture"]
 
 == 3. Setting a picture as the background of a Form
+//ST: 3. Setting a picture as the background of a Form
 
 //ST: !
 So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:
@@ -209,10 +212,10 @@ Congratulations! You learned how to place a picture onto a Form, and how to set 
 12. set a picture as the background of a Form.
 
 //ST: !
-You are now well equipped to build apps with beautiful UI (user interface). Go and create something beautiful!
+You are now well equipped to work with the building blocks of the user interface (UI) of your app.
 
 //ST: !
-*In the next module, we are going to learn how test and release your app for Android an iPhones!*
+*In the next module, we are going to learn how to style and place all these different Components exactly where you want them to be on screen, to achieve the design you have in mind.*
 
 == The end
 //ST: The end

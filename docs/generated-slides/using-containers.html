@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>CODAPPS: Using containers</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Using containers</h2><div class="preamble"><div class="paragraph"><p>last modified: 2018-01-21</p></div>
+<div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2><div class="admonitionblock warning"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>You should have learned the previous lesson on Layouts before starting this one.</p></div></td></tr></table></div></section>
+<section id="_1_definition_of_containers"><h2>1. Definition of Containers</h2></section>
+<section><div class="paragraph"><p>We introduce the notion of Containers by showing one limit of Forms and Layouts:</p></div>
+<div class="paragraph"><p>Layouts help us organize the space of the Form but&#8230;&#8203; the whole Form gets impacted all at once.</p></div></section>
+<section><div class="paragraph"><p>What if we prefer to have, say, the top of the Form organized as a Grid, and the bottom part of the Form organized with a Box Y Layout?</p></div>
+<div class="paragraph"><p>We can&#8217;t achieve this simply by applying a Layout to a Form. We need different layouts applied to different groups of Components.</p></div>
+<div class="paragraph"><p><strong>This is what Containers will help us achieve.</strong></p></div></section>
+<section><div class="paragraph"><p>A container is a Component that you can find in the <strong>Core Components</strong>, like the others:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Finding-the-Container-among-Core-Components.png" alt="Finding the Container among Core Components" height="100%" /></div><div class="title">Figure 1. Finding the Container among Core Components</div></section>
+<section><div class="paragraph"><p>The difference with other Components is that when you drag and drop a Container on the Form, it remains invisible.</p></div>
+<div class="paragraph"><p>This is normal.</p></div></section>
+<section><div class="exampleblock"><div class="content"><div class="paragraph"><p><strong>A Container&#8217;s role is not to show something, but only to help grouping some Components together, so that a Layout can be applied specifically to them.</strong></p></div></div></div></section>
+<section id="_2_placing_components_in_and_out_of_containers"><h2>2. Placing Components in and out of Containers</h2></section>
+<section><div class="paragraph"><p>Once the Container is dragged and dropped onto the Form, we need to place Components in it (an empty Container has no purpose).</p></div>
+<div class="paragraph"><p>Let&#8217;s imagine we have 5 Labels in our Form, and then we added a Container:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/5-labels-and-a-container.png" alt="5 labels and a container" height="100%" /></div><div class="title">Figure 2. 5 labels and a container</div></section>
+<section><div class="paragraph"><p>To move a Label or place it in the Container, we must select it and <strong>use these arrows</strong>:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Moving-the-Labels-or-placing-them-in-the-container.png" alt="Moving the Labels or placing them in the container" height="100%" /></div><div class="title">Figure 3. Moving the Labels or placing them in the container</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Showing-the-content-of-a-Container.png" alt="Showing the content of a Container" height="100%" /></div><div class="title">Figure 4. Showing the content of a Container</div></section>
+<section><div class="paragraph"><p>If we need to move a Component <span class="underline">out</span> of a Container, we must simply:</p></div>
+<div class="ulist"><ul><li><p>select it</p></li><li><p>move it up or down until it leaves the Container</p></li><li><p>we know the Component has left the Container when it not indented anymore.</p></li></ul></div></section>
+<section><div class="paragraph"><p>All this moving around of Containers and Components is a gymnastics which requests some practice, so <strong>take the time to exercise on simple cases</strong> like the one above.</p></div></section>
+<section id="_3_applying_a_layout_to_a_container"><h2>3. Applying a Layout to a Container</h2></section>
+<section><div class="paragraph"><p>This is straightforward: all you need to do is:</p></div></section>
+<section><div class="ulist"><ul><li><p>select your Container,</p></li><li><p>click on the icon for layout,</p></li><li><p>select the layout you need</p></li><li><p>for a definition of each layout, see the previous lesson</p></li></ul></div></section>
+<section><div class="paragraph"><p>These steps shown in the GUI Builder:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Applying-a-layout-to-a-container.png" alt="Applying a layout to a container" height="100%" /></div><div class="title">Figure 5. Applying a layout to a container</div></section>
+<section><div class="paragraph"><p>The power of Containers comes <strong>when several of them</strong> are in use:  we can apply different layouts to each of them, achieving full flexibility for the design of our app.</p></div></section>
+<section id="_4_applying_different_layouts_to_different_containers"><h2>4. Applying different Layouts to different Containers</h2></section>
+<section><div class="paragraph"><p>Creating several containers on a Form allows to have different layouts applied to different groups of Components on the Form!</p></div></section>
+<section><div class="paragraph"><p>To illustrate: what if we want to have this kind of layout on our screen?</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Another-of-a-layout.png" alt="Another of a layout" height="100%" /></div><div class="title">Figure 6. Another of a layout</div></section>
+<section><div class="paragraph"><p>We can add several Containers on the Form, place some Components in each of them, and apply different Layouts to each of them.</p></div></section>
+<section><div class="paragraph"><p>Spend 5 minutes imagining how many Containers, and what type of Layouts, you&#8217;d need to achieve this effect in practice?</p></div>
+<div class="paragraph"><p>You can use a pen and paper to sketch your solution.</p></div></section>
+<section><div class="paragraph"><p>Ok? The solution is the following:</p></div></section>
+<section><div class="ulist"><ul><li><p>Put the Form in a Border Layout.</p></li><li><p>Add a Label for "Learn English with my app!", put it in the North position</p></li><li><p>Add a Label for "Open the Dictionary", put it in the South position</p></li><li><p>(nothing in West and East positions)</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>Add a Container in the Center position (let&#8217;s call it "Vocabulary Container")</p></li><li><p>Apply a Grid Layout to this Container, with 2 rows and 2 columns</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>Add 4 new Containers in the Vocabulary Container</p></li><li><p>Apply to each of these Containers a "Border" Layout</p></li><li><p>In each of these Containers, add a ScaledLabel for the picture in Center position</p></li><li><p>In each of these Containers, add a Label for the caption in South position</p></li></ul></div>
+<div class="admonitionblock note"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>It might look long and complicated but this is actually nothing unusual for software development: constructing a precise interface takes time and trial and error. <strong>You need to practice</strong>.</p></div></td></tr></table></div></section>
+<section><div class="paragraph"><p><strong>This is the end of the third module. You should now be able to:</strong></p></div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>Style your components from the GUI Builder and from theme.res</p></li><li><p>Be able to quickly switch from the GUI Builder and the file theme.res to update and refresh your styles</p></li><li><p>Understand what a Layout is</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>Play with different layouts</p></li><li><p>Understand what role Containers play</p></li><li><p>Place Components in and out Containers, re-order Components</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="7"><li><p>Apply different layouts to different containers</p></li><li><p>With some practice, create exactly the look you need for your app.</p></li></ol></div></section>
+<section><div class="paragraph"><p>You are now well equipped to achieve a very clean design for your apps. Congratulations! 🎉🎉🎉🎉🎉🎉</p></div></section>
+<section><div class="paragraph"><p><strong>In the next module, we are going to learn how to test and release your app for Android an iPhones!</strong></p></div></section>
+<section id="_the_end"><h2>The end</h2></section>
+<section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p></div></section>
+<section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>
+<section><div class="paragraph"><p>Licence: Creative Commons, <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Attribution 4.0 International</a> (CC BY 4.0).
+You are free to:</p></div>
+<div class="ulist"><ul><li><p>copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li></ul></div>
+<div class="paragraph"><p>&#8658; for any purpose, even commercially.</p></div></section>
+<section><div class="paragraph"><p><span class="image right"><img src="images/round_portrait_mini_150.png" alt="round portrait mini 150" /></span>
+This course is designed by Clement Levallois.</p></div>
+<div class="paragraph"><p>Discover my other courses in data / tech for business: <a href="http://www.clementlevallois.net" class="bare">http://www.clementlevallois.net</a></p></div>
+<div class="paragraph"><p>Or get in touch via Twitter: <a href="https://www.twitter.com/seinecle">@seinecle</a>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11592657;
+        var sc_invisible = 1;
+        var sc_security = "11592657";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11592657/0/11592657/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'white',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 10.0,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>

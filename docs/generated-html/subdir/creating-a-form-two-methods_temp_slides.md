@@ -19,8 +19,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-
-==  !
+==  1. Creating a Form and a Label by writing some code (DYI approach)
 
 Not sure what a Form is? Have a look at the previous lesson!
 
@@ -80,6 +79,7 @@ public void start() {
 So this is how you add a Form by writing some code in a file. But in this course, *we will first use almost no coding at all*. We will use instead a simpler approach:
 
 ==  !
+==  2. Another possibility: creating a form without coding - with the GUI
 
 In the previous lesson we had called this method the "Ikea approach": we just assemble pre-existing blocks, without designing the whole furniture ourself.
 
@@ -173,7 +173,6 @@ Now, launching the app preview will show our Form1! It still empty but it is a g
 ==  !
 [.stretch]
 image::Previewing-the-Form-you-created!.png[align="center",title="Previewing the Form you created!"]
-
 
 
 

@@ -90,7 +90,8 @@ table.CodeRay td.code>pre{padding:0}
 <div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section><div class="admonitionblock warning"><table><tr><td class="icon"><div class="title"></div></td><td class="content">this is a pretty intense lesson. You need to be execute the steps precisely for things to work correctly.</td></tr></table></div></section>
-<section><div class="paragraph"><p>So far, we have learned how to create a Form, how to place Components (text, pictures, buttons) on it and how to get these Components organized on screen.</p></div>
+<section></section>
+<section id="_1_limitations_to_styling_components_in_the_gui_builder"><h2>1. Limitations to styling Components in the GUI Builder.</h2><div class="paragraph"><p>So far, we have learned how to create a Form, how to place Components (text, pictures, buttons) on it and how to get these Components organized on screen.</p></div>
 <div class="paragraph"><p>Using a <strong>Span Label</strong>, a <strong>Scaled Label for the picture</strong> and a <strong>Button</strong>, all in a Box Y Layout, we get this result:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/preview-before-advanced-styling.png" alt="preview before advanced styling" width="An app promoting the Guillestre and Queyras regions" /></div></section>
 <section><div class="paragraph"><p>(note: the arrow next to "Go for a tour!" was added thanks to the "Icon" property of the Button, where I selected the pic "arrow" "from Material Icon")</p></div></section>
@@ -100,8 +101,8 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist"><ul><li><p>some parameters, even when you choose them in the properties, don&#8217;t apply. For the Button, try to select a bold and italic "font name" in the properties: it will not work (the Button will remain as it is).</p></li></ul></div></section>
 <section><div class="ulist"><ul><li><p>some parameters are simply not available in the GUI Builder. I&#8217;d like to put the phrase "Discover the beautiful landscapes&#8230;&#8203; " at the center of the screen but the properties of the Label in the GUI Builder don&#8217;t offer this possibility.</p></li></ul></div>
 <div class="admonitionblock tip"><table><tr><td class="icon"><div class="title"></div></td><td class="content">The GUI Builder is constantly improving. When you will download an updated version of the plugin, things might be fixed!</td></tr></table></div></section>
-<section><div class="paragraph"><p>When these situations arise, the solution is to work from a different location to apply your styles. Let&#8217;s see how:</p></div>
-<div class="paragraph"><p>In the files of your project in NetBeans, spot the file named "theme.res". We have already used it to import pictures, in a previous lesson.</p></div>
+<section><div class="paragraph"><p>When these situations arise, the solution is to work from a different location to apply your styles. Let&#8217;s see how:</p></div></section>
+<section id="_2_using_theme_res_to_create_a_custom_style"><h2>2. Using theme.res to create a custom style</h2><div class="paragraph"><p>In the files of your project in NetBeans, spot the file named "theme.res". We have already used it to import pictures, in a previous lesson.</p></div>
 <div class="paragraph"><p>Double click on it:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Clicking-on-the-file-theme.res.png" alt="Clicking on the file theme.res" height="100%" /></div><div class="title">Figure 2. Clicking on the file theme.res</div></section>
 <section><div class="paragraph"><p>&#8594; It launches a new window. Be patient, it takes a bit of time to open!</p></div>
@@ -128,8 +129,8 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/The-new-style-in-the-list-of-available-styles..png" alt="The new style in the list of available styles." height="100%" /></div><div class="title">Figure 9. The new style in the list of available styles.</div></section>
 <section><div class="paragraph"><p>You can leave the window theme.res opened, <strong>but make sure you save the changes you just made (File &#8594; Save)</strong>.</p></div>
 <div class="paragraph"><p>(if you don&#8217;t save, the GUI Builder will not be able to find and use the new style you created).</p></div></section>
-<section><div class="paragraph"><p>We are now ready to come back in the GUI Builder of our Form, and use this style to change the appearance of our button.</p></div>
-<div class="paragraph"><p>Let&#8217;s open our Form in the GUI Builder.</p></div>
+<section><div class="paragraph"><p>We are now ready to come back in the GUI Builder of our Form, and use this style to change the appearance of our button.</p></div></section>
+<section id="_3_using_our_custom_style_in_the_gui_builder"><h2>3. Using our custom style in the GUI Builder</h2><div class="paragraph"><p>Let&#8217;s open our Form in the GUI Builder.</p></div>
 <div class="paragraph"><p>To change the style of our Button to "ButtonItalicBlue" that we just created, we simply need to modify the property "UIID":</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-the-GUI-Builder-and-changing-the-property-UIID.png" alt="Opening the GUI Builder and changing the property UIID" height="100%" /></div><div class="title">Figure 10. Opening the GUI Builder and changing the property UIID</div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/The-text-of-the-Button-is-now-in-italics-and-blue.png" alt="The text of the Button is now in italics and blue" height="100%" /></div><div class="title">Figure 11. The text of the Button is now in italics and blue</div></section>
@@ -137,8 +138,8 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph"><p>How to fix this?</p></div>
 <div class="paragraph"><p>The basic principle is the same: what you can&#8217;t fix in the GUI Builder, you fix it in theme.res</p></div></section>
 <section><div class="paragraph"><p>It can be annoying to open theme.res, change styles, close theme.res, open the GUI Builder, then open theme.res again to fix things&#8230;&#8203;</p></div>
-<div class="paragraph"><p>Luckily there is an easy way to work between the GUI Builder and theme.res.</p></div>
-<div class="paragraph"><p>The workflow is simple:</p></div></section>
+<div class="paragraph"><p>Luckily there is an easy way to work between the GUI Builder and theme.res.</p></div></section>
+<section id="_4_editing_styles_easily_between_the_gui_builder_and_theme_res"><h2>4. Editing styles easily between the GUI Builder and theme.res</h2><div class="paragraph"><p>The workflow is simple:</p></div></section>
 <section><div class="ulist"><ul><li><p>Open theme.res and keep it open</p></li><li><p>Open the GUI Builder and keep it open</p></li><li><p>modify the style in theme.res. <strong>Of course this time we don&#8217;t add a new style, we <span class="underline">edit</span> ButtonItalic Blue</strong>:</p></li></ul></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Editing-the-style-ButtonItalicBlue-we-created.png" alt="Editing the style ButtonItalicBlue we created" height="100%" /></div><div class="title">Figure 12. Editing the style ButtonItalicBlue we created</div>
 <div class="paragraph"><p>A new window opens: the place we have already seen, where you can change many aspects of style.</p></div></section>
@@ -146,6 +147,7 @@ table.CodeRay td.code>pre{padding:0}
 <section><div class="paragraph"><p>Again, <strong>make sure theme.res is saved</strong>. You can keep the window open.</p></div>
 <div class="ulist"><ul><li><p>Go back to the GUI Builder and click on an icon near the top right: it will "reload" and apply the modifications you made to theme.res:</p></li></ul></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Refreshing-the-theme-to-see-the-changes-in-the-GUI-Builder.png" alt="Refreshing the theme to see the changes in the GUI Builder" height="100%" /></div><div class="title">Figure 14. Refreshing the theme to see the changes in the GUI Builder</div></section>
+<section id="_5_the_case_of_designing_span_labels_and_span_buttons"><h2>5. The case of designing Span Labels and Span Buttons</h2></section>
 <section><h3>a. The case of Span Labels</h3></section>
 <section><div class="paragraph"><p>Span Labels or Span buttons are convenient alternatives to Labels and Buttons, because when the text is too long on them it overflows on several lines instead of being cut:</p></div></section>
 <section><div class="imageblock stretch" style="text-align: center"><img src="images/Difference-between-Label-and-SpanLabel.png" alt="Difference between Label and SpanLabel" height="100%" /></div><div class="title">Figure 15. Difference between Label and SpanLabel</div></section>

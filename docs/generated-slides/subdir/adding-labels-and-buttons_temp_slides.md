@@ -21,6 +21,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 
 ==  !
+==  1. Some preparations
 
 Not sure what a Form is? Have a look at the previous lessons!
 
@@ -40,6 +41,7 @@ image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI
 
 
 
+==  2. Adding a Label to your Form
 
 ==  !
 ==== a. A piece of text is called a *Label*. Why?
@@ -93,6 +95,7 @@ image::A-Span-Label.png[align="center",title="A Span Label"]
 Span Labels are like regular Labels, *but their text can stretch on many lines*, not just one. Even if this is a tiny difference, you have cases when one is more practical than the other.
 
 
+==  3. Adding a Button to your Form - and your first Action!
 
 ==  !
 ==== a. Adding the button

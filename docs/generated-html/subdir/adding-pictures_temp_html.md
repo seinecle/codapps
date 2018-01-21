@@ -22,6 +22,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 //ST: !
 == 1. Importing a picture into the app
+//ST: 1. Importing a picture into the app
 
 Before a picture can be shown on the screen of your app, you must add the picture to the files of your app.
 
@@ -72,6 +73,7 @@ Done! Save (File -> Save) before you close this window, as we don't need it anym
 You are now ready to use this pic in your app. Let's see how to add it onto a Form:
 
 == 2. Adding a picture to a Form
+//ST: 2. Adding a picture to a Form
 
 The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.
 
@@ -105,6 +107,7 @@ image::Resizing-and-fitting-the-picture.png[align="center",title="Resizing and f
 {nbsp} +
 
 == 3. Setting a picture as the background of a Form
+//ST: 3. Setting a picture as the background of a Form
 
 //ST: !
 So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:

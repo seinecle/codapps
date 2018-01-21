@@ -6,7 +6,7 @@ last modified: {docdate}
 
 :icons!:
 :source-highlighter: rouge
-:iconsfont:   font-awesome
+:iconsfont: font-awesome
 :revnumber: 1.0
 :example-caption!:
 
@@ -23,6 +23,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 WARNING: this is a pretty intense lesson. You need to be execute the steps precisely for things to work correctly.
 
 ==  !
+==  1. Limitations to styling Components in the GUI Builder.
 
 So far, we have learned how to create a Form, how to place Components (text, pictures, buttons) on it and how to get these Components organized on screen.
 
@@ -57,6 +58,7 @@ TIP: The GUI Builder is constantly improving. When you will download an updated 
 ==  !
 When these situations arise, the solution is to work from a different location to apply your styles. Let's see how:
 
+==  2. Using theme.res to create a custom style
 
 In the files of your project in NetBeans, spot the file named "theme.res". We have already used it to import pictures, in a previous lesson.
 
@@ -154,6 +156,7 @@ You can leave the window theme.res opened, *but make sure you save the changes y
 ==  !
 We are now ready to come back in the GUI Builder of our Form, and use this style to change the appearance of our button.
 
+==  3. Using our custom style in the GUI Builder
 
 Let's open our Form in the GUI Builder.
 
@@ -181,6 +184,7 @@ It can be annoying to open theme.res, change styles, close theme.res, open the G
 
 Luckily there is an easy way to work between the GUI Builder and theme.res.
 
+==  4. Editing styles easily between the GUI Builder and theme.res
 
 The workflow is simple:
 
@@ -211,12 +215,12 @@ Again, *make sure theme.res is saved*. You can keep the window open.
 image::Refreshing-the-theme-to-see-the-changes-in-the-GUI-Builder.png[align="center",title="Refreshing the theme to see the changes in the GUI Builder"]
 
 
+==  5. The case of designing Span Labels and Span Buttons
 
 [[anchor-1]]
 
 ==  !
 ==== a. The case of Span Labels
-
 
 ==  !
 Span Labels or Span buttons are convenient alternatives to Labels and Buttons, because when the text is too long on them it overflows on several lines instead of being cut:

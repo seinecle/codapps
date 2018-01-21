@@ -9,6 +9,7 @@ last modified: {docdate}
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
+:sourcedir: ../../../../main/java
 
 
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
@@ -21,6 +22,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 //ST: !
 == 1. Some preparations
+//ST: 1. Some preparations
 
 Not sure what a Form is? Have a look at the previous lessons!
 
@@ -39,6 +41,7 @@ image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI
 
 
 == 2. Adding a Label to your Form
+//ST: 2. Adding a Label to your Form
 
 //ST: !
 ==== a. A piece of text is called a *Label*. Why?
@@ -90,6 +93,7 @@ Span Labels are like regular Labels, *but their text can stretch on many lines*,
 
 
 == 3. Adding a Button to your Form - and your first Action!
+//ST: 3. Adding a Button to your Form - and your first Action!
 
 //ST: !
 ==== a. Adding the button
