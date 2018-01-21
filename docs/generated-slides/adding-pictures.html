@@ -106,27 +106,30 @@ table.CodeRay td.code>pre{padding:0}
 <div class="ulist"><ul><li><p>choose an image in '.jpg' or '.png' format</p></li><li><p><strong>choose a small sized image</strong>: a file not bigger than 300kb.</p></li></ul></div></section>
 <section><div class="paragraph"><p>Done! Save (File &#8594; Save) before you close this window, as we don&#8217;t need it anymore.</p></div>
 <div class="paragraph"><p>You are now ready to use this pic in your app. Let&#8217;s see how to add it onto a Form:</p></div></section>
-<section id="_2_adding_a_picture_to_a_form"><h2>2. Adding a picture to a Form</h2><div class="paragraph"><p>The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.</p></div>
-<div class="paragraph"><p>Let&#8217;s try this with a Label. Open the GUI Builder of the Form, then place a Label on the Form:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Dragging-a-Label-onto-the-Form.png" alt="Dragging a Label onto the Form" height="100%" /></div><div class="title">Figure 5. Dragging a Label onto the Form</div></section>
-<section><div class="paragraph"><p>If you have clicked on this little icon, you should now see many properties of the Label that you can modify:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Discovering-how-to-change-the-style-of-a-Label.png" alt="Discovering how to change the style of a Label" height="100%" /></div><div class="title">Figure 6. Discovering how to change the style of a Label</div></section>
-<section><div class="paragraph"><p>So many properties that we can change! Feel free to explore them. For the moment, we want to add a picture:</p></div></section>
-<section><div class="ulist"><ul><li><p>Click on the right of the line of 'Bg Image', where there are 3 dots.</p></li><li><p>If you imported correctly your image in the previous step (see above), you should see your picture available.</p></li><li><p>Select it</p></li><li><p>Click on its name at the bottom of the menu to close the window.</p></li></ul></div></section>
-<section><div class="paragraph"><p>You should now see your picture on the Form:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Resizing-and-fitting-the-picture.png" alt="Resizing and fitting the picture" height="100%" /></div><div class="title">Figure 7. Resizing and fitting the picture</div></section>
-<section id="_3_setting_a_picture_as_the_background_of_a_form"><h2>3. Setting a picture as the background of a Form</h2></section>
+<section id="_2_adding_a_picture_to_a_form"><h2>2. Adding a picture to a Form</h2><div class="paragraph"><p>A Component has been specially designed for pictures, but it is called "Scaled Label". You find it here:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Open-the-panel-with-Additional-Components.png" alt="Open the panel with Additional Components" height="100%" /></div><div class="title">Figure 5. Open the panel with Additional Components</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Dragging-a-Scaled-Label-onto-the-Form-and-adding-a-Picture.png" alt="Dragging a Scaled Label onto the Form and adding a Picture" height="100%" /></div><div class="title">Figure 6. Dragging a Scaled Label onto the Form and adding a Picture</div></section>
+<section><div class="paragraph"><p>You should now see your picture on the Form!</p></div></section>
+<section id="_3_adding_a_picture_to_a_button"><h2>3. Adding a picture to a Button</h2><div class="paragraph"><p>It is common for app to have pictures that the user can click.</p></div>
+<div class="paragraph"><p>To get this effect, we create a Button and add a picture to it.</p></div>
+<div class="paragraph"><p>This works like the <code>Scaled Label</code> we have just seen, except that it is a <code>Scaled Button</code>:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Open-the-panel-with-Additional-Components.png" alt="Open the panel with Additional Components" height="100%" /></div><div class="title">Figure 7. Open the panel with Additional Components</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Dragging-a-Scaled-Button-onto-the-Form-and-adding-a-Picture-to-it.png" alt="Dragging a Scaled Button onto the Form and adding a Picture to it" height="100%" /></div><div class="title">Figure 8. Dragging a Scaled Button onto the Form and adding a Picture to it</div></section>
+<section><div class="paragraph"><p>When clicking on "Command", a window opens:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Select-a-picture-for-your-Button-in-this-window.png" alt="Select a picture for your Button in this window" height="100%" /></div><div class="title">Figure 9. Select a picture for your Button in this window</div></section>
+<section><div class="paragraph"><p>You should now see your Button on the Form: it is a picture, which triggers an action when the user touches it!</p></div></section>
+<section id="_4_setting_a_picture_as_the_background_of_a_form"><h2>4. Setting a picture as the background of a Form</h2></section>
 <section><div class="paragraph"><p>So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/Nexus_4-smaller.png" alt="Nexus 4 smaller" height="100%" /></div><div class="title">Figure 8. An example of an app with a colored background</div></section>
-<section><div class="paragraph"><p>In this case, we could create a Label and then resize it to take the entire space of the Form, but there is a better way:</p></div></section>
+<div class="imageblock stretch" style="text-align: center"><img src="images/Nexus_4-smaller.png" alt="Nexus 4 smaller" height="100%" /></div><div class="title">Figure 10. An example of an app with a colored background</div></section>
+<section><div class="paragraph"><p>In this case, we could try to create a Scaled Label and then resize it to take the entire space of the Form, but there is a better way:</p></div></section>
 <section><div class="paragraph"><p>We can simply set the picture we want to the background of the Form itself. In the following, I am using a picture by <a href="https://www.flickr.com/photos/zooboing/5405160553">user Patrick Hoesly on Flickr</a>:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/green_background-smaller.png" alt="green background smaller" height="100%" /></div><div class="title">Figure 9. a green background</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/green_background-smaller.png" alt="green background smaller" height="100%" /></div><div class="title">Figure 11. a green background</div></section>
 <section><div class="paragraph"><p>Just like we have seen, we need first to import this picture through the file 'theme.res' (see the top of this lesson for how to).</p></div>
 <div class="paragraph"><p>Then, set this picture as the "Bg Image" of the Form:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/Setting-an-image-as-the-background-of-the-Form.png" alt="Setting an image as the background of the Form" height="100%" /></div><div class="title">Figure 10. Setting an image as the background of the Form</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Setting-an-image-as-the-background-of-the-Form.png" alt="Setting an image as the background of the Form" height="100%" /></div><div class="title">Figure 12. Setting an image as the background of the Form</div></section>
 <section><div class="paragraph"><p>To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow in NetBeans.).</p></div>
 <div class="paragraph"><p>You should get something like:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/background-preview-1.png" alt="background preview 1" height="100%" /></div><div class="title">Figure 11. Background of the app - but with the top remaining blank</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/background-preview-1.png" alt="background preview 1" height="100%" /></div><div class="title">Figure 13. Background of the app - but with the top remaining blank</div></section>
 <section><div class="paragraph"><p>This is quite good but we see that some room on the top of the app is not covered, because it is reserved space for the title of the Form.</p></div></section>
 <section><div class="paragraph"><p>We can remove this white space on the top by adding two lines of code to the file 'MyApplication.java'.</p></div>
 <div class="paragraph"><p>In the file 'MyApplication.java', spot the lines that say:</p></div></section>
@@ -150,7 +153,7 @@ table.CodeRay td.code>pre{padding:0}
     myForm1.show();
 }</code></pre></div></div></section>
 <section><div class="paragraph"><p>Now, if you launch the preview, your background should nicely cover the entire space of your screen:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/background-preview-2.png" alt="background preview 2" height="100%" /></div><div class="title">Figure 12. Background of the app - covering the entire screen</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/background-preview-2.png" alt="background preview 2" height="100%" /></div><div class="title">Figure 14. Background of the app - covering the entire screen</div></section>
 <section><div class="paragraph"><p>Congratulations! You learned how to place a picture onto a Form, and how to set a picture as the background of your app. It will look great! 🎉🎉🎉</p></div></section>
 <section><div class="paragraph"><p><strong>This is the end of the second module. You should now be able to:</strong></p></div></section>
 <section><div class="olist arabic"><ol class="arabic"><li><p>understand what a Component is.</p></li><li><p>understand what an Action is.</p></li><li><p>understand what a Form is.</p></li></ol></div></section>

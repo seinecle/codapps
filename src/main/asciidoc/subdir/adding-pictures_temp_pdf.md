@@ -75,39 +75,49 @@ You are now ready to use this pic in your app. Let's see how to add it onto a Fo
 == 2. Adding a picture to a Form
 //ST: 2. Adding a picture to a Form
 
-The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.
-
-Let's try this with a Label. Open the GUI Builder of the Form, then place a Label on the Form:
+A Component has been specially designed for pictures, but it is called "Scaled Label". You find it here:
 
 //ST: !
-image::Dragging-a-Label-onto-the-Form.png[align="center",title="Dragging a Label onto the Form"]
+image::Open-the-panel-with-Additional-Components.png[align="center",title="Open the panel with Additional Components"]
 {nbsp} +
 
 //ST: !
-If you have clicked on this little icon, you should now see many properties of the Label that you can modify:
-
-//ST: !
-image::Discovering-how-to-change-the-style-of-a-Label.png[align="center",title="Discovering how to change the style of a Label"]
+image::Dragging-a-Scaled-Label-onto-the-Form-and-adding-a-Picture.png[align="center",title="Dragging a Scaled Label onto the Form and adding a Picture"]
 {nbsp} +
 
 //ST: !
-So many properties that we can change! Feel free to explore them. For the moment, we want to add a picture:
+You should now see your picture on the Form!
+
+== 3. Adding a picture to a Button
+//ST: 3. Adding a picture to a Button
+
+It is common for app to have pictures that the user can click.
+
+To get this effect, we create a Button and add a picture to it.
+
+This works like the `Scaled Label` we have just seen, except that it is a `Scaled Button`:
 
 //ST: !
-- Click on the right of the line of 'Bg Image', where there are 3 dots.
-- If you imported correctly your image in the previous step (see above), you should see your picture available.
-- Select it
-- Click on its name at the bottom of the menu to close the window.
-
-//ST: !
-You should now see your picture on the Form:
-
-//ST: !
-image::Resizing-and-fitting-the-picture.png[align="center",title="Resizing and fitting the picture"]
+image::Open-the-panel-with-Additional-Components.png[align="center",title="Open the panel with Additional Components"]
 {nbsp} +
 
-== 3. Setting a picture as the background of a Form
-//ST: 3. Setting a picture as the background of a Form
+//ST: !
+image::Dragging-a-Scaled-Button-onto-the-Form-and-adding-a-Picture-to-it.png[align="center",title="Dragging a Scaled Button onto the Form and adding a Picture to it"]
+{nbsp} +
+
+//ST: !
+When clicking on "Command", a window opens:
+
+//ST: !
+image::Select-a-picture-for-your-Button-in-this-window.png[align="center",title="Select a picture for your Button in this window"]
+{nbsp} +
+
+
+//ST: !
+You should now see your Button on the Form: it is a picture, which triggers an action when the user touches it!
+
+== 4. Setting a picture as the background of a Form
+//ST: 4. Setting a picture as the background of a Form
 
 //ST: !
 So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:
@@ -116,7 +126,7 @@ image::Nexus_4-smaller.png[align="center",title="An example of an app with a col
 {nbsp} +
 
 //ST: !
-In this case, we could create a Label and then resize it to take the entire space of the Form, but there is a better way:
+In this case, we could try to create a Scaled Label and then resize it to take the entire space of the Form, but there is a better way:
 
 //ST: !
 We can simply set the picture we want to the background of the Form itself. In the following, I am using a picture by https://www.flickr.com/photos/zooboing/5405160553[user Patrick Hoesly on Flickr]:

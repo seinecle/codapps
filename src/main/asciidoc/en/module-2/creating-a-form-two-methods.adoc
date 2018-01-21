@@ -87,13 +87,19 @@ Let's see how it works:
 image::https://docs.google.com/drawings/d/e/2PACX-1vT4Yl4K81RE7QjqpmufUFjhi-KfMJ3iptSoCqjWGrB8HK0ATNZxdRQJvV0U-Ms-9sf4fSvlIc5_vRW0/pub?w=1440&h=1080[align="center",title="Creating a Form with the GUI - first step"]
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vT4Yl4K81RE7QjqpmufUFjhi-KfMJ3iptSoCqjWGrB8HK0ATNZxdRQJvV0U-Ms-9sf4fSvlIc5_vRW0/pub?w=1440&h=1080[align="center",title="Creating a Form with the GUI - second step"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vS_PQz8oYrBQvvhXXCb2LERBuc3vUuYctawlw2cNT__UGf_YgWIzg7SIW623u3ZruaYyTGLz03feja0/pub?w=1440&h=1080[align="center",title="Creating a Form with the GUI - second step"]
+
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vS_PQz8oYrBQvvhXXCb2LERBuc3vUuYctawlw2cNT__UGf_YgWIzg7SIW623u3ZruaYyTGLz03feja0/pub?w=1440&h=1080[align="center",title="Creating a Form with the GUI - third step"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vRNvsUaxjHk0yxAsh7TSS018Vqy0N-c27SnWKiEeWVEENg6fuT9n6BENmtB1a2O8t-ryLvwiibNdLOP/pub?w=1134&h=1035[align="center",title="Creating a Form with the GUI - third step"]
 
 //ST: !
 *Clicking on 'Finish' did not show you any 'Form', so what happened?* Where do I find my 'Form' and how do I use it?
+
+//ST: !
+A file with the same name as your Form as been created, ending with ".java"
+
+So if you named your Form `Form1`, you should see a new file called `Form1.java`. *Open it in this following manner*:
 
 //ST: !
 image::https://docs.google.com/drawings/d/e/2PACX-1vSZrQqUaxVkLbjSyAnY8bu0IFgBrRTvCOZ2i9vhtcA5LaT5ZUXqFhcPFHVc4E9DZRzTVepawvIb338a/pub?w=1440&h=1080[align="center",title="Opening the Form we created to work on it"]

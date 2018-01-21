@@ -122,7 +122,7 @@ Creating several containers on a Form allows to have different layouts applied t
 To illustrate: what if we want to have this kind of layout on our screen?
 
 //ST: !
-image::Another-of-a-layout.png[align="center",title="Another of a layout"]
+image::A-type-of-design-for-an-app.png[align="center",title="A type of design for an app"]
 {nbsp} +
 
 //ST: !

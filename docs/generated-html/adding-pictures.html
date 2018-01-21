@@ -531,7 +531,8 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#_1_importing_a_picture_into_the_app">1. Importing a picture into the app</a></li>
 <li><a href="#_2_adding_a_picture_to_a_form">2. Adding a picture to a Form</a></li>
-<li><a href="#_3_setting_a_picture_as_the_background_of_a_form">3. Setting a picture as the background of a Form</a></li>
+<li><a href="#_3_adding_a_picture_to_a_button">3. Adding a picture to a Button</a></li>
+<li><a href="#_4_setting_a_picture_as_the_background_of_a_form">4. Setting a picture as the background of a Form</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -644,67 +645,80 @@ table.CodeRay td.code>pre{padding:0}
 <h2 id="_2_adding_a_picture_to_a_form">2. Adding a picture to a Form</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The general idea is very simple: place a Component onto the Form, then set the picture as the background of this Component.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s try this with a Label. Open the GUI Builder of the Form, then place a Label on the Form:</p>
+<p>A Component has been specially designed for pictures, but it is called "Scaled Label". You find it here:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Dragging-a-Label-onto-the-Form.png" alt="Dragging a Label onto the Form">
+<img src="images/Open-the-panel-with-Additional-Components.png" alt="Open the panel with Additional Components">
 </div>
-<div class="title">Figure 5. Dragging a Label onto the Form</div>
+<div class="title">Figure 5. Open the panel with Additional Components</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Dragging-a-Scaled-Label-onto-the-Form-and-adding-a-Picture.png" alt="Dragging a Scaled Label onto the Form and adding a Picture">
+</div>
+<div class="title">Figure 6. Dragging a Scaled Label onto the Form and adding a Picture</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>If you have clicked on this little icon, you should now see many properties of the Label that you can modify:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Discovering-how-to-change-the-style-of-a-Label.png" alt="Discovering how to change the style of a Label">
-</div>
-<div class="title">Figure 6. Discovering how to change the style of a Label</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>So many properties that we can change! Feel free to explore them. For the moment, we want to add a picture:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on the right of the line of 'Bg Image', where there are 3 dots.</p>
-</li>
-<li>
-<p>If you imported correctly your image in the previous step (see above), you should see your picture available.</p>
-</li>
-<li>
-<p>Select it</p>
-</li>
-<li>
-<p>Click on its name at the bottom of the menu to close the window.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>You should now see your picture on the Form:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Resizing-and-fitting-the-picture.png" alt="Resizing and fitting the picture">
-</div>
-<div class="title">Figure 7. Resizing and fitting the picture</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
+<p>You should now see your picture on the Form!</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_setting_a_picture_as_the_background_of_a_form">3. Setting a picture as the background of a Form</h2>
+<h2 id="_3_adding_a_picture_to_a_button">3. Adding a picture to a Button</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is common for app to have pictures that the user can click.</p>
+</div>
+<div class="paragraph">
+<p>To get this effect, we create a Button and add a picture to it.</p>
+</div>
+<div class="paragraph">
+<p>This works like the <code>Scaled Label</code> we have just seen, except that it is a <code>Scaled Button</code>:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Open-the-panel-with-Additional-Components.png" alt="Open the panel with Additional Components">
+</div>
+<div class="title">Figure 7. Open the panel with Additional Components</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Dragging-a-Scaled-Button-onto-the-Form-and-adding-a-Picture-to-it.png" alt="Dragging a Scaled Button onto the Form and adding a Picture to it">
+</div>
+<div class="title">Figure 8. Dragging a Scaled Button onto the Form and adding a Picture to it</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>When clicking on "Command", a window opens:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Select-a-picture-for-your-Button-in-this-window.png" alt="Select a picture for your Button in this window">
+</div>
+<div class="title">Figure 9. Select a picture for your Button in this window</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>You should now see your Button on the Form: it is a picture, which triggers an action when the user touches it!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_setting_a_picture_as_the_background_of_a_form">4. Setting a picture as the background of a Form</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:</p>
@@ -713,13 +727,13 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/Nexus_4-smaller.png" alt="Nexus 4 smaller">
 </div>
-<div class="title">Figure 8. An example of an app with a colored background</div>
+<div class="title">Figure 10. An example of an app with a colored background</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>In this case, we could create a Label and then resize it to take the entire space of the Form, but there is a better way:</p>
+<p>In this case, we could try to create a Scaled Label and then resize it to take the entire space of the Form, but there is a better way:</p>
 </div>
 <div class="paragraph">
 <p>We can simply set the picture we want to the background of the Form itself. In the following, I am using a picture by <a href="https://www.flickr.com/photos/zooboing/5405160553">user Patrick Hoesly on Flickr</a>:</p>
@@ -728,7 +742,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/green_background-smaller.png" alt="green background smaller">
 </div>
-<div class="title">Figure 9. a green background</div>
+<div class="title">Figure 11. a green background</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -743,7 +757,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/Setting-an-image-as-the-background-of-the-Form.png" alt="Setting an image as the background of the Form">
 </div>
-<div class="title">Figure 10. Setting an image as the background of the Form</div>
+<div class="title">Figure 12. Setting an image as the background of the Form</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -758,7 +772,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/background-preview-1.png" alt="background preview 1">
 </div>
-<div class="title">Figure 11. Background of the app - but with the top remaining blank</div>
+<div class="title">Figure 13. Background of the app - but with the top remaining blank</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -810,7 +824,7 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <img src="images/background-preview-2.png" alt="background preview 2">
 </div>
-<div class="title">Figure 12. Background of the app - covering the entire screen</div>
+<div class="title">Figure 14. Background of the app - covering the entire screen</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -940,7 +954,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-01-21 17:13:39 CET
+Last updated 2018-01-21 21:13:33 CET
 </div>
 </div>
 </body>

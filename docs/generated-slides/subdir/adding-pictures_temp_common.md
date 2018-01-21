@@ -224,10 +224,10 @@ Congratulations! You learned how to place a picture onto a Form, and how to set 
 12. set a picture as the background of a Form.
 
 //ST: !
-You are now well equipped to build apps with beautiful UI (user interface). Go and create something beautiful!
+You are now well equipped to work with the building blocks of the user interface (UI) of your app.
 
 //ST: !
-*In the next module, we are going to learn how test and release your app for Android an iPhones!*
+*In the next module, we are going to learn how to style and place all these different Components exactly where you want them to be on screen, to achieve the design you have in mind.*
 
 == The end
 //ST: The end

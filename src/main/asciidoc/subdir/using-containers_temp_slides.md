@@ -124,7 +124,7 @@ To illustrate: what if we want to have this kind of layout on our screen?
 
 ==  !
 [.stretch]
-image::Another-of-a-layout.png[align="center",title="Another of a layout"]
+image::A-type-of-design-for-an-app.png[align="center",title="A type of design for an app"]
 
 
 ==  !

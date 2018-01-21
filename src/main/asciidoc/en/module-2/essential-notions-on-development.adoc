@@ -98,7 +98,7 @@ For instance:
 Because of this need for precise names, you will see that:
 
 - adding text to the app, we will use a Component named `*Label*` (not Text)
-- adding pictures to the app, we will use a Component named `*Image*` (not Picture)
+- adding pictures to the app, we will use a different Components but none of them named Image!
 - adding buttons to the app, we will use a `*Button*` Component (this one is intuitive!)
 
 == 3. Two approaches to work on mobile apps
@@ -108,7 +108,7 @@ Because of this need for precise names, you will see that:
 To sum up what we have seen so far:
 
 - when we start designing an app, we need to create a `Form` first.
-- Then we will place Components in the Form: Buttons, Labels, Images, etc.
+- Then we will place Components in the Form: Buttons, Labels,  etc.
 - Then we can attach actions to each of these components (a "click action" on a button, etc)
 
 //ST: !
