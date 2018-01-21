@@ -122,7 +122,7 @@ Actions can be very complex: for example, a gaming app has buttons making charac
 We are going to create a very simple action to illustrate the principle: *pressing the button will change the text of the Label*
 
 //ST: !
-==== c. Step-by-step creation of an action attached
+==== c. Step-by-step creation of an action attached to the button
 
 //ST: !
 [WARNING]
@@ -160,15 +160,12 @@ image::Giving-a-name-to-the-action-and-to-the-button.png[align="center",title="G
 {nbsp} +
 
 //ST: !
-[WARNING]
+[NOTE]
 ====
-*Common issue at this stage*
+You might have the idea to add a picture to your button, because you see properties named "icon" or "Pick Image".
 
-At this step *if you clicked on "Cancel" without having given a name or a display name*, the Button can get resized - becomes much bigger! (sometimes taking even the whole space of the Form, making it hard to spot since it covers everything).
-
-Solution: spot the "resize handles" of the Button and use them to drag the borders of the Button back to a smaller size.
+Actually, the best way to add a picture to a button is to use a "Scaled Button", not a Button. We explain how to do in the lesson on "Adding Pictures" in this module.
 ====
-
 
 //ST: !
 [start=4]
@@ -204,6 +201,15 @@ We are going to write just one line of code between the curly braces:
 this.gui_Label.setText("pressed!");
 ----
 
+//ST: !
+[NOTE]
+====
+Here we suppose that the Label that you want impact with your Button is called "Label".
+Check the name of your Label in the GUI Builder: if it is named `Label_1` or `Label_2`, then the line of code should become:
+
+`this.gui_Label_1.setText("pressed!");` or `this.gui_Label_2.setText("pressed!");`
+====
+
 So that it looks like:
 
 //ST: !
@@ -227,7 +233,10 @@ image::Previewing-the-button-and-its-action.png[align="center",title="Previewing
 {nbsp} +
 
 //ST: !
-Congratulations! You learned how to place a Label (some text), a Button and  how to make it perform an action. This is a huge step! 🎉🎉🎉
+Not this result? Make sure you save the GUI Builder! (File -> Save)
+
+//ST: !
+Congratulations! You learned how to place a Label on screen, a Button, and how to make the Button perform an action. This is a huge step! 🎉🎉🎉
 
 //ST: !
 In the next lesson of this module, we are going to learn how to insert a picture in the app.

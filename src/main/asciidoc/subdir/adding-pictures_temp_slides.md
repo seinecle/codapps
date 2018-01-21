@@ -153,7 +153,7 @@ image::Setting-an-image-as-the-background-of-the-Form.png[align="center",title="
 
 
 ==  !
-To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow in NetBeans.).
+To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow image:green-arrow.jpg[] in NetBeans.).
 
 You should get something like:
 

@@ -42,7 +42,7 @@ image::Deleting-the-title-of-the-Form.png[align="center",title="Deleting the tit
 
 
 ==  !
-*Make sure to save the GUI Builder (File -> Save)*, you can keep it open. Then launch the preview of the app (big green arrow in NetBeans):
+*Make sure to save the GUI Builder (File -> Save)*, you can keep it open. Then launch the preview of the app (big green arrow image:green-arrow.jpg[] in NetBeans):
 
 ==  !
 [.stretch]

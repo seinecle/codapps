@@ -133,7 +133,7 @@ Then, set this picture as the "Bg Image" of the Form:
 image::https://docs.google.com/drawings/d/e/2PACX-1vSzhd-E4N9gnl1SloouWV9nTRYxeLGX-ojS1Bvi5jeNqCZ8gfvG_dvHo-b0zUIEbA5H6fr8-wp_N70X/pub?w=1446&h=935[align="center",title="Setting an image as the background of the Form"]
 
 //ST: !
-To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow in NetBeans.).
+To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow image:green-arrow.jpg[] in NetBeans.).
 
 You should get something like:
 

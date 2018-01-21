@@ -122,7 +122,7 @@ image::Previewing-your-app.png[align="center",title="Previewing your app"]
 
 //ST: !
 1. The files of your app appear on the left of your screen in NetBeans.
-2. You can launch the preview of your app by clicking on the green arrow.
+2. You can launch the preview of your app by clicking on the green arrow image:green-arrow.jpg[]
 
 //ST: !
 It should show a blank screen with "Hi World" in the title, and "Hi World" again in the screen:

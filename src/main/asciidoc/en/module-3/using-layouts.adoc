@@ -39,7 +39,7 @@ I delete the title of the Form (which is "Form1" by default):
 image::https://docs.google.com/drawings/d/e/2PACX-1vS3R96Q_npkmejPvuMP0PJ5szkg988OfLnNG_liqKmk42mF5AYQ1rQq2DN5iusFebzKcpysSkxypNCD/pub?w=1437&h=793[align="center",title="Deleting the title of the Form"]
 
 //ST: !
-*Make sure to save the GUI Builder (File -> Save)*, you can keep it open. Then launch the preview of the app (big green arrow in NetBeans):
+*Make sure to save the GUI Builder (File -> Save)*, you can keep it open. Then launch the preview of the app (big green arrow image:green-arrow.jpg[] in NetBeans):
 
 //ST: !
 image::layout-2.png[align="center",title="Previewing your app with the default layout"]

@@ -95,6 +95,7 @@ image::Creating-a-Form-with-the-GUI---first-step.png[align="center",title="Creat
 image::Creating-a-Form-with-the-GUI---second-step.png[align="center",title="Creating a Form with the GUI - second step"]
 
 
+
 ==  !
 [.stretch]
 image::Creating-a-Form-with-the-GUI---third-step.png[align="center",title="Creating a Form with the GUI - third step"]
@@ -102,6 +103,11 @@ image::Creating-a-Form-with-the-GUI---third-step.png[align="center",title="Creat
 
 ==  !
 *Clicking on 'Finish' did not show you any 'Form', so what happened?* Where do I find my 'Form' and how do I use it?
+
+==  !
+A file with the same name as your Form as been created, ending with ".java"
+
+So if you named your Form `Form1`, you should see a new file called `Form1.java`. *Open it in this following manner*:
 
 ==  !
 [.stretch]

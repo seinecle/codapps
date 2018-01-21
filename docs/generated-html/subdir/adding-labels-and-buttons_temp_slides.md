@@ -114,7 +114,7 @@ image::Drag---dropping-a-Button.png[align="center",title="Drag - dropping a Butt
 ==  !
 Of course the button, alone, is not interesting: it should do something when the user of the app touches it.
 
-You can launch the preview of your app (big green arrow in the NetBeans menu): you see in the preview that the button can be pressed, but nothing happens. *We need to attach an Action to the button*.
+You can launch the preview of your app (big green arrow image:green-arrow.jpg[] in the NetBeans menu): you see in the preview that the button can be pressed, but nothing happens. *We need to attach an Action to the button*.
 
 ==  !
 Actions can be very complex: for example, a gaming app has buttons making characters jump or run. Or a store app has buttons that select products and make payments...
