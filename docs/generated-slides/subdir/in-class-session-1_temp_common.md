@@ -69,10 +69,18 @@ image::banderas.gif[]
 Toutes les consignes, dates, ... sont dans le syllabus
 
 //ST: !
-==== c. Le cours se trouve sur un site web dédié: allez-y de vous même, chaque semaine.
+==== c. Posez des questions sur Github!
 
 //ST: !
-==== d. Mais les devoirs sont bien à rendre sur Brightspace!
+image::Octocat.jpg[align="center",title="Check the lesson on Github!"]
+{nbsp} +
+
+
+//ST: !
+==== d. Le cours se trouve sur un site web dédié: allez-y de vous même, chaque semaine.
+
+//ST: !
+==== e. Mais les devoirs sont bien à rendre sur Brightspace!
 
 //ST: !
 Vous savez déjà coder? Vous apprenez vite? Vous avez vos propres projets et vous avez besoin de soutien ou de conseils? N’hésitez pas à me contacter.
