@@ -21,7 +21,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: 1. Installing NetBeans
 
 //ST: !
-
 - Your MAC needs to run OS X 10.7 (Lion) or a more recent version.
 https://support.apple.com/en-us/HT201260[Find out the OS X version of your MAC].
 - Go to http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
@@ -37,7 +36,7 @@ image::Downloading-NetBeans-for-a-MAC.png[align="center",title="Downloading NetB
 - Find the file you downloaded on your computer and click on it to install.
 
 //ST: !
-Note:: you might need administrator rights to install software on your MAC!
+NOTE: you might need administrator rights to install software on your MAC!
 
 //ST: !
 Now that we have NetBeans installed, let’s add the Codename One plugin.
@@ -60,6 +59,7 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 == 3. Restart NetBeans to finish the installation
 //ST: 3. Restart NetBeans to finish the installation
 
+//ST: !
 Congratulations, you are ready to create your first mobile app! 🎉
 
 == The end

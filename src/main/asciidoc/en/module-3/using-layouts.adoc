@@ -81,7 +81,6 @@ But we don't use this feature yet in this course so *do not select* Auto Layout 
 //ST: !
 image::https://docs.google.com/drawings/d/e/2PACX-1vSku-UZtHZR2QxGWUM-4uyxUlzit5DQywwXzxkJFFKm3I81S0c5NLI-N5YTMHFAYOjH5_wJ9P7BkgDd/pub?w=1424&h=675[align="center",title="An experimental feature to make layout easier - but dont use it yet"]
 
-
 //ST: !
 With these explanations made, we can discover how layouts and containers work. Let's start with layouts:
 

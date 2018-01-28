@@ -20,9 +20,9 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
-==  !
 ==  1. Some preparations
 
+==  !
 Not sure what a Form is? Have a look at the previous lessons!
 
 To start this lesson, we will assume that you already created a Form called "Form1" and that you opened it in the GUI Builder, like this:

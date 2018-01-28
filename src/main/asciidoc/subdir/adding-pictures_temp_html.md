@@ -20,10 +20,10 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
-//ST: !
 == 1. Importing a picture into the app
 //ST: 1. Importing a picture into the app
 
+//ST: !
 Before a picture can be shown on the screen of your app, you must add the picture to the files of your app.
 
 Importing a picture in the files of the app should be done from the GUI Builder, in one click:
@@ -75,6 +75,7 @@ You are now ready to use this pic in your app. Let's see how to add it onto a Fo
 == 2. Adding a picture to a Form
 //ST: 2. Adding a picture to a Form
 
+//ST: !
 A Component has been specially designed for pictures, but it is called "Scaled Label". You find it here:
 
 //ST: !
@@ -91,6 +92,8 @@ You should now see your picture on the Form!
 == 3. Adding a picture to a Button
 //ST: 3. Adding a picture to a Button
 
+
+//ST: !
 It is common for app to have pictures that the user can click.
 
 To get this effect, we create a Button and add a picture to it.

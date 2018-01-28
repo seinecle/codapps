@@ -85,7 +85,6 @@ But we don't use this feature yet in this course so *do not select* Auto Layout 
 image::An-experimental-feature-to-make-layout-easier---but-dont-use-it-yet.png[align="center",title="An experimental feature to make layout easier - but dont use it yet"]
 {nbsp} +
 
-
 //ST: !
 With these explanations made, we can discover how layouts and containers work. Let's start with layouts:
 

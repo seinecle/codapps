@@ -21,6 +21,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 ==  1. Creating a Form and a Label by writing some code (DYI approach)
 
+==  !
 Not sure what a Form is? Have a look at the previous lesson!
 
 ==  !
@@ -50,7 +51,7 @@ How was this Form and this Label added to the app?
 Simply with 3 lines of code included in the file `MyApplication.java`:
 
 ==  !
-IMPORTANT:: we will now show some lines of code *but you are not supposed to understand them at this stage*. It is simply to illustrate that Forms can be created with code.
+IMPORTANT: we will now show some lines of code *but you are not supposed to understand them at this stage*. It is simply to illustrate that Forms can be created with code.
 
 (scroll down a bit in NetBeans, as these lines are in the middle of the file):
 
@@ -78,9 +79,9 @@ public void start() {
 ==  !
 So this is how you add a Form by writing some code in a file. But in this course, *we will first use almost no coding at all*. We will use instead a simpler approach:
 
-==  !
 ==  2. Another possibility: creating a form without coding - with the GUI
 
+==  !
 In the previous lesson we had called this method the "Ikea approach": we just assemble pre-existing blocks, without designing the whole furniture ourself.
 
 Let's see how it works:
@@ -115,6 +116,13 @@ image::Opening-the-Form-we-created-to-work-on-it.png[align="center",title="Openi
 
 
 ==  !
+The window which opens now is called the *"GUI Builder". This window shows a preview of the `Form` you just created.*
+
+It provides simple tools to add text, picture, buttons... to the `Form`, without coding!
+
+Let's examine the GUI Builder in detail:
+
+==  !
 [.stretch]
 image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI Builder"]
 
@@ -127,7 +135,7 @@ image::Save-before-you-quit!.png[align="center",title="Save before you quit!"]
 ==  !
 And... that's almost it! Whatever you create with the GUI Builder will be included in your app.
 
-*Except that* if you preview your app (clicking the usual big green arrow icon in the menu of NetBeans) to admire your work, you don't see your screen but another one that says "Hi World". Why?
+*Except that* if you preview your app (clicking the usual big green arrow icon image:green-arrow.jpg[] in NetBeans) to admire your work, you don't see your screen but another one that says "Hi World". Why?
 
 ==  !
 Even if you can create a Form with the GUI Builder, so without coding, *you still need a couple of lines of code to trigger the opening of the Form when the app launches*.

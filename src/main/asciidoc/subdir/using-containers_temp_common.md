@@ -20,6 +20,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
+//ST: !
 [WARNING]
 ====
 You should have learned the previous lesson on Layouts before starting this one.

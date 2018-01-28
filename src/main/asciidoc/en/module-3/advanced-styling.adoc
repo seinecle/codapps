@@ -22,10 +22,11 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: !
 WARNING: this is a pretty intense lesson. You need to be execute the steps precisely for things to work correctly.
 
-//ST: !
+
 == 1. Limitations to styling Components in the GUI Builder.
 //ST: 1. Limitations to styling Components in the GUI Builder.
 
+//ST: !
 So far, we have learned how to create a Form, how to place Components (text, pictures, buttons) on it and how to get these Components organized on screen.
 
 Using a *Span Label*, a *Scaled Label for the picture* and a *Button*, all in a Box Y Layout, we get this result:
@@ -58,6 +59,7 @@ When these situations arise, the solution is to work from a different location t
 == 2. Using theme.res to create a custom style
 //ST: 2. Using theme.res to create a custom style
 
+//ST: !
 In the files of your project in NetBeans, spot the file named "theme.res". We have already used it to import pictures, in a previous lesson.
 
 Double click on it:
@@ -141,6 +143,7 @@ We are now ready to come back in the GUI Builder of our Form, and use this style
 == 3. Using our custom style in the GUI Builder
 //ST: 3. Using our custom style in the GUI Builder
 
+//ST: !
 Let's open our Form in the GUI Builder.
 
 To change the style of our Button to "ButtonItalicBlue" that we just created, we simply need to modify the property "UIID":
@@ -166,6 +169,7 @@ Luckily there is an easy way to work between the GUI Builder and theme.res.
 == 4. Editing styles easily between the GUI Builder and theme.res
 //ST: 4. Editing styles easily between the GUI Builder and theme.res
 
+//ST: !
 The workflow is simple:
 
 //ST: !

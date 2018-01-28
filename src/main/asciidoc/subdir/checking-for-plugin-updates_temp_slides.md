@@ -18,8 +18,8 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. Notifications for updates
-==  !
 
+==  !
 The Codename One plugin is the tool that enables us to apps with NetBeans.
 
 You have installed the plugin, but the creators of the plugin continue to make it evolve, adding new functionalities to it.
@@ -43,8 +43,8 @@ You can have updates for the Codename One plugin, but also for other components 
 I advise you to install all the updates available.
 
 ==  2. Propagating the update to existing projects
-==  !
 
+==  !
 Now, what if you already had created an app in NetBeans? *It will not automatically benefit from the updated plugin*.
 
 Follow these steps:
@@ -55,8 +55,8 @@ b.	In the window that opens, click on “Update project libs”. Close the windo
 c.	Right click again on the project’s name. Click on “Clean and Build”. You should be good to go!
 
 ==  3. Rare case: the check for updates fails
-==  !
 
+==  !
 It sometimes happens that the address that NetBeans checks for plugin updates is incorrect.
 
 In this case, NetBeans will never find updates and you’ll be stuck with an old version of the plugin!
@@ -83,7 +83,6 @@ image::Putting-the-correct-web-address.png[align="center",title="Putting the cor
 That’s it! You have to do it just once, next time NetBeans will now how to search plugin updates by itself! 🎉
 
 Just check if there is a bubble at the bottom right corner when you open NetBeans.
-
 
 ==  The end
 

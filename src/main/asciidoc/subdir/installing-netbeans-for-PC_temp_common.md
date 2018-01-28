@@ -21,7 +21,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: 1. Installing NetBeans
 
 //ST: !
-
 - Go to http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
 - Click on “Accept License Agreement”.
 - There are two different files for Windows. Which one should you choose?
@@ -34,12 +33,12 @@ image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBean
 - If you don’t know, choose “jdk-8u151-nb-8_2-windows-i586.exe” (see below)
 - If you are absolutely sure you run a 64-bit version of Windows, choose Windows x64.
 
-Tip:: https://support.microsoft.com/en-us/kb/827218[How do I know if my PC runs a 32-bit or 64-bit version of Windows?]
+TIP: https://support.microsoft.com/en-us/kb/827218[How do I know if my PC runs a 32-bit or 64-bit version of Windows?]
 
 //ST: !
 - Find the file you downloaded on your computer and click on it to install.
 
-Note:: you might need administrator rights to install software on your PC!
+NOTE: you might need administrator rights to install software on your PC!
 
 Now that we have NetBeans installed, let’s add the Codename One plugin.
 
@@ -60,6 +59,7 @@ Plugins can be listed alphabetically by clicking on the column “name”, that 
 == 3. Restart NetBeans to finish the installation
 //ST: 3. Restart NetBeans to finish the installation
 
+//ST: !
 Congratulations, you are ready to create your first mobile app! 🎉
 
 == The end
