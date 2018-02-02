@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="author" content="Clément Levallois">
-<title>CODAPPS: Quick overview of the process to test and release apps with Codename One</title>
+<title>CODAPPS: Quick overview to test and release your app</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -520,7 +520,7 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article">
 <div id="header">
-<h1>CODAPPS: Quick overview of the process to test and release apps with Codename One</h1>
+<h1>CODAPPS: Quick overview to test and release your app</h1>
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
@@ -529,6 +529,16 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_1_explaining_the_workflow">1. Explaining the workflow</a></li>
+<li><a href="#_2_general_setup">2. General setup</a>
+<ul class="sectlevel3">
+<li><a href="#_a_create_a_free_account_on_codename_one">a. Create a free account on Codename One</a></li>
+<li><a href="#_b_connect_netbeans_to_your_codename_one_account">b. Connect NetBeans to your Codename One account</a></li>
+<li><a href="#_c_set_up_your_phone_to_accept_apps_from_unknown_sources">c. Set up your phone to accept apps from unknown sources</a></li>
+<li><a href="#_d_install_a_qr_code_reader_on_your_phone">d. Install a QR code reader on your phone</a></li>
+</ul>
+</li>
+<li><a href="#_3_anticipating_the_differences_between_google_play_and_apple_s_app_store">3. Anticipating the differences between Google Play and Apple&#8217;s App Store</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -537,7 +547,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-01-28</p>
+<p>last modified: 2018-01-31</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -547,11 +557,16 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_explaining_the_workflow">1. Explaining the workflow</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We are developing an app on NetBeans, with a plugin with installed, called "Codename One".</p>
 </div>
 <div class="paragraph">
-<p>But how do we go from there to an app available on the Play Store (for Android phones) or Appe&#8217;s App Store (for iPhones and tablets)?</p>
+<p>But how do we go from there to an app available on the Play Store (for Android phones and tablets) or Appe&#8217;s App Store (for iPhones and iPads)?</p>
 </div>
 <div class="paragraph">
 <p>The workflow has several steps:</p>
@@ -592,6 +607,281 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>So we see that there is a few interconnected parts: NetBeans, the website of Codename One, the app platforms by Google and Apple&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>We present you now the setup you need to test and release your app, common to Android and iPhone app releases.</p>
+</div>
+<div class="paragraph">
+<p>You will need some additional steps specific either to Google or Apple&#8217;s app platforms, but we leave these for separate lessons.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_general_setup">2. General setup</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_a_create_a_free_account_on_codename_one">a. Create a free account on Codename One</h4>
+<div class="paragraph">
+<p>Codename One is the company providing the open source plugin we use in NetBeans.</p>
+</div>
+<div class="paragraph">
+<p><strong>Codename One will convert our app into an Android app</strong>. So we need to create an account with them.</p>
+</div>
+<div class="paragraph">
+<p>They have several pricing plans:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the free plan. It gives you access to everything but puts a <strong>size limit</strong> on your app.</p>
+</li>
+<li>
+<p>the basic, pro and entreprise plans, which give extra capabilities.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>In the CODAPPS course we use the free plan</strong>.</p>
+</div>
+<div class="paragraph">
+<p>To create your account, go on <a href="http://www.codenameone.com">www.codenameone.com</a> and just <strong>sign up</strong> for an account:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/The-codename-one-website.png" alt="The codename one website">
+</div>
+<div class="title">Figure 1. The codename one website</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Make sure you remember the email and password</strong> you used to sign up as we will need them later.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_b_connect_netbeans_to_your_codename_one_account">b. Connect NetBeans to your Codename One account</h4>
+<div class="paragraph">
+<p>In NetBeans, <strong>right click</strong> on the name of your project and select <code>Properties</code>:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Accessing-the-properties-of-your-project.png" alt="Accessing the properties of your project">
+</div>
+<div class="title">Figure 2. Accessing the properties of your project</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Codename-One-properties.png" alt="Codename One properties">
+</div>
+<div class="title">Figure 3. Codename One properties</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>A login window opens. You should enter <strong>the email and password of the account you created on the Codename One website</strong> (see above in the lesson).</p>
+</div>
+<div class="paragraph">
+<p>This is how NetBeans will be able to send the app you created to the Codename One website!</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/testing-android-3.png" alt="testing android 3">
+</div>
+<div class="title">Figure 4. Entering your Codename One credentials</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Then close all the windows we opened by clicking on <code>OK</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_c_set_up_your_phone_to_accept_apps_from_unknown_sources">c. Set up your phone to accept apps from unknown sources</h4>
+<div class="paragraph">
+<p>This step is necessary only for testing the app on your phone.
+For security reasons, your phone accepts to install only apps coming from official app stores.</p>
+</div>
+<div class="paragraph">
+<p><strong>You must unlock this feature so that you can test your own app.</strong></p>
+</div>
+<div class="paragraph">
+<p>The latest versions of your phones might invite you to unlock when you are installing your app, but on older phones you need to do it beforehand:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>go to the parameters of your phone</p>
+</li>
+<li>
+<p>in the security settings, switch on the "install from unknown sources".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This website provides an illustration for Android phones:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.softwarert.com/install-apps-unknown-sources-android-phones/">https://www.softwarert.com/install-apps-unknown-sources-android-phones/</a></p>
+</div>
+<div class="paragraph">
+<p>(<em>Depending on your phone and version of Android, your screens will look slightly different</em>)</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Make sure to switch off this parameter after you installed your app.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_d_install_a_qr_code_reader_on_your_phone">d. Install a QR code reader on your phone</h4>
+<div class="paragraph">
+<p>QR codes are very common and you surely have seen them before, they look like:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/qrcode.png" alt="qrcode">
+</div>
+<div class="title">Figure 5. An example of  QR code</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>We need an app on our phone to read QR codes, <strong>because this is how we will transfer our app onto our phone</strong> (fancy!).</p>
+</div>
+<div class="paragraph">
+<p>Just go on the App Store, search "QR code", and install a free app doing QR code reader.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_anticipating_the_differences_between_google_play_and_apple_s_app_store">3. Anticipating the differences between Google Play and Apple&#8217;s App Store</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apple and Google have two different business strategies for their app stores:</p>
+</div>
+<table class="tableblock frame-topbot grid-all spread">
+<caption class="title">Table 1. Comparing Apple and Google&#8217;s strategy for their app store</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-right valign-top"></th>
+<th class="tableblock halign-left valign-top">Google&#8217;s Play Store</th>
+<th class="tableblock halign-left valign-top">Apple&#8217;s App Store</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><strong>Developer program membership (price to pay)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">one time payment of 25$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90$ every year</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><strong>Testing the app on a phone is possible without a membership</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no / difficult</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-topbot grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-right valign-top"></th>
+<th class="tableblock halign-left valign-top">Google&#8217;s Play Store</th>
+<th class="tableblock halign-left valign-top">Apple&#8217;s App Store</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><strong>Policy to accept apps on the Store</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all apps are welcome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apple rejects the app if it does not provide a "valuable" service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><strong>Time to get the app on the Store</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 hours</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">several days</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>We see a pattern here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Google has an approach where apps are like websites: everyone has the right to publish one, as long as they are legal / not offensive etc. This makes for a very large app store, with apps which are of varying quality.</p>
+</li>
+<li>
+<p>Apple has a qualitative, closed approach. They decide who has the right to enter their ecosystem, and they reject what they consider to be "low quality" apps.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These different strategies have consequences for operational and financial figures:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Play includes a large volume of apps, with low revenues per app (because many apps are simple and non pro)</p>
+</li>
+<li>
+<p>Apple&#8217;s App Store includes fewer apps, but these apps are carefully selected and often made by companies which make revenues from them</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Google-and-Apple-have-different-strategies-for-their-app-stores.png" alt="Google and Apple have different strategies for their app stores">
+</div>
+<div class="title">Figure 6. Google and Apple have different strategies for their app stores</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>And there are consequences for developers like you as well:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>it is relatively easy and cheap to release an app for Android phones and tablets</p>
+</li>
+<li>
+<p>it is much trickier to release for Apple&#8217;s App Store, or even to test your app on your own iPhone!</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The next lessons will guide you through the process of testing and releasing your app in both cases, but be prepared for a longer process in the case of Apple.</p>
 </div>
 </div>
 </div>
@@ -654,7 +944,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-01-28 15:07:02 CET
+Last updated 2018-01-31 16:13:55 CET
 </div>
 </div>
 </body>

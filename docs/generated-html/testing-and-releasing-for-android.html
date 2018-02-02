@@ -531,10 +531,8 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#_1_preliminary_setup">1. Preliminary setup</a>
 <ul class="sectlevel3">
-<li><a href="#_a_take_an_android_phone_and_install_a_qr_code_reader_on_it">a. Take an Android phone and install a QR code reader on it</a></li>
-<li><a href="#_b_create_a_free_account_on_codename_one">b. Create a free account on Codename One</a></li>
-<li><a href="#_c_create_a_developer_account_on_google_s_play_store_25">c. Create A developer account on Google&#8217;s Play Store (25$)</a></li>
-<li><a href="#_d_set_up_your_phone_to_accept_apps_from_unknown_sources">d. Set up your phone to accept apps from unknown sources</a></li>
+<li><a href="#_b_create_a_developer_account_on_google_s_play_store_25">b. Create A developer account on Google&#8217;s Play Store (25$)</a></li>
+<li><a href="#_c_set_up_your_phone_to_accept_apps_from_unknown_sources">c. Set up your phone to accept apps from unknown sources</a></li>
 <li><a href="#_e_connect_netbeans_to_your_codename_one_account">e. Connect NetBeans to your Codename One account</a></li>
 <li><a href="#_f_generate_a_google_certificate_for_the_app">f. Generate a Google certificate for the app</a></li>
 </ul>
@@ -550,7 +548,7 @@ table.CodeRay td.code>pre{padding:0}
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>last modified: 2018-01-28</p>
+<p>last modified: 2018-01-30</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -565,98 +563,28 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="_1_preliminary_setup">1. Preliminary setup</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The setup will take 95% of this lesson. So do not worry or get bored if this is long, as you will be nearly finished upon the completion of the setup!</p>
+<p>Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>For a global view on the steps to create, test and release your app for Android phones, tablets and iPhones, please refer to the lesson in this same module.</p>
-</div>
-<div class="paragraph">
-<p>In this lesson, we focus on creating, testing and releasing your app for Android Phones.</p>
-</div>
-<div class="paragraph">
-<p>Working on apps for Android phones and tablets is fairly simple, and made even simpler by Codename One, the tool we use in this course.</p>
+<p>Testing and releasing mobile apps for Android phones and tablets is fairly simple, and made even simpler by Codename One, the tool we use in this course.</p>
 </div>
 <div class="paragraph">
 <p>Here is the list of what you&#8217;ll need:</p>
 </div>
 <div class="sect3">
-<h4 id="_a_take_an_android_phone_and_install_a_qr_code_reader_on_it">a. Take an Android phone and install a QR code reader on it</h4>
-<div class="paragraph">
-<p>So you obviously need an Android phone. But also an app installed on this phone, to read QR codes.</p>
-</div>
-<div class="paragraph">
-<p>QR codes are very common and you surely have seen them before, they look like:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/qrcode.png" alt="qrcode">
-</div>
-<div class="title">Figure 1. An example of  QR code</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>We need an app on our Android phone able to read QR codes, <strong>because this is how we will transfer our app onto our phone</strong> (fancy!).</p>
-</div>
-<div class="paragraph">
-<p>Just go on the Play Store, search "QR code", and install a free app doing QR code reader.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_b_create_a_free_account_on_codename_one">b. Create a free account on Codename One</h4>
-<div class="paragraph">
-<p>If you remember the workflow illustrated in the intro to this module, Codename One is the service providing the plugin we use in NetBeans.</p>
-</div>
-<div class="paragraph">
-<p><strong>Codename One will convert our app into an Android app</strong>. So we need to create an account with them.</p>
-</div>
-<div class="paragraph">
-<p>Codename One is a commercial company proposing an open source tool. They have several pricing plans:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the free plan. It gives you access to everything but puts a <strong>size limit</strong> on your app.</p>
-</li>
-<li>
-<p>the basic, pro and entreprise plans, which give extra capabilities.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>In the CODAPPS course we use the free plan</strong>.</p>
-</div>
-<div class="paragraph">
-<p>To create your account, go on <a href="http://www.codenameone.com">www.codenameone.com</a> and just <strong>sign up</strong> for an account:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/The-codename-one-website.png" alt="The codename one website">
-</div>
-<div class="title">Figure 2. The codename one website</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p><strong>Make sure you remember the email and password</strong> you used to sign up as we will need them later.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_c_create_a_developer_account_on_google_s_play_store_25">c. Create A developer account on Google&#8217;s Play Store (25$)</h4>
+<h4 id="_b_create_a_developer_account_on_google_s_play_store_25">b. Create A developer account on Google&#8217;s Play Store (25$)</h4>
 <div class="paragraph">
 <p>You don&#8217;t need this step if you just want to test your app on your own Android phone.</p>
 </div>
@@ -691,7 +619,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect3">
-<h4 id="_d_set_up_your_phone_to_accept_apps_from_unknown_sources">d. Set up your phone to accept apps from unknown sources</h4>
+<h4 id="_c_set_up_your_phone_to_accept_apps_from_unknown_sources">c. Set up your phone to accept apps from unknown sources</h4>
 <div class="paragraph">
 <p>This step is necessary only for testing the app on your phone.
 For security reasons, your phone accepts to install only apps coming from the Google Play Store.</p>
@@ -745,7 +673,7 @@ For security reasons, your phone accepts to install only apps coming from the Go
 <div class="content">
 <img src="images/Accessing-the-properties-of-your-project.png" alt="Accessing the properties of your project">
 </div>
-<div class="title">Figure 3. Accessing the properties of your project</div>
+<div class="title">Figure 1. Accessing the properties of your project</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -754,7 +682,7 @@ For security reasons, your phone accepts to install only apps coming from the Go
 <div class="content">
 <img src="images/Codename-One-properties.png" alt="Codename One properties">
 </div>
-<div class="title">Figure 4. Codename One properties</div>
+<div class="title">Figure 2. Codename One properties</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -769,7 +697,7 @@ For security reasons, your phone accepts to install only apps coming from the Go
 <div class="content">
 <img src="images/testing-android-3.png" alt="testing android 3">
 </div>
-<div class="title">Figure 5. Entering your Codename One credentials</div>
+<div class="title">Figure 3. Entering your Codename One credentials</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -800,7 +728,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Accessing-the-properties-of-your-project.png" alt="Accessing the properties of your project">
 </div>
-<div class="title">Figure 6. Accessing the properties of your project</div>
+<div class="title">Figure 4. Accessing the properties of your project</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -812,7 +740,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Android-properties-of-your-project.png" alt="Android properties of your project">
 </div>
-<div class="title">Figure 7. Android properties of your project</div>
+<div class="title">Figure 5. Android properties of your project</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -821,7 +749,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Generating-a-certificate.png" alt="Generating a certificate">
 </div>
-<div class="title">Figure 8. Generating a certificate</div>
+<div class="title">Figure 6. Generating a certificate</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -845,7 +773,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Launching-the-Android-build.png" alt="Launching the Android build">
 </div>
-<div class="title">Figure 9. Launching the Android build</div>
+<div class="title">Figure 7. Launching the Android build</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -869,7 +797,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Checking-the-result-on-the-website-of-Codename-One.png" alt="Checking the result on the website of Codename One">
 </div>
-<div class="title">Figure 10. Checking the result on the website of Codename One</div>
+<div class="title">Figure 8. Checking the result on the website of Codename One</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -887,7 +815,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Revealing-the-QR-code-and-the-download-options.png" alt="Revealing the QR code and the download options">
 </div>
-<div class="title">Figure 11. Revealing the QR code and the download options</div>
+<div class="title">Figure 9. Revealing the QR code and the download options</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -934,7 +862,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Downloading-the-apk-file-to-your-computer.png" alt="Downloading the apk file to your computer">
 </div>
-<div class="title">Figure 12. Downloading the apk file to your computer</div>
+<div class="title">Figure 10. Downloading the apk file to your computer</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -956,7 +884,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Creating-a-new-app-on-your-Google-Play-Console.png" alt="Creating a new app on your Google Play Console">
 </div>
-<div class="title">Figure 13. Creating a new app on your Google Play Console</div>
+<div class="title">Figure 11. Creating a new app on your Google Play Console</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -971,7 +899,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Upload-your-apk-here.png" alt="Upload your apk here">
 </div>
-<div class="title">Figure 14. Upload your apk here</div>
+<div class="title">Figure 12. Upload your apk here</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -992,7 +920,7 @@ You are almost ready to send your app to Codename One.</p>
 <div class="content">
 <img src="images/Visit-and-set-every-parameter-flagged-with-an-icon.png" alt="Visit and set every parameter flagged with an icon">
 </div>
-<div class="title">Figure 15. Visit and set every parameter flagged with an icon</div>
+<div class="title">Figure 13. Visit and set every parameter flagged with an icon</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -1061,7 +989,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-01-28 15:13:51 CET
+Last updated 2018-01-30 09:58:55 CET
 </div>
 </div>
 </body>

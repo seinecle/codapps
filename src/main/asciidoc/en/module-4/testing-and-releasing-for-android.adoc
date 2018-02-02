@@ -23,65 +23,19 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: 1. Preliminary setup
 
 //ST: !
-[NOTE]
+[WARNING]
 ====
-The setup will take 95% of this lesson. So do not worry or get bored if this is long, as you will be nearly finished upon the completion of the setup!
+Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.
 ====
 
 //ST: !
-For a global view on the steps to create, test and release your app for Android phones, tablets and iPhones, please refer to the lesson in this same module.
-
-In this lesson, we focus on creating, testing and releasing your app for Android Phones.
-
-//ST: !
-Working on apps for Android phones and tablets is fairly simple, and made even simpler by Codename One, the tool we use in this course.
+Testing and releasing mobile apps for Android phones and tablets is fairly simple, and made even simpler by Codename One, the tool we use in this course.
 
 Here is the list of what you'll need:
 
-//ST: !
-==== a. Take an Android phone and install a QR code reader on it
 
 //ST: !
-So you obviously need an Android phone. But also an app installed on this phone, to read QR codes.
-
-QR codes are very common and you surely have seen them before, they look like:
-
-//ST: !
-image::qrcode.png[align="center",title="An example of  QR code"]
-
-//ST: !
-We need an app on our Android phone able to read QR codes, *because this is how we will transfer our app onto our phone* (fancy!).
-
-Just go on the Play Store, search "QR code", and install a free app doing QR code reader.
-
-//ST: !
-==== b. Create a free account on Codename One
-
-//ST: !
-If you remember the workflow illustrated in the intro to this module, Codename One is the service providing the plugin we use in NetBeans.
-
-*Codename One will convert our app into an Android app*. So we need to create an account with them.
-
-//ST: !
-Codename One is a commercial company proposing an open source tool. They have several pricing plans:
-
-//ST: !
-- the free plan. It gives you access to everything but puts a *size limit* on your app.
-- the basic, pro and entreprise plans, which give extra capabilities.
-
-*In the CODAPPS course we use the free plan*.
-
-//ST: !
-To create your account, go on http://www.codenameone.com[www.codenameone.com] and just *sign up* for an account:
-
-//ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vR1uuMWHdaJXYigqRSJLJ8VrQfgU5PirIF9eTwrCPHr-lNdsQfLxWFz3tD9kTlGe3rmwEjGVoIm2wsx/pub?w=1113&h=602[align="center",title="The codename one website"]
-
-//ST: !
-*Make sure you remember the email and password* you used to sign up as we will need them later.
-
-//ST: !
-==== c. Create A developer account on Google's Play Store (25$)
+==== b. Create A developer account on Google's Play Store (25$)
 
 //ST: !
 You don't need this step if you just want to test your app on your own Android phone.
@@ -104,7 +58,7 @@ A one-time *25$ fee for a lifetime membership* to the Google Developer Program i
 With this fee you can distribute an unlimited number of apps, without limit of time.
 
 //ST: !
-==== d. Set up your phone to accept apps from unknown sources
+==== c. Set up your phone to accept apps from unknown sources
 
 //ST: !
 This step is necessary only for testing the app on your phone.

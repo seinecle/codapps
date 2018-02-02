@@ -19,9 +19,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
-== 1. Explaining the workflow
-//ST: 1. Explaining the workflow
-
 //ST: !
 We are developing an app on NetBeans, with a plugin with installed, called "Codename One".
 

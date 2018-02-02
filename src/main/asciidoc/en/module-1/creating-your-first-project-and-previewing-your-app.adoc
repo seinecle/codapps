@@ -72,10 +72,16 @@ It should be unique: one package name for each different app you create.
 //ST: !
 The package name should contain at least three parts separated by dots. The default value suggested `com.mycompany.myapp`
 
+//ST: !
 [WARNING]
 ====
-*You should change this default value*.
+- *You should change this default value*.
+- No special characters like - _# »& @
+- No accent marks like é ù à or ñ, etc.
 ====
+
+//ST: !
+You should absolutely have a correct package name as you can't change it later[https://github.com/seinecle/codapps/issues/9]. You will have to delete your app and start again from zero.
 
 //ST: !
 How can we find a unique package name for an app?

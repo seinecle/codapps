@@ -169,7 +169,7 @@ The last step consists in generating a Google certificate for your app.
 A certificate is the unique and "tamperproof" ID of your app. It is used by Google to make sure that your app is indeed the one it claims to be, and not one corrupted by a third party.
 
 //ST: !
-Generating certificates can be a long and painful process (watch the lesson on certificates for iPhone apps and cry...). Luckily, Google's process is simpler, and Codename One makes it evenn simpler.
+Generating certificates can be a long and painful process (watch the lesson on certificates for iPhone apps and cry...). Luckily, Google's process is simpler, and Codename One makes it even simpler.
 
 Follow these steps:
 
@@ -218,9 +218,9 @@ Now you should open your web browser, go to http://www.codenameone.com[http://ww
 
 Then go to the Dashboard:
 
+//ST: !
 image::Checking-the-result-on-the-website-of-Codename-One.png[align="center",title="Checking the result on the website of Codename One"]
 {nbsp} +
-//ST: !
 
 //ST: !
 If the build is green and successful, you can go ahead and follow the next instructions below.
