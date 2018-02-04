@@ -16,7 +16,6 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. Explaining the workflow
@@ -44,8 +43,7 @@ These steps can be illustrated simply:
 
 ==  !
 [.stretch]
-image::.png[align="center","testing or releasing an app for Android or iPhones"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTGa1iw57ePcWS4bT1A0ECBHe0oiM8VDjIv_Bi1VDgi_WcHjj7nfu8qP7XMPkeHJQG3oGXKUEJl6Sux/pub?w=1440&h=1080[align="center","testing or releasing an app for Android or iPhones"]
 
 ==  !
 So we see that there is a few interconnected parts: NetBeans, the website of Codename One, the app platforms by Google and Apple...
@@ -79,8 +77,7 @@ To create your account, go on http://www.codenameone.com[www.codenameone.com] an
 
 ==  !
 [.stretch]
-image::The-codename-one-website.png[align="center",title="The codename one website"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vR1uuMWHdaJXYigqRSJLJ8VrQfgU5PirIF9eTwrCPHr-lNdsQfLxWFz3tD9kTlGe3rmwEjGVoIm2wsx/pub?w=1113&h=602[align="center",title="The codename one website"]
 
 ==  !
 *Make sure you remember the email and password* you used to sign up as we will need them later.
@@ -93,13 +90,11 @@ In NetBeans, *right click* on the name of your project and select `Properties`:
 
 ==  !
 [.stretch]
-image::Accessing-the-properties-of-your-project.png[align="center",title="Accessing the properties of your project"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638[align="center",title="Accessing the properties of your project"]
 
 ==  !
 [.stretch]
-image::Codename-One-properties.png[align="center",title="Codename One properties"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vQNsfJ5n7XKfCFwrHOVWvSStXTTegqn7VLQhglAKO6DNIW9U7MYDOigiCYvDyc2z0Iug_v95Zwzk4bH/pub?w=1124&h=638[align="center",title="Codename One properties"]
 
 ==  !
 A login window opens. You should enter *the email and password of the account you created on the Codename One website* (see above in the lesson).
@@ -109,7 +104,6 @@ This is how NetBeans will be able to send the app you created to the Codename On
 ==  !
 [.stretch]
 image::testing-android-3.png[align="center", title="Entering your Codename One credentials"]
-
 
 ==  !
 Then close all the windows we opened by clicking on `OK`.
@@ -153,7 +147,6 @@ QR codes are very common and you surely have seen them before, they look like:
 [.stretch]
 image::qrcode.png[align="center",title="An example of  QR code"]
 
-
 ==  !
 We need an app on our phone to read QR codes, *because this is how we will transfer our app onto our phone* (fancy!).
 
@@ -195,8 +188,7 @@ These different strategies have consequences for operational and financial figur
 
 ==  !
 [.stretch]
-image::Google-and-Apple-have-different-strategies-for-their-app-stores.png[align="center",title="Google and Apple have different strategies for their app stores"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTu8D_1UD15eBbLetOkhZ7TrPpmFZePNw4mbL0LgbQoGqCrahbpr1SdcRJqkJOvzVnLuZ6DHaQQf-1W/pub?w=1434&h=791[align="center",title="Google and Apple have different strategies for their app stores"]
 
 
 ==  !

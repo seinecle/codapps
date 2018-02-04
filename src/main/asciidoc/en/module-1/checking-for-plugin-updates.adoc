@@ -1,9 +1,7 @@
 = CODAPPS: Checking for plugin updates
 Clément Levallois <levallois@em-lyon.com>
 2017-12-13
-
 last modified: {docdate}
-
 :icons!:
 :iconsfont:   font-awesome
 :revnumber: 1.0

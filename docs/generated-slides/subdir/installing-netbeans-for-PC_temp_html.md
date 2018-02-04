@@ -13,7 +13,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -26,8 +25,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 - There are two different files for Windows. Which one should you choose?
 
 //ST: !
-image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBeans for PC"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSS1bTOBljfjOD8aj8weZWc0E7lfRQRut6AclLUxMU6IbeCjFiTwhSsJ8vYRfdvxFYJveydFwVHd5kH/pub?w=1440&h=1080[align="center",title="Downloading NetBeans for PC"]
 
 //ST: !
 - If you don’t know, choose “jdk-8u151-nb-8_2-windows-i586.exe” (see below)

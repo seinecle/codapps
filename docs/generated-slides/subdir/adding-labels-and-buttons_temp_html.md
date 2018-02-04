@@ -15,7 +15,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -29,15 +28,13 @@ Not sure what a Form is? Have a look at the previous lessons!
 To start this lesson, we will assume that you already created a Form called "Form1" and that you opened it in the GUI Builder, like this:
 
 //ST: !
-image::Opening-the-Form-we-created-to-work-on-it.png[align="center",title="Opening the Form we created to work on it"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSZrQqUaxVkLbjSyAnY8bu0IFgBrRTvCOZ2i9vhtcA5LaT5ZUXqFhcPFHVc4E9DZRzTVepawvIb338a/pub?w=1440&h=1080[align="center",title="Opening the Form we created to work on it"]
 
 //ST: !
 So that you should now have the GUI Builder open to design your Form. Here is a recall of the different panels that compose the GUI Builder:
 
 //ST: !
-image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI Builder"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTLmA6SJYK28g7ypoFem5WovZ7hX1vUjna9Sh3mkTtRWtTeuquCn50G72S_kt1cDUtaH9u52H1fGlnh/pub?w=1440&h=1080[align="center",title="Discovering the GUI Builder"]
 
 
 == 2. Adding a Label to your Form
@@ -68,15 +65,13 @@ With these explanations and clarifications made, we can now add a Label in our a
 Start by opening the 'Core Components' menu on the top right:
 
 //ST: !
-image::Opening-the-Core-Components-menu.png[align="center",title="Opening the Core Components menu"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRsMnjK415Ikdk8GMoHX9bayKSgvtT6ZovBv1S3Qs4h_WJXoFoi239WELLcI_TZt2ifIX4wq-BqxDh-/pub?w=1434&h=791[align="center",title="Opening the Core Components menu"]
 
 //ST: !
 Then *drag and drop a Label onto the Form*. Place it where you prefer:
 
 //ST: !
-image::Drag---dropping-a-Label.png[align="center",title="Drag - dropping a Label"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vR0DDosS7CtbpLEWueQ5DlO1ZukhwnzMYGTPL2Z94jZay1e4kvKGurDZLhMSkiS0caE--tc5usMKmNu/pub?w=1434&h=791[align="center",title="Drag - dropping a Label"]
 
 //ST: !
 ==== c. Label or Span Label?
@@ -85,8 +80,7 @@ image::Drag---dropping-a-Label.png[align="center",title="Drag - dropping a Label
 You may have noticed that a Component called "Span Label" also exists, right next to Label:
 
 //ST: !
-image::A-Span-Label.png[align="center",title="A Span Label"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSflXDBf95uRdeSO12WXeyA4G_kUqxzRBZKCcu42iQKLD8PQTPK743niD9gWMJucvGuzu4Yoyy7tZdI/pub?w=1434&h=791[align="center",title="A Span Label"]
 
 //ST: !
 Span Labels are like regular Labels, *but their text can stretch on many lines*, not just one. Even if this is a tiny difference, you have cases when one is more practical than the other.
@@ -102,8 +96,7 @@ Span Labels are like regular Labels, *but their text can stretch on many lines*,
 Adding a Button is easy: just like we did for Labels, *we just need to drag and drop the Button* onto the Form:
 
 //ST: !
-image::Drag---dropping-a-Button.png[align="center",title="Drag - dropping a Button"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTA3dVNZGthIBJLSlBe5ETgfVVuXkYecR7TuXz0ZyQpcWLR7KOMF0yRAGALtlLDFCbCwVaTbv2XGIj8/pub?w=1434&h=791[align="center",title="Drag - dropping a Button"]
 
 //ST: !
 ==== b. Making the button do something
@@ -145,8 +138,7 @@ We are going to create a very simple action to illustrate the principle: *pressi
 *2.* Select the button with your mouse and click on the three dots in the properties:
 
 //ST: !
-image::Selecting-the-Button.png[align="center",title="Selecting the Button"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTh6txPb0VnbXWTovpmS9ZGFuz6GcS6hgH664-Iewcz7eyBcNqfkqv15ScTdGCGjBA22Ei0dkYZLbpI/pub?w=1434&h=791[align="center",title="Selecting the Button"]
 
 //ST: !
 This opens a new window.
@@ -156,8 +148,7 @@ This opens a new window.
 *3.* Give a name to the action and to the button
 
 //ST: !
-image::Giving-a-name-to-the-action-and-to-the-button.png[align="center",title="Giving a name to the action and to the button"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vT347e9ts2KIIRkgKW8qbEooFp4IexuSyN-vZFBJYGWXzXKQztCdkEbs-HrSzdKIwJU9wEmsEsBu9Iy/pub?w=1434&h=791[align="center",title="Giving a name to the action and to the button"]
 
 //ST: !
 [NOTE]
@@ -229,8 +220,7 @@ public void onUpdateLabelTextCommand(com.codename1.ui.events.ActionEvent ev, com
 You can now preview your app (big green arrow in NetBeans). Press the button in the preview, the effect should be:
 
 //ST: !
-image::Previewing-the-button-and-its-action.png[align="center",title="Previewing the button and its action"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTGoQNP8cQHsOTNsSFnYNgNyBx6kjzlSnW6xWhXp2ZzcX7BxJ03yiGQejvS3hO2wUwHY6968SUnQUvV/pub?w=1440&h=1080[align="center",title="Previewing the button and its action"]
 
 //ST: !
 Not this result? Make sure you save the GUI Builder! (File -> Save)

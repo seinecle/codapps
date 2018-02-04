@@ -12,7 +12,6 @@ image::Octocat.png[align="center",title="Github's mascot", pdfwidth=30%]
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 Github is equivalent to https://bitbucket.org/product[Bitbucket], its main competitor.
 
@@ -32,7 +31,6 @@ You will be able to use this forum to search for information or ask new question
 If you don't already have a Github account, you sign in for one here: https://github.com
 
 image::creating-an-account-on-Github.png[align="center",title="creating an account on Github"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -71,7 +69,6 @@ If you spot a question you have the answer for, or if you know the question has 
 - There are two different files for Windows. Which one should you choose?
 
 image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBeans for PC"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -119,7 +116,6 @@ image::Downloading-NetBeans-for-a-MAC.png[align="center",title="Downloading NetB
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 - Find the file you downloaded on your computer and click on it to install.
 
@@ -160,7 +156,6 @@ image::Update-available.png[align="center",title="Update available"]
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 If there is a notification, it means updates are available. Click on the bubble and follow the instructions to download and install the updates.
 
@@ -187,7 +182,6 @@ In this case, NetBeans will never find updates and you’ll be stuck with an old
 Here is how to make sure you have everything correctly setup (explanations follow the picture below)
 
 image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -218,12 +212,10 @@ image::Clicking-on-the-icon-for-new-projects.png[align="center",title="Clicking 
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 - Select a « CodenameOne project »:
 
 image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -244,14 +236,12 @@ image::nb-codenameone-project-name.png[align="center",title="Choosing the name a
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 This will be the administrative name of your app on the app store so please choose it carefully !
 
 Then click on `Next` to move to the next screen:
 
 image::Choosing-the-name-and-location-of-your-project.png[align="center",title="Choosing the name and location of your project"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -300,7 +290,6 @@ Click on `Finish` and your app will be created.
 ==== 4. Done! Preview your app.
 
 image::Previewing-your-app.png[align="center",title="Previewing your app"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -354,7 +343,6 @@ When building software like mobile apps, it is important to give precise names t
 Often, these names don't make intuitive sense, and this creates an impression of technical difficulty:
 
 image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -423,12 +411,10 @@ image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The f
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 Double click on the file `MyApplication.java` to see its content on the right panel in NetBeans:
 
 image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
-{nbsp} +
 {nbsp} +
 {nbsp} +
 {nbsp} +

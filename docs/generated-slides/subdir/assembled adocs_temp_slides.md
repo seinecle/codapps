@@ -12,7 +12,6 @@ image::Octocat.png[align="center",title="Github's mascot", pdfwidth=30%]
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 Github is equivalent to https://bitbucket.org/product[Bitbucket], its main competitor.
 
@@ -33,7 +32,6 @@ If you don't already have a Github account, you sign in for one here: https://gi
 [.stretch]
 image::creating-an-account-on-Github.png[align="center",title="creating an account on Github"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -70,7 +68,6 @@ If you spot a question you have the answer for, or if you know the question has 
 [.stretch]
 image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBeans for PC"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -115,7 +112,6 @@ image::Downloading-NetBeans-for-a-MAC.png[align="center",title="Downloading NetB
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 - Find the file you downloaded on your computer and click on it to install.
 
@@ -154,7 +150,6 @@ image::Update-available.png[align="center",title="Update available"]
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 If there is a notification, it means updates are available. Click on the bubble and follow the instructions to download and install the updates.
 
@@ -181,7 +176,6 @@ Here is how to make sure you have everything correctly setup (explanations follo
 [.stretch]
 image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -211,14 +205,12 @@ image::Clicking-on-the-icon-for-new-projects.png[align="center",title="Clicking 
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 - Select a « CodenameOne project »:
 
 [.stretch]
 image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -239,7 +231,6 @@ image::nb-codenameone-project-name.png[align="center",title="Choosing the name a
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 This will be the administrative name of your app on the app store so please choose it carefully !
 
@@ -248,7 +239,6 @@ Then click on `Next` to move to the next screen:
 [.stretch]
 image::Choosing-the-name-and-location-of-your-project.png[align="center",title="Choosing the name and location of your project"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -298,7 +288,6 @@ Click on `Finish` and your app will be created.
 [.stretch]
 image::Previewing-your-app.png[align="center",title="Previewing your app"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -351,7 +340,6 @@ Often, these names don't make intuitive sense, and this creates an impression of
 [.stretch]
 image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 
@@ -419,14 +407,12 @@ image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The f
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
 
 Double click on the file `MyApplication.java` to see its content on the right panel in NetBeans:
 
 [.stretch]
 image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
 
-{nbsp} +
 {nbsp} +
 {nbsp} +
 

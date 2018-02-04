@@ -13,7 +13,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -22,7 +21,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 //ST: !
 image::Logo%20DRDI.JPG[align="center"]
-{nbsp} +
 
 ====
 http://data.em-lyon.com
@@ -53,14 +51,12 @@ video::7PmaiMNwxio[youtube]
 
 //ST: !
 image::.png[]
-{nbsp} +
 
 //ST: !
 et les 20% restant, ca fait:
 
 //ST: !
 image::.png[]
-{nbsp} +
 
 //ST: !
 ==== b. Lisez le syllabus
@@ -73,7 +69,6 @@ Toutes les consignes, dates, ... sont dans le syllabus
 
 //ST: !
 image::Octocat.jpg[align="center",title="Check the lesson on Github!"]
-{nbsp} +
 
 
 //ST: !

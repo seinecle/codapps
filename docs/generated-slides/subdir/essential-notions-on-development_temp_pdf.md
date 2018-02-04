@@ -15,7 +15,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -70,7 +69,6 @@ Often, these names don't make intuitive sense, and this creates an impression of
 
 //ST: !
 image::Getting-confused-by-the-technical-vocabulary.png[align="center",title="Getting confused by the technical vocabulary"]
-{nbsp} +
 
 //ST: !
 It is not to be annoying, but to make sure we actually get the proper tool when we need it. Every domain of specialty, not just programmers, do this.

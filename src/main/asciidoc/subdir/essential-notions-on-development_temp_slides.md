@@ -16,7 +16,6 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. A note on components and actions
@@ -69,7 +68,6 @@ Often, these names don't make intuitive sense, and this creates an impression of
 ==  !
 [.stretch]
 image::Zach-Galifianakis-maths.gif[align="center",title="Getting confused by the technical vocabulary"]
-
 
 ==  !
 It is not to be annoying, but to make sure we actually get the proper tool when we need it. Every domain of specialty, not just programmers, do this.

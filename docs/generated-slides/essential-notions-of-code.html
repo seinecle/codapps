@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>CODAPPS: Essential notions of code</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>CODAPPS: Essential notions of code</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
@@ -86,36 +86,115 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .insert .insert{color:#080}
 .CodeRay .delete .delete{color:#800}
 .CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Essential notions of code</h2><div class="preamble"><div class="paragraph"><p>last modified: 2018-02-02</p></div>
-<div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Essential notions of code</h2><div class="preamble"><div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$('#open-solution').click(function() {
+    $('#solution').toggle();
+});
+</script></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_1_the_interactive_we_are_using_to_learn_the_basics_of_code"><h2>1. The interactive  we are using to learn the basics of code</h2></section>
 <section><div class="paragraph"><p>It is useful to learn about coding by reading a lesson like this one, but it is more efficient if you can <strong>practice while you read</strong>.</p></div>
 <div class="paragraph"><p>Indeed, a key competency in coding is to learn the simple discipline of writing text carefully:</p></div></section>
-<section><div class="ulist"><ul><li><p>not forgetting a <code>;</code> at the end of the line</p></li><li><p>not forgetting to put a capitalized letter when it is necessary</p></li><li><p>learning how to spot opening accolades <code>{</code> and closing accolades <code>}</code></p></li><li><p>not confusing when to use commas <code>,</code> and semi-colons <code>;</code></p></li></ul></div></section>
-<section><div class="paragraph"><p>It is all very trivial, right? And yet this is what needs the most practice, at the start.</p></div></section>
+<section><div class="ulist"><ul><li><p>not forgetting a <code>;</code> at the end of the line</p></li><li><p>not forgetting to put a capitalized letter when it is necessary</p></li><li><p>learning how to spot opening accolades <code>{</code> and closing accolades <code>}</code></p></li><li><p>not confusing when to use commas <code>,</code> and semi-colons <code>;</code>, knowning wen to put double quotes <code>""</code> or not&#8230;&#8203;</p></li></ul></div></section>
+<section><div class="paragraph"><p>It is all very trivial, right?</p></div>
+<div class="paragraph"><p><strong>And yet this is what needs the most practice, at the start.</strong></p></div></section>
 <section><div class="paragraph"><p>So in this lesson, you will see plenty of interactive screens like this one:</p></div>
-<iframe height="600px" width="100%" src="https://repl.it/repls/DifficultRashAmazontreeboa?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></section>
-<section><div class="paragraph"><p>You can write your code directly on it in this lesson, and and "launch it" to see the results. Here is an explanation of how this works:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: Center"><img src="images/How-does-the-interactive-tool-work.png" alt="How does the interactive tool work" height="100%" /></div><div class="title">Figure 1. How does the interactive tool work</div></section>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe></section>
+<section><div class="paragraph"><p>"Interactive screen" means that <strong>you can write directly on it</strong> and see your code in action - yes, right here: click next to "java", a cursor will blink to show that you can write:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: Center"><img src="images/How-to-use-the-interactive-tool.png" alt="How to use the interactive tool" height="100%" /></div><div class="title">Figure 1. How to use the interactive tool</div></section>
 <section><div class="paragraph"><p>Last note before we start: this lesson is on the <span class="underline">essentials</span> of coding, so we go fast and discuss just the most important notions of coding.</p></div>
 <div class="paragraph"><p>If you are interested in (much) longer, more thorough approaches, you can have a look at these two interactive courses:</p></div></section>
 <section><div class="ulist"><ul><li><p><a href="https://books.trinket.io/thinkjava/index.html">"Think Java"</a> by Tinklet (Java is the same programmming language as the one we use here)</p></li><li><p><a href="https://books.trinket.io/pfe/index.html">"Python for Everybody"</a> also by Tinklet (Python is the most popular programming language for data science)</p></li></ul></div></section>
 <section id="_1_variables"><h2>1. Variables</h2></section>
 <section><div class="paragraph"><p>If we compare coding to cooking, you could say that <code>variables</code> are the ingredients of the recipe.</p></div>
-<div class="paragraph"><p>If we develop a gaming app, we need to have characters and animate them, show their names on screen, record scores&#8230;&#8203;</p></div>
-<div class="paragraph"><p>&#8594; variables are a way to create, define and store all these things we need in our program.</p></div></section>
-<section><div class="admonitionblock tip"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>You can create all the kinds of variables you want, but to help you, a number of them are already predefined because they are so common:</p></div></td></tr></table></div></section>
-<section><div class="paragraph"><p>A variable is created and defined this way:</p></div></section>
-<section><div class="listingblock" id="anchor-1"><div class="title">Creating a variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>;</code></pre></div></div>
-<div class="paragraph"><p>What does all this mean? Let&#8217;s decompose each term:</p></div></section>
-<section><div class="ulist"><ul><li><p><code>String</code>: The capital <strong>S</strong> is mandatory. It means this variable specializes in storing <strong>text</strong>. This is the <strong>type</strong> of the variable.</p></li><li><p><code>player</code>: this is the name I chose for the variable, it could have been anything else. By convention it always starts <strong>without</strong> a capitalized letter and it has <strong>no space</strong> in it.</p></li><li><p><code>=</code>: the right of the equal sign will be the value of the variable.</p></li><li><p><code>"Bernard B"</code>: this is the value I store in the variable <code>player</code>. <strong>Textual values should be put between quotes " "</strong>.</p></li><li><p><code>;</code>: this step of code is finished a the end of the line. The <code>;</code> shows this end and <strong>is mandatory</strong> (if you don&#8217;t put it, the program tries to read the next line as the direct continuation of this one, and it gets confused).</p></li></ul></div></section>
-<section><div class="listingblock" id="anchor-1"><div class="title">Creating a variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>;</code></pre></div></div>
-<div class="paragraph"><p>So this single line of code creates a variable called playerName, and I immediately give it a value: "Bernard B".</p></div></section>
+<div class="paragraph"><p>&#8594; variables are a way to create, define and store all the information we need in our mobile app.</p></div>
+<div class="paragraph"><p>What kind of information do we need to store?</p></div></section>
+<section><div class="ulist"><ul><li><p>if you create a <strong>gaming app</strong>, you might need to store the name of the player, the score, the energy level, etc&#8230;&#8203;</p></li><li><p>if you create an <strong>app selling a service</strong>, you might need to store a login name, a password, a list of products and their prices&#8230;&#8203;</p></li></ul></div></section>
+<section><div class="paragraph"><p>As you see, variables can be of different types: text, numbers, numbers with decimals, &#8230;&#8203;</p></div></section>
+<section><div class="admonitionblock tip"><table><tr><td class="icon"><i class="fa fa-lightbulb-o"></i></td><td class="content"><div class="paragraph"><p>You can create all the kinds of variables you want, but to help you, a number of them are already predefined because they are so common:</p></div></td></tr></table></div></section>
+<section><h3>a. <strong>String</strong> variables: to store text</h3></section>
+<section><div class="paragraph"><p>A variable of type "String" specializes in storing textual information. It is created and defined this way:</p></div></section>
+<section><div class="listingblock" id="string"><div class="title">Creating a String variable and giving it a value</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName; <i class="conum" data-value="1"></i><b>(1)</b>
+playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre></div></div>
+<div class="paragraph"><p>What does all this mean? Let&#8217;s decompose each line:</p></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We create the variable (this needs to be <strong>done just once</strong>)</td></tr></table></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>A value is assigned to the variable (this can be done as many times as we need)</td></tr></table></div></section>
+<section><div class="paragraph"><p>There is a shortcut if you want to create a variable and give it a value, just in one line of code:</p></div></section>
+<section><div class="listingblock" id="string-shortcut"><div class="title">A shortcut</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>;</code></pre></div></div>
+<div class="paragraph"><p><strong>So this single line of code creates a variable called <code>playerName</code>, and I immediately give it a value: <code>Bernard B</code>.</strong></p></div></section>
 <section><div class="paragraph"><p>This will be handy when we need to show the player&#8217;s name on the screen of the app: we will just use the variable <code>player</code>, and what ever value in it (the player&#8217;s name) will be shown.</p></div></section>
-<section><div class="paragraph"><p>Try to create a variable by yourself:</p></div>
-<div class="admonitionblock warning"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>You need to put the name of your variable in the line "System.out.println&#8230;&#8203;" if you want to see the result on screen, just like below</p></div></td></tr></table></div></section>
-<section><iframe height="600px" width="100%" src="https://repl.it/@seinecle/Variable-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></section>
+<section><div class="exampleblock"><div class="content"><div class="paragraph"><p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p></div>
+<div class="paragraph"><p><em>Create a variable called "favoriteMovie" and store the name of your favorite movie in it</em></p></div></div></div></section>
+<section><iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe></section>
+<section><div class="paragraph"><p>Here is the solution:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Creating-a-variable-for-a-textual-information.png" alt="Creating a variable for a textual information" height="100%" /></div><div class="title">Figure 2. Creating a variable for a textual information</div></section>
+<section><h3>b. <strong>Integer</strong> variables: to store round numbers</h3></section>
+<section><div class="paragraph"><p>A variable of type "Integer" specializes in storing round numbers (like 1, 2, 3&#8230;&#8203;). It is created and defined this way:</p></div></section>
+<section><div class="listingblock" id="integer"><div class="title">Creating an Integer variable and giving it a value</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Integer</span> playerAge; <i class="conum" data-value="1"></i><b>(1)</b>
+playerAge = <span class="integer">22</span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre></div></div>
+<div class="paragraph"><p><em>Note that we did not put double quotes around 22</em>! Let&#8217;s decompose each line:</p></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We create the variable (this needs to be <strong>done just once</strong>)</td></tr></table></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>A value is assigned to the variable (this can be done as many times as we need)</td></tr></table></div></section>
+<section><div class="paragraph"><p>There is the same shortcut as usual if you want to create a variable and give it a value, just in one line of code:</p></div></section>
+<section><div class="listingblock" id="integer-shortcut"><div class="title">A shortcut</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Integer</span> playerName = <span class="integer">18</span>;</code></pre></div></div>
+<div class="paragraph"><p><strong>So this single line of code creates a variable called <code>playerAge</code>, and I immediately give it a value: <code>22</code>.</strong></p></div></section>
+<section><div class="paragraph"><p>There is another way to use variables for round numbers:</p></div></section>
+<section><div class="listingblock" id="int-primitive"><div class="title">Another way</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="type">int</span> playerName = <span class="integer">18</span>;</code></pre></div></div>
+<div class="paragraph"><p><code>Integer</code> has been replaced by <code>int</code>. Both are the same, except that <code>int</code> takes <strong>even less space in the memory of your program</strong>.</p></div></section>
+<section><div class="exampleblock"><div class="content"><div class="paragraph"><p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p><em>Create an Integer variable called <code>score</code> and store <code>999999</code> in it. </em></p></li><li><p><em>Create a variable called <code>purchasedItems</code>, using <code>int</code> instead of <code>Integer</code>. Store <code>4</code> in it.</em></p></li></ol></div></div></div></section>
+<section><iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe></section>
+<section><div class="paragraph"><p>Here is the solution:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/java-repl-3.png" alt="java repl 3" height="100%" /></div><div class="title">Figure 3. Creating 2 variables to store numbers</div></section>
+<section><h3>c. <strong>Float</strong>, <strong>Double</strong> and <strong>Long</strong> variables: to store decimal numbers and big numbers</h3></section>
+<section><div class="paragraph"><p>Variables of type "Float" and "Double" specialize in storing decimal numbers (like 1.4533).</p></div>
+<div class="paragraph"><p>The difference between Float and Double? Double can store even more decimals than Float.</p></div>
+<div class="paragraph"><p>Variable of type "Long" specializes in storing loooong numbers (like 9395353439449039035353). It is useful when you need to count milliseconds, for example.</p></div>
+<div class="paragraph"><p>These are created and defined this way:</p></div></section>
+<section><div class="listingblock" id="float-double-long"><div class="title">Using Float, Double and Long variables</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> averagePrice;
+averagePrice = <span class="float">15.34f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="predefined-type">Double</span> piValue;
+piValue = <span class="float">3.14159265358979323846d</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="predefined-type">Long</span> timeOfPlayinMilliSeconds;
+timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>; <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
+<div class="paragraph"><p>Let&#8217;s notice a few things:</p></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We added the letter <code>f</code> at the end of our number, to signal that this is a <strong>Float</strong>.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>We added the letter <code>d</code> at the end of our number, to signal that this is a <strong>Double</strong>.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>We added the letter <code>l</code> at the end of our number, to signal that this is a <strong>Long</strong>.</td></tr></table></div></section>
+<section><div class="paragraph"><p>There is the same shortcut as usual if you want to create a variable and give it a value, just in one line of code:</p></div></section>
+<section><div class="listingblock" id="float-double-long-shortcuts"><div class="title">A shortcut</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> averagePrice = <span class="float">15.34f</span>;
+<span class="predefined-type">Double</span> piValue = <span class="float">3.14159265358979323846d</span>;
+<span class="predefined-type">Long</span> timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>;</code></pre></div></div></section>
+<section><div class="paragraph"><p>There is another way to use these types of variables, again for a gain in memory:</p></div></section>
+<section><div class="listingblock" id="float-double-long-primitive"><div class="title">Another way</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="type">float</span> averagePrice = <span class="float">15.34f</span>;
+<span class="type">double</span> piValue = <span class="float">3.14159265358979323846d</span>;
+<span class="type">long</span> timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>;</code></pre></div></div></section>
+<section><div class="paragraph"><p><code>Float</code> is replaced by <code>float</code>, <code>Double</code> is replaced by <code>double</code>, and <code>Long</code> is replaced by <code>long</code>.</p></div>
+<div class="paragraph"><p>This looks like just a small change, but the smaller cap version takes <strong>even less space in the memory of your program</strong>.</p></div></section>
+<section><div class="exampleblock"><div class="content"><div class="paragraph"><p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p><em>Create a variable called <code>discountPercentage</code> and store <code>0.33</code> in it. </em></p></li><li><p><em>Create a variable called <code>dollarToEuro</code>, using <code>double</code>. Store <code>0.80240500000000003</code> in it.</em></p></li><li><p><em>Create a variable called <code>milliseconds</code>, using <code>long</code>. Store <code>25343353530285753</code> in it.</em></p></li></ol></div></div></div></section>
+<section><iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe></section>
+<section><div class="paragraph" id="open-solution"><p>Here is the solution:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/java-repl-4.png" alt="java repl 4" height="100%" /></div><div class="title">Figure 4. Creating 3 variables to store decimal or long numbers</div></section>
+<section><h3>d. <strong>Boolean</strong> variables: to store true / false information</h3></section>
+<section><div class="paragraph"><p>If you have never programmed before, this type of variable might be surprising to you.
+Why do we need a type of variable that would just store 2 possible values: <code>true</code> or <code>false</code>?</p></div>
+<div class="paragraph"><p>After all, we could just use a <code>String</code> type of variable for that:</p></div></section>
+<section><div class="listingblock" id="string-for-boolean"><div class="title">Using a String variable to store a "true" value</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> customerLoggedIn = <span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span>;
+<span class="predefined-type">String</span> customerSubscribedToNewsletter= <span class="string"><span class="delimiter">&quot;</span><span class="content">false</span><span class="delimiter">&quot;</span></span>;</code></pre></div></div></section>
+<section><div class="paragraph"><p>That would work very well, but in practice these true / false values are so common that a special type of variable called <code>Boolean</code> has been created just for them:</p></div></section>
+<section><div class="listingblock" id="boolean"><div class="title">Using Boolean variables</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Boolean</span> hasSuperPowers = <span class="predefined-constant">true</span>;
+<span class="predefined-type">Boolean</span> isAClubMember = <span class="predefined-constant">false</span>;</code></pre></div></div>
+<div class="paragraph"><p>Let&#8217;s notice that <strong>we did not put double quotes around the value <code>true</code> or <code>false</code></strong>.</p></div></section>
+<section><div class="paragraph"><p>Just like before, there is another way to use these type of variables, again for a gain in memory:</p></div></section>
+<section><div class="listingblock" id="boolean-primitive"><div class="title">Another way</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="type">boolean</span> hasSuperPowers = <span class="predefined-constant">true</span>;
+<span class="type">boolean</span> isAClubMember = <span class="predefined-constant">false</span>;</code></pre></div></div>
+<div class="paragraph"><p>Notice that <code>Boolean</code> has been replaced by <code>boolean</code>.</p></div></section>
+<section><div class="exampleblock"><div class="content"><div class="paragraph"><p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p><em>Create a variable called <code>isPremiumMember</code> and store a <code>true</code> value in it. </em></p></li><li><p><em>Create a variable called <code>isReturningVisitor</code> and store a <code>false</code> value in it</em></p></li></ol></div></div></div></section>
+<section><iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe></section>
+<section><div class="paragraph"><p>Here is the solution:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/java-repl-5.png" alt="java repl 5" height="100%" /></div><div class="title">Figure 5. Creating 3 variables to store true false values</div></section>
 <section id="_the_end"><h2>The end</h2></section>
 <section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p></div></section>
 <section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>

@@ -13,7 +13,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -25,14 +24,12 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 - Click on the second icon from the left:
 
 //ST: !
-image::Clicking-on-the-icon-for-new-projects.png[align="center",title="Clicking on the icon for new projects"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSvRqMTjZdYdJNiPxPV3EKeQnouO1Nea5Ug4LBQE7sfIKe2vrhCuiVDMxWP8xNOcF1BRDjcXXqizlrx/pub?w=999&h=623[align="center",title="Clicking on the icon for new projects"]
 
 //ST: !
 - Select a « CodenameOne project »:
 
 image::nb-codenameone-project.png[align="center",title="Selecting a Codename One type of project"]
-{nbsp} +
 //ST: !
 
 
@@ -52,7 +49,6 @@ Then click on `Next` to move to the next screen.
 
 //ST: !
 image::nb-codenameone-project-name.png[align="center",title="Choosing the name and location of your project"]
-{nbsp} +
 
 //ST: !
 This will be the administrative name of your app on the app store so please choose it carefully !
@@ -60,8 +56,7 @@ This will be the administrative name of your app on the app store so please choo
 Then click on `Next` to move to the next screen:
 
 //ST: !
-image::Choosing-the-name-and-location-of-your-project.png[align="center",title="Choosing the name and location of your project"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vScQAHg2o2koZ0pcTn32YYw_AloTy6nineYPiusdo5ogQuGbRZol0Ljix9t2paUpqbps3-CUGu2zYDR/pub?w=1440&h=1080[align="center",title="Choosing the name and location of your project"]
 
 //ST: !
 We will explain in turn what package name, theme and template you should choose:
@@ -123,8 +118,7 @@ Click on `Finish` and your app will be created.
 ==== 4. Done! Preview your app.
 
 //ST: !
-image::Previewing-your-app.png[align="center",title="Previewing your app"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTq1eyMFdbYtX7AP5x5C9oKeK3uuxe9j_JqYQqjHV1hzjaqpdGsvQmKRniQFFa4x1GEQ2LYfbsrtMNP/pub?w=1076&h=760[align="center",title="Previewing your app"]
 
 //ST: !
 1. The files of your app appear on the left of your screen in NetBeans.
@@ -134,8 +128,7 @@ image::Previewing-your-app.png[align="center",title="Previewing your app"]
 It should show a blank screen with "Hi World" in the title, and "Hi World" again in the screen:
 
 //ST: !
-image::Previewing-your-app.png[align="center",title="Previewing your app"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQsRlTI_wir2DjMptV54byD2hzWp30T74nuE4eOpl46d8rg4UorDCJFP0DADKpeb5pkgFe92PX5nqse/pub?w=216&h=381[align="center",title="Previewing your app"]
 
 
 //ST: !

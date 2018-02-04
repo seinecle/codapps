@@ -150,7 +150,7 @@
                         
                         <!-- Shared configurations across `executions`. Can be overwritten if needed by an executions -->
                         <configuration>
-                            <sourceDocumentName>${doc-to-process}</sourceDocumentName>
+                            <!--<sourceDocumentName>${doc.to.process}</sourceDocumentName>-->
 
                             <requires>
                                 <require>asciidoctor-diagram</require>
@@ -202,7 +202,7 @@
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
                                         <asciimath>asciimath</asciimath>
-                                        <doc-to-process>${doc-to-process}</doc-to-process>
+                                        <doc-to-process>${doc.to.process}</doc-to-process>
                                         <refresh-pics>${refresh.pics}</refresh-pics>
                                     </attributes>
                                     <extensions>
@@ -230,7 +230,7 @@
                                         <icons>font</icons>
                                         <pagenums/>
                                         <toc/>
-                                        <doc-to-process>${doc-to-process}</doc-to-process>
+                                        <doc-to-process>${doc.to.process}</doc-to-process>
                                         <refresh-pics>${refresh.pics}</refresh-pics>
                                     </attributes>
                                     <extensions>
@@ -270,7 +270,7 @@
                                         <!--they will be injected into the extensions which manage the html output formats-->
                                         <statcounter-project>${statcounter-project}</statcounter-project>
                                         <statcounter-security>${statcounter-security}</statcounter-security>
-                                        <doc-to-process>${doc-to-process}</doc-to-process> 
+                                        <doc-to-process>${doc.to.process}</doc-to-process> 
                                         <refresh-pics>${refresh.pics}</refresh-pics>
                                     </attributes>
                                 </configuration>

@@ -524,13 +524,22 @@ table.CodeRay td.code>pre{padding:0}
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
-<span id="revdate">2018-01-22</span>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">last modified</span>
+<br><span id="revremark">2018-02-04</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_1_the_interactive_tool_we_are_using_to_learn_the_basics_of_code">1. The interactive tool we are using to learn the basics of code</a></li>
-<li><a href="#_1_variables">1. Variables</a></li>
+<li><a href="#_1_variables">1. Variables</a>
+<ul class="sectlevel3">
+<li><a href="#_a_strong_string_strong_variables_to_store_text">a. <strong>String</strong> variables: to store text</a></li>
+<li><a href="#_b_strong_integer_strong_variables_to_store_round_numbers">b. <strong>Integer</strong> variables: to store round numbers</a></li>
+<li><a href="#_c_strong_float_strong_strong_double_strong_and_strong_long_strong_variables_to_store_decimal_numbers_and_big_numbers">c. <strong>Float</strong>, <strong>Double</strong> and <strong>Long</strong> variables: to store decimal numbers and big numbers</a></li>
+<li><a href="#_d_strong_boolean_strong_variables_to_store_true_false_information">d. <strong>Boolean</strong> variables: to store true / false information</a></li>
+</ul>
+</li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -538,9 +547,6 @@ table.CodeRay td.code>pre{padding:0}
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>last modified: 2018-02-02</p>
-</div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242">
@@ -549,6 +555,12 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$('#open-solution').click(function() {
+    $('#solution').toggle();
+});
+</script>
 </div>
 </div>
 <div class="sect1">
@@ -572,25 +584,28 @@ table.CodeRay td.code>pre{padding:0}
 <p>learning how to spot opening accolades <code>{</code> and closing accolades <code>}</code></p>
 </li>
 <li>
-<p>not confusing when to use commas <code>,</code> and semi-colons <code>;</code></p>
+<p>not confusing when to use commas <code>,</code> and semi-colons <code>;</code>, knowning wen to put double quotes <code>""</code> or not&#8230;&#8203;</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>It is all very trivial, right? And yet this is what needs the most practice, at the start.</p>
+<p>It is all very trivial, right?</p>
+</div>
+<div class="paragraph">
+<p><strong>And yet this is what needs the most practice, at the start.</strong></p>
 </div>
 <div class="paragraph">
 <p>So in this lesson, you will see plenty of interactive screens like this one:</p>
 </div>
-<iframe height="600px" width="100%" src="https://repl.it/repls/DifficultRashAmazontreeboa?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
 <div class="paragraph">
-<p>You can write your code directly on it in this lesson, and and "launch it" to see the results. Here is an explanation of how this works:</p>
+<p>"Interactive screen" means that <strong>you can write directly on it</strong> and see your code in action - yes, right here: click next to "java", a cursor will blink to show that you can write:</p>
 </div>
 <div class="imageblock" style="text-align: Center">
 <div class="content">
-<img src="images/How-does-the-interactive-tool-work.png" alt="How does the interactive tool work">
+<img src="images/How-to-use-the-interactive-tool.png" alt="How to use the interactive tool">
 </div>
-<div class="title">Figure 1. How does the interactive tool work</div>
+<div class="title">Figure 1. How to use the interactive tool</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
@@ -620,10 +635,23 @@ table.CodeRay td.code>pre{padding:0}
 <p>If we compare coding to cooking, you could say that <code>variables</code> are the ingredients of the recipe.</p>
 </div>
 <div class="paragraph">
-<p>If we develop a gaming app, we need to have characters and animate them, show their names on screen, record scores&#8230;&#8203;</p>
+<p>&#8594; variables are a way to create, define and store all the information we need in our mobile app.</p>
 </div>
 <div class="paragraph">
-<p>&#8594; variables are a way to create, define and store all these things we need in our program.</p>
+<p>What kind of information do we need to store?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>if you create a <strong>gaming app</strong>, you might need to store the name of the player, the score, the energy level, etc&#8230;&#8203;</p>
+</li>
+<li>
+<p>if you create an <strong>app selling a service</strong>, you might need to store a login name, a password, a list of products and their prices&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As you see, variables can be of different types: text, numbers, numbers with decimals, &#8230;&#8203;</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -639,67 +667,399 @@ table.CodeRay td.code>pre{padding:0}
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="_a_strong_string_strong_variables_to_store_text">a. <strong>String</strong> variables: to store text</h4>
 <div class="paragraph">
-<p>A variable is created and defined this way:</p>
+<p>A variable of type "String" specializes in storing textual information. It is created and defined this way:</p>
 </div>
-<div id="anchor-1" class="listingblock">
-<div class="title">Creating a variable</div>
+<div id="string" class="listingblock">
+<div class="title">Creating a String variable and giving it a value</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> playerName; <i class="conum" data-value="1"></i><b>(1)</b>
+playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>What does all this mean? Let&#8217;s decompose each term:</p>
+<p>What does all this mean? Let&#8217;s decompose each line:</p>
 </div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We create the variable (this needs to be <strong>done just once</strong>)
 <div class="ulist">
 <ul>
 <li>
-<p><code>String</code>: The capital <strong>S</strong> is mandatory. It means this variable specializes in storing <strong>text</strong>. This is the <strong>type</strong> of the variable.</p>
+<p><code>String</code> The capital <strong>S</strong> is mandatory. It means this variable specializes in storing <strong>text</strong>. This is the <strong>type</strong> of the variable.</p>
 </li>
 <li>
-<p><code>player</code>: this is the name I chose for the variable, it could have been anything else. By convention it always starts <strong>without</strong> a capitalized letter and it has <strong>no space</strong> in it.</p>
+<p><code>playerName</code> this is the name I chose for the variable, it could have been anything else. By convention it always starts <strong>without</strong> a capitalized letter and it has <strong>no space</strong> in it.</p>
+</li>
+<li>
+<p>The <code>;</code> shows the end of this instruction and <strong>is mandatory</strong> (if you don&#8217;t put it, the program tries to read the next line as the direct continuation of this one, and it gets confused).</p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>A value is assigned to the variable (this can be done as many times as we need)
+<div class="ulist">
+<ul>
+<li>
+<p><code>playerName</code>: our variable, created just above.</p>
 </li>
 <li>
 <p><code>=</code>: the right of the equal sign will be the value of the variable.</p>
 </li>
 <li>
-<p><code>"Bernard B"</code>: this is the value I store in the variable <code>player</code>. <strong>Textual values should be put between quotes " "</strong>.</p>
+<p><code>"Bernard B"</code>: this is the value I store in the variable <code>playerName</code>. <strong>Textual values should be put between quotes " "</strong>.</p>
 </li>
 <li>
-<p><code>;</code>: this step of code is finished a the end of the line. The <code>;</code> shows this end and <strong>is mandatory</strong> (if you don&#8217;t put it, the program tries to read the next line as the direct continuation of this one, and it gets confused).</p>
+<p>The <code>;</code> shows the end of this instruction and <strong>is mandatory</strong>.</p>
 </li>
 </ul>
+</div></td>
+</tr>
+</table>
 </div>
-<div id="anchor-1" class="listingblock">
-<div class="title">Creating a variable</div>
+<div class="paragraph">
+<p>There is a shortcut if you want to create a variable and give it a value, just in one line of code:</p>
+</div>
+<div id="string-shortcut" class="listingblock">
+<div class="title">A shortcut</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>So this single line of code creates a variable called playerName, and I immediately give it a value: "Bernard B".</p>
+<p><strong>So this single line of code creates a variable called <code>playerName</code>, and I immediately give it a value: <code>Bernard B</code>.</strong></p>
 </div>
 <div class="paragraph">
 <p>This will be handy when we need to show the player&#8217;s name on the screen of the app: we will just use the variable <code>player</code>, and what ever value in it (the player&#8217;s name) will be shown.</p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>Try to create a variable by yourself:</p>
+<p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p>
 </div>
-<div class="admonitionblock warning">
+<div class="paragraph">
+<p><em>Create a variable called "favoriteMovie" and store the name of your favorite movie in it</em></p>
+</div>
+</div>
+</div>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<div class="paragraph">
+<p>Here is the solution:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/Creating-a-variable-for-a-textual-information.png" alt="Creating a variable for a textual information">
+</div>
+<div class="title">Figure 2. Creating a variable for a textual information</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_b_strong_integer_strong_variables_to_store_round_numbers">b. <strong>Integer</strong> variables: to store round numbers</h4>
+<div class="paragraph">
+<p>A variable of type "Integer" specializes in storing round numbers (like 1, 2, 3&#8230;&#8203;). It is created and defined this way:</p>
+</div>
+<div id="integer" class="listingblock">
+<div class="title">Creating an Integer variable and giving it a value</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Integer</span> playerAge; <i class="conum" data-value="1"></i><b>(1)</b>
+playerAge = <span class="integer">22</span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Note that we did not put double quotes around 22</em>! Let&#8217;s decompose each line:</p>
+</div>
+<div class="colist arabic">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You need to put the name of your variable in the line "System.out.println&#8230;&#8203;" if you want to see the result on screen, just like below</p>
-</div>
-</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We create the variable (this needs to be <strong>done just once</strong>)
+<div class="ulist">
+<ul>
+<li>
+<p><code>Integer</code> The capital <strong>I</strong> is mandatory. It means this variable specializes in storing <strong>round numbers</strong>. This is the <strong>type</strong> of the variable.</p>
+</li>
+<li>
+<p><code>playerAge</code> this is the name I chose for the variable, it could have been anything else. By convention it always starts <strong>without</strong> a capitalized letter and it has <strong>no space</strong> in it.</p>
+</li>
+<li>
+<p>The <code>;</code> shows the end of this instruction and <strong>is mandatory</strong> (if you don&#8217;t put it, the program tries to read the next line as the direct continuation of this one, and it gets confused).</p>
+</li>
+</ul>
+</div></td>
 </tr>
 </table>
 </div>
-<iframe height="600px" width="100%" src="https://repl.it/@seinecle/Variable-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>A value is assigned to the variable (this can be done as many times as we need)
+<div class="ulist">
+<ul>
+<li>
+<p><code>playerAge</code>: our variable, created just above.</p>
+</li>
+<li>
+<p><code>=</code>: the right of the equal sign will be the value of the variable.</p>
+</li>
+<li>
+<p><code>22</code>: this is the value I store in the variable <code>playerAge</code>. <strong>Don&#8217;t use double quote around the value</strong>.</p>
+</li>
+<li>
+<p>The <code>;</code> shows the end of this instruction and <strong>is mandatory</strong>.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There is the same shortcut as usual if you want to create a variable and give it a value, just in one line of code:</p>
+</div>
+<div id="integer-shortcut" class="listingblock">
+<div class="title">A shortcut</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Integer</span> playerName = <span class="integer">18</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>So this single line of code creates a variable called <code>playerAge</code>, and I immediately give it a value: <code>22</code>.</strong></p>
+</div>
+<div class="paragraph">
+<p>There is another way to use variables for round numbers:</p>
+</div>
+<div id="int-primitive" class="listingblock">
+<div class="title">Another way</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">int</span> playerName = <span class="integer">18</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>Integer</code> has been replaced by <code>int</code>. Both are the same, except that <code>int</code> takes <strong>even less space in the memory of your program</strong>.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>Create an Integer variable called <code>score</code> and store <code>999999</code> in it. </em></p>
+</li>
+<li>
+<p><em>Create a variable called <code>purchasedItems</code>, using <code>int</code> instead of <code>Integer</code>. Store <code>4</code> in it.</em></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<div class="paragraph">
+<p>Here is the solution:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/java-repl-3.png" alt="java repl 3">
+</div>
+<div class="title">Figure 3. Creating 2 variables to store numbers</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_c_strong_float_strong_strong_double_strong_and_strong_long_strong_variables_to_store_decimal_numbers_and_big_numbers">c. <strong>Float</strong>, <strong>Double</strong> and <strong>Long</strong> variables: to store decimal numbers and big numbers</h4>
+<div class="paragraph">
+<p>Variables of type "Float" and "Double" specialize in storing decimal numbers (like 1.4533).</p>
+</div>
+<div class="paragraph">
+<p>The difference between Float and Double? Double can store even more decimals than Float.</p>
+</div>
+<div class="paragraph">
+<p>Variable of type "Long" specializes in storing loooong numbers (like 9395353439449039035353). It is useful when you need to count milliseconds, for example.</p>
+</div>
+<div class="paragraph">
+<p>These are created and defined this way:</p>
+</div>
+<div id="float-double-long" class="listingblock">
+<div class="title">Using Float, Double and Long variables</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Float</span> averagePrice;
+averagePrice = <span class="float">15.34f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="predefined-type">Double</span> piValue;
+piValue = <span class="float">3.14159265358979323846d</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="predefined-type">Long</span> timeOfPlayinMilliSeconds;
+timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s notice a few things:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We added the letter <code>f</code> at the end of our number, to signal that this is a <strong>Float</strong>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We added the letter <code>d</code> at the end of our number, to signal that this is a <strong>Double</strong>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We added the letter <code>l</code> at the end of our number, to signal that this is a <strong>Long</strong>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There is the same shortcut as usual if you want to create a variable and give it a value, just in one line of code:</p>
+</div>
+<div id="float-double-long-shortcuts" class="listingblock">
+<div class="title">A shortcut</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Float</span> averagePrice = <span class="float">15.34f</span>;
+<span class="predefined-type">Double</span> piValue = <span class="float">3.14159265358979323846d</span>;
+<span class="predefined-type">Long</span> timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There is another way to use these types of variables, again for a gain in memory:</p>
+</div>
+<div id="float-double-long-primitive" class="listingblock">
+<div class="title">Another way</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">float</span> averagePrice = <span class="float">15.34f</span>;
+<span class="type">double</span> piValue = <span class="float">3.14159265358979323846d</span>;
+<span class="type">long</span> timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>Float</code> is replaced by <code>float</code>, <code>Double</code> is replaced by <code>double</code>, and <code>Long</code> is replaced by <code>long</code>.</p>
+</div>
+<div class="paragraph">
+<p>This looks like just a small change, but the smaller cap version takes <strong>even less space in the memory of your program</strong>.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>Create a variable called <code>discountPercentage</code> and store <code>0.33</code> in it. </em></p>
+</li>
+<li>
+<p><em>Create a variable called <code>dollarToEuro</code>, using <code>double</code>. Store <code>0.80240500000000003</code> in it.</em></p>
+</li>
+<li>
+<p><em>Create a variable called <code>milliseconds</code>, using <code>long</code>. Store <code>25343353530285753</code> in it.</em></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<div id="open-solution" class="paragraph">
+<p>Here is the solution:</p>
+</div>
+<div id="solution" class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/java-repl-4.png" alt="java repl 4">
+</div>
+<div class="title">Figure 4. Creating 3 variables to store decimal or long numbers</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_d_strong_boolean_strong_variables_to_store_true_false_information">d. <strong>Boolean</strong> variables: to store true / false information</h4>
+<div class="paragraph">
+<p>If you have never programmed before, this type of variable might be surprising to you.
+Why do we need a type of variable that would just store 2 possible values: <code>true</code> or <code>false</code>?</p>
+</div>
+<div class="paragraph">
+<p>After all, we could just use a <code>String</code> type of variable for that:</p>
+</div>
+<div id="string-for-boolean" class="listingblock">
+<div class="title">Using a String variable to store a "true" value</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">String</span> customerLoggedIn = <span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span>;
+<span class="predefined-type">String</span> customerSubscribedToNewsletter= <span class="string"><span class="delimiter">&quot;</span><span class="content">false</span><span class="delimiter">&quot;</span></span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That would work very well, but in practice these true / false values are so common that a special type of variable called <code>Boolean</code> has been created just for them:</p>
+</div>
+<div id="boolean" class="listingblock">
+<div class="title">Using Boolean variables</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Boolean</span> hasSuperPowers = <span class="predefined-constant">true</span>;
+<span class="predefined-type">Boolean</span> isAClubMember = <span class="predefined-constant">false</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s notice that <strong>we did not put double quotes around the value <code>true</code> or <code>false</code></strong>.</p>
+</div>
+<div class="paragraph">
+<p>Just like before, there is another way to use these type of variables, again for a gain in memory:</p>
+</div>
+<div id="boolean-primitive" class="listingblock">
+<div class="title">Another way</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">boolean</span> hasSuperPowers = <span class="predefined-constant">true</span>;
+<span class="type">boolean</span> isAClubMember = <span class="predefined-constant">false</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that <code>Boolean</code> has been replaced by <code>boolean</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>Create a variable called <code>isPremiumMember</code> and store a <code>true</code> value in it. </em></p>
+</li>
+<li>
+<p><em>Create a variable called <code>isReturningVisitor</code> and store a <code>false</code> value in it</em></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<div class="paragraph">
+<p>Here is the solution:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/java-repl-5.png" alt="java repl 5">
+</div>
+<div class="title">Figure 5. Creating 3 variables to store true false values</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -761,7 +1121,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-02-02 16:05:45 CET
+Last updated 2018-02-04 20:39:37 CET
 </div>
 </div>
 </body>
