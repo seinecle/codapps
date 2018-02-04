@@ -43,7 +43,7 @@ It is all very trivial, right?
 //ST: !
 So in this lesson, you will see plenty of interactive screens like this one:
 
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 500px; height: 130px; border: 0px"></iframe>
 
 //ST: !
 "Interactive screen" means that *you can write directly on it* and see your code in action - yes, right here: click next to "java", a cursor will blink to show that you can write:
@@ -139,7 +139,7 @@ __Create a variable called "favoriteMovie" and store the name of your favorite m
 ====
 
 //ST: !
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 500px; height: 130px; border: 0px"></iframe>
 
 //ST: !
 Here is the solution:
