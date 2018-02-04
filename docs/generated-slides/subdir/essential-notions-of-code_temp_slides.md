@@ -320,11 +320,11 @@ icon:child[3x] Your turn!
 ++++
 
 ==  !
-[.open-solution]
+[#open-solution]
 Here is the solution:
 
 ==  !
-[.solution]
+[#solution]
 [.stretch]
 image::java-repl-4.png[align="center", title="Creating 3 variables to store decimal or long numbers"]
 

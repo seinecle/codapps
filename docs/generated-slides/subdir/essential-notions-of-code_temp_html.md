@@ -319,11 +319,11 @@ icon:child[3x] Your turn!
 ++++
 
 //ST: !
-[.open-solution]
+[#open-solution]
 Here is the solution:
 
 //ST: !
-[.solution]
+[#solution]
 image::java-repl-4.png[align="center", title="Creating 3 variables to store decimal or long numbers"]
 {nbsp} +
 

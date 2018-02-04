@@ -5,7 +5,7 @@ last modified: {docdate}
 :iconsfont: font-awesome
 :source-highlighter: rouge
 :revnumber: 1.0
-:try-caption: 💡
+:docinfo: shared-head
 :example-caption!:
 
 
@@ -15,14 +15,6 @@ last modified: {docdate}
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
 
-+++++++++
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-$('#open-solution').click(function() {
-    $('#solution').toggle();
-});
-</script>
-+++++++++
 
 
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
