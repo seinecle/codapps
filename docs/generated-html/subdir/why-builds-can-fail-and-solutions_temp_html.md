@@ -15,6 +15,7 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
+{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -36,7 +37,8 @@ A number of reasons can make your build terminate with an error at this stage.
 Login to www.codenameone.com, go on the dashboard and check the status of your build:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRE33SmNUvGgboMDCEizxNh2MieEFJ7tyawDHNX59GPcwygPkli60Bxgli4dZzlTOouf_mB8TcROm8f/pub?w=1124&h=638[align="center",title="Checking the result on the website of Codename One"]
+image::Checking-the-result-on-the-website-of-Codename-One.png[align="center",title="Checking the result on the website of Codename One"]
+{nbsp} +
 
 //ST: !
 As you see, the build of this Android app failed. What happened?
@@ -44,7 +46,8 @@ As you see, the build of this Android app failed. What happened?
 To do a diagnostic, click on the *date and time* on the red display and then click on "Error log" to open the error message:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vTyWysSDM9Hvnh2Kv5F_oEwPcmuoXo0Hs3qMfxvt3xGpikSVkHBR2yIWOVWWlcFa4a3MDlWt78AdKHw/pub?w=1122&h=321[align="center",title="Opening the error message after a failed build"]
+image::Opening-the-error-message-after-a-failed-build.png[align="center",title="Opening the error message after a failed build"]
+{nbsp} +
 
 //ST: !
 The text that appears is typically very long and intimidating. The good news is, we are usually *just interested in the lines at the bottom*.
@@ -90,14 +93,16 @@ The solution is simple:
 1. Open the Codename One properties of the project:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638[align="center",title="Accessing the properties of your project"]
+image::Accessing-the-properties-of-your-project.png[align="center",title="Accessing the properties of your project"]
+{nbsp} +
 
 //ST: !
 [start=2]
 2. Go to the Android properties and take the name and location of the "keystore.ks" file indicated here:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRJttX3GOuXEaoALj88d5ZQNgqTGN_r6cwmyrXMwVxAhdHZCrDOogX5znuWe_0SQV_46llOq3tP8HAS/pub?w=1124&h=638[align="center",title="Find this file on your computer and delete it"]
+image::Find-this-file-on-your-computer-and-delete-it.png[align="center",title="Find this file on your computer and delete it"]
+{nbsp} +
 
 //ST: !
 [start="3]

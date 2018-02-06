@@ -25,6 +25,7 @@ It is very famous in the community of programmers.
 Github's icon is a cat which is also an octopus:
 
 image::Octocat.png[align="center",title="Github's mascot", pdfwidth=30%]
+{nbsp} +
 
 //ST: !
 Github is equivalent to https://bitbucket.org/product[Bitbucket], its main competitor.
@@ -49,7 +50,8 @@ You will be able to use this forum to search for information or ask new question
 //ST: !
 If you don't already have a Github account, you sign in for one here: https://github.com
 
-image::https://docs.google.com/drawings/d/e/2PACX-1vSTE_PnMLElyX7jQhCbj9jb65GBV6E9SH6IEk_GanbVTQDesp2E76XmheYxgiSBWRKNtQ8z-TznxC1o/pub?w=1440&h=1080[align="center",title="creating an account on Github"]
+image::creating-an-account-on-Github.png[align="center",title="creating an account on Github"]
+{nbsp} +
 
 == 3. Asking a question on Github
 //ST: 3. Asking a question on Github

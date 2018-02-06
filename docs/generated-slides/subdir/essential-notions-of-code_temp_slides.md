@@ -5,7 +5,7 @@ last modified: {docdate}
 :iconsfont: font-awesome
 :source-highlighter: rouge
 :revnumber: 1.0
-:docinfo: shared-head
+:docinfo: shared
 :example-caption!:
 
 
@@ -43,7 +43,7 @@ It is all very trivial, right?
 So in this lesson, you will see plenty of interactive screens like this one:
 
 ++++
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
 ++++
 
 ==  !
@@ -142,7 +142,7 @@ __Create a variable called "favoriteMovie" and store the name of your favorite m
 
 ==  !
 ++++
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="http://www.javarepl.com/embed.html" style="width: 500px; height: 130px; border: 0px"></iframe>
 ++++
 
 ==  !

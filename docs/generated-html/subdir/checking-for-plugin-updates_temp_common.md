@@ -1,14 +1,17 @@
 = CODAPPS: Checking for plugin updates
 Clément Levallois <levallois@em-lyon.com>
+2017-12-13
+last modified: {docdate}
 :icons!:
 :iconsfont:   font-awesome
 :revnumber: 1.0
 :example-caption!:
-:title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 :sourcedir: ../../../main/java
 
+:title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
-
+image::EMLyon_logo_corp.png[width="242" align="center"]
+{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
