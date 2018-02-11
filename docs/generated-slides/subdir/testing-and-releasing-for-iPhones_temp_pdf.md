@@ -15,6 +15,7 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
+{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -24,98 +25,286 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 //ST: !
 [WARNING]
 ====
-Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.
-====
-
-
-//ST: !
-And finally, these differences have a consequence for you, who learn how to make apps.
-
-//ST: !
-- If you don't have an app which is "market ready" (interesting to potential users), Apple will reject it from their App store
-- Even if you want to create an app and test it just on your own phone (not releasing it on the App Store), it will cost you 99$ per year to join the Apple Developer Program.
-
-//ST: !
-
-//ST: !
-==== a. Take an Android phone and install a QR code reader on it
-
-//ST: !
-So you obviously need an Android phone. But also an app installed on this phone, to read QR codes.
-
-QR codes are very common and you surely have seen them before, they look like:
-
-//ST: !
-image::qrcode.png[align="center",title="An example of  QR code"]
-
-//ST: !
-We need an app on our Android phone able to read QR codes, *because this is how we will transfer our app onto our phone* (fancy!).
-
-Just go on the Play Store, search "QR code", and install a free app doing QR code reader.
-
-//ST: !
-==== c. Create A developer account on Google's Play Store (25$)
-
-//ST: !
-You don't need this step if you just want to test your app on your own Android phone.
-
-[NOTE]
-====
-em *lyon business school* students: we provide you with a free access to a Google Play Store account.
-
-You will receive the invitation by email. You can ignore this and move on to the next part of this lesson.
+1. Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.
+2. *You need a Mac computer*
 ====
 
 //ST: !
-To release your app on the Play Store, you need to create an account.
+As explained in the first lesson of this module, here are your options:
 
-Visit the webpage to sign up for a Google Play developer account: https://play.google.com/apps/publish/signup[https://play.google.com/apps/publish/signup].
-
-//ST: !
-A one-time *25$ fee for a lifetime membership* to the Google Developer Program is requested.
-
-With this fee you can distribute an unlimited number of apps, without limit of time.
-
+a. paying 99$ (per year) to access Apple's Developer program.
+** this allows you to test your app on your own phone
+** you can release your app on the App Store *if Apple judges that your app is "good enough"*
 
 //ST: !
-==== f. Generate a Google certificate for the app
+[start=2]
+b. access an https://developer.apple.com/programs/ios/university/[iOS Developer University Program]
+** this allows you to test your app on your own phone *for free*
+** you cannot release your app on the App Store (unless you pay the 99$ of course)
 
 //ST: !
-A certificate is the unique and "tamperproof" ID of your app. It is used by Google to make sure that your app is indeed the one it claims to be, and not one corrupted by a third party.
+Codename One provides straightforward help and tutorials for case a. Have a look:
 
 //ST: !
-Generating certificates can be a long and painful process (watch the lesson on certificates for iPhone apps and cry...). Luckily, Google's process is simpler, and Codename One makes it even simpler.
+video::pOLOoZFHxwU[youtube]
 
-Follow these steps:
-
-//ST: !
-Return to the `Properties` of your project:
+Or visit https://www.codenameone.com/blog/ios-certificate-wizard.html[the corresponding web page].
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638[align="center",title="Accessing the properties of your project"]
+In this lesson, we focus on case b.
+
+http://www.em-lyon.com/en[Emlyon business school] students have access to the iOS Developer University Program and we will see here how to use it.
+
+If you are in a different school, ask your administration how they could set up such a program! (it is free).
 
 //ST: !
-You can now access the Android settings of your project. *Be extra careful in following these instructions* as mistakes are particularly frustrating to debug:
+Make sure you have an hour ahead of you, some tea or coffee and plenty of patience. This is going to be a long road.
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vTDTzagRutzHUrqYDRNXrkG3IrGc8wLffsjgaByrTiFqOJmrXdnWZ913uO2K1O__NG43B8NTnZY5twV/pub?w=1124&h=638[align="center",title="Android properties of your project"]
+image::winter.gif[align="center",title="Releasing your app for iOS"]
+{nbsp} +
+
+== 2. The long road
+//ST: 2. The long road
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRYCv8H7IzJIWxZhh5AmSvyiGeYgzXlZVvpxQm6pBG1_lmi_OJPnBdovuF9pf0xvlwebgsY0skuG-_F/pub?w=1124&h=638[align="center",title="Generating a certificate"]
+==== a. Getting access to the Apple Developer Console
 
 //ST: !
-Your Google certificate is now generated! Close the properties of the project by clicking on `OK` and be ready to create the Android version of your app!
-
-== 2. Launching the build
-//ST: Launching the build
+You have received an email inviting you to join an Apple Developer program :
+If you don’t find this email, check your spam folder !
 
 //ST: !
-With all the setup completed, we are nearly finished.
-
-Launch the build of the Android app by right clicking on your project's name:
+image::ios-release-univ-1.jpg[align="center", title="Email invitation"]
+{nbsp} +
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vQaeosAZWaAnFnfksQD3AsDpZT_8WlsjCV6ysrvpG1BrH35dOj7MKsspzItbs3LDuV0UQcYY2zhzOEK/pub?w=1124&h=638[align="center",title="Launching the Android build"]
+Open this email, click on the link :
+
+//ST: !
+image::ios-release-univ-2.jpg[align="center", title="Content of the email"]
+{nbsp} +
+
+//ST: !
+On the page that opens, choose "I need to register as an Apple Developer"
+
+//ST: !
+image::ios-release-univ-3.jpg[align="center", title="Registration as an Apple Developer"]
+{nbsp} +
+
+//ST: !
+Then you arrive on a screen that asks you to use your Apple id:
+
+a.	If you have an Apple Id (because you own a Mac, or an iPhone, or because you use iTunes…), choose "sign in"
+b.	If you don’t have an Apple id, choose "Create an Apple Id"
+
+//ST: !
+image::ios-release-univ-4.jpg[align="center", title="Apple id"]
+{nbsp} +
+
+//ST: !
+Then you need to agree on the license:
+
+//ST: !
+image::ios-release-univ-5.jpg[align="center", title="Apple Developer Agreement"]
+{nbsp} +
+
+//ST: !
+You should be redirected to this page, which is the place where you manage the certificates of your apps for iPhones.
+
+Congratulations, that's already a big step!
+
+//ST: !
+==== b. Generating a certificate request
+
+//ST: !
+Click on 'Certificates, Identities and Profiles'
+
+//ST: !
+image::ios-release-univ-6.jpg[align="center", title="Access certificates"]
+{nbsp} +
+
+//ST: !
+Click on `Certificates -> All` then click on the `+` sign, to add a new certificate for your app :
+
+//ST: !
+image::ios-release-univ-7.png[align="center", title="Adding a certificate"]
+{nbsp} +
+
+//ST: !
+1. Choose "iOS App Development",
+2. click on "Worldwide Developer Relations Certificate Authority"
+**  it will download a file on you computer.
+3. Then click on "Continue"
+
+//ST: !
+image::ios-release-univ-8.png[align="center", title="step 1 of the creation"]
+{nbsp} +
+
+//ST: !
+You should arrive on this screen, *stay on it*:
+
+//ST: !
+image::ios-release-univ-9.png[align="center", title="step 2 of the creation"]
+{nbsp} +
+
+//ST: !
+In the Finder on your Mac, open the Applications folder (image:ios-release-univ-10.png[]), and inside it, open the "Utilities" folder:
+
+//ST: !
+image::Opening-the-Utilities-Folder.png[align="center", title="Opening the Utilities Folder"]
+{nbsp} +
+
+//ST: !
+In the "Utilities" folder, open the Keychain access:
+
+
+//ST: !
+image::Opening-the-Keychain-access.png[align="center", title="Opening the Keychain access"]
+{nbsp} +
+In the window that opens, select in the menu "Keychain access -> Certificate Assistant -> Request a Certificate from a Certificate Authority":
+
+//ST: !
+image::Requesting-a-certificate.png[align="center", title="Requesting a certificate"]
+{nbsp} +
+
+//ST: !
+In the small window that opens:
+
+-	In the field "User email address", put the email address *of your Apple ID*
+-	In the field "Common Name", put your *emlyon email address*
+-	Then choose "save to disk" and click on "continue".
+
+I suggest you create a folder somewhere on your computer called "Apple certificates", where you will save the file.
+
+//ST: !
+image::ios-release-univ-14.png[align="center", title="Filling in details"]
+{nbsp} +
+
+//ST: !
+Now, let’s go back to the website of the Apple Dev Center, where we can continue where we left !
+
+[TIP]
+====
+If there is an error on the page, it just means that the page expired. Just reload it, and go back to the screen where we left
+====
+
+//ST: !
+Upload the file "CertificateSigningRequest.certSigningRequest" that you just saved on your disk:
+
+//ST: !
+image::ios-release-univ-15.png[align="center", title="Uploading the certificate request"]
+{nbsp} +
+
+//ST: !
+This upload is the step that creates your certificate. Congratulations! That's also a big step you just accomplished!
+
+//ST: !
+==== c. Using the certificate
+
+//ST: !
+Now download the certificate to your disk, in the same folder. It should be called "ios_development.cer":
+
+//ST: !
+image::ios-release-univ-16.png[align="center", title="Downloading the certificate"]
+{nbsp} +
+
+//ST: !
+Find your file "ios_development.cer" where you saved it. Double click on it. This will open the Keychain access:
+
+-	 click on "Certificates" in the left menu
+-	Right click on the name of your certificate and choose "Export…"
+
+//ST: !
+image::ios-release-univ-17.png[align="center", title="Exporting the certificate"]
+{nbsp} +
+
+//ST: !
+This opens a window asking for a password. Put "emlyon1000":
+
+//ST: !
+image::ios-release-univ-18.png[align="center", title="Assigning a password"]
+{nbsp} +
+
+//ST: !
+Then on the next screen you are asked again for a password.
+
+You should use the password of your Mac computer (the one you use to login when the computer starts) :
+
+//ST: !
+image::ios-release-univ-19.png[align="center", title="Confirming with the Mac password"]
+{nbsp} +
+
+//ST: !
+You are invited to save a file on your disk. This is a file with "p12", save it in the same folder where you saved your other files for this certificate.
+
+//ST: !
+==== d. Getting the UDID of your phone
+
+//ST: !
+We need the UDID of your phone, the one where you will install and test your app.
+
+The UDID is the unique identifier of your iPhone. You can find it by plugging your phone to iTunes. A very simple tutorial explains it here : http://whatsmyudid.com/
+
+Once you have your UDID, write it to me here: http://goo.gl/forms/mmotEWvRYs
+
+//ST: !
+And now wait just a couple of days… I need to collect all UDID from students before I create “Provisioning Profiles” (yes, this process is long and horrible, but we are NEARLY there!).
+
+I’ll send you an email when you can resume this lesson, at the step just below: "Downloading a provisioning profile"
+
+//ST: !
+==== e. Downloading the Provisioning Profile
+
+//ST: !
+Go to “Provisioning Profiles” and download the most recent one:
+
+[TIP]
+====
+I advise you to download it to the same folder where you saved the previous files created in this tutorial, related to certificates.
+====
+
+//ST: !
+image::ios-release-univ-20.png[align="center", title="Downloading the most recent provisioning profile"]
+{nbsp} +
+
+//ST: !
+image::ios-release-univ-20.png[align="center", title="Downloading the most recent provisioning profile"]
+{nbsp} +
+
+//ST: !
+Now, open NetBeans, right click on the name of your project, and select “Properties” (last item at the bottom).
+
+//ST: !
+Please check the screenshot below and the numbered steps, and read the indications for each of them:
+
+1.	Select “iOS” on the menu on the left
+2.	For Certificate, choose the file with the name ending in “p12” that you saved on your computer in this lesson
+3.	For Certificate password, write “emlyon1000”
+
+//ST: !
+[start=4]
+4.	For provisioning profile, choose the one we just downloaded
+5.	In app ID, you must add “4RVRDEN5JP.” Just before io.codapps
+6.	Validate
+
+//ST: !
+image::ios-release-univ-21.png[align="center", title="Filling in the properties in NetBeans"]
+{nbsp} +
+
+== 3. The end of the road: sending your build to Codename One
+//ST: 3. The end of the road: sending your build to Codename One
+
+//ST: !
+The version of your app that you will build to install on your iPhone is considered to be for the purpose of testing and debbuging.
+
+For this reason, we will call it the "iOS debug build".
+
+Launch the iOS debug build by right clicking on your project's name:
+
+//ST: !
+image::Sending-the-iOS-Debug-Build.png[align="center", title="Sending the iOS Debug Build"]
+{nbsp} +
 
 //ST: !
 If you get a "Build failed" message at the end, don't worry this is very common not to succeed at the first time.
@@ -130,7 +319,8 @@ Now you should open your web browser, go to http://www.codenameone.com[http://ww
 Then go to the Dashboard:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRt5pn7XtJ08RdO3IQp2GybVFwJ78DnqsFnqXqs_hdJF6UXKJdbNXNV-AwAXMr31mzIper1sr5pTM0L/pub?w=1124&h=638[align="center",title="Checking the result on the website of Codename One"]
+image::Checking-the-result-on-the-website-of-Codename-One.png[align="center",title="Checking the result on the website of Codename One"]
+{nbsp} +
 
 //ST: !
 If the build is green and successful, you can go ahead and follow the next instructions below.
@@ -141,65 +331,22 @@ If it is red, again this is quite usual the first times. You can read the specia
 Ok, assuming your build was successful and "green", click on *the date and time* shown on it:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vSWiQz6G6d-PWmVv9P4T59jI8t9Ph5BVzHUeL9bn1WIN9mlrgZEKhQhzGMJp9KVjNbXe-qGcTaPo2gY/pub?w=1124&h=638[align="center",title="Revealing the QR code and the download options"]
+image::Revealing-the-QR-code-and-the-download-options.png[align="center",title="Revealing the QR code and the download options"]
+{nbsp} +
 
 //ST: !
-And now, you can simply test your app on your Android phone, or publish it on Google's Play Store.
+And now, you can simply test your app on your iPhone.
 
 Let's see how:
 
-== 3. Testing the app on an Android Phone
-//ST: 3. Testing the app on an Android Phone
+== 4. Installing the app on the iPhone
+//ST: 4. Installing the app on the iPhone
 
 //ST: !
 - Take your phone and open the QR code reader app that you installed on it.
 - Flash the QR code displayed on your successful build on www.codenameone.com.
 - Your app should install on your phone (follow the steps / confirm)
 - go and find the icon of your app on your phone, open it and enjoy it!
-
-== 4. Publishing your app on Google's Play Store
-//ST: 4. Publishing your app on Google's Play Store
-
-//ST: !
-Download the "apk" file on your computer. This file is your Android app!
-
-(if you are curious, `apk` stands for `Android package`)
-
-//ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRrWlwetQeZ_yQOXFJ15yvT05SjcQXCV4nl_BXvy09K9Ql7GtQXti1ucZNltAceNKTO2lVLpzw6vJ3v/pub?w=1124&h=638[align="center",title="Downloading the apk file to your computer"]
-
-//ST: !
-Now, login to your Google Play Developer account at https://play.google.com/apps/publish[https://play.google.com/apps/publish]
-
-- we created this Google Play Console account in one of the steps above
-- *em lyon business school students*: log in to your account by following the instuctions you received by email.
-
-//ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vTXrE1Y1AchhDJMOR8lEBPaChaC5dlxK5mi9FXvNjod_NVuCa4mLGr801fz0Fcz_dyTkjNhfv1QE7C7/pub?w=1124&h=638[align="center",title="Creating a new app on your Google Play Console"]
-
-//ST: !
-You now have access to the menu for your app.
-
-Upload your apk here:
-
-//ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRzNQ_99QLcjOYA_ClU4Fki_RzgL3n7n8wVCuI4pwq1i0WzEsD-ZXVJlsfuDHy_ekJcKZtkAx1Vg0Cj/pub?w=1124&h=638[align="center",title="Upload your apk here"]
-
-//ST: !
-The Play Store now requires that you add screenshots of your app to market it.
-
-There are a number of screenshots of you app to create and upload, each at  precise pixel size. You will find https://support.google.com/googleplay/android-developer/answer/1078870?hl=en[help and indications here].
-
-This website might also be useful to create the screenshots: http://www.appscreenshot.me/
-
-//ST: !
-Finally, there are a number of parameters for you to set. They are shown with an "alert sign" icon on your page:
-
-//ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRrpx-KEEERAdW7YcGcGDBzYrPYyZA8-NXQcsf2Rd9HuM7WHoQgbarDl6tKraQgjGDmmg0CS634t9dT/pub?w=1124&h=638[align="center",title="Visit and set every parameter flagged with an icon"]
-
-//ST: !
-When all these parameters will be set, your app will become publishable.
 
 
 == The end

@@ -15,6 +15,7 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
+{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -44,7 +45,8 @@ We can't achieve this simply by applying a Layout to a Form. We need different l
 A container is a Component that you can find in the *Core Components*, like the others:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vTZilzT-i-pousY6xCia7BW3gXUIRyp0rIvbiJs1RGwIvpB9CJyI7Z-ILdF7cukkC4dBpF9Ca9JQWoN/pub?w=1434&h=791[align="center",title="Finding the Container among Core Components"]
+image::Finding-the-Container-among-Core-Components.png[align="center",title="Finding the Container among Core Components"]
+{nbsp} +
 
 //ST: !
 The difference with other Components is that when you drag and drop a Container on the Form, it remains invisible.
@@ -65,16 +67,19 @@ Once the Container is dragged and dropped onto the Form, we need to place Compon
 Let's imagine we have 5 Labels in our Form, and then we added a Container:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vRvtljHinE4t9A5_oFNZECm54T6-owU9fb5jTPi9Q00YkjHv8UZ0pMXA6BZe3o729Pw2bqOkym1vNrr/pub?w=1434&h=791[align="center",title="5 labels and a container"]
+image::5-labels-and-a-container.png[align="center",title="5 labels and a container"]
+{nbsp} +
 
 //ST: !
 To move a Label or place it in the Container, we must select it and *use these arrows*:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vR3JP6_knWh0nnTwnYYUI-GNxxrJwsPN7W0cimF91XkT8dxtBFZURdJn1sj5j3uvme_AFjXxM2XxZsM/pub?w=1434&h=791[align="center",title="Moving the Labels or placing them in the container"]
+image::Moving-the-Labels-or-placing-them-in-the-container.png[align="center",title="Moving the Labels or placing them in the container"]
+{nbsp} +
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vSHUIfg0oK526Z4POh2IAjLx1CUSfqh3qgYaSBHyG4v8vcSGdLVPSJdBk-iLH8yajtX_Z1BU75NIGQ7/pub?w=1434&h=791[align="center",title="Showing the content of a Container"]
+image::Showing-the-content-of-a-Container.png[align="center",title="Showing the content of a Container"]
+{nbsp} +
 
 //ST: !
 If we need to move a Component [underline]#out# of a Container, we must simply:
@@ -102,7 +107,8 @@ This is straightforward: all you need to do is:
 These steps shown in the GUI Builder:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vSBhhvm7fh__imFOF20IkRiKUfAvCiXf0t8jdIJFwa84-ih74GE8LCZ8jWtfnFHBw0CFQKLivat-Uds/pub?w=1434&h=791[align="center",title="Applying a layout to a container"]
+image::Applying-a-layout-to-a-container.png[align="center",title="Applying a layout to a container"]
+{nbsp} +
 
 //ST: !
 The power of Containers comes *when several of them* are in use:  we can apply different layouts to each of them, achieving full flexibility for the design of our app.
@@ -117,7 +123,8 @@ Creating several containers on a Form allows to have different layouts applied t
 To illustrate: what if we want to have this kind of layout on our screen?
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vQxEvhooS8XQRc2h6LVplpq1LNF1R6Rs8JvJVOVDROYbZVa9OuEXOOFQRmXPPP0pn2Ck9QH4q-OY_F0/pub?w=453&h=575[align="center",title="A type of design for an app"]
+image::A-type-of-design-for-an-app.png[align="center",title="A type of design for an app"]
+{nbsp} +
 
 //ST: !
 We can add several Containers on the Form, place some Components in each of them, and apply different Layouts to each of them.

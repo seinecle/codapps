@@ -44,7 +44,7 @@ The workflow has several steps:
 These steps can be illustrated simply:
 
 //ST: !
-image::.png[align="center","testing or releasing an app for Android or iPhones"]
+image::testing-or-releasing-an-app-for-Android-or-iPhones.png[align="center",title="testing or releasing an app for Android or iPhones"]
 {nbsp} +
 
 //ST: !
@@ -166,7 +166,7 @@ Apple and Google have two different business strategies for their app stores:
 |======================
 |                                                                            |Google's Play Store            |Apple's App Store
 |Developer program membership (price to pay)                                 |one time payment of 25$        |90$ every year
-|Testing the app on a phone is possible without a membership                 |yes                            |no / difficult
+|Testing the app on a phone is possible without a membership                 |yes                            |no / very difficult
 |======================
 
 
@@ -174,6 +174,7 @@ Apple and Google have two different business strategies for their app stores:
 [cols=">s,,"frame="topbot",options="header"]
 |======================
 |                                                             |Google's Play Store            |Apple's App Store
+|Tools needed for the release                                 |PC, Mac or Linux               |Mac only
 |Policy to accept apps on the Store                           |all apps are welcome           |Apple rejects the app if it does not provide a "valuable" service
 |Time to get the app on the Store                             |3 hours                        |several days
 |======================

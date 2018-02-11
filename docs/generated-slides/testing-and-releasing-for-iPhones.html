@@ -90,68 +90,105 @@ table.CodeRay td.code>pre{padding:0}
 <div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_1_preliminary_setup"><h2>1. Preliminary setup</h2></section>
-<section><div class="admonitionblock warning"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.</p></div></td></tr></table></div></section>
-<section><div class="paragraph"><p>And finally, these differences have a consequence for you, who learn how to make apps.</p></div></section>
-<section><div class="ulist"><ul><li><p>If you don&#8217;t have an app which is "market ready" (interesting to potential users), Apple will reject it from their App store</p></li><li><p>Even if you want to create an app and test it just on your own phone (not releasing it on the App Store), it will cost you 99$ per year to join the Apple Developer Program.</p></li></ul></div></section>
-<section></section>
-<section><h3>a. Take an Android phone and install a QR code reader on it</h3></section>
-<section><div class="paragraph"><p>So you obviously need an Android phone. But also an app installed on this phone, to read QR codes.</p></div>
-<div class="paragraph"><p>QR codes are very common and you surely have seen them before, they look like:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/qrcode.png" alt="qrcode" height="100%" /></div><div class="title">Figure 1. An example of  QR code</div></section>
-<section><div class="paragraph"><p>We need an app on our Android phone able to read QR codes, <strong>because this is how we will transfer our app onto our phone</strong> (fancy!).</p></div>
-<div class="paragraph"><p>Just go on the Play Store, search "QR code", and install a free app doing QR code reader.</p></div></section>
-<section><h3>c. Create A developer account on Google&#8217;s Play Store (25$)</h3></section>
-<section><div class="paragraph"><p>You don&#8217;t need this step if you just want to test your app on your own Android phone.</p></div>
-<div class="admonitionblock note"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>em <strong>lyon business school</strong> students: we provide you with a free access to a Google Play Store account.</p></div>
-<div class="paragraph"><p>You will receive the invitation by email. You can ignore this and move on to the next part of this lesson.</p></div></td></tr></table></div></section>
-<section><div class="paragraph"><p>To release your app on the Play Store, you need to create an account.</p></div>
-<div class="paragraph"><p>Visit the webpage to sign up for a Google Play developer account: <a href="https://play.google.com/apps/publish/signup">https://play.google.com/apps/publish/signup</a>.</p></div></section>
-<section><div class="paragraph"><p>A one-time <strong>25$ fee for a lifetime membership</strong> to the Google Developer Program is requested.</p></div>
-<div class="paragraph"><p>With this fee you can distribute an unlimited number of apps, without limit of time.</p></div></section>
-<section><h3>f. Generate a Google certificate for the app</h3></section>
-<section><div class="paragraph"><p>A certificate is the unique and "tamperproof" ID of your app. It is used by Google to make sure that your app is indeed the one it claims to be, and not one corrupted by a third party.</p></div></section>
-<section><div class="paragraph"><p>Generating certificates can be a long and painful process (watch the lesson on certificates for iPhone apps and cry&#8230;&#8203;). Luckily, Google&#8217;s process is simpler, and Codename One makes it even simpler.</p></div>
-<div class="paragraph"><p>Follow these steps:</p></div></section>
-<section><div class="paragraph"><p>Return to the <code>Properties</code> of your project:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 2. Accessing the properties of your project</div></section>
-<section><div class="paragraph"><p>You can now access the Android settings of your project. <strong>Be extra careful in following these instructions</strong> as mistakes are particularly frustrating to debug:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTDTzagRutzHUrqYDRNXrkG3IrGc8wLffsjgaByrTiFqOJmrXdnWZ913uO2K1O__NG43B8NTnZY5twV/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 3. Android properties of your project</div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vRYCv8H7IzJIWxZhh5AmSvyiGeYgzXlZVvpxQm6pBG1_lmi_OJPnBdovuF9pf0xvlwebgsY0skuG-_F/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 4. Generating a certificate</div></section>
-<section><div class="paragraph"><p>Your Google certificate is now generated! Close the properties of the project by clicking on <code>OK</code> and be ready to create the Android version of your app!</p></div></section>
-<section id="_launching_the_build"><h2>Launching the build</h2></section>
-<section><div class="paragraph"><p>With all the setup completed, we are nearly finished.</p></div>
-<div class="paragraph"><p>Launch the build of the Android app by right clicking on your project&#8217;s name:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQaeosAZWaAnFnfksQD3AsDpZT_8WlsjCV6ysrvpG1BrH35dOj7MKsspzItbs3LDuV0UQcYY2zhzOEK/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 5. Launching the Android build</div></section>
+<section><div class="admonitionblock warning"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="olist arabic"><ol class="arabic"><li><p>Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.</p></li><li><p><strong>You need a Mac computer</strong></p></li></ol></div></td></tr></table></div></section>
+<section><div class="paragraph"><p>As explained in the first lesson of this module, here are your options:</p></div>
+<div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>paying 99$ (per year) to access Apple&#8217;s Developer program.</p><div class="ulist"><ul><li><p>this allows you to test your app on your own phone</p></li><li><p>you can release your app on the App Store <strong>if Apple judges that your app is "good enough"</strong></p></li></ul></div></li></ol></div></section>
+<section><div class="olist loweralpha"><ol class="loweralpha" start="2" type="a"><li><p>access an <a href="https://developer.apple.com/programs/ios/university/">iOS Developer University Program</a></p><div class="ulist"><ul><li><p>this allows you to test your app on your own phone <strong>for free</strong></p></li><li><p>you cannot release your app on the App Store (unless you pay the 99$ of course)</p></li></ul></div></li></ol></div></section>
+<section><div class="paragraph"><p>Codename One provides straightforward help and tutorials for case a. Have a look:</p></div></section>
+<section><div class="videoblock stretch"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/pOLOoZFHxwU?rel=0" frameborder="0" allowfullscreen=""></iframe></div>
+<div class="paragraph"><p>Or visit <a href="https://www.codenameone.com/blog/ios-certificate-wizard.html">the corresponding web page</a>.</p></div></section>
+<section><div class="paragraph"><p>In this lesson, we focus on case b.</p></div>
+<div class="paragraph"><p><a href="http://www.em-lyon.com/en">Emlyon business school</a> students have access to the iOS Developer University Program and we will see here how to use it.</p></div>
+<div class="paragraph"><p>If you are in a different school, ask your administration how they could set up such a program! (it is free).</p></div></section>
+<section><div class="paragraph"><p>Make sure you have an hour ahead of you, some tea or coffee and plenty of patience. This is going to be a long road.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/winter.gif" alt="winter" height="100%" /></div><div class="title">Figure 1. Releasing your app for iOS</div></section>
+<section id="_2_the_long_road"><h2>2. The long road</h2></section>
+<section><h3>a. Getting access to the Apple Developer Console</h3></section>
+<section><div class="paragraph"><p>You have received an email inviting you to join an Apple Developer program :
+If you don’t find this email, check your spam folder !</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-1.jpg" alt="ios release univ 1" height="100%" /></div><div class="title">Figure 2. Email invitation</div></section>
+<section><div class="paragraph"><p>Open this email, click on the link :</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-2.jpg" alt="ios release univ 2" height="100%" /></div><div class="title">Figure 3. Content of the email</div></section>
+<section><div class="paragraph"><p>On the page that opens, choose "I need to register as an Apple Developer"</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-3.jpg" alt="ios release univ 3" height="100%" /></div><div class="title">Figure 4. Registration as an Apple Developer</div></section>
+<section><div class="paragraph"><p>Then you arrive on a screen that asks you to use your Apple id:</p></div>
+<div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>If you have an Apple Id (because you own a Mac, or an iPhone, or because you use iTunes…), choose "sign in"</p></li><li><p>If you don’t have an Apple id, choose "Create an Apple Id"</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-4.jpg" alt="ios release univ 4" height="100%" /></div><div class="title">Figure 5. Apple id</div></section>
+<section><div class="paragraph"><p>Then you need to agree on the license:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-5.jpg" alt="ios release univ 5" height="100%" /></div><div class="title">Figure 6. Apple Developer Agreement</div></section>
+<section><div class="paragraph"><p>You should be redirected to this page, which is the place where you manage the certificates of your apps for iPhones.</p></div>
+<div class="paragraph"><p>Congratulations, that&#8217;s already a big step!</p></div></section>
+<section><h3>b. Generating a certificate request</h3></section>
+<section><div class="paragraph"><p>Click on 'Certificates, Identities and Profiles'</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-6.jpg" alt="ios release univ 6" height="100%" /></div><div class="title">Figure 7. Access certificates</div></section>
+<section><div class="paragraph"><p>Click on <code>Certificates &#8594; All</code> then click on the <code>+</code> sign, to add a new certificate for your app :</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-7.png" alt="ios release univ 7" height="100%" /></div><div class="title">Figure 8. Adding a certificate</div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>Choose "iOS App Development",</p></li><li><p>click on "Worldwide Developer Relations Certificate Authority"</p><div class="ulist"><ul><li><p>it will download a file on you computer.</p></li></ul></div></li><li><p>Then click on "Continue"</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-8.png" alt="ios release univ 8" height="100%" /></div><div class="title">Figure 9. step 1 of the creation</div></section>
+<section><div class="paragraph"><p>You should arrive on this screen, <strong>stay on it</strong>:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-9.png" alt="ios release univ 9" height="100%" /></div><div class="title">Figure 10. step 2 of the creation</div></section>
+<section><div class="paragraph"><p>In the Finder on your Mac, open the Applications folder (<span class="image"><img src="images/ios-release-univ-10.png" alt="ios release univ 10" /></span>), and inside it, open the "Utilities" folder:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-the-Utilities-Folder.png" alt="Opening the Utilities Folder" height="100%" /></div><div class="title">Figure 11. Opening the Utilities Folder</div></section>
+<section><div class="paragraph"><p>In the "Utilities" folder, open the Keychain access:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Opening-the-Keychain-access.png" alt="Opening the Keychain access" height="100%" /></div><div class="title">Figure 12. Opening the Keychain access</div>
+<div class="paragraph"><p>In the window that opens, select in the menu "Keychain access &#8594; Certificate Assistant &#8594; Request a Certificate from a Certificate Authority":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Requesting-a-certificate.png" alt="Requesting a certificate" height="100%" /></div><div class="title">Figure 13. Requesting a certificate</div></section>
+<section><div class="paragraph"><p>In the small window that opens:</p></div>
+<div class="ulist"><ul><li><p>In the field "User email address", put the email address <strong>of your Apple ID</strong></p></li><li><p>In the field "Common Name", put your <strong>emlyon email address</strong></p></li><li><p>Then choose "save to disk" and click on "continue".</p></li></ul></div>
+<div class="paragraph"><p>I suggest you create a folder somewhere on your computer called "Apple certificates", where you will save the file.</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-14.png" alt="ios release univ 14" height="100%" /></div><div class="title">Figure 14. Filling in details</div></section>
+<section><div class="paragraph"><p>Now, let’s go back to the website of the Apple Dev Center, where we can continue where we left !</p></div>
+<div class="admonitionblock tip"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>If there is an error on the page, it just means that the page expired. Just reload it, and go back to the screen where we left</p></div></td></tr></table></div></section>
+<section><div class="paragraph"><p>Upload the file "CertificateSigningRequest.certSigningRequest" that you just saved on your disk:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-15.png" alt="ios release univ 15" height="100%" /></div><div class="title">Figure 15. Uploading the certificate request</div></section>
+<section><div class="paragraph"><p>This upload is the step that creates your certificate. Congratulations! That&#8217;s also a big step you just accomplished!</p></div></section>
+<section><h3>c. Using the certificate</h3></section>
+<section><div class="paragraph"><p>Now download the certificate to your disk, in the same folder. It should be called "ios_development.cer":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-16.png" alt="ios release univ 16" height="100%" /></div><div class="title">Figure 16. Downloading the certificate</div></section>
+<section><div class="paragraph"><p>Find your file "ios_development.cer" where you saved it. Double click on it. This will open the Keychain access:</p></div>
+<div class="ulist"><ul><li><p>click on "Certificates" in the left menu</p></li><li><p>Right click on the name of your certificate and choose "Export…"</p></li></ul></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-17.png" alt="ios release univ 17" height="100%" /></div><div class="title">Figure 17. Exporting the certificate</div></section>
+<section><div class="paragraph"><p>This opens a window asking for a password. Put "emlyon1000":</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-18.png" alt="ios release univ 18" height="100%" /></div><div class="title">Figure 18. Assigning a password</div></section>
+<section><div class="paragraph"><p>Then on the next screen you are asked again for a password.</p></div>
+<div class="paragraph"><p>You should use the password of your Mac computer (the one you use to login when the computer starts) :</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-19.png" alt="ios release univ 19" height="100%" /></div><div class="title">Figure 19. Confirming with the Mac password</div></section>
+<section><div class="paragraph"><p>You are invited to save a file on your disk. This is a file with "p12", save it in the same folder where you saved your other files for this certificate.</p></div></section>
+<section><h3>d. Getting the UDID of your phone</h3></section>
+<section><div class="paragraph"><p>We need the UDID of your phone, the one where you will install and test your app.</p></div>
+<div class="paragraph"><p>The UDID is the unique identifier of your iPhone. You can find it by plugging your phone to iTunes. A very simple tutorial explains it here : <a href="http://whatsmyudid.com/" class="bare">http://whatsmyudid.com/</a></p></div>
+<div class="paragraph"><p>Once you have your UDID, write it to me here: <a href="http://goo.gl/forms/mmotEWvRYs" class="bare">http://goo.gl/forms/mmotEWvRYs</a></p></div></section>
+<section><div class="paragraph"><p>And now wait just a couple of days… I need to collect all UDID from students before I create “Provisioning Profiles” (yes, this process is long and horrible, but we are NEARLY there!).</p></div>
+<div class="paragraph"><p>I’ll send you an email when you can resume this lesson, at the step just below: "Downloading a provisioning profile"</p></div></section>
+<section><h3>e. Downloading the Provisioning Profile</h3></section>
+<section><div class="paragraph"><p>Go to “Provisioning Profiles” and download the most recent one:</p></div>
+<div class="admonitionblock tip"><table><tr><td class="icon"><div class="title"></div></td><td class="content"><div class="paragraph"><p>I advise you to download it to the same folder where you saved the previous files created in this tutorial, related to certificates.</p></div></td></tr></table></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-20.png" alt="ios release univ 20" height="100%" /></div><div class="title">Figure 20. Downloading the most recent provisioning profile</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-20.png" alt="ios release univ 20" height="100%" /></div><div class="title">Figure 21. Downloading the most recent provisioning profile</div></section>
+<section><div class="paragraph"><p>Now, open NetBeans, right click on the name of your project, and select “Properties” (last item at the bottom).</p></div></section>
+<section><div class="paragraph"><p>Please check the screenshot below and the numbered steps, and read the indications for each of them:</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Select “iOS” on the menu on the left</p></li><li><p>For Certificate, choose the file with the name ending in “p12” that you saved on your computer in this lesson</p></li><li><p>For Certificate password, write “emlyon1000”</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>For provisioning profile, choose the one we just downloaded</p></li><li><p>In app ID, you must add “4RVRDEN5JP.” Just before io.codapps</p></li><li><p>Validate</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/ios-release-univ-21.png" alt="ios release univ 21" height="100%" /></div><div class="title">Figure 22. Filling in the properties in NetBeans</div></section>
+<section id="_3_the_end_of_the_road_sending_your_build_to_codename_one"><h2>3. The end of the road: sending your build to Codename One</h2></section>
+<section><div class="paragraph"><p>The version of your app that you will build to install on your iPhone is considered to be for the purpose of testing and debbuging.</p></div>
+<div class="paragraph"><p>For this reason, we will call it the "iOS debug build".</p></div>
+<div class="paragraph"><p>Launch the iOS debug build by right clicking on your project&#8217;s name:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Sending-the-iOS-Debug-Build.png" alt="Sending the iOS Debug Build" height="100%" /></div><div class="title">Figure 23. Sending the iOS Debug Build</div></section>
 <section><div class="paragraph"><p>If you get a "Build failed" message at the end, don&#8217;t worry this is very common not to succeed at the first time.</p></div>
 <div class="paragraph"><p>Read the lesson in this module about possible causes and solutions.</p></div>
 <div class="paragraph"><p>If you get a successful build, continue here:</p></div></section>
 <section><div class="paragraph"><p>Now you should open your web browser, go to <a href="http://www.codenameone.com">http://www.codenameone.com</a> and login to your account.</p></div>
 <div class="paragraph"><p>Then go to the Dashboard:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vRt5pn7XtJ08RdO3IQp2GybVFwJ78DnqsFnqXqs_hdJF6UXKJdbNXNV-AwAXMr31mzIper1sr5pTM0L/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 6. Checking the result on the website of Codename One</div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Checking-the-result-on-the-website-of-Codename-One.png" alt="Checking the result on the website of Codename One" height="100%" /></div><div class="title">Figure 24. Checking the result on the website of Codename One</div></section>
 <section><div class="paragraph"><p>If the build is green and successful, you can go ahead and follow the next instructions below.</p></div>
 <div class="paragraph"><p>If it is red, again this is quite usual the first times. You can read the special lesson in this module to help you diagnostic and solve the error.</p></div></section>
 <section><div class="paragraph"><p>Ok, assuming your build was successful and "green", click on <strong>the date and time</strong> shown on it:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vSWiQz6G6d-PWmVv9P4T59jI8t9Ph5BVzHUeL9bn1WIN9mlrgZEKhQhzGMJp9KVjNbXe-qGcTaPo2gY/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 7. Revealing the QR code and the download options</div></section>
-<section><div class="paragraph"><p>And now, you can simply test your app on your Android phone, or publish it on Google&#8217;s Play Store.</p></div>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Revealing-the-QR-code-and-the-download-options.png" alt="Revealing the QR code and the download options" height="100%" /></div><div class="title">Figure 25. Revealing the QR code and the download options</div></section>
+<section><div class="paragraph"><p>And now, you can simply test your app on your iPhone.</p></div>
 <div class="paragraph"><p>Let&#8217;s see how:</p></div></section>
-<section id="_3_testing_the_app_on_an_android_phone"><h2>3. Testing the app on an Android Phone</h2></section>
+<section id="_4_installing_the_app_on_the_iphone"><h2>4. Installing the app on the iPhone</h2></section>
 <section><div class="ulist"><ul><li><p>Take your phone and open the QR code reader app that you installed on it.</p></li><li><p>Flash the QR code displayed on your successful build on www.codenameone.com.</p></li><li><p>Your app should install on your phone (follow the steps / confirm)</p></li><li><p>go and find the icon of your app on your phone, open it and enjoy it!</p></li></ul></div></section>
-<section id="_4_publishing_your_app_on_google_s_play_store"><h2>4. Publishing your app on Google&#8217;s Play Store</h2></section>
-<section><div class="paragraph"><p>Download the "apk" file on your computer. This file is your Android app!</p></div>
-<div class="paragraph"><p>(if you are curious, <code>apk</code> stands for <code>Android package</code>)</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vRrWlwetQeZ_yQOXFJ15yvT05SjcQXCV4nl_BXvy09K9Ql7GtQXti1ucZNltAceNKTO2lVLpzw6vJ3v/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 8. Downloading the apk file to your computer</div></section>
-<section><div class="paragraph"><p>Now, login to your Google Play Developer account at <a href="https://play.google.com/apps/publish">https://play.google.com/apps/publish</a></p></div>
-<div class="ulist"><ul><li><p>we created this Google Play Console account in one of the steps above</p></li><li><p><strong>em lyon business school students</strong>: log in to your account by following the instuctions you received by email.</p></li></ul></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTXrE1Y1AchhDJMOR8lEBPaChaC5dlxK5mi9FXvNjod_NVuCa4mLGr801fz0Fcz_dyTkjNhfv1QE7C7/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 9. Creating a new app on your Google Play Console</div></section>
-<section><div class="paragraph"><p>You now have access to the menu for your app.</p></div>
-<div class="paragraph"><p>Upload your apk here:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vRzNQ_99QLcjOYA_ClU4Fki_RzgL3n7n8wVCuI4pwq1i0WzEsD-ZXVJlsfuDHy_ekJcKZtkAx1Vg0Cj/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 10. Upload your apk here</div></section>
-<section><div class="paragraph"><p>The Play Store now requires that you add screenshots of your app to market it.</p></div>
-<div class="paragraph"><p>There are a number of screenshots of you app to create and upload, each at  precise pixel size. You will find <a href="https://support.google.com/googleplay/android-developer/answer/1078870?hl=en">help and indications here</a>.</p></div>
-<div class="paragraph"><p>This website might also be useful to create the screenshots: <a href="http://www.appscreenshot.me/" class="bare">http://www.appscreenshot.me/</a></p></div></section>
-<section><div class="paragraph"><p>Finally, there are a number of parameters for you to set. They are shown with an "alert sign" icon on your page:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="https://docs.google.com/drawings/d/e/2PACX-1vRrpx-KEEERAdW7YcGcGDBzYrPYyZA8-NXQcsf2Rd9HuM7WHoQgbarDl6tKraQgjGDmmg0CS634t9dT/pub?w=1124&h=638" alt="pub?w=1124&h=638" height="100%" /></div><div class="title">Figure 11. Visit and set every parameter flagged with an icon</div></section>
-<section><div class="paragraph"><p>When all these parameters will be set, your app will become publishable.</p></div></section>
 <section id="_the_end"><h2>The end</h2></section>
 <section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p></div></section>
 <section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>

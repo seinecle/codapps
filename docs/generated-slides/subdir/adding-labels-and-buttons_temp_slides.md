@@ -16,6 +16,7 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
+
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
@@ -28,14 +29,16 @@ To start this lesson, we will assume that you already created a Form called "For
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vSZrQqUaxVkLbjSyAnY8bu0IFgBrRTvCOZ2i9vhtcA5LaT5ZUXqFhcPFHVc4E9DZRzTVepawvIb338a/pub?w=1440&h=1080[align="center",title="Opening the Form we created to work on it"]
+image::Opening-the-Form-we-created-to-work-on-it.png[align="center",title="Opening the Form we created to work on it"]
+
 
 ==  !
 So that you should now have the GUI Builder open to design your Form. Here is a recall of the different panels that compose the GUI Builder:
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vTLmA6SJYK28g7ypoFem5WovZ7hX1vUjna9Sh3mkTtRWtTeuquCn50G72S_kt1cDUtaH9u52H1fGlnh/pub?w=1440&h=1080[align="center",title="Discovering the GUI Builder"]
+image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI Builder"]
+
 
 
 ==  2. Adding a Label to your Form
@@ -66,14 +69,16 @@ Start by opening the 'Core Components' menu on the top right:
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRsMnjK415Ikdk8GMoHX9bayKSgvtT6ZovBv1S3Qs4h_WJXoFoi239WELLcI_TZt2ifIX4wq-BqxDh-/pub?w=1434&h=791[align="center",title="Opening the Core Components menu"]
+image::Opening-the-Core-Components-menu.png[align="center",title="Opening the Core Components menu"]
+
 
 ==  !
 Then *drag and drop a Label onto the Form*. Place it where you prefer:
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vR0DDosS7CtbpLEWueQ5DlO1ZukhwnzMYGTPL2Z94jZay1e4kvKGurDZLhMSkiS0caE--tc5usMKmNu/pub?w=1434&h=791[align="center",title="Drag - dropping a Label"]
+image::Drag---dropping-a-Label.png[align="center",title="Drag - dropping a Label"]
+
 
 ==  !
 ==== c. Label or Span Label?
@@ -83,7 +88,8 @@ You may have noticed that a Component called "Span Label" also exists, right nex
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vSflXDBf95uRdeSO12WXeyA4G_kUqxzRBZKCcu42iQKLD8PQTPK743niD9gWMJucvGuzu4Yoyy7tZdI/pub?w=1434&h=791[align="center",title="A Span Label"]
+image::A-Span-Label.png[align="center",title="A Span Label"]
+
 
 ==  !
 Span Labels are like regular Labels, *but their text can stretch on many lines*, not just one. Even if this is a tiny difference, you have cases when one is more practical than the other.
@@ -99,7 +105,8 @@ Adding a Button is easy: just like we did for Labels, *we just need to drag and 
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vTA3dVNZGthIBJLSlBe5ETgfVVuXkYecR7TuXz0ZyQpcWLR7KOMF0yRAGALtlLDFCbCwVaTbv2XGIj8/pub?w=1434&h=791[align="center",title="Drag - dropping a Button"]
+image::Drag---dropping-a-Button.png[align="center",title="Drag - dropping a Button"]
+
 
 ==  !
 ==== b. Making the button do something
@@ -142,7 +149,8 @@ We are going to create a very simple action to illustrate the principle: *pressi
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vTh6txPb0VnbXWTovpmS9ZGFuz6GcS6hgH664-Iewcz7eyBcNqfkqv15ScTdGCGjBA22Ei0dkYZLbpI/pub?w=1434&h=791[align="center",title="Selecting the Button"]
+image::Selecting-the-Button.png[align="center",title="Selecting the Button"]
+
 
 ==  !
 This opens a new window.
@@ -153,7 +161,8 @@ This opens a new window.
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vT347e9ts2KIIRkgKW8qbEooFp4IexuSyN-vZFBJYGWXzXKQztCdkEbs-HrSzdKIwJU9wEmsEsBu9Iy/pub?w=1434&h=791[align="center",title="Giving a name to the action and to the button"]
+image::Giving-a-name-to-the-action-and-to-the-button.png[align="center",title="Giving a name to the action and to the button"]
+
 
 ==  !
 [NOTE]
@@ -226,7 +235,8 @@ You can now preview your app (big green arrow in NetBeans). Press the button in 
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vTGoQNP8cQHsOTNsSFnYNgNyBx6kjzlSnW6xWhXp2ZzcX7BxJ03yiGQejvS3hO2wUwHY6968SUnQUvV/pub?w=1440&h=1080[align="center",title="Previewing the button and its action"]
+image::Previewing-the-button-and-its-action.png[align="center",title="Previewing the button and its action"]
+
 
 ==  !
 Not this result? Make sure you save the GUI Builder! (File -> Save)

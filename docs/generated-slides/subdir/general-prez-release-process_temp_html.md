@@ -15,6 +15,7 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
+{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -43,7 +44,8 @@ The workflow has several steps:
 These steps can be illustrated simply:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vTGa1iw57ePcWS4bT1A0ECBHe0oiM8VDjIv_Bi1VDgi_WcHjj7nfu8qP7XMPkeHJQG3oGXKUEJl6Sux/pub?w=1440&h=1080[align="center","testing or releasing an app for Android or iPhones"]
+image::testing-or-releasing-an-app-for-Android-or-iPhones.png[align="center",title="testing or releasing an app for Android or iPhones"]
+{nbsp} +
 
 //ST: !
 So we see that there is a few interconnected parts: NetBeans, the website of Codename One, the app platforms by Google and Apple...
@@ -77,7 +79,8 @@ They have several pricing plans:
 To create your account, go on http://www.codenameone.com[www.codenameone.com] and just *sign up* for an account:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vR1uuMWHdaJXYigqRSJLJ8VrQfgU5PirIF9eTwrCPHr-lNdsQfLxWFz3tD9kTlGe3rmwEjGVoIm2wsx/pub?w=1113&h=602[align="center",title="The codename one website"]
+image::The-codename-one-website.png[align="center",title="The codename one website"]
+{nbsp} +
 
 //ST: !
 *Make sure you remember the email and password* you used to sign up as we will need them later.
@@ -89,10 +92,12 @@ image::https://docs.google.com/drawings/d/e/2PACX-1vR1uuMWHdaJXYigqRSJLJ8VrQfgU5
 In NetBeans, *right click* on the name of your project and select `Properties`:
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638[align="center",title="Accessing the properties of your project"]
+image::Accessing-the-properties-of-your-project.png[align="center",title="Accessing the properties of your project"]
+{nbsp} +
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vQNsfJ5n7XKfCFwrHOVWvSStXTTegqn7VLQhglAKO6DNIW9U7MYDOigiCYvDyc2z0Iug_v95Zwzk4bH/pub?w=1124&h=638[align="center",title="Codename One properties"]
+image::Codename-One-properties.png[align="center",title="Codename One properties"]
+{nbsp} +
 
 //ST: !
 A login window opens. You should enter *the email and password of the account you created on the Codename One website* (see above in the lesson).
@@ -101,6 +106,7 @@ This is how NetBeans will be able to send the app you created to the Codename On
 
 //ST: !
 image::testing-android-3.png[align="center", title="Entering your Codename One credentials"]
+{nbsp} +
 
 //ST: !
 Then close all the windows we opened by clicking on `OK`.
@@ -142,6 +148,7 @@ QR codes are very common and you surely have seen them before, they look like:
 
 //ST: !
 image::qrcode.png[align="center",title="An example of  QR code"]
+{nbsp} +
 
 //ST: !
 We need an app on our phone to read QR codes, *because this is how we will transfer our app onto our phone* (fancy!).
@@ -159,7 +166,7 @@ Apple and Google have two different business strategies for their app stores:
 |======================
 |                                                                            |Google's Play Store            |Apple's App Store
 |Developer program membership (price to pay)                                 |one time payment of 25$        |90$ every year
-|Testing the app on a phone is possible without a membership                 |yes                            |no / difficult
+|Testing the app on a phone is possible without a membership                 |yes                            |no / very difficult
 |======================
 
 
@@ -167,6 +174,7 @@ Apple and Google have two different business strategies for their app stores:
 [cols=">s,,"frame="topbot",options="header"]
 |======================
 |                                                             |Google's Play Store            |Apple's App Store
+|Tools needed for the release                                 |PC, Mac or Linux               |Mac only
 |Policy to accept apps on the Store                           |all apps are welcome           |Apple rejects the app if it does not provide a "valuable" service
 |Time to get the app on the Store                             |3 hours                        |several days
 |======================
@@ -184,7 +192,8 @@ These different strategies have consequences for operational and financial figur
 - Apple's App Store includes fewer apps, but these apps are carefully selected and often made by companies which make revenues from them
 
 //ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vTu8D_1UD15eBbLetOkhZ7TrPpmFZePNw4mbL0LgbQoGqCrahbpr1SdcRJqkJOvzVnLuZ6DHaQQf-1W/pub?w=1434&h=791[align="center",title="Google and Apple have different strategies for their app stores"]
+image::Google-and-Apple-have-different-strategies-for-their-app-stores.png[align="center",title="Google and Apple have different strategies for their app stores"]
+{nbsp} +
 
 
 //ST: !

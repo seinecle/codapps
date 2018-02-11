@@ -44,7 +44,7 @@ It is all very trivial, right?
 So in this lesson, you will see plenty of interactive screens like this one:
 
 ++++
-<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 130px; border: 0px"></iframe>
+<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
 ++++
 
 //ST: !
@@ -143,7 +143,7 @@ __Create a variable called "favoriteMovie" and store the name of your favorite m
 
 //ST: !
 ++++
-<iframe src="http://www.javarepl.com/embed.html" style="width: 500px; height: 130px; border: 0px"></iframe>
+<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
 ++++
 
 //ST: !
@@ -222,7 +222,7 @@ icon:child[3x] Your turn!
 
 //ST: !
 ++++
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
 ++++
 
 //ST: !
@@ -307,7 +307,7 @@ icon:child[3x] Your turn!
 
 //ST: !
 ++++
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
 ++++
 
 //ST: !
@@ -379,8 +379,9 @@ icon:child[3x] Your turn!
 
 //ST: !
 ++++
-<iframe src="http://www.javarepl.com/embed.html" style="width: 100%; height: 130px; border: 0px"></iframe>
+<iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
 ++++
+
 
 //ST: !
 Here is the solution:

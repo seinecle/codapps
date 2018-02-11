@@ -52,14 +52,14 @@ video::7PmaiMNwxio[youtube]
 80% du temps, coder fait cet effet:
 
 //ST: !
-image::angry.gif[]
+image::angry.gif[align="center",title="pain"]
 {nbsp} +
 
 //ST: !
 et les 20% restant, ca fait:
 
 //ST: !
-image::banderas.gif[]
+image::banderas.gif[align="center",title="pleasure"]
 {nbsp} +
 
 //ST: !
