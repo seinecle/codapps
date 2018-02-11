@@ -61,7 +61,7 @@ If you are in a different school, ask your administration how they could set up 
 Make sure you have an hour ahead of you, some tea or coffee and plenty of patience. This is going to be a long road.
 
 //ST: !
-image::winter.gif[align="center",title="Releasing your app for iOS"]
+image::Releasing-your-app-for-iOS.png[align="center",title="Releasing your app for iOS"]
 {nbsp} +
 
 == 2. The long road
