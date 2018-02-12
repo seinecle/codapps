@@ -105,16 +105,12 @@ String playerName; //<1>
 playerName = "Bernard B"; //<2>
 ----
 
-What does all this mean? Let's decompose each line:
-
-//ST: !
 <1> We create the variable (this needs to be *done just once*)
 
 - `String` The capital *S* is mandatory. It means this variable *specializes in storing text*. This is the *type* of the variable and it always *stands in front* of the name of the variable.
 - `playerName` this is the name I chose for the variable, it could have been anything else. By convention it always starts *without* a capitalized letter and it has *no space* in it.
 - The `;` shows the end of this instruction and *is mandatory* (if you don't put it, the program tries to read the next line as the direct continuation of this one, and it gets confused).
 
-//ST: !
 <2> A value is assigned to the variable (this can be done as many times as we need)
 
 - `playerName`: our variable, created just above.
@@ -172,10 +168,6 @@ Integer playerAge; //<1>
 playerAge = 22; //<2>
 ----
 
-__Note that we did not put double quotes around 22__! Let's decompose each line:
-
-
-//ST: !
 <1> We create the variable (this needs to be *done just once*)
 
 - `Integer` The capital *I* is mandatory. It means this variable specializes in storing *round numbers*. This is the *type* of the variable.
@@ -189,6 +181,9 @@ __Note that we did not put double quotes around 22__! Let's decompose each line:
 - `=`: the right of the equal sign will be the value of the variable.
 - `22`: this is the value I store in the variable `playerAge`. *Don't use double quote around the value*.
 - The `;` shows the end of this instruction and *is mandatory*.
+
+To repeat: __we did not put double quotes around 22! Double quotes `" "` are only for `String` variables! __
+
 
 //ST: !
 There is the same shortcut as usual if you want to create a variable and give it a value, just in one line of code:
@@ -211,10 +206,10 @@ There is another way to use variables for round numbers:
 .Another way
 [source,java]
 ----
-int playerName = 18;
+int playerName = 18; <1>
 ----
 
-`Integer` has been replaced by `int`. Both are the same, except that `int` takes *even less space in the memory of your program*.
+<1> `Integer` has been replaced by `int`. Both are the same, except that `int` takes *even less space in the memory of your program*.
 
 //ST: !
 ====
@@ -261,9 +256,6 @@ Long timeOfPlayinMilliSeconds;
 timeOfPlayinMilliSeconds = 72585335350535l; //<3>
 ----
 
-Let's notice a few things:
-
-//ST: !
 <1> We added the letter `f` at the end of our number, to signal that this is a *Float*.
 <2> We added the letter `d` at the end of our number, to signal that this is a *Double*.
 <3> We added the letter `l` at the end of our number, to signal that this is a *Long*.
