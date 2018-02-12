@@ -526,7 +526,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
 <span id="revnumber">version 1.0,</span>
 <span id="revdate">last modified</span>
-<br><span id="revremark">2018-02-11</span>
+<br><span id="revremark">2018-02-12</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -679,9 +679,6 @@ table.CodeRay td.code>pre{padding:0}
 playerName = <span class="string"><span class="delimiter">&quot;</span><span class="content">Bernard B</span><span class="delimiter">&quot;</span></span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>What does all this mean? Let&#8217;s decompose each line:</p>
-</div>
 <div class="colist arabic">
 <table>
 <tr>
@@ -701,12 +698,8 @@ playerName = <span class="string"><span class="delimiter">&quot;</span><span cla
 </ul>
 </div></td>
 </tr>
-</table>
-</div>
-<div class="colist arabic">
-<table>
 <tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>A value is assigned to the variable (this can be done as many times as we need)
 <div class="ulist">
 <ul>
@@ -778,9 +771,6 @@ playerName = <span class="string"><span class="delimiter">&quot;</span><span cla
 playerAge = <span class="integer">22</span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><em>Note that we did not put double quotes around 22</em>! Let&#8217;s decompose each line:</p>
-</div>
 <div class="colist arabic">
 <table>
 <tr>
@@ -827,6 +817,9 @@ playerAge = <span class="integer">22</span>; <i class="conum" data-value="2"></i
 </table>
 </div>
 <div class="paragraph">
+<p>To repeat: <em>we did not put double quotes around 22! Double quotes <code>" "</code> are only for <code>String</code> variables! </em></p>
+</div>
+<div class="paragraph">
 <p>There is the same shortcut as usual if you want to create a variable and give it a value, just in one line of code:</p>
 </div>
 <div id="integer-shortcut" class="listingblock">
@@ -844,11 +837,16 @@ playerAge = <span class="integer">22</span>; <i class="conum" data-value="2"></i
 <div id="int-primitive" class="listingblock">
 <div class="title">Another way</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">int</span> playerName = <span class="integer">18</span>;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">int</span> playerName = <span class="integer">18</span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><code>Integer</code> has been replaced by <code>int</code>. Both are the same, except that <code>int</code> takes <strong>even less space in the memory of your program</strong>.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>Integer</code> has been replaced by <code>int</code>. Both are the same, except that <code>int</code> takes <strong>even less space in the memory of your program</strong>.</td>
+</tr>
+</table>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -905,9 +903,6 @@ piValue = <span class="float">3.14159265358979323846d</span>; <i class="conum" d
 <span class="predefined-type">Long</span> timeOfPlayinMilliSeconds;
 timeOfPlayinMilliSeconds = <span class="integer">72585335350535l</span>; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s notice a few things:</p>
 </div>
 <div class="colist arabic">
 <table>
@@ -1293,7 +1288,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-02-11 21:55:14 CET
+Last updated 2018-02-12 08:33:12 CET
 </div>
 </div>
 </body>
