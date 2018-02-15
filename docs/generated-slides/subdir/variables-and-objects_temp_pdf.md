@@ -182,12 +182,11 @@ playerAge = 22; //<2>
 - `playerAge` this is the name I chose for the variable, it could have been anything else. By convention it always starts *without* a capitalized letter and it has *no space* in it.
 - The `;` shows the end of this instruction and *is mandatory* (if you don't put it, the program tries to read the next line as the direct continuation of this one, and it gets confused).
 
-//ST: !
 <2> A value is assigned to the variable (this can be done as many times as we need)
 
-- `playerAge`: our variable, created just above.
-- `=`: the right of the equal sign will be the value of the variable.
-- `22`: this is the value I store in the variable `playerAge`. *Don't use double quote around the value*.
+- `playerAge` is our variable, created just above.
+- `=` the right of the equal sign will be the value of the variable.
+- `22` is the value I store in the variable `playerAge`. *Don't use double quote around the value*.
 - The `;` shows the end of this instruction and *is mandatory*.
 
 To repeat: __we did not put double quotes around 22! Double quotes `" "` are only for `String` variables! __

@@ -67,6 +67,12 @@ image::winter.gif[align="center",title="Releasing your app for iOS"]
 ==  2. The long road
 
 ==  !
+[WARNING]
+====
+The app, once published on the the Apple App Store, will be public. [underline]#Make sure your app does not include personal content# (pictures, personal details...) that you do not want to get public!
+====
+
+==  !
 ==== a. Getting access to the Apple Developer Console
 
 ==  !

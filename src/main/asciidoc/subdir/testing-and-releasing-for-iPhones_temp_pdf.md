@@ -68,6 +68,12 @@ image::Releasing-your-app-for-iOS.png[align="center",title="Releasing your app f
 //ST: 2. The long road
 
 //ST: !
+[WARNING]
+====
+The app, once published on the the Apple App Store, will be public. [underline]#Make sure your app does not include personal content# (pictures, personal details...) that you do not want to get public!
+====
+
+//ST: !
 ==== a. Getting access to the Apple Developer Console
 
 //ST: !

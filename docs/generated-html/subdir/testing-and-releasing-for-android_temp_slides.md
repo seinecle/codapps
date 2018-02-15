@@ -209,6 +209,13 @@ Let's see how:
 ==  4. Publishing your app on Google's Play Store
 
 ==  !
+[WARNING]
+====
+The app, once published on the Google Play, will be public. [underline]#Make sure your app does not include personal content# (pictures, personal details...) that you do not want to get public!
+====
+
+
+==  !
 Download the "apk" file on your computer. This file is your Android app!
 
 (if you are curious, `apk` stands for `Android package`)
