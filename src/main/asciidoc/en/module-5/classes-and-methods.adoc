@@ -278,7 +278,7 @@ A last important note on variables:
 //ST: !
 To illustrate:
 
-image::https://docs.google.com/drawings/d/e/2PACX-1vRlKE6GKoatTptz4Yg-KDV0qJP0jxoCkduq7aXn6PLcYya9Wb3I-3VeTsB222uc7YNmFagToZVYovOu/pub?w=1437&h=1075[align="center", "The scope of variables"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vRlKE6GKoatTptz4Yg-KDV0qJP0jxoCkduq7aXn6PLcYya9Wb3I-3VeTsB222uc7YNmFagToZVYovOu/pub?w=1437&h=1075[align="center", title="The scope of variables"]
 
 //ST: !
 What we just discussed about "can a variable created here be used there" is called the *scope of the variable*.

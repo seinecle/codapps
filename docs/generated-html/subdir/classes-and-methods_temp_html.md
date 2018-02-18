@@ -107,7 +107,8 @@ private Float addFrenchVAT(Float priceWithoutVAT) {
 ----
 <1> create a Float variable that will contain the price with VAT
 <2> assign the value `priceWithoutVAT * 1.20` to it
-<3> return it."Return" means that the method is finished and gives back a result, here: a Float variable which is the price with VAT.
+//ST: !
+<3> "Return" means that the method is finished and gives back a result, here: a Float variable which is the price with VAT.
 <4> Don't forget the closing curly brace `}` when finishing the definition of a method.
 
 //ST: !
@@ -163,7 +164,7 @@ A note on the interactive exercise: it is not easy nor comfortable to write a me
 So if you find it difficult, this is normal. You will need time and practice to get used to this logic.
 
 //ST: !
-The good news is, *it is much easier to write our code in NetBeans*, because we have a lot of help showing were we might have forgotten to close a parenthesis `)` or a `;` ...
+The good news is, *it is much easier to write our code in NetBeans*, because we have a lot of help showing where we might have forgotten to close a parenthesis `)` or a `;` ...
 
 This is what we are going to learn now, but just before that we just need to see a last thing about methods:
 
@@ -191,6 +192,7 @@ private void addFrenchVAT() {  // <2>
 - `Float` has been replaced by `void`, which is an English term meaning "nothing"
 - it has no parameter: there is nothing in the parenthesis `(  )`
 
+//ST: !
 <3> the method does one thing: it multiplies the value of the variable `price` by 1.20
 <4> this is the end of the method. There is no "return" statement.
 
@@ -246,7 +248,7 @@ There are just 2 principles we need to understand:
 If you understand these two principles you're good to code!
 
 //ST: !
-=== a. The code is written inside "classes"
+==== a. The code is written inside "classes"
 
 //ST: !
 A class is just a file in your app. It contains the variables and the methods that you want.
@@ -263,6 +265,8 @@ One of the most powerful consequences of this is for the organization of variabl
 //ST: !
 - Let's imagine you create 2 Forms: Form1 and Form2.
 - You want to create 2 Buttons: one in Form1, one in Form2
+
+//ST: !
 - Like this: `Button myButton = new Button();` somewhere in Form1 and `Button myButton = new Button();` somewhere in Form2
 - Is your code going to be a mess because when you change `myButton` in Form1, the program things you also mean `myButton` in Form2?
 - No: the 2 buttons are clearly separated in 2 different classes, so you are fine.
@@ -287,7 +291,7 @@ What we just discussed about "can a variable created here be used there" is call
 It can be a tricky subject but you got the essentials.
 
 //ST: !
-=== b. Classes need to be instantiated
+==== b. Classes need to be instantiated
 
 //ST: !
 Ok, that's the hardest part to figure. What does this even mean?
@@ -315,6 +319,7 @@ myForm.addTwiceToScore(); // <3>
 //ST: !
 Let's provide an example. Do you remember the code we put in `MyApplication.java` to show the Form we created at the start of our app?
 
+//ST: !
 [[example-instantiaton]]
 .Instantiating a Form in MyApplication.java
 [source,java]
@@ -328,15 +333,15 @@ public void start() {
 <2> And now we can use methods of this Form. Here, we use the method `show()` which has for effect to display the `Form` on screen.
 
 //ST: !
-=== c. ... but not always
+==== c. ... but not always: static methods
 
 //ST: !
 In some cases, you don't want or don't need to go through the instantiation step. For example:
 
-- you can create 2Buttons and set the text on them:
+- you can create 2 Buttons and set the text on them:
 
 //ST: !
-[[example-button]]
+[[example-buttons]]
 .Creating 2 buttons
 [source,java]
 ----
@@ -356,8 +361,8 @@ To achieve this effect, the creators of the class `Button` added a `*static meth
 And you use it like this:
 
 //ST: !
-[[example-button]]
-.Creating 2 buttons
+[[example-static-method]]
+.Using a static method
 [source,java]
 ----
 Button.setCapsTextDefault(true);

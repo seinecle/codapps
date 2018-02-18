@@ -284,7 +284,7 @@ A last important note on variables:
 To illustrate:
 
 [.stretch]
-image::.png[align="center", "The scope of variables"]
+image::The-scope-of-variables.png[align="center", title="The scope of variables"]
 
 
 ==  !
