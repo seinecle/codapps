@@ -16,7 +16,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. The interactive  we are using to learn the basics of code
@@ -40,9 +39,7 @@ It is all very trivial, right?
 ==  !
 So in this lesson, you will see plenty of interactive screens like this one:
 
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 
 
@@ -55,8 +52,7 @@ So in this lesson, you will see plenty of interactive screens like this one:
 
 ==  !
 [.stretch]
-image::How-to-use-the-interactive-tool.png[align="Center" title="How to use the interactive tool"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTqctPrQ5bK61KrG0FUJEr0DvuNINJViyrJK5CXA4Py7of-e84AdX0d_DqFkll1ERPAKA7L2A0B7dJ4/pub?w=1431&h=583[align="Center" title="How to use the interactive tool"]
 
 ==  !
 Last note before we start: this lesson is on the [underline]#essentials# of coding, so we go fast and discuss just the most important notions of coding.
@@ -141,17 +137,14 @@ __Create a variable called "favoriteMovie" and store the name of your favorite m
 ====
 
 ==  !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 ==  !
 Here is the solution:
 
 ==  !
 [.stretch]
-image::Creating-a-variable-for-a-textual-information.png[align="center", title="Creating a variable for a textual information"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTo_-6M2WScpIxnSh10Y22_nJXNvO_LwnoKIJ4-Sm4918bKIeczl7YFBGHVWfoNSCEWBVA0XyTfPjad/pub?w=1426&h=536[align="center", title="Creating a variable for a textual information"]
 
 ==  !
 ==== b. *Integer* variables: to store round numbers
@@ -219,9 +212,7 @@ icon:child[3x] Your turn!
 ====
 
 ==  !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 ==  !
 Here is the solution:
@@ -229,7 +220,6 @@ Here is the solution:
 ==  !
 [.stretch]
 image::java-repl-3.png[align="center", title="Creating 2 variables to store numbers"]
-
 
 ==  !
 ==== c. *Float*, *Double* and *Long* variables: to store decimal numbers and big numbers
@@ -302,9 +292,7 @@ icon:child[3x] Your turn!
 ====
 
 ==  !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 ==  !
 [#open-solution]
@@ -314,7 +302,6 @@ Here is the solution:
 [#solution]
 [.stretch]
 image::java-repl-4.png[align="center", title="Creating 3 variables to store decimal or long numbers"]
-
 
 
 ==  !
@@ -375,9 +362,7 @@ icon:child[3x] Your turn!
 ====
 
 ==  !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 
 ==  !
@@ -385,7 +370,6 @@ Here is the solution:
 
 [.stretch]
 image::java-repl-5.png[align="center", title="Creating 3 variables to store true false values"]
-
 
 ==  3. objects
 
@@ -505,9 +489,7 @@ icon:child[3x] Your turn!
 ====
 
 ==  !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 
 ==  !
@@ -515,7 +497,6 @@ Here is the solution:
 
 [.stretch]
 image::new-date.jpg[align="center", title="Declaring and instantiating an object of type Date"]
-
 
 ==  !
 Look at the line in green: it gives the value stored in your variable `dateOfSubscription`: by default, it is the day and time when the variable is instantiated. Very convenient!

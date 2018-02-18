@@ -12,7 +12,6 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. Notifications for updates
@@ -29,8 +28,7 @@ When you open NetBeans, it actually checks for you if there is any update availa
 
 ==  !
 [.stretch]
-image::Update-available.png[align="center",title="Update available"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vRH-O0XGBDJCTJm4RPgxrUGTk7_-gWoJTBfTaqgCtrfOmvpdyZ_aPGbJ9qmxLFXuflEab_b_9xFkpfy/pub?w=1440&h=1080[align="center",title="Update available"]
 
 ==  !
 If there is a notification, it means updates are available. Click on the bubble and follow the instructions to download and install the updates.
@@ -63,8 +61,7 @@ Here is how to make sure you have everything correctly setup (explanations follo
 
 ==  !
 [.stretch]
-image::Putting-the-correct-web-address.png[align="center",title="Putting the correct web address"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vQ85UQ5q6B3EXlwkBLtNlPy1dgHeL0SE_jehAGmSD4p4TfG9d6pSi4mwnx2icxDtnk4kEm_pja1bBcP/pub?w=1440&h=1080[align="center",title="Putting the correct web address"]
 
 ==  !
 - In the NetBeans menu, click on Tools -> Plugin

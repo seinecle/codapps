@@ -15,7 +15,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -92,12 +91,10 @@ Make sure to switch off this parameter after you installed your app.
 In NetBeans, *right click* on the name of your project and select `Properties`:
 
 //ST: !
-image::Accessing-the-properties-of-your-project.png[align="center",title="Accessing the properties of your project"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638[align="center",title="Accessing the properties of your project"]
 
 //ST: !
-image::Codename-One-properties.png[align="center",title="Codename One properties"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQNsfJ5n7XKfCFwrHOVWvSStXTTegqn7VLQhglAKO6DNIW9U7MYDOigiCYvDyc2z0Iug_v95Zwzk4bH/pub?w=1124&h=638[align="center",title="Codename One properties"]
 
 //ST: !
 A login window opens. You should enter *the email and password of the account you created on the Codename One website* (see above in the lesson).
@@ -106,7 +103,6 @@ This is how NetBeans will be able to send the app you created to the Codename On
 
 //ST: !
 image::testing-android-3.png[align="center", title="Entering your Codename One credentials"]
-{nbsp} +
 
 //ST: !
 Then close all the windows we opened by clicking on `OK`.
@@ -129,19 +125,16 @@ Follow these steps:
 Return to the `Properties` of your project:
 
 //ST: !
-image::Accessing-the-properties-of-your-project.png[align="center",title="Accessing the properties of your project"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vR2U-jqeLhKY0TQAJw4416mqnmWkn594MiYhVtBqe6ajfgkwvi_2UbpkNtlODgrGGM27jxagIWp7dYT/pub?w=1124&h=638[align="center",title="Accessing the properties of your project"]
 
 //ST: !
 You can now access the Android settings of your project. *Be extra careful in following these instructions* as mistakes are particularly frustrating to debug:
 
 //ST: !
-image::Android-properties-of-your-project.png[align="center",title="Android properties of your project"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTDTzagRutzHUrqYDRNXrkG3IrGc8wLffsjgaByrTiFqOJmrXdnWZ913uO2K1O__NG43B8NTnZY5twV/pub?w=1124&h=638[align="center",title="Android properties of your project"]
 
 //ST: !
-image::Generating-a-certificate.png[align="center",title="Generating a certificate"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRYCv8H7IzJIWxZhh5AmSvyiGeYgzXlZVvpxQm6pBG1_lmi_OJPnBdovuF9pf0xvlwebgsY0skuG-_F/pub?w=1124&h=638[align="center",title="Generating a certificate"]
 
 //ST: !
 Your Google certificate is now generated! Close the properties of the project by clicking on `OK` and be ready to create the Android version of your app!
@@ -155,8 +148,7 @@ With all the setup completed, we are nearly finished.
 Launch the build of the Android app by right clicking on your project's name:
 
 //ST: !
-image::Launching-the-Android-build.png[align="center",title="Launching the Android build"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQaeosAZWaAnFnfksQD3AsDpZT_8WlsjCV6ysrvpG1BrH35dOj7MKsspzItbs3LDuV0UQcYY2zhzOEK/pub?w=1124&h=638[align="center",title="Launching the Android build"]
 
 //ST: !
 If you get a "Build failed" message at the end, don't worry this is very common not to succeed at the first time.
@@ -171,8 +163,7 @@ Now you should open your web browser, go to http://www.codenameone.com[http://ww
 Then go to the Dashboard:
 
 //ST: !
-image::Checking-the-result-on-the-website-of-Codename-One.png[align="center",title="Checking the result on the website of Codename One"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRt5pn7XtJ08RdO3IQp2GybVFwJ78DnqsFnqXqs_hdJF6UXKJdbNXNV-AwAXMr31mzIper1sr5pTM0L/pub?w=1124&h=638[align="center",title="Checking the result on the website of Codename One"]
 
 //ST: !
 If the build is green and successful, you can go ahead and follow the next instructions below.
@@ -183,8 +174,7 @@ If it is red, again this is quite usual the first times. You can read the specia
 Ok, assuming your build was successful and "green", click on *the date and time* shown on it:
 
 //ST: !
-image::Revealing-the-QR-code-and-the-download-options.png[align="center",title="Revealing the QR code and the download options"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSWiQz6G6d-PWmVv9P4T59jI8t9Ph5BVzHUeL9bn1WIN9mlrgZEKhQhzGMJp9KVjNbXe-qGcTaPo2gY/pub?w=1124&h=638[align="center",title="Revealing the QR code and the download options"]
 
 //ST: !
 And now, you can simply test your app on your Android phone, or publish it on Google's Play Store.
@@ -204,13 +194,19 @@ Let's see how:
 //ST: 4. Publishing your app on Google's Play Store
 
 //ST: !
+[WARNING]
+====
+The app, once published on the Google Play, will be public. [underline]#Make sure your app does not include personal content# (pictures, personal details...) that you do not want to get public!
+====
+
+
+//ST: !
 Download the "apk" file on your computer. This file is your Android app!
 
 (if you are curious, `apk` stands for `Android package`)
 
 //ST: !
-image::Downloading-the-apk-file-to-your-computer.png[align="center",title="Downloading the apk file to your computer"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRrWlwetQeZ_yQOXFJ15yvT05SjcQXCV4nl_BXvy09K9Ql7GtQXti1ucZNltAceNKTO2lVLpzw6vJ3v/pub?w=1124&h=638[align="center",title="Downloading the apk file to your computer"]
 
 //ST: !
 Now, login to your Google Play Developer account at https://play.google.com/apps/publish[https://play.google.com/apps/publish]
@@ -219,8 +215,7 @@ Now, login to your Google Play Developer account at https://play.google.com/apps
 - *em lyon business school students*: log in to your account by following the instuctions you received by email.
 
 //ST: !
-image::Creating-a-new-app-on-your-Google-Play-Console.png[align="center",title="Creating a new app on your Google Play Console"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTXrE1Y1AchhDJMOR8lEBPaChaC5dlxK5mi9FXvNjod_NVuCa4mLGr801fz0Fcz_dyTkjNhfv1QE7C7/pub?w=1124&h=638[align="center",title="Creating a new app on your Google Play Console"]
 
 //ST: !
 You now have access to the menu for your app.
@@ -228,8 +223,7 @@ You now have access to the menu for your app.
 Upload your apk here:
 
 //ST: !
-image::Upload-your-apk-here.png[align="center",title="Upload your apk here"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRzNQ_99QLcjOYA_ClU4Fki_RzgL3n7n8wVCuI4pwq1i0WzEsD-ZXVJlsfuDHy_ekJcKZtkAx1Vg0Cj/pub?w=1124&h=638[align="center",title="Upload your apk here"]
 
 //ST: !
 The Play Store now requires that you add screenshots of your app to market it.
@@ -242,8 +236,7 @@ This website might also be useful to create the screenshots: http://www.appscree
 Finally, there are a number of parameters for you to set. They are shown with an "alert sign" icon on your page:
 
 //ST: !
-image::Visit-and-set-every-parameter-flagged-with-an-icon.png[align="center",title="Visit and set every parameter flagged with an icon"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRrpx-KEEERAdW7YcGcGDBzYrPYyZA8-NXQcsf2Rd9HuM7WHoQgbarDl6tKraQgjGDmmg0CS634t9dT/pub?w=1124&h=638[align="center",title="Visit and set every parameter flagged with an icon"]
 
 //ST: !
 When all these parameters will be set, your app will become publishable.

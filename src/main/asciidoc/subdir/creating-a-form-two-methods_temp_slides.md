@@ -16,7 +16,6 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. Creating a Form and a Label by writing some code (DYI approach)
@@ -31,16 +30,14 @@ NetBeans is a software with many functionalities, including text editing: you ca
 
 ==  !
 [.stretch]
-image::The-files-of-your-app-visible-in-NetBeans.png[align="center",title="The files of your app visible in NetBeans"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vRegIsioWEy2WJuVNAHybPWTspqrEj-Hs--Ltakuv0Si5QVc87tQBcrYkf7dFVzLJ-wSAplcTQYEhsT/pub?w=1440&h=776[align="center",title="The files of your app visible in NetBeans"]
 
 ==  !
 *Double click* on the file `MyApplication.java` to display its content in the right panel in NetBeans:
 
 ==  !
 [.stretch]
-image::Opening-the-content-of-MyApplication.java-for-editing.png[align="center",title="Opening the content of MyApplication.java for editing"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTKloosCyuNNXnhb7LSkHf6OKSMFVqCi4MLZ6PmSFAFue7HQPgYQgc9ARh-cpJITFOe3MCYhBSXCr8D/pub?w=1440&h=1080[align="center",title="Opening the content of MyApplication.java for editing"]
 
 ==  !
 When we created the project in the previous lesson, a Form was added to this new app by default, with a Label saying "Hi World" in it.
@@ -88,19 +85,16 @@ Let's see how it works:
 
 ==  !
 [.stretch]
-image::Creating-a-Form-with-the-GUI---first-step.png[align="center",title="Creating a Form with the GUI - first step"]
+image::https://docs.google.com/drawings/d/e/2PACX-1vT4Yl4K81RE7QjqpmufUFjhi-KfMJ3iptSoCqjWGrB8HK0ATNZxdRQJvV0U-Ms-9sf4fSvlIc5_vRW0/pub?w=1440&h=1080[align="center",title="Creating a Form with the GUI - first step"]
+
+==  !
+[.stretch]
+image::https://docs.google.com/drawings/d/e/2PACX-1vS_PQz8oYrBQvvhXXCb2LERBuc3vUuYctawlw2cNT__UGf_YgWIzg7SIW623u3ZruaYyTGLz03feja0/pub?w=1440&h=1080[align="center",title="Creating a Form with the GUI - second step"]
 
 
 ==  !
 [.stretch]
-image::Creating-a-Form-with-the-GUI---second-step.png[align="center",title="Creating a Form with the GUI - second step"]
-
-
-
-==  !
-[.stretch]
-image::Creating-a-Form-with-the-GUI---third-step.png[align="center",title="Creating a Form with the GUI - third step"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vRNvsUaxjHk0yxAsh7TSS018Vqy0N-c27SnWKiEeWVEENg6fuT9n6BENmtB1a2O8t-ryLvwiibNdLOP/pub?w=1134&h=1035[align="center",title="Creating a Form with the GUI - third step"]
 
 ==  !
 *Clicking on 'Finish' did not show you any 'Form', so what happened?* Where do I find my 'Form' and how do I use it?
@@ -112,8 +106,7 @@ So if you named your Form `Form1`, you should see a new file called `Form1.java`
 
 ==  !
 [.stretch]
-image::Opening-the-Form-we-created-to-work-on-it.png[align="center",title="Opening the Form we created to work on it"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vSZrQqUaxVkLbjSyAnY8bu0IFgBrRTvCOZ2i9vhtcA5LaT5ZUXqFhcPFHVc4E9DZRzTVepawvIb338a/pub?w=1440&h=1080[align="center",title="Opening the Form we created to work on it"]
 
 ==  !
 The window which opens now is called the *"GUI Builder". This window shows a preview of the `Form` you just created.*
@@ -124,13 +117,11 @@ Let's examine the GUI Builder in detail:
 
 ==  !
 [.stretch]
-image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI Builder"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTLmA6SJYK28g7ypoFem5WovZ7hX1vUjna9Sh3mkTtRWtTeuquCn50G72S_kt1cDUtaH9u52H1fGlnh/pub?w=1440&h=1080[align="center",title="Discovering the GUI Builder"]
 
 ==  !
 [.stretch]
-image::Save-before-you-quit!.png[align="center",title="Save before you quit!"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vS-F0Wi5-RBtQIQxpaLzk5q9nCImYEMDDLhQJX_WzSmQSCCHiYBSgOp4nG8RlntjMwme5EB37G41cC-/pub?w=1441&h=971[align="center",title="Save before you quit!"]
 
 ==  !
 And... that's almost it! Whatever you create with the GUI Builder will be included in your app.
@@ -186,8 +177,7 @@ Now, launching the app preview will show our Form1! It still empty but it is a g
 
 ==  !
 [.stretch]
-image::Previewing-the-Form-you-created!.png[align="center",title="Previewing the Form you created!"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vRmHRiHIt3hGnSnUofYnEpZocaHvwV-lk6i6NUy9fvwaNpRFtTyXtc8XYjkdMheibvcoAax-Xf6YAJ4/pub?w=244&h=406[align="center",title="Previewing the Form you created!"]
 
 
 ==  The end

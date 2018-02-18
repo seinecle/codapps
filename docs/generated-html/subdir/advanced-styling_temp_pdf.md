@@ -15,7 +15,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -33,7 +32,6 @@ Using a *Span Label*, a *Scaled Label for the picture* and a *Button*, all in a 
 
 //ST: !
 image::preview-before-advanced-styling.png[align="center","An app promoting the Guillestre and Queyras regions"]
-{nbsp} +
 
 //ST: !
 (note: the arrow next to "Go for a tour!" was added thanks to the "Icon" property of the Button, where I selected the pic "arrow" "from Material Icon")
@@ -42,8 +40,7 @@ image::preview-before-advanced-styling.png[align="center","An app promoting the 
 The color of the text of the Button can be changed by accessing the property "Fg Color" available here:
 
 //ST: !
-image::Styling-the-Components-from-the-GUI-Builder.png[align="center",title="Styling the Components from the GUI Builder"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRYRXdEeDZ33POcjS3P0DIn_KmLe_hE5g0htzoJM-BjFmsRk_3fglhzhXyfIa8xYCBfAZKlpGIXoGxb/pub?w=1440&h=1080[align="center",title="Styling the Components from the GUI Builder"]
 
 //ST: !
 But there are two limitations:
@@ -67,8 +64,7 @@ In the files of your project in NetBeans, spot the file named "theme.res". We ha
 Double click on it:
 
 //ST: !
-image::Clicking-on-the-file-theme.res.png[align="center",title="Clicking on the file theme.res"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vS_VG4vC2052zshEacVIzW2S0F0u-TPZlTx-eA81RDqc4ArK3p5N_EQib5ev6-5LqwguLUFKcxhqkkF/pub?w=645&h=434[align="center",title="Clicking on the file theme.res"]
 
 //ST: !
 -> It launches a new window. Be patient, it takes a bit of time to open!
@@ -76,30 +72,26 @@ image::Clicking-on-the-file-theme.res.png[align="center",title="Clicking on the 
 Then, click on "Themes":
 
 //ST: !
-image::Opening-the-Themes-in-theme-res.png[align="center",title="Opening the Themes in theme res"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQ_6EO1MX6j0aN4xFj9aht9GK_3veOvR5zSBaDNz3N2EDPgAZj5uQ7-kbl7Q_J0bamZtBTEUDnDEBZW/pub?w=1124&h=638[align="center",title="Opening the Themes in theme res"]
 
 //ST: !
 Now double click on "Theme" (*not on "Add a Theme"*) to access the list of all the styles applied by default to your Components:
 
 //ST: !
-image::Opening-the-Theme-in-theme-res.png[align="center",title="Opening the Theme in theme res"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vS_Cfi0Pug4Vmd-c7iu5X7TBddWgEtK64O4SEQ-qB37AoYAncZslYfSXOo4tNCw5sc5ICOyGH_guldk/pub?w=1124&h=638[align="center",title="Opening the Theme in theme res"]
 
 //ST: !
 What you see now is the default style of your theme. Select it, and click on "Add" because we want to add a new style for our Buttons
 
 //ST: !
-image::Selecting-the-default-style-to-modify-it.png[align="center",title="Selecting the default style to modify it"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTUtJhQVlZGTWkSQessxQkiHiiCyzYGv-TGqiHGSyRK0a-alSCy7sUVhCicF3AdqydVygZggvDrRQ1K/pub?w=1124&h=638[align="center",title="Selecting the default style to modify it"]
 
 
 //ST: !
 The window which opens now deserves a bit of explanation. In the drop down menu on top, you can see the list of all possible Components:
 
 //ST: !
-image::Scrolling-through-the-list-of-Components.png[align="center",title="Scrolling through the list of Components"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vScOyV7FrhHSNPIPZpuyELlaEuWvBjRIQi9mj6d3dcPfh2N_ZT6rO6s5i5PxnLx9UPOnovZEak2LM0D/pub?w=1124&h=638[align="center",title="Scrolling through the list of Components"]
 
 //ST: !
 Once you have selected "Button" in the list, you will be able to modify the style of all the Buttons in your app.
@@ -118,8 +110,7 @@ What you need is to:
 To achieve this, rename "Button" as "ButtonItalicBlue" (*careful! no spaces! Don't forget the capitalized letters!*) on top of the window, and start defining this specific style you want:
 
 //ST: !
-image::Defining-the-color-of-the-text-as-blue.png[align="center",title="Defining the color of the text as blue"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQpampMK8HB9JxpK7Z0q6_kLqeq0KEe_WzQV1aI6P_Ul6fI0qYGw70Huw8LU5Woa4tkW840x7nYbQ5J/pub?w=1124&h=638[align="center",title="Defining the color of the text as blue"]
 
 //ST: !
 The logic is simple:
@@ -132,15 +123,13 @@ The logic is simple:
 So we have defined a blue color for the text, now let's make this text italicized:
 
 //ST: !
-image::Adding-italics-to-the-ButtonItalicBlue-style.png[align="center",title="Adding italics to the ButtonItalicBlue style"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTV2swZM9TI23OXno_rZ-lKkmpPCE9e84S_t_LBQh01e2C4afBnLoQMJ9qnItq3Z0MJwTbX7Ael_Hc8/pub?w=1124&h=638[align="center",title="Adding italics to the ButtonItalicBlue style"]
 
 //ST: !
 We closed the window for styling, and we see our new style appearing in the list of available styles:
 
 //ST: !
-image::The-new-style-in-the-list-of-available-styles..png[align="center",title="The new style in the list of available styles."]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRgua-vEerpzRCruMe7_dJO14emBxTozu0BANJFN5tmxlnS74ckmQ_jdXUMEeP-bZrmoDY0ssNI9Ziv/pub?w=1124&h=638[align="center",title="The new style in the list of available styles."]
 
 //ST: !
 You can leave the window theme.res opened, *but make sure you save the changes you just made (File -> Save)*.
@@ -159,12 +148,10 @@ Let's open our Form in the GUI Builder.
 To change the style of our Button to "ButtonItalicBlue" that we just created, we simply need to modify the property "UIID":
 
 //ST: !
-image::Opening-the-GUI-Builder-and-changing-the-property-UIID.png[align="center",title="Opening the GUI Builder and changing the property UIID"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRRLq-K1XIQZHjUsrFZ2mvdkNW7nthDTPojjLYTC5P_l5hbU4e8-MjFbN5iVsi85wxo9ZM7SXvLfEV7/pub?w=1440&h=1080[align="center",title="Opening the GUI Builder and changing the property UIID"]
 
 //ST: !
-image::The-text-of-the-Button-is-now-in-italics-and-blue.png[align="center",title="The text of the Button is now in italics and blue"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vR2Y3Hb_okOduPZpdL8Y6PnvKTrJB8NN4iS1TIAJCbm_yOGcx-QYMMU-KDFFpuD4jSzQ0gKcZ78G50t/pub?w=1437&h=793[align="center",title="The text of the Button is now in italics and blue"]
 
 //ST: !
 You noticed that a problem occurred: yes, the Button is styled as we want *except that the text is now aligned to the left, not centered!*
@@ -190,14 +177,12 @@ The workflow is simple:
 - modify the style in theme.res. *Of course this time we don't add a new style, we [underline]#edit# ButtonItalic Blue*:
 
 //ST: !
-image::Editing-the-style-ButtonItalicBlue-we-created.png[align="center",title="Editing the style ButtonItalicBlue we created"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTXbpUWIZpQNqv3avTdbarrqUZ6v01vHW14P0dUlMMLmJ2PS4UEGIu1ZiSugbn806oHycEgSfcx0FXF/pub?w=1440&h=1080[align="center",title="Editing the style ButtonItalicBlue we created"]
 
 A new window opens: the place we have already seen, where you can change many aspects of style.
 
 //ST: !
-image::Changing-the-align-property-to-center-text.png[align="center",title="Changing the align property to center text"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vT1MQvNs86PvrcKoPnh3k6o7DkYpGFMDNH-3y-qQAY2Po-vO_ou4jw8RihYoM3ud9P6qZgODuee1iVS/pub?w=1440&h=1080[align="center",title="Changing the align property to center text"]
 
 //ST: !
 Again, *make sure theme.res is saved*. You can keep the window open.
@@ -205,8 +190,7 @@ Again, *make sure theme.res is saved*. You can keep the window open.
 - Go back to the GUI Builder and click on an icon near the top right: it will "reload" and apply the modifications you made to theme.res:
 
 //ST: !
-image::Refreshing-the-theme-to-see-the-changes-in-the-GUI-Builder.png[align="center",title="Refreshing the theme to see the changes in the GUI Builder"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vR_RgBl2OtbHMIgKuBwgJe3plI5umesHXgZ-Nf0uW2xiPWNlKIxf9A1uPFX2dO3wcG5yRnyB2jVmvqQ/pub?w=1437&h=793[align="center",title="Refreshing the theme to see the changes in the GUI Builder"]
 
 == 5. The case of designing Span Labels and Span Buttons
 //ST: 5. The case of designing Span Labels and Span Buttons
@@ -220,19 +204,16 @@ image::Refreshing-the-theme-to-see-the-changes-in-the-GUI-Builder.png[align="cen
 Span Labels or Span buttons are convenient alternatives to Labels and Buttons, because when the text is too long on them it overflows on several lines instead of being cut:
 
 //ST: !
-image::Difference-between-Label-and-SpanLabel.png[align="center",title="Difference between Label and SpanLabel"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRIV41xEWZ9oSv9VqO5b9mNkzqk7zNsX5GAAEQ5_M2ifMO83rgFvcEDeL8FSxL4Xram3h2ECavgyew9/pub?w=957&h=779[align="center",title="Difference between Label and SpanLabel"]
 
 //ST: !
 When you want to apply a style that you have created to a Span Label or a Span Button, *you should be careful to shift to [underline]#advanced properties# to find the correct UIID property to change*:
 
 //ST: !
-image::Switching-to-the-advanced-properties-of-the-Span-Label.png[align="center",title="Switching to the advanced properties of the Span Label"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQy3FMfkSICwOkDiI3ZxBMuioK0ZkQZeSW-2pKp5zH87gTSAcYhNpPS8W766WxDLY6jECd8s-Qu0v4e/pub?w=1437&h=799[align="center",title="Switching to the advanced properties of the Span Label"]
 
 //ST: !
-image::The-text-of-the-Span-Label-but-also-its-icon-can-be-styled.png[align="center",title="The text of the Span Label but also its icon can be styled"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSxE80ZNtweXSfDalM3Gcs-NckidbJZn6NlkdmKLLV0De8HlWTa6LDPhxudOH03HjuoH4bfHx_3vjQz/pub?w=872&h=617[align="center",title="The text of the Span Label but also its icon can be styled"]
 
 //ST: !
 ==== b. The case of Span Buttons

@@ -13,7 +13,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 
 
@@ -41,9 +40,7 @@ It is all very trivial, right?
 //ST: !
 So in this lesson, you will see plenty of interactive screens like this one:
 
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 
 [TIP]
@@ -63,8 +60,7 @@ http://www.javarepl.com/term.html
 "Interactive screen" means that *you can write directly on it* and see your code in action - yes, right here: click next to "java", a cursor will blink to show that you can write:
 
 //ST: !
-image::How-to-use-the-interactive-tool.png[align="Center" title="How to use the interactive tool"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTqctPrQ5bK61KrG0FUJEr0DvuNINJViyrJK5CXA4Py7of-e84AdX0d_DqFkll1ERPAKA7L2A0B7dJ4/pub?w=1431&h=583[align="Center" title="How to use the interactive tool"]
 
 //ST: !
 Last note before we start: this lesson is on the [underline]#essentials# of coding, so we go fast and discuss just the most important notions of coding.
@@ -150,16 +146,13 @@ __Create a variable called "favoriteMovie" and store the name of your favorite m
 ====
 
 //ST: !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 //ST: !
 Here is the solution:
 
 //ST: !
-image::Creating-a-variable-for-a-textual-information.png[align="center", title="Creating a variable for a textual information"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTo_-6M2WScpIxnSh10Y22_nJXNvO_LwnoKIJ4-Sm4918bKIeczl7YFBGHVWfoNSCEWBVA0XyTfPjad/pub?w=1426&h=536[align="center", title="Creating a variable for a textual information"]
 
 //ST: !
 ==== b. *Integer* variables: to store round numbers
@@ -227,16 +220,13 @@ icon:child[3x] Your turn!
 ====
 
 //ST: !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 //ST: !
 Here is the solution:
 
 //ST: !
 image::java-repl-3.png[align="center", title="Creating 2 variables to store numbers"]
-{nbsp} +
 
 //ST: !
 ==== c. *Float*, *Double* and *Long* variables: to store decimal numbers and big numbers
@@ -309,9 +299,7 @@ icon:child[3x] Your turn!
 ====
 
 //ST: !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 //ST: !
 [#open-solution]
@@ -320,7 +308,6 @@ Here is the solution:
 //ST: !
 [#solution]
 image::java-repl-4.png[align="center", title="Creating 3 variables to store decimal or long numbers"]
-{nbsp} +
 
 
 //ST: !
@@ -381,16 +368,13 @@ icon:child[3x] Your turn!
 ====
 
 //ST: !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 
 //ST: !
 Here is the solution:
 
 image::java-repl-5.png[align="center", title="Creating 3 variables to store true false values"]
-{nbsp} +
 
 == 3. Objects
 //ST: 3. objects
@@ -511,16 +495,13 @@ icon:child[3x] Your turn!
 ====
 
 //ST: !
-++++
 <iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe>
-++++
 
 
 //ST: !
 Here is the solution:
 
 image::new-date.jpg[align="center", title="Declaring and instantiating an object of type Date"]
-{nbsp} +
 
 //ST: !
 Look at the line in green: it gives the value stored in your variable `dateOfSubscription`: by default, it is the day and time when the variable is instantiated. Very convenient!

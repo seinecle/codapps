@@ -150,7 +150,7 @@
                         
                         <!-- Shared configurations across `executions`. Can be overwritten if needed by an executions -->
                         <configuration>
-                            <!--<sourceDocumentName>${doc.to.process}</sourceDocumentName>-->
+                            <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
 
                             <requires>
                                 <require>asciidoctor-diagram</require>
@@ -182,6 +182,7 @@
                                 </goals>
                                 <configuration>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <backend>revealjs</backend>
                                     <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -222,6 +223,7 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -251,6 +253,7 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
+                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
                                     <backend>html</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>

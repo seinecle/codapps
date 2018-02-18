@@ -16,7 +16,6 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 

@@ -15,7 +15,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -29,8 +28,7 @@ Before a picture can be shown on the screen of your app, you must add the pictur
 Importing a picture in the files of the app should be done from the GUI Builder, in one click:
 
 //ST: !
-image::Importing-from-the-GUI-Builder---does-not-work-at-the-moment.png[align="center",title="Importing from the GUI Builder - does not work at the moment"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSLPnmssKJF8wwyqE11sImdLaTRBXOennCg2Es4bCYrNndq6w6utCETw-h6SDKrSX-VHugOxa6KiwdK/pub?w=1444&h=779[align="center",title="Importing from the GUI Builder - does not work at the moment"]
 
 //ST: !
 But this simple way does not work at the moment (it will probably be fixed soon).
@@ -42,8 +40,7 @@ So the alternative is to go somewhere else: in a place that used to be important
 - in the files of your project in NetBeans, spot the file named "theme.res" and double click on it:
 
 //ST: !
-image::Clicking-on-the-file-theme.res.png[align="center",title="Clicking on the file theme.res"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vS_VG4vC2052zshEacVIzW2S0F0u-TPZlTx-eA81RDqc4ArK3p5N_EQib5ev6-5LqwguLUFKcxhqkkF/pub?w=645&h=434[align="center",title="Clicking on the file theme.res"]
 
 //ST: !
 -> It launches a new window. Be patient, it takes a bit of time to open!
@@ -51,15 +48,13 @@ image::Clicking-on-the-file-theme.res.png[align="center",title="Clicking on the 
 Here is how the new window should look:
 
 //ST: !
-image::A-new-window-opened.png[align="center",title="A new window opened"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRxDY5ikra8n7-BQ9l7D71NRl2nht21cS6Mg62o1kJ_THCDiRB7i6fEj0dxsB1daRbqhISd6cwit5vZ/pub?w=1124&h=638[align="center",title="A new window opened"]
 
 //ST: !
 There, just go in the top menu, select 'Images' and choose "Add images":
 
 //ST: !
-image::Selecting-Add-Images.png[align="center",title="Selecting Add Images"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTrZcz0hlcsJOp3f57r14z2TG3wTqkjvGz3kX2QXODhAZ5VsSDja6j4T2LjiIrWShsdsFRluHFQe2pk/pub?w=1441&h=819[align="center",title="Selecting Add Images"]
 
 //ST: !
 Simply choose the image that you would like to insert in your app. Guidelines:
@@ -79,12 +74,10 @@ You are now ready to use this pic in your app. Let's see how to add it onto a Fo
 A Component has been specially designed for pictures, but it is called "Scaled Label". You find it here:
 
 //ST: !
-image::Open-the-panel-with-Additional-Components.png[align="center",title="Open the panel with Additional Components"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTMGtTp-orZxzdpLSymJNpJUId0NY9Uqwm8S5jmqjKAK35P5fnRK0NVahhsNbouTqpvYIzkCPKcBYtK/pub?w=1434&h=791[align="center",title="Open the panel with Additional Components"]
 
 //ST: !
-image::Dragging-a-Scaled-Label-onto-the-Form-and-adding-a-Picture.png[align="center",title="Dragging a Scaled Label onto the Form and adding a Picture"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQHw-TySSvzp4oL28xKIUvYJkyHwij0XRvk1WIJbu6ibR-04ujwzH8nZdQlgXNXiAJU-JxmvYQ9GI2D/pub?w=1434&h=791[align="center",title="Dragging a Scaled Label onto the Form and adding a Picture"]
 
 //ST: !
 You should now see your picture on the Form!
@@ -101,19 +94,16 @@ To get this effect, we create a Button and add a picture to it.
 This works like the `Scaled Label` we have just seen, except that it is a `Scaled Button`:
 
 //ST: !
-image::Open-the-panel-with-Additional-Components.png[align="center",title="Open the panel with Additional Components"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTMGtTp-orZxzdpLSymJNpJUId0NY9Uqwm8S5jmqjKAK35P5fnRK0NVahhsNbouTqpvYIzkCPKcBYtK/pub?w=1434&h=791[align="center",title="Open the panel with Additional Components"]
 
 //ST: !
-image::Dragging-a-Scaled-Button-onto-the-Form-and-adding-a-Picture-to-it.png[align="center",title="Dragging a Scaled Button onto the Form and adding a Picture to it"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vQyp3wcn7Dh5sKA-Y2YHNc0p-8CPCXFcg5lFkAjW1riAXRzasavSs66itMSDdoZgIS0m7K7iqqIsOfv/pub?w=1434&h=791[align="center",title="Dragging a Scaled Button onto the Form and adding a Picture to it"]
 
 //ST: !
 When clicking on "Command", a window opens:
 
 //ST: !
-image::Select-a-picture-for-your-Button-in-this-window.png[align="center",title="Select a picture for your Button in this window"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRDDdyNZ2cL6fuesTn7PFItJRM7PhpXB_T2Kebg4z80EX_xqDirGjZeCijMLSI1ycolXLChnCNsoruY/pub?w=1434&h=791[align="center",title="Select a picture for your Button in this window"]
 
 
 //ST: !
@@ -126,7 +116,6 @@ You should now see your Button on the Form: it is a picture, which triggers an a
 So, we have seen how to add a pic on the screen. But often we also want to set a background for the entire of the phone, like this:
 
 image::Nexus_4-smaller.png[align="center",title="An example of an app with a colored background"]
-{nbsp} +
 
 //ST: !
 In this case, we could try to create a Scaled Label and then resize it to take the entire space of the Form, but there is a better way:
@@ -136,7 +125,6 @@ We can simply set the picture we want to the background of the Form itself. In t
 
 //ST: !
 image::green_background-smaller.png[align="center",title="a green background"]
-{nbsp} +
 
 //ST: !
 Just like we have seen, we need first to import this picture through the file 'theme.res' (see the top of this lesson for how to).
@@ -144,8 +132,7 @@ Just like we have seen, we need first to import this picture through the file 't
 Then, set this picture as the "Bg Image" of the Form:
 
 //ST: !
-image::Setting-an-image-as-the-background-of-the-Form.png[align="center",title="Setting an image as the background of the Form"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSzhd-E4N9gnl1SloouWV9nTRYxeLGX-ojS1Bvi5jeNqCZ8gfvG_dvHo-b0zUIEbA5H6fr8-wp_N70X/pub?w=1446&h=935[align="center",title="Setting an image as the background of the Form"]
 
 //ST: !
 To see the result, make sure to save the GUI Builder then launch the preview of the app (big green arrow image:green-arrow.jpg[] in NetBeans.).
@@ -154,7 +141,6 @@ You should get something like:
 
 //ST: !
 image::background-preview-1.png[align="center",title="Background of the app - but with the top remaining blank"]
-{nbsp} +
 
 //ST: !
 This is quite good but we see that some room on the top of the app is not covered, because it is reserved space for the title of the Form.
@@ -204,7 +190,6 @@ Now, if you launch the preview, your background should nicely cover the entire s
 
 //ST: !
 image::background-preview-2.png[align="center",title="Background of the app - covering the entire screen"]
-{nbsp} +
 
 //ST: !
 Congratulations! You learned how to place a picture onto a Form, and how to set a picture as the background of your app. It will look great! 🎉🎉🎉

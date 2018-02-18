@@ -14,7 +14,6 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
-
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. Installing NetBeans
@@ -26,8 +25,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 ==  !
 [.stretch]
-image::Downloading-NetBeans-for-PC.png[align="center",title="Downloading NetBeans for PC"]
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vSS1bTOBljfjOD8aj8weZWc0E7lfRQRut6AclLUxMU6IbeCjFiTwhSsJ8vYRfdvxFYJveydFwVHd5kH/pub?w=1440&h=1080[align="center",title="Downloading NetBeans for PC"]
 
 ==  !
 - If you don’t know, choose “jdk-8u151-nb-8_2-windows-i586.exe” (see below)

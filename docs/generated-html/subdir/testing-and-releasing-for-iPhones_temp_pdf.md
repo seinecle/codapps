@@ -15,7 +15,6 @@ last modified: {docdate}
 :title-logo-image: EMLyon_logo_corp.png[width="242" align="center"]
 
 image::EMLyon_logo_corp.png[width="242" align="center"]
-{nbsp} +
 
 //ST: 'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
@@ -62,7 +61,6 @@ Make sure you have an hour ahead of you, some tea or coffee and plenty of patien
 
 //ST: !
 image::Releasing-your-app-for-iOS.png[align="center",title="Releasing your app for iOS"]
-{nbsp} +
 
 == 2. The long road
 //ST: 2. The long road
@@ -82,21 +80,18 @@ If you don’t find this email, check your spam folder !
 
 //ST: !
 image::ios-release-univ-1.jpg[align="center", title="Email invitation"]
-{nbsp} +
 
 //ST: !
 Open this email, click on the link :
 
 //ST: !
 image::ios-release-univ-2.jpg[align="center", title="Content of the email"]
-{nbsp} +
 
 //ST: !
 On the page that opens, choose "I need to register as an Apple Developer"
 
 //ST: !
 image::ios-release-univ-3.jpg[align="center", title="Registration as an Apple Developer"]
-{nbsp} +
 
 //ST: !
 Then you arrive on a screen that asks you to use your Apple id:
@@ -106,14 +101,12 @@ b.	If you don’t have an Apple id, choose "Create an Apple Id"
 
 //ST: !
 image::ios-release-univ-4.jpg[align="center", title="Apple id"]
-{nbsp} +
 
 //ST: !
 Then you need to agree on the license:
 
 //ST: !
 image::ios-release-univ-5.jpg[align="center", title="Apple Developer Agreement"]
-{nbsp} +
 
 //ST: !
 You should be redirected to this page, which is the place where you manage the certificates of your apps for iPhones.
@@ -128,14 +121,12 @@ Click on 'Certificates, Identities and Profiles'
 
 //ST: !
 image::ios-release-univ-6.jpg[align="center", title="Access certificates"]
-{nbsp} +
 
 //ST: !
 Click on `Certificates -> All` then click on the `+` sign, to add a new certificate for your app :
 
 //ST: !
 image::ios-release-univ-7.png[align="center", title="Adding a certificate"]
-{nbsp} +
 
 //ST: !
 1. Choose "iOS App Development",
@@ -145,34 +136,29 @@ image::ios-release-univ-7.png[align="center", title="Adding a certificate"]
 
 //ST: !
 image::ios-release-univ-8.png[align="center", title="step 1 of the creation"]
-{nbsp} +
 
 //ST: !
 You should arrive on this screen, *stay on it*:
 
 //ST: !
 image::ios-release-univ-9.png[align="center", title="step 2 of the creation"]
-{nbsp} +
 
 //ST: !
 In the Finder on your Mac, open the Applications folder (image:ios-release-univ-10.png[]), and inside it, open the "Utilities" folder:
 
 //ST: !
-image::Opening-the-Utilities-Folder.png[align="center", title="Opening the Utilities Folder"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSv6mohyjSszqBxydJKT58FWiZ7ScvgRmo-wzLd93DevN_uP4qAox8EhzYr0Zf1l0p-E5GzxUe27pbc/pub?w=1437&h=793[align="center", title="Opening the Utilities Folder"]
 
 //ST: !
 In the "Utilities" folder, open the Keychain access:
 
 
 //ST: !
-image::Opening-the-Keychain-access.png[align="center", title="Opening the Keychain access"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vR4u6UGVt6gt9HlxaNIQk2NC422f64Ls1SveKbWY7ANnM6nyd9mP9JWq4N_jmaMYSfBp5blngtF1KCH/pub?w=996&h=629[align="center", title="Opening the Keychain access"]
 In the window that opens, select in the menu "Keychain access -> Certificate Assistant -> Request a Certificate from a Certificate Authority":
 
 //ST: !
-image::Requesting-a-certificate.png[align="center", title="Requesting a certificate"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTLwYM8v9L9XAyfa1W21KSOmRf_BCqVQs731AM9SHonHdYrzW58AwS5yUgd-depblUmxrxNYrLNx6Ih/pub?w=1034&h=412[align="center", title="Requesting a certificate"]
 
 //ST: !
 In the small window that opens:
@@ -185,7 +171,6 @@ I suggest you create a folder somewhere on your computer called "Apple certifica
 
 //ST: !
 image::ios-release-univ-14.png[align="center", title="Filling in details"]
-{nbsp} +
 
 //ST: !
 Now, let’s go back to the website of the Apple Dev Center, where we can continue where we left !
@@ -200,7 +185,6 @@ Upload the file "CertificateSigningRequest.certSigningRequest" that you just sav
 
 //ST: !
 image::ios-release-univ-15.png[align="center", title="Uploading the certificate request"]
-{nbsp} +
 
 //ST: !
 This upload is the step that creates your certificate. Congratulations! That's also a big step you just accomplished!
@@ -213,7 +197,6 @@ Now download the certificate to your disk, in the same folder. It should be call
 
 //ST: !
 image::ios-release-univ-16.png[align="center", title="Downloading the certificate"]
-{nbsp} +
 
 //ST: !
 Find your file "ios_development.cer" where you saved it. Double click on it. This will open the Keychain access:
@@ -223,14 +206,12 @@ Find your file "ios_development.cer" where you saved it. Double click on it. Thi
 
 //ST: !
 image::ios-release-univ-17.png[align="center", title="Exporting the certificate"]
-{nbsp} +
 
 //ST: !
 This opens a window asking for a password. Put "emlyon1000":
 
 //ST: !
 image::ios-release-univ-18.png[align="center", title="Assigning a password"]
-{nbsp} +
 
 //ST: !
 Then on the next screen you are asked again for a password.
@@ -239,7 +220,6 @@ You should use the password of your Mac computer (the one you use to login when 
 
 //ST: !
 image::ios-release-univ-19.png[align="center", title="Confirming with the Mac password"]
-{nbsp} +
 
 //ST: !
 You are invited to save a file on your disk. This is a file with "p12", save it in the same folder where you saved your other files for this certificate.
@@ -272,11 +252,9 @@ I advise you to download it to the same folder where you saved the previous file
 
 //ST: !
 image::ios-release-univ-20.png[align="center", title="Downloading the most recent provisioning profile"]
-{nbsp} +
 
 //ST: !
 image::ios-release-univ-20.png[align="center", title="Downloading the most recent provisioning profile"]
-{nbsp} +
 
 //ST: !
 Now, open NetBeans, right click on the name of your project, and select “Properties” (last item at the bottom).
@@ -296,7 +274,6 @@ Please check the screenshot below and the numbered steps, and read the indicatio
 
 //ST: !
 image::ios-release-univ-21.png[align="center", title="Filling in the properties in NetBeans"]
-{nbsp} +
 
 == 3. The end of the road: sending your build to Codename One
 //ST: 3. The end of the road: sending your build to Codename One
@@ -309,8 +286,7 @@ For this reason, we will call it the "iOS debug build".
 Launch the iOS debug build by right clicking on your project's name:
 
 //ST: !
-image::Sending-the-iOS-Debug-Build.png[align="center", title="Sending the iOS Debug Build"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vTMBr7suk2_sk1qbtMdJ4e5EkGdAHwhDJU2AWbGR_L1iwp7EhYZ45m7bK5Q8hx7-fZXOAJfUN1s7hoF/pub?w=739&h=675[align="center", title="Sending the iOS Debug Build"]
 
 //ST: !
 If you get a "Build failed" message at the end, don't worry this is very common not to succeed at the first time.
@@ -325,8 +301,7 @@ Now you should open your web browser, go to http://www.codenameone.com[http://ww
 Then go to the Dashboard:
 
 //ST: !
-image::Checking-the-result-on-the-website-of-Codename-One.png[align="center",title="Checking the result on the website of Codename One"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vRt5pn7XtJ08RdO3IQp2GybVFwJ78DnqsFnqXqs_hdJF6UXKJdbNXNV-AwAXMr31mzIper1sr5pTM0L/pub?w=1124&h=638[align="center",title="Checking the result on the website of Codename One"]
 
 //ST: !
 If the build is green and successful, you can go ahead and follow the next instructions below.
@@ -337,8 +312,7 @@ If it is red, again this is quite usual the first times. You can read the specia
 Ok, assuming your build was successful and "green", click on *the date and time* shown on it:
 
 //ST: !
-image::Revealing-the-QR-code-and-the-download-options.png[align="center",title="Revealing the QR code and the download options"]
-{nbsp} +
+image::https://docs.google.com/drawings/d/e/2PACX-1vSWiQz6G6d-PWmVv9P4T59jI8t9Ph5BVzHUeL9bn1WIN9mlrgZEKhQhzGMJp9KVjNbXe-qGcTaPo2gY/pub?w=1124&h=638[align="center",title="Revealing the QR code and the download options"]
 
 //ST: !
 And now, you can simply test your app on your iPhone.
