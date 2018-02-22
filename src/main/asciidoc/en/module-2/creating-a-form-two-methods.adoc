@@ -118,6 +118,7 @@ image::https://docs.google.com/drawings/d/e/2PACX-1vTLmA6SJYK28g7ypoFem5WovZ7hX1
 //ST: !
 image::https://docs.google.com/drawings/d/e/2PACX-1vS-F0Wi5-RBtQIQxpaLzk5q9nCImYEMDDLhQJX_WzSmQSCCHiYBSgOp4nG8RlntjMwme5EB37G41cC-/pub?w=1441&h=971[align="center",title="Save before you quit!"]
 
+[[anchor-2]]
 //ST: !
 And... that's almost it! Whatever you create with the GUI Builder will be included in your app.
 

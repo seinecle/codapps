@@ -126,6 +126,7 @@ image::Discovering-the-GUI-Builder.png[align="center",title="Discovering the GUI
 image::Save-before-you-quit!.png[align="center",title="Save before you quit!"]
 {nbsp} +
 
+[[anchor-2]]
 //ST: !
 And... that's almost it! Whatever you create with the GUI Builder will be included in your app.
 

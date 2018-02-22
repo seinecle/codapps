@@ -283,7 +283,7 @@ A last important note on variables:
 //ST: !
 To illustrate:
 
-image::.png[align="center", "The scope of variables"]
+image::The-scope-of-variables.png[align="center", title="The scope of variables"]
 {nbsp} +
 
 //ST: !

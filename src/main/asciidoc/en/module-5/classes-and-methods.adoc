@@ -40,7 +40,7 @@ What we miss here is:
 Let's create an Integer variable representing the price of an item, as we discussed in the previous lesson:
 
 //ST: !
-[[string-example]]
+[[price-example]]
 .Creating a variable to store the price of an item
 [source,java]
 ----
@@ -369,6 +369,18 @@ Notice that the button is not instantiated (there is no `new Button()`). The met
 You can create such methods yourself just by adding the keyword `static` in front of the title of your method.
 
 Each time you see a line of code looking like `Example.method()`, this means a static method of the class `Example` is being used.
+
+The most famous example of a static method is this one:
+
+//ST: !
+[[system-out-println]]
+.Showing something in the console
+[source,java]
+----
+System.out.println("oh hey!");
+----
+
+This line will write "oh hey" in the console of your app.
 
 //ST: !
 But we discuss here some technical details that will make much more sense when we will actually code an app.
