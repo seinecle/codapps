@@ -102,7 +102,9 @@ if (priceItemInEuros != 5.99) { //<2>
 <2> `!=` looks weird, why not just `≠`? Well try to find ≠ on your keyboard 😉
 
 //ST: !
-Before we leave conditional statements: we'll see in the app that we use them *a lot* because they make the app so powerful and flexible.
+There are other important subtleties about conditionals, but we leave them for the "cheatsheet" lesson in this module.
+
+A last remark: we'll see in the app that we use conditional statements *a lot* because they make the app so powerful and flexible.
 
 Some even joke that many products with "artificial intelligence" sold out there actually just have plenty of conditional statements in their code to mimic an "intelligent behavior" 😉
 
@@ -194,7 +196,7 @@ Just like for the conditional statements, the way to write a loop looks a bit ba
 
 Don't worry, it is not about memorizing everthing by heart, but simply to at least get the general picture.
 
-Then you can have the cheat sheet (availabe in this module) printed next to you when you code, as a helper.
+Then you can have the cheat sheet (available in this module) printed next to you when you code, as a helper.
 
 //ST: !
 ==== b. a closer look at the syntax
@@ -224,9 +226,42 @@ We'll meet them again just below, in a simpler version.
 //ST: 4. Making your app handle lots of stuff
 
 //ST: !
+Programmers who created the animations for the Pixar movie "Up" had to code a lot of balloons (https://en.wikipedia.org/wiki/Up_%282009_film%29[10,000 to 20,000]):
 
+//ST: !
+image::up.jpg[align="center",title="Lots of balloons"]
 
+//ST: !
+How did they handle these balloons in their code? Did they create 20,000 variables and if so, did they just patiently do:
 
+//ST: !
+[[balloons]]
+.20,000 balloon variables
+[source,java]
+----
+Balloon balloon1 = new Balloon();
+Balloon balloon2 = new Balloon();
+Balloon balloon3 = new Balloon();
+----
+... and so on for 20,000 lines? No.
+
+//ST: !
+What they probably did is that they used a loop to create the ballons:
+
+//ST: !
+[[balloons]]
+.20,000 balloon variables
+[source,java]
+----
+for (int i = 0; i<20000;i = i+1){
+  Balloon balloon = new Balloon();
+}
+----
+
+//ST: !
+Ok, but where get each of these balloons stored, so that they can be used later (to add color to them, animate them...)?
+
+We need something to handle our 20,000 ballons. Like a bag or a box where they would be stored and available for use. This is called a Collection.
 
 == The end
 //ST: The end

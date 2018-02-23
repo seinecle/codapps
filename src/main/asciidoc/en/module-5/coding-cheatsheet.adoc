@@ -163,7 +163,7 @@ if (priceItemInEuros < 6 & priceItem > 2) { // <1>
   productLabel.setText("relatively cheap product!");
 }
 ----
-<1> the `&` means "and". The two conditions `priceItemInEuros < 6` and `priceItem > 2` need to be true for the statement `productLabel.setText("relatively cheap product!");` to be executed.
+<1> the `&` means "and". The two conditions: `priceItemInEuros < 6` *and* `priceItem > 2` both need to be true for the statement `productLabel.setText("relatively cheap product!");` to be executed.
 
 [[several-and-conditionals-example]]
 .A statement with two conditions where just either one of the two needs to be true
@@ -176,9 +176,7 @@ if (priceItemInEuros < 6 | priceItem > 2) { // <1>
   productLabel.setText("relatively cheap product!");
 }
 ----
-<1> the `|` means "or". Just one of the two conditions `priceItemInEuros < 6` or `priceItem > 2` need to be true for the statement `productLabel.setText("relatively cheap product!");` to be executed.
-
-
+<1> the `|` means "or". Just one of the two conditions: `priceItemInEuros < 6` *or* `priceItem > 2` needs to be true for the statement `productLabel.setText("relatively cheap product!");` to be executed.
 
 == Loops
 
