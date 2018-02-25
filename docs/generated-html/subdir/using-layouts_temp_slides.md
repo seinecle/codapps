@@ -16,6 +16,7 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
+
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
@@ -29,14 +30,16 @@ See what happens when we create an empty Form, and put 5 Labels on it:
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vSGArlWg1lmVYVNcW4KGKKEKSwbhRk2G4MCtkADbxtzbWvanSmiPap-2W0DSHR6qnFHX0HE-yLVM3CV/pub?w=1437&h=793[align="center",title="Putting 5 Labels on an empty Form"]
+image::Putting-5-Labels-on-an-empty-Form.png[align="center",title="Putting 5 Labels on an empty Form"]
+
 
 ==  !
 I delete the title of the Form (which is "Form1" by default):
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vS3R96Q_npkmejPvuMP0PJ5szkg988OfLnNG_liqKmk42mF5AYQ1rQq2DN5iusFebzKcpysSkxypNCD/pub?w=1437&h=793[align="center",title="Deleting the title of the Form"]
+image::Deleting-the-title-of-the-Form.png[align="center",title="Deleting the title of the Form"]
+
 
 ==  !
 *Make sure to save the GUI Builder (File -> Save)*, you can keep it open. Then launch the preview of the app (big green arrow image:green-arrow.jpg[] in NetBeans):
@@ -44,6 +47,7 @@ image::https://docs.google.com/drawings/d/e/2PACX-1vS3R96Q_npkmejPvuMP0PJ5szkg98
 ==  !
 [.stretch]
 image::layout-2.png[align="center",title="Previewing your app with the default layout"]
+
 
 ==  !
 We see that *by default, the Components are organized from left to right on the screen*.
@@ -81,7 +85,8 @@ But we don't use this feature yet in this course so *do not select* Auto Layout 
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vSku-UZtHZR2QxGWUM-4uyxUlzit5DQywwXzxkJFFKm3I81S0c5NLI-N5YTMHFAYOjH5_wJ9P7BkgDd/pub?w=1424&h=675[align="center",title="An experimental feature to make layout easier - but dont use it yet"]
+image::An-experimental-feature-to-make-layout-easier---but-dont-use-it-yet.png[align="center",title="An experimental feature to make layout easier - but dont use it yet"]
+
 
 ==  !
 With these explanations made, we can discover how layouts and containers work. Let's start with layouts:
@@ -100,7 +105,8 @@ You already now th Flow layout, because when we create a new Form, the "Flow Lay
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRSkdCYywZNebgzyn-sL3QI8O54BaQR48j6FIu8lGuUG1HAWsu1H5pQb7NUfB0nA8Y4hUTJAPfcXDjX/pub?w=1437&h=793[align="center",title="Form adopt by default a Flow layout"]
+image::Form-adopt-by-default-a-Flow-layout.png[align="center",title="Form adopt by default a Flow layout"]
+
 
 ==  !
 The Flow Layout is easy to understand: when a Form is set to "Flow Layout", the Components it contains will be set from left to right, and then place on the next line when there is no more room on the screen, etc.
@@ -130,7 +136,8 @@ How to apply to the Form? Simply select the Form and then spot the icon managing
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vT5BI4fRa6V22jZcrqAbQy3YI54Dz5XK7eEWux-e9naXH1ZBc4q-3YLGgUeZTe8r-8kEkw4WdqqdXTR/pub?w=1437&h=793[align="center",title="Applying a Box Y Layout to the Form"]
+image::Applying-a-Box-Y-Layout-to-the-Form.png[align="center",title="Applying a Box Y Layout to the Form"]
+
 
 ==  !
 Small digression here: if you remember, when you created the project in NetBeans, a Form had been created automatically with some lines of code.
@@ -165,7 +172,8 @@ This Layout is similar to the Box Y Layout, except that this time every Componen
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRtxv2cxJ95D2-Zj3ER15ONRCxfejWmVkS9OwUrEV7SLnE6IrKDlIrH1KsmiaI5xIwLH4InNSRJjYJ4/pub?w=1437&h=793[align="center",title="Applying a Box X Layout to the Form"]
+image::Applying-a-Box-X-Layout-to-the-Form.png[align="center",title="Applying a Box X Layout to the Form"]
+
 
 
 ==  5. The Grid Layout
@@ -182,7 +190,8 @@ For example: 3 rows and 3 columns? 9 cells. If you have less than 9 Components, 
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vQRlx21jhzMIx65yutQKhlst1SgDaTPCg3BFNSUHoXcUJsGBd1HryLPvzaC-fLwweFR5u4nJtTkRsXS/pub?w=1437&h=793[align="center",title="Applying a Grid Layout to the Form"]
+image::Applying-a-Grid-Layout-to-the-Form.png[align="center",title="Applying a Grid Layout to the Form"]
+
 
 ==  6. The Border Layout
 
@@ -194,7 +203,8 @@ The logic of the Border layout is a bit different: it divides the space in the C
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRBGoG80ZfWCqyX8lUpfkc64ADK-oImP-YO5lq27SM5mTSfeXIYtn98AihNCW_tDsYE753uB9c0R6yx/pub?w=368&h=515[align="center",title="Applying a Border Layout to the Form"]
+image::Applying-a-Border-Layout-to-the-Form.png[align="center",title="Applying a Border Layout to the Form"]
+
 
 ==  !
 This layout is particularly interesting for one reason:
@@ -208,14 +218,16 @@ Let's examine an example. In this Form, I placed 1 Button and 4 Labels. If we ch
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRoEAMjHm28kHLgU6v7StrLENbLmlXYbDnuz5mV990hQtS3QwbVV4j-P-PUZ1-WJNHWWpP-lUUKb9tP/pub?w=1440&h=902[align="center",title="The Box Y Layout applied to the Form"]
+image::The-Box-Y-Layout-applied-to-the-Form.png[align="center",title="The Box Y Layout applied to the Form"]
+
 
 ==  !
 Now I don't change anything, *except for the layout of the Form*: I select "Border Layout"
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRU8bXqOcgq8m3CZVrOrINo9hY9iUXoEknZY3E9fWIAfrdHJ1kr0o55Z8FI24rdTp9ZP5Zf_g7nG-D2/pub?w=1438&h=894[align="center",title="Applying a Border Layout to the Form"]
+image::Applying-a-Border-Layout-to-the-Form.png[align="center",title="Applying a Border Layout to the Form"]
+
 
 ==  !
 [WARNING]
@@ -233,7 +245,8 @@ There is more: what if we keep this Border Layout, but we *delete all Labels and
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vTVZ7wfchuzSTf_VZJBjd-kOEqw4AotXPMQ91Csd3jKv_crnG6Do6MmRVSazJIKftz0Xp3PBFNe50Ws/pub?w=1435&h=798[align="center",title="A single Component in the central region of a border layout"]
+image::A-single-Component-in-the-central-region-of-a-border-layout.png[align="center",title="A single Component in the central region of a border layout"]
+
 
 ==  !
 The Button takes up all the space!
@@ -252,7 +265,8 @@ Last remark on the Border layout: how to instruct a given Component to be in the
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vRIFWBnGgweg9QuR-TgQGk_FvODQeEdbsVJhbcyftiucgiWDVPLP0FhX8Qj862SRv6CUCNTEszLF-hK/pub?w=1438&h=894[align="center",title="Selecting the position of a Component in a Border layout"]
+image::Selecting-the-position-of-a-Component-in-a-Border-layout.png[align="center",title="Selecting the position of a Component in a Border layout"]
+
 
 ==  !
 We leave here the different layouts and move on to the next lesson on how to have different layouts for different regions of the Form, thanks to *Containers*.

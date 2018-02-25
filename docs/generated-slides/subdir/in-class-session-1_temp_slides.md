@@ -14,6 +14,7 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
+
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. The Data R&D Institute
@@ -21,6 +22,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 ==  !
 [.stretch]
 image::Logo%20DRDI.JPG[align="center"]
+
 
 ====
 http://data.em-lyon.com
@@ -50,12 +52,14 @@ video::7PmaiMNwxio[youtube]
 [.stretch]
 image::angry.gif[align="center",title="pain"]
 
+
 ==  !
 et les 20% restant, ca fait:
 
 ==  !
 [.stretch]
 image::banderas.gif[align="center",title="pleasure"]
+
 
 ==  !
 ==== b. Lisez le syllabus
@@ -69,6 +73,7 @@ Toutes les consignes, dates, ... sont dans le syllabus
 ==  !
 [.stretch]
 image::Octocat.jpg[align="center",title="Check the lesson on Github!"]
+
 
 
 ==  !

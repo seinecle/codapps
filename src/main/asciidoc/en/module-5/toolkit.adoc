@@ -242,18 +242,19 @@ How did they handle these balloons in their code? Did they create 20,000 variabl
 Balloon balloon1 = new Balloon();
 Balloon balloon2 = new Balloon();
 Balloon balloon3 = new Balloon();
+etc...
 ----
-... and so on for 20,000 lines? No.
+and so on for 20,000 lines? No.
 
 //ST: !
-What they probably did is that they used a loop to create the ballons:
+What they probably did is that they used a loop to create the balloons:
 
 //ST: !
 [[balloons]]
 .20,000 balloon variables
 [source,java]
 ----
-for (int i = 0; i<20000;i = i+1){
+for (int i = 0; i<20000;i = i+1) {
   Balloon balloon = new Balloon();
 }
 ----
@@ -261,10 +262,76 @@ for (int i = 0; i<20000;i = i+1){
 //ST: !
 Ok, but where get each of these balloons stored, so that they can be used later (to add color to them, animate them...)?
 
-We need something to handle our 20,000 ballons.
+We need something to handle our 20,000 balloons.
 Like a bag or a box where we could put them, or remove them, or retrieve them.
 
+//ST: !
 *Collections* are these "bags" we need to handle a lot of variables together.
+There are many collections available, but we'll see just one here: the `ArrayList`.
+
+Let's see how it works:
+
+//ST: !
+[[ArrayLists]]
+.An ArrayList to handle all your balloons at once
+[source,java]
+----
+ArrayList<Balloon> balloons = new ArrayList(); // <1>
+
+for (int i = 0; i<20000;i = i+1){
+  Balloon myBalloon = new Balloon();
+  balloons.add(myBalloon); // <2>
+}
+----
+<1> ArrayList is an object.
+- You need to define it and instantiate it.
+- Don't forget the capital A and capital L! **A**rray**L**ist
+- what about the `<Balloon>` part? Because `ArrayList` can contain just *one type of Object*, which you need to mention between the `<>`.
+
+//ST: !
+<2> The ArrayList `balloons` has a method called `add` to add balloons to it.
+
+Now our 20,000 balloons are all in one ArrayList. How is it useful?
+
+//ST: !
+Let's imagine we want to show all of them on the screen:
+
+//ST: !
+[[using-lists]]
+.Showing all balloons on screen
+[source,java]
+----
+Form1 myScreen = new Form1 ();
+for (Balloon balloon: balloons) { // <1>
+  myScreen.add(balloon); // <2>
+}
+----
+<1> a new way to loop, different from the one we've seen above. It means: "for each balloon in the list, do ..."
+<2> in this example I assume that Balloon is a Component which can be added to a Form, like a `Label` or a `Button`
+
+//ST: !
+Another possibility: showing on screen only the largest balloons:
+
+//ST: !
+[[using-lists-with-if]]
+.Showing only the largest balloons
+[source,java]
+----
+Form1 myScreen = new Form1 ();
+
+for (Balloon balloon: balloons){ // <1>
+  if (balloon.getDiameter() > 3){
+    myScreen.add(balloon);
+  }
+
+} // <1>
+----
+<1> don't forget this closing curly brace, which corresponds to the opening curly brace above!
+
+//ST: !
+That was a lot to digest, but now you have a lot of tools and techniques to code whatever you want. Let's meet at the next lesson to build an app!
+
+In the meantime, you can go and print the "cheat sheet" for this Module 5: a handy page where you'll find a summary of all these techniques we've just seen.
 
 == The end
 //ST: The end

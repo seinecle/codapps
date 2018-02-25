@@ -16,6 +16,7 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 
 
 
+
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 
@@ -82,7 +83,7 @@ __ This seems not very useful but actually we use it quite often __
 ----
 Boolean hasAStudentCard = true; //<1>
 ----
-<1> A classic mistake is to write "true" (with double quotes, which is incorrect). Boolean values are `true` or `false` [underline]#without double quotes " "#.
+<1> A classic mistake is to write `"true"` (with double quotes, which is incorrect). Boolean values are `true` or `false` [underline]#without double quotes " "#.
 `boolean` can be used instead of `Boolean`: less memory but also less convenient to use in some cases.
 
 ==== `Objects`: to create and store a variety of things
@@ -101,6 +102,150 @@ Date dateEndOfTheGame = new Date();  //<3>
 <1> An object `dateStartOfTheGame` of type `Date` is [underline]#declared#. It is `null` at the moment.
 <2> `dateStartOfTheGame` is [underline]#instantiated#: an instance of it is created.
 <3> Shortcut: a variable can be [underline]#declared# and [underline]#instantiated# in one line of code.
+
+
+==== conditional statements for numbers
+
+[[if-example]]
+.Different kinds of conditional statements about numbers
+[source,java]
+----
+Float priceItemInEuros;
+priceItemInEuros = 5.99f;
+Label productLabel = new Label();
+if (priceItemInEuros < 6) {
+  productLabel.setText("cheap product!");
+}
+if (priceItemInEuros == 5.99) { //<1>
+  productLabel.setText("the price is exactly 5.99");
+}
+if (priceItemInEuros != 5.99) { //<2>
+  productLabel.setText("the price is different from 5.99");
+}
+if (priceItemInEuros =< 6) {
+  productLabel.setText("the price is under or equal to 6!");
+}
+if (priceItemInEuros >= 7) {
+  productLabel.setText("the price is above or equal to 6!");
+}
+----
+
+==== conditional statements about text
+
+It would be a *mistake* to write:
+
+[[if-text-example-mistake]]
+.Mistake! Don't do this!
+[source,java]
+----
+String playerName1 = "Tristan";
+String playerName2 = "Tristan";
+
+if (playerName1 == playerName2) { //<1>
+  messageLabel.setText("the two players have the same name!");
+}
+----
+<1> Using `==` to compare two Strings is incorrect.
+- Your build will not fail, but even if the two players have the same name it might say it's false!
+- when comparing two String, you should do like below:
+
+[[if-text-example]]
+.Different kinds of conditional statements about text
+[source,java]
+----
+String playerName1 = "Tristan";
+String playerName2 = "Touni";
+
+if (playerName1.equals(playerName2)) {
+  messageLabel.setText("the two players have the same name!");
+}
+if (!playerName1.equals(playerName2)) { //<1>
+  messageLabel.setText("the two players have different names!");
+}
+----
+<1> note the `!` in front
+
+==== conditional statements about several items
+
+[[several-and-conditionals-example]]
+.A statement with two conditions which need both to be true
+[source,java]
+----
+Float priceItemInEuros;
+priceItemInEuros = 5.99f;
+Label productLabel = new Label();
+if (priceItemInEuros < 6 & priceItem > 2) { // <1>
+  productLabel.setText("relatively cheap product!");
+}
+----
+<1> the `&` means "and". The two conditions: `priceItemInEuros < 6` *and* `priceItem > 2` both need to be true for the statement `productLabel.setText("relatively cheap product!");` to be executed.
+
+[[several-and-conditionals-example]]
+.A statement with two conditions where just either one of the two needs to be true
+[source,java]
+----
+Float priceItemInEuros;
+priceItemInEuros = 5.99f;
+Label productLabel = new Label();
+if (priceItemInEuros < 6 | priceItem > 2) { // <1>
+  productLabel.setText("relatively cheap product!");
+}
+----
+<1> the `|` means "or". Just one of the two conditions: `priceItemInEuros < 6` *or* `priceItem > 2` needs to be true for the statement `productLabel.setText("relatively cheap product!");` to be executed.
+
+
+[[loop]]
+.Writing a loop
+[source,java]
+----
+for (int i = 0; i<100; i = i+1){
+  System.out.println("I looped " + i) +" times.";
+}
+----
+
+==  !
+[[using-loop-with-if]]
+.A loop with several ifs inside
+[source,java]
+----
+for (int i = 0; i<100; i = i+1){
+  System.out.println("I looped " + i + " times.");
+  if (i == 0) {
+    System.out.println("We just started the loops. This is going to be a long journey.");
+  }
+  if (i == 50) {
+    System.out.println("Half way already!");
+  }
+  if (i == 99) {
+    System.out.println("This was the last loop. Bye!");
+  }
+}
+----
+
+
+[[lists]]
+.Creating a list and adding objects to it
+[source,java]
+----
+ArrayList<Balloon> balloons = new ArrayList();
+for (int i = 0; i<20000;i = i+1){
+  Balloon myBalloon = new Balloon();
+  balloons.add(myBalloon);
+}
+----
+
+==  !
+[[using-ArrayLists]]
+.Looping through a list to show the names of all players
+[source,java]
+----
+for (String player: playerNames) { //<1>
+  Label myLabel = new Label();
+  myLabel.setText(player);
+  myForm.add(myLabel)
+}
+----
+<1> here we assume that we had created before an ArrayList of player names.
 pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11592657;

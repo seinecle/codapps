@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>CODAPPS: Conditional statements, loops and data structures</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Conditional statements, loops and data structures</h2><div class="preamble"><div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
+<section id="_1_useful_additions_to_your_coding_toolkit"><h2>1. Useful additions to your coding toolkit</h2></section>
+<section><div class="paragraph"><p>What we have seen so far is really the essential of coding: variables, methods and classes.</p></div>
+<div class="paragraph"><p>We can code an app with this.
+But what makes programming feel like magic is when we take advantage of three things computers (and mobile phones) are really good at:</p></div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>they can adapt their behavior to changing environments</p></li><li><p>they are really fast</p></li><li><p>they can handle huge volumes of things</p></li></ol></div></section>
+<section><div class="paragraph"><p>In this lesson, we learn how to do these 3 things. Promised, this is the last of the "technical" lessons.
+After this one you will create a great app.</p></div></section>
+<section id="_2_making_your_app_adapt"><h2>2. Making your app adapt</h2></section>
+<section><div class="paragraph"><p>If your app does always the same thing, it will be quickly boring.
+What you need is the ability to code something that says:</p></div>
+<div class="paragraph"><p>"if the user of the app chooses this option, then do this. If not, do that instead"</p></div></section>
+<section><div class="paragraph"><p>This need is so universal that all programming languages have a way to express this "if this is true, then do that".</p></div>
+<div class="paragraph"><p>The formal name for it is a <code>conditional statement</code>.</p></div></section>
+<section><h3>a. How to write a conditional statement</h3></section>
+<section><div class="listingblock" id="if-example"><div class="title">Creating a conditional statement</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">cheap product!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="paragraph"><p>This will put the text "cheap product" in the Label, <strong>only if the price of the product is under 6</strong>.</p></div></section>
+<section><div class="paragraph"><p>Let&#8217;s have a closer look at the syntax (the boring part, but where any mistake will make your build fail)</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Detailing-how-a-conditional-statement-works.png" alt="Detailing how a conditional statement works" height="100%" /></div><div class="title">Figure 1. Detailing how a conditional statement works</div></section>
+<section><div class="paragraph"><p>That&#8217;s about it for conditional statements.</p></div>
+<div class="paragraph"><p>We have seen a condition that said "if this thing is <strong>lower than</strong> this other thing".</p></div>
+<div class="paragraph"><p>We just need to learn to write "if these things are <strong>equal</strong>" or "if these things are <strong>unequal</strong>", because these are frequent use cases:</p></div></section>
+<section><h3>b. How to write an "equal" and "unequal" condition</h3></section>
+<section><div class="listingblock" id="if-equal-example"><div class="title">Equal and unequal statements</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros == <span class="float">5.99</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is exactly 5.99</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros != <span class="float">5.99</span>) { <i class="conum" data-value="2"></i><b>(2)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is different from 5.99</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the <code>==</code> is surprising. Why twice <code>=</code>? Just because <code>=</code> is already taken to mean that we assign a value to a variable.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><code>!=</code> looks weird, why not just <code>≠</code>? Well try to find ≠ on your keyboard 😉</td></tr></table></div></section>
+<section><div class="paragraph"><p>There are other important subtleties about conditionals, but we leave them for the "cheatsheet" lesson in this module.</p></div>
+<div class="paragraph"><p>A last remark: we&#8217;ll see in the app that we use conditional statements <strong>a lot</strong> because they make the app so powerful and flexible.</p></div>
+<div class="paragraph"><p>Some even joke that many products with "artificial intelligence" sold out there actually just have plenty of conditional statements in their code to mimic an "intelligent behavior" 😉</p></div></section>
+<section><div class="paragraph"><p>(for example, you could build a chat bot with conditional statements: "if the person asks x, answer this". "if they asks y, answer that". Etc&#8230;&#8203;)</p></div></section>
+<section><br/>
+<div style="width: 400px !important;margin-right: auto !important;margin-left: auto !important;">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">You say: &quot;We added AI to our product&quot;<br>I hear: &quot;We added a bunch more IF statements to our codebase&quot;</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/830070592611172357?ref_src=twsrc%5Etfw">February 10, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<br/></section>
+<section id="_3_making_your_app_go_fast"><h2>3. Making your app go fast</h2></section>
+<section><div class="paragraph"><p>Computers can do things quickly, we know that. If you write these three lines of code:</p></div></section>
+<section><div class="listingblock" id="three-statements"><div class="title">Three lines of code</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> priceLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+priceLabel.setText(priceItemInEuros);</code></pre></div></div></section>
+<section><div class="paragraph"><p>Your mobile phone will run these lines of code in less than a millisecond.</p></div>
+<div class="paragraph"><p>But to make your app do thousands of things per second, do we need to write thousand lines of code to describe each of these things?</p></div>
+<div class="paragraph"><p>Certainly not.</p></div></section>
+<section><div class="paragraph"><p>Actually, many things happen in loops. The computer does one thing, and as it is in a loop, it gets repeated for as long as you need.</p></div></section>
+<section><div class="paragraph"><p>Is the loop repeating 1000 times the same thing?
+No! If you put a conditional statement in the loop (see above for conditional statements!), then each turn of the loop can do something different. Clever!</p></div>
+<div class="paragraph"><p>Ok, how to write loops?</p></div></section>
+<section><h3>a. How to write loops</h3></section>
+<section><div class="paragraph"><p>There are many ways to write loops, but here is a common way:</p></div></section>
+<section><div class="listingblock" id="loop"><div class="title">Writing a loop</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> ( <span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">100</span>; i = i+<span class="integer">1</span>){
+  <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">I looped </span><span class="delimiter">&quot;</span></span> + i);
+}</code></pre></div></div></section>
+<section><div class="paragraph"><p>Before we have a closer look at what these lines of code mean, let&#8217;s see what they do in practice:</p></div>
+<div class="exampleblock"><div class="content"><div class="paragraph"><p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p></div>
+<div class="paragraph"><p><em>Copy paste the 3 lines of code above in the console just below, <strong>line by line</strong>, and see what happens</em></p></div></div></div></section>
+<section><iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe></section>
+<section><div class="paragraph" id="loop-open-solution"><p>Here is the solution:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/loop-example.jpg" alt="loop example" height="100%" /></div><div class="title">Figure 2. Looping - a simple example</div></section>
+<section><div class="paragraph"><p>Just like for the conditional statements, the way to write a loop looks a bit barbarian, with plenty of <code>( )</code> and <code>;</code> and <code>{ }</code></p></div>
+<div class="paragraph"><p>Don&#8217;t worry, it is not about memorizing everthing by heart, but simply to at least get the general picture.</p></div>
+<div class="paragraph"><p>Then you can have the cheat sheet (available in this module) printed next to you when you code, as a helper.</p></div></section>
+<section><h3>b. a closer look at the syntax</h3></section>
+<section><div class="paragraph"><p>So let&#8217;s have a closer look at what we did:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/A-detailed-explanation-of-loops.png" alt="A detailed explanation of loops" height="100%" /></div><div class="title">Figure 3. A detailed explanation of loops</div></section>
+<section><div class="paragraph"><p>You don&#8217;t need to memorize perfectly how to write for loops, just pay attention to&#8230;&#8203;</p></div></section>
+<section><div class="ulist"><ul><li><p>the semi-colon <code>;</code> &#8594; did you notice there were two of these in the first line? They are essential.</p></li><li><p>the opening and closing brackets, followed at the end of the line by a <code>{</code></p></li><li><p>the closing <code>}</code> which marks the end of what&#8217;s enclose in the loop.</p></li></ul></div></section>
+<section><div class="paragraph"><p>Your app can now go fast!</p></div>
+<div class="paragraph"><p>That&#8217;s about it for the loops.
+We&#8217;ll meet them again just below, in a simpler version.</p></div></section>
+<section id="_4_making_your_app_handle_lots_of_stuff"><h2>4. Making your app handle lots of stuff</h2></section>
+<section><div class="paragraph"><p>Programmers who created the animations for the Pixar movie "Up" had to code a lot of balloons (<a href="https://en.wikipedia.org/wiki/Up_%282009_film%29">10,000 to 20,000</a>):</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/up.jpg" alt="up" height="100%" /></div><div class="title">Figure 4. Lots of balloons</div></section>
+<section><div class="paragraph"><p>How did they handle these balloons in their code? Did they create 20,000 variables and if so, did they just patiently do:</p></div></section>
+<section><div class="listingblock" id="balloons"><div class="title">20,000 balloon variables</div><div class="content"><pre class="CodeRay"><code class="java language-java">Balloon balloon1 = <span class="keyword">new</span> Balloon();
+Balloon balloon2 = <span class="keyword">new</span> Balloon();
+Balloon balloon3 = <span class="keyword">new</span> Balloon();
+etc...</code></pre></div></div>
+<div class="paragraph"><p>and so on for 20,000 lines? No.</p></div></section>
+<section><div class="paragraph"><p>What they probably did is that they used a loop to create the balloons:</p></div></section>
+<section><div class="listingblock" id="balloons"><div class="title">20,000 balloon variables</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">20000</span>;i = i+<span class="integer">1</span>) {
+  Balloon balloon = <span class="keyword">new</span> Balloon();
+}</code></pre></div></div></section>
+<section><div class="paragraph"><p>Ok, but where get each of these balloons stored, so that they can be used later (to add color to them, animate them&#8230;&#8203;)?</p></div>
+<div class="paragraph"><p>We need something to handle our 20,000 balloons.
+Like a bag or a box where we could put them, or remove them, or retrieve them.</p></div></section>
+<section><div class="paragraph"><p><strong>Collections</strong> are these "bags" we need to handle a lot of variables together.
+There are many collections available, but we&#8217;ll see just one here: the <code>ArrayList</code>.</p></div>
+<div class="paragraph"><p>Let&#8217;s see how it works:</p></div></section>
+<section><div class="listingblock" id="ArrayLists"><div class="title">An ArrayList to handle all your balloons at once</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">ArrayList</span>&lt;Balloon&gt; balloons = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>(); <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">20000</span>;i = i+<span class="integer">1</span>){
+  Balloon myBalloon = <span class="keyword">new</span> Balloon();
+  balloons.add(myBalloon); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>ArrayList is an object.</td></tr></table></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>The ArrayList <code>balloons</code> has a method called <code>add</code> to add balloons to it.</td></tr></table></div>
+<div class="paragraph"><p>Now our 20,000 balloons are all in one ArrayList. How is it useful?</p></div></section>
+<section><div class="paragraph"><p>Let&#8217;s imagine we want to show all of them on the screen:</p></div></section>
+<section><div class="listingblock" id="using-lists"><div class="title">Showing all balloons on screen</div><div class="content"><pre class="CodeRay"><code class="java language-java">Form1 myScreen = <span class="keyword">new</span> Form1 ();
+<span class="keyword">for</span> (Balloon balloon: balloons) { <i class="conum" data-value="1"></i><b>(1)</b>
+  myScreen.add(balloon); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>a new way to loop, different from the one we&#8217;ve seen above. It means: "for each balloon in the list, do &#8230;&#8203;"</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>in this example I assume that Balloon is a Component which can be added to a Form, like a <code>Label</code> or a <code>Button</code></td></tr></table></div></section>
+<section><div class="paragraph"><p>Another possibility: showing on screen only the largest balloons:</p></div></section>
+<section><div class="listingblock" id="using-lists-with-if"><div class="title">Showing only the largest balloons</div><div class="content"><pre class="CodeRay"><code class="java language-java">Form1 myScreen = <span class="keyword">new</span> Form1 ();
+
+<span class="keyword">for</span> (Balloon balloon: balloons){ <i class="conum" data-value="1"></i><b>(1)</b>
+  <span class="keyword">if</span> (balloon.getDiameter() &gt; <span class="integer">3</span>){
+    myScreen.add(balloon);
+  }
+
+} <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>don&#8217;t forget this closing curly brace, which corresponds to the opening curly brace above!</td></tr></table></div></section>
+<section><div class="paragraph"><p>That was a lot to digest, but now you have a lot of tools and techniques to code whatever you want. Let&#8217;s meet at the next lesson to build an app!</p></div>
+<div class="paragraph"><p>In the meantime, you can go and print the "cheat sheet" for this Module 5: a handy page where you&#8217;ll find a summary of all these techniques we&#8217;ve just seen.</p></div></section>
+<section id="_the_end"><h2>The end</h2></section>
+<section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p></div></section>
+<section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>
+<section><div class="paragraph"><p>Licence: Creative Commons, <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Attribution 4.0 International</a> (CC BY 4.0).
+You are free to:</p></div>
+<div class="ulist"><ul><li><p>copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li></ul></div>
+<div class="paragraph"><p>&#8658; for any purpose, even commercially.</p></div></section>
+<section><div class="paragraph"><p><span class="image right"><img src="images/round_portrait_mini_150.png" alt="round portrait mini 150" /></span>
+This course is designed by Clement Levallois.</p></div>
+<div class="paragraph"><p>Discover my other courses in data / tech for business: <a href="http://www.clementlevallois.net" class="bare">http://www.clementlevallois.net</a></p></div>
+<div class="paragraph"><p>Or get in touch via Twitter: <a href="https://www.twitter.com/seinecle">@seinecle</a>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11592657;
+        var sc_invisible = 1;
+        var sc_security = "11592657";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11592657/0/11592657/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'white',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 10.0,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>

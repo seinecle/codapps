@@ -104,13 +104,89 @@ Also, note: <span class="underline">no</span> double quote!! Double quotes are j
 <div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Don&#8217;t forget the <code>l</code> letter at the end of your number. <code>long</code> or <code>Long</code> can be used, <code>long</code> takes less memory than Long but can be inconvenient to use.</td></tr></table></div>
 <h3><strong>Boolean</strong> stores <strong>true / false values</strong></h3><div class="paragraph"><p><em> This seems not very useful but actually we use it quite often </em></p></div>
 <div class="listingblock" id="Boolean"><div class="title">Creating a Boolean variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Boolean</span> hasAStudentCard = <span class="predefined-constant">true</span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
-<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>A classic mistake is to write "true" (with double quotes, which is incorrect). Boolean values are <code>true</code> or <code>false</code> <span class="underline">without double quotes " "</span>.
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>A classic mistake is to write <code>"true"</code> (with double quotes, which is incorrect). Boolean values are <code>true</code> or <code>false</code> <span class="underline">without double quotes " "</span>.
 <code>boolean</code> can be used instead of <code>Boolean</code>: less memory but also less convenient to use in some cases.</td></tr></table></div>
 <h3><code>Objects</code>: to create and store a variety of things</h3><div class="paragraph"><p><em> A variety of objects exist - use them to create and store things </em></p></div>
 <div class="listingblock" id="object"><div class="title">Creating an Object storing a Date</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Date</span> dateStartOfTheGame;  <i class="conum" data-value="1"></i><b>(1)</b>
 dateStartOfTheGame = <span class="keyword">new</span> <span class="predefined-type">Date</span>(); <i class="conum" data-value="2"></i><b>(2)</b>
 <span class="predefined-type">Date</span> dateEndOfTheGame = <span class="keyword">new</span> <span class="predefined-type">Date</span>();  <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
-<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>An object <code>dateStartOfTheGame</code> of type <code>Date</code> is <span class="underline">declared</span>. It is <code>null</code> at the moment.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><code>dateStartOfTheGame</code> is <span class="underline">instantiated</span>: an instance of it is created.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Shortcut: a variable can be <span class="underline">declared</span> and <span class="underline">instantiated</span> in one line of code.
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>An object <code>dateStartOfTheGame</code> of type <code>Date</code> is <span class="underline">declared</span>. It is <code>null</code> at the moment.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><code>dateStartOfTheGame</code> is <span class="underline">instantiated</span>: an instance of it is created.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Shortcut: a variable can be <span class="underline">declared</span> and <span class="underline">instantiated</span> in one line of code.</td></tr></table></div>
+<h3>conditional statements for numbers</h3><div class="listingblock" id="if-example"><div class="title">Different kinds of conditional statements about numbers</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">cheap product!</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros == <span class="float">5.99</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is exactly 5.99</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros != <span class="float">5.99</span>) { <i class="conum" data-value="2"></i><b>(2)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is different from 5.99</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros =&lt; <span class="integer">6</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is under or equal to 6!</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros &gt;= <span class="integer">7</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is above or equal to 6!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<h3>conditional statements about text</h3><div class="paragraph"><p>It would be a <strong>mistake</strong> to write:</p></div>
+<div class="listingblock" id="if-text-example-mistake"><div class="title">Mistake! Don&#8217;t do this!</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName1 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Tristan</span><span class="delimiter">&quot;</span></span>;
+<span class="predefined-type">String</span> playerName2 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Tristan</span><span class="delimiter">&quot;</span></span>;
+
+<span class="keyword">if</span> (playerName1 == playerName2) { <i class="conum" data-value="1"></i><b>(1)</b>
+  messageLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the two players have the same name!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Using <code>==</code> to compare two Strings is incorrect.</td></tr></table></div>
+<div class="listingblock" id="if-text-example"><div class="title">Different kinds of conditional statements about text</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName1 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Tristan</span><span class="delimiter">&quot;</span></span>;
+<span class="predefined-type">String</span> playerName2 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Touni</span><span class="delimiter">&quot;</span></span>;
+
+<span class="keyword">if</span> (playerName1.equals(playerName2)) {
+  messageLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the two players have the same name!</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (!playerName1.equals(playerName2)) { <i class="conum" data-value="1"></i><b>(1)</b>
+  messageLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the two players have different names!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>note the <code>!</code> in front</td></tr></table></div>
+<h3>conditional statements about several items</h3><div class="listingblock" id="several-and-conditionals-example"><div class="title">A statement with two conditions which need both to be true</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span> &amp; priceItem &gt; <span class="integer">2</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">relatively cheap product!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the <code>&amp;</code> means "and". The two conditions: <code>priceItemInEuros &lt; 6</code> <strong>and</strong> <code>priceItem &gt; 2</code> both need to be true for the statement <code>productLabel.setText("relatively cheap product!");</code> to be executed.</td></tr></table></div>
+<div class="listingblock" id="several-and-conditionals-example"><div class="title">A statement with two conditions where just either one of the two needs to be true</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span> | priceItem &gt; <span class="integer">2</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">relatively cheap product!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the <code>|</code> means "or". Just one of the two conditions: <code>priceItemInEuros &lt; 6</code> <strong>or</strong> <code>priceItem &gt; 2</code> needs to be true for the statement <code>productLabel.setText("relatively cheap product!");</code> to be executed.</td></tr></table></div>
+<div class="listingblock" id="loop"><div class="title">Writing a loop</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">100</span>; i = i+<span class="integer">1</span>){
+  <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">I looped </span><span class="delimiter">&quot;</span></span> + i) +<span class="string"><span class="delimiter">&quot;</span><span class="content"> times.</span><span class="delimiter">&quot;</span></span>;
+}</code></pre></div></div></section>
+<section><div class="listingblock" id="using-loop-with-if"><div class="title">A loop with several ifs inside</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">100</span>; i = i+<span class="integer">1</span>){
+  <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">I looped </span><span class="delimiter">&quot;</span></span> + i + <span class="string"><span class="delimiter">&quot;</span><span class="content"> times.</span><span class="delimiter">&quot;</span></span>);
+  <span class="keyword">if</span> (i == <span class="integer">0</span>) {
+    <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">We just started the loops. This is going to be a long journey.</span><span class="delimiter">&quot;</span></span>);
+  }
+  <span class="keyword">if</span> (i == <span class="integer">50</span>) {
+    <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">Half way already!</span><span class="delimiter">&quot;</span></span>);
+  }
+  <span class="keyword">if</span> (i == <span class="integer">99</span>) {
+    <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">This was the last loop. Bye!</span><span class="delimiter">&quot;</span></span>);
+  }
+}</code></pre></div></div>
+<div class="listingblock" id="lists"><div class="title">Creating a list and adding objects to it</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">ArrayList</span>&lt;Balloon&gt; balloons = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>();
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">20000</span>;i = i+<span class="integer">1</span>){
+  Balloon myBalloon = <span class="keyword">new</span> Balloon();
+  balloons.add(myBalloon);
+}</code></pre></div></div></section>
+<section><div class="listingblock" id="using-ArrayLists"><div class="title">Looping through a list to show the names of all players</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="predefined-type">String</span> player: playerNames) { <i class="conum" data-value="1"></i><b>(1)</b>
+  <span class="predefined-type">Label</span> myLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+  myLabel.setText(player);
+  myForm.add(myLabel)
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>here we assume that we had created before an ArrayList of player names.
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11592657;

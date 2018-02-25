@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>CODAPPS: Classes and methods</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Classes and methods</h2><div class="preamble"><div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
+<section id="_1_beyond_variables_we_need_methods_and_classes_to_create_our_app"><h2>1. Beyond variables&#8230;&#8203; we need methods and classes to create our app!</h2></section>
+<section><div class="paragraph"><p>In the previous lesson we discovered variables, comparing them to the ingredients of a recipe: the basic stuff we need to create an app.</p></div>
+<div class="paragraph"><p>All good, but should we just open an empty text file and write these variables? Just like a cake does not get created just with wheat and eggs, our app needs more than variables to be created!</p></div>
+<div class="paragraph"><p>What we miss here is:</p></div></section>
+<section><div class="ulist"><ul><li><p>methods (also called functions). Just like "baking", "mixing", "adding milk"&#8230;&#8203; we need to write code describing what the app does.</p></li><li><p>classes. Classes are a bit like the "kitchen worktop": a place where we will write our variables and methods in a clean and orderly way - good chefs work in well organized kitchens!</p></li></ul></div></section>
+<section id="_2_methods_to_make_your_variables_do_something_in_your_app"><h2>2. Methods: to make your variables "do something" in your app</h2></section>
+<section><div class="paragraph"><p>Let&#8217;s create an Integer variable representing the price of an item, as we discussed in the previous lesson:</p></div></section>
+<section><div class="listingblock" id="price-example"><div class="title">Creating a variable to store the price of an item</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>don&#8217;t forget the <code>f</code> next to the number, so that is is indeed recognized as <code>Float</code>.</td></tr></table></div>
+<div class="paragraph"><p>Ok, this <code>priceItemInEuros</code> is the ingredient of our recipe. We might need to use it in many ways in our app:</p></div></section>
+<section><div class="ulist"><ul><li><p>convert its price in Yuan</p></li><li><p>add the VAT to it</p></li><li><p>add the price of this item to the total price of the items in the basket of the customer</p></li><li><p>show it on the screen of our app</p></li><li><p>etc&#8230;&#8203;</p></li></ul></div></section>
+<section><div class="paragraph"><p>Each of this action is a <strong>method</strong>. A method needs first to be defined (created), then only it can be applied.</p></div></section>
+<section><h3>a. Defining a method</h3></section>
+<section><div class="paragraph"><p>How does one create or define method? Let&#8217;s create one that adds the French VAT to the price of the item:</p></div></section>
+<section><div class="listingblock" id="method-creation"><div class="title">Creating a variable for the price of an item</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) { <i class="conum" data-value="1"></i><b>(1)</b>
+   <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="comment">//the regular rate of the VAT in France is 20% so we multiply the price by 1.20 to find the new price </span><i class="conum" data-value="3"></i><b>(3)</b>
+   priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="keyword">return</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+}<i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>title of the method you create, then the method start at the opening curly brace <code>{</code>.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>the method itself</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>an explanation, not some code! The line starts with <code>//</code> to show this is some explanations for humans like you and me, not some code in our app.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>this closing curly brace signals the end of the definition of the method.</td></tr></table></div></section>
+<section><div class="paragraph"><p>The first line (title of the method) is pretty intimidating, the rest is pretty clear. So let&#8217;s have closer look:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/Explaining-the-title-of-the-method.png" alt="Explaining the title of the method" height="100%" /></div><div class="title">Figure 1. Explaining the title of the method</div></section>
+<section><div class="paragraph"><p>The three lines inside the method itself are pretty simple:</p></div></section>
+<section><div class="listingblock" id="method-creation"><div class="title">The three lines of the method</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) {
+   <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="1"></i><b>(1)</b>
+   priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="keyword">return</span> priceWithVAT; <i class="conum" data-value="3"></i><b>(3)</b>
+}<i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>create a Float variable that will contain the price with VAT</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>assign the value <code>priceWithoutVAT * 1.20</code> to it
+==  !</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>"Return" means that the method is finished and gives back a result, here: a Float variable which is the price with VAT.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>Don&#8217;t forget the closing curly brace <code>}</code> when finishing the definition of a method.</td></tr></table></div></section>
+<section><h3>b. Executing a method</h3></section>
+<section><div class="paragraph"><p>We have defined a method called <code>addFrenchVAT</code> which takes a Float variable as parameter (the price without VAT), and returns a price with VAT.</p></div>
+<div class="paragraph"><p>Defining a method does nothing in itself, a bit like a recipe does nothing as long as nobody uses it. How do we use a method?</p></div>
+<div class="paragraph"><p>Very simply:</p></div></section>
+<section><div class="listingblock" id="executing-a-method"><div class="title">Executing a method</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="predefined-type">Float</span> priceItemsInEurosWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+priceItemsInEurosWithVAT = addFrenchVAT(priceItemInEuros); <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>don&#8217;t forget the <code>f</code> next to the number, so that is is indeed recognized as <code>Float</code>.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>we create a variable that will store the price of our item, including the VAT.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>we assign a value to <code>priceItemsInEurosWithVAT</code>. Which one? The value returned by the method <code>addFrenchVAT</code>.</td></tr></table></div>
+<div class="paragraph"><p>The variable <code>priceItemsInEurosWithVAT</code> should now contain the value 7.188 (5.99 multiplied by 1.20).</p></div></section>
+<section><div class="exampleblock"><div class="content"><div class="paragraph"><p><span class="icon"><i class="fa fa-child fa-3x"></i></span> Your turn!</p></div>
+<div class="paragraph"><p><em>Create a method called "addVAT" and which takes a price for paramter, and returns a price with VAT</em></p></div>
+<div class="paragraph"><p><em>Then apply this method to a variable named <code>price</code> which has 5.99 for value</em></p></div></div></div></section>
+<section><iframe src="https://repl.exploreyourdata.com/ui/console.html" style="width: 500px; height: 150px; border: 0px"></iframe></section>
+<section><div class="paragraph"><p>Here is the solution (and read the note below):</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/repl-method.jpg" alt="repl method" height="100%" /></div><div class="title">Figure 2. Creating a method and applying it</div></section>
+<section><div class="paragraph"><p>A note on the interactive exercise: it is not easy nor comfortable to write a method on the interactive console&#8230;&#8203;</p></div>
+<div class="paragraph"><p>So if you find it difficult, this is normal. You will need time and practice to get used to this logic.</p></div></section>
+<section><div class="paragraph"><p>The good news is, <strong>it is much easier to write our code in NetBeans</strong>, because we have a lot of help showing where we might have forgotten to close a parenthesis <code>)</code> or a <code>;</code> &#8230;&#8203;</p></div>
+<div class="paragraph"><p>This is what we are going to learn now, but just before that we just need to see a last thing about methods:</p></div></section>
+<section><h3>c. The case of methods which don&#8217;t return a result</h3></section>
+<section><div class="paragraph"><p>We need to see a case where methods perform an action, but don&#8217;t return anything.</p></div>
+<div class="paragraph"><p>Let&#8217;s define such a method:</p></div></section>
+<section><div class="listingblock" id="creating-a-method-without-return"><div class="title">Creating a method which returns nothing</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> price = <span class="float">5.99f</span>;  <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">private</span> <span class="type">void</span> addFrenchVAT() {  <i class="conum" data-value="2"></i><b>(2)</b>
+   price = price * <span class="float">1.20</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+} <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>we have created a variable named <code>price</code></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>now we define a method like the one before in this lesson, except that:</td></tr></table></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the method does one thing: it multiplies the value of the variable <code>price</code> by 1.20</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>this is the end of the method. There is no "return" statement.</td></tr></table></div></section>
+<section><div class="paragraph"><p>Now, if we want to apply this method, we can just write:</p></div>
+<div class="listingblock"><div class="content"><pre class="CodeRay"><code>addFrenchVAT();</code></pre></div></div>
+<div class="paragraph"><p>and this will have for effect to multiply the value of the variable <code>price</code> by 1.20.</p></div></section>
+<section><div class="paragraph"><p>You will sometimes find lines of code like the one we just saw:</p></div>
+<div class="listingblock"><div class="content"><pre class="CodeRay"><code>strangeWordFollowedyEmptyParentheses();</code></pre></div></div>
+<div class="paragraph"><p>Then remember it is probably a method that impacts some variables somewhere else in the code, without returning a variable.</p></div></section>
+<section><div class="paragraph"><p>Ok, this was quite dense but we are almost there. Now, we are going to see how to <strong>organize</strong> the ingredients (the variables) and the cooking instructions (the methods) in our recipe (our app!).</p></div>
+<div class="ulist"><ul><li><p>where to write code?</p></li><li><p>how does one part of the code affects another?</p></li></ul></div></section>
+<section id="_3_classes_to_code_in_an_organized_and_methodic_way"><h2>3. Classes: to code in an organized and methodic way.</h2></section>
+<section><div class="paragraph"><p>Writing code is like cooking: you can do it in the small kitchen of your apartment, by improvising as you go, or you can do it in in the big kitchens of a large restaurant, with a team of cooks and a strict organization about who does what.</p></div></section>
+<section><div class="paragraph"><p>Different programming languages have different "styles of cooking":</p></div></section>
+<section><div class="ulist"><ul><li><p>most allow you to "cook as you go": just open an empty text file, write the variables you want, create your methods, then write another line of code to run your methods, and you&#8217;re launched! But that can be messy.</p></li><li><p>other programming languages oblige you to have what is called an <strong>"object-oriented"</strong> way of cooking: it is a style where you need to classify your code in smaller, different parts, according to some strict rules. This is less fun for beginners, but it leads to writing some code which is easier to understand and work with in the long term.</p></li></ul></div></section>
+<section><div class="paragraph"><p>The language we use in this course is called <code>Java</code>, and is famous for imposing an <strong>"object-oriented"</strong> way of coding.</p></div></section>
+<section><div class="paragraph"><p>"Object-oriented" programming can be complex and intimidating, and there are <a href="https://bioboost.gitbooks.io/object-oriented-programming-using-java/content/">full courses</a> and <a href="https://www.amazon.com/Python-Object-oriented-Programming-Building-maintainable/dp/1784398780/">books</a> devoted to the topic.
+But if we learn it for a simple project, that&#8217;s quite simple.</p></div>
+<div class="paragraph"><p>There are just 2 principles we need to understand:</p></div></section>
+<section><div class="ulist"><ul><li><p>The code we write must be written inside classes (classes are just files, so this one is easy)</p></li><li><p>These classes can act as variables</p></li></ul></div>
+<div class="paragraph"><p>If you understand these two principles you&#8217;re good to code!</p></div></section>
+<section><h3>a. The code is written inside "classes"</h3></section>
+<section><div class="paragraph"><p>A class is just a file in your app. It contains the variables and the methods that you want.</p></div>
+<div class="paragraph"><p>When you created a <code>Form</code> named <code>Form1</code> for your app in module 2, it created a file called <code>Form1.java</code>, where you can write stuff:</p></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/What-is-a-class---simply-a-file.png" alt="What is a class   simply a file" height="100%" /></div><div class="title">Figure 3. What is a class - simply a file</div></section>
+<section><div class="paragraph"><p>One of the most powerful consequences of this is for the organization of variables:</p></div></section>
+<section><div class="ulist"><ul><li><p>Let&#8217;s imagine you create 2 Forms: Form1 and Form2.</p></li><li><p>You want to create 2 Buttons: one in Form1, one in Form2</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p>Like this: <code>Button myButton = new Button();</code> somewhere in Form1 and <code>Button myButton = new Button();</code> somewhere in Form2</p></li><li><p>Is your code going to be a mess because when you change <code>myButton</code> in Form1, the program things you also mean <code>myButton</code> in Form2?</p></li><li><p>No: the 2 buttons are clearly separated in 2 different classes, so you are fine.</p></li></ul></div></section>
+<section><div class="paragraph"><p>(this kind of details might seem trivial to you, and it is! But 90% of headaches in coding come from struggling with these small issues).</p></div></section>
+<section><div class="paragraph"><p>A last important note on variables:</p></div>
+<div class="ulist"><ul><li><p>if I create a variable <code>Integer score</code> at the top of the class, it is called a "global variable" and it can be used anywhere in the class, including inside methods.</p></li><li><p>but variables created inside methods exist only inside the method where it was created.</p></li></ul></div></section>
+<section><div class="paragraph"><p>To illustrate:</p></div>
+<div class="imageblock stretch" style="text-align: center"><img src="images/The-scope-of-variables.png" alt="The scope of variables" height="100%" /></div><div class="title">Figure 4. The scope of variables</div></section>
+<section><div class="paragraph"><p>What we just discussed about "can a variable created here be used there" is called the <strong>scope of the variable</strong>.
+It can be a tricky subject but you got the essentials.</p></div></section>
+<section><h3>b. Classes need to be instantiated</h3></section>
+<section><div class="paragraph"><p>Ok, that&#8217;s the hardest part to figure. What does this even mean?</p></div>
+<div class="paragraph"><p>Simply: let&#8217;s forget the cooking metaphor and take the metaphor of a car: the code written inside a class (the variables, the methods&#8230;&#8203;) is your car, ready to drive.</p></div>
+<div class="paragraph"><p>Instantiating the class is like turning the ignition key and running the engine.</p></div>
+<div class="paragraph"><p>Like this:</p></div></section>
+<section><div class="listingblock" id="class-instantiation"><div class="title">Instantiating a class to use it</div><div class="content"><pre class="CodeRay"><code class="java language-java">Form4 myForm; <i class="conum" data-value="1"></i><b>(1)</b>
+myForm = <span class="keyword">new</span> Form4(); <i class="conum" data-value="2"></i><b>(2)</b>
+myForm.addTwiceToScore(); <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Form4 is the class where my code is. I create a variable called "myForm". <strong><code>Form4</code> is the type of my variable</strong></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>I instantiate this variable: I create a new instance of it.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Now I can use / run / execute the code inside my file Form4.java, by writing: <code>myForm.xxxxx</code></td></tr></table></div></section>
+<section><div class="paragraph"><p>Let&#8217;s provide an example. Do you remember the code we put in <code>MyApplication.java</code> to show the Form we created at the start of our app?</p></div></section>
+<section><div class="listingblock" id="example-instantiaton"><div class="title">Instantiating a Form in MyApplication.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+    Form1 myForm1 = <span class="keyword">new</span> Form1(); <i class="conum" data-value="1"></i><b>(1)</b>
+    myForm1.show(); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We instantiate our Form</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>And now we can use methods of this Form. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td></tr></table></div></section>
+<section><h3>c. &#8230;&#8203; but not always: static methods</h3></section>
+<section><div class="paragraph"><p>In some cases, you don&#8217;t want or don&#8217;t need to go through the instantiation step. For example:</p></div>
+<div class="ulist"><ul><li><p>you can create 2 Buttons and set the text on them:</p></li></ul></div></section>
+<section><div class="listingblock" id="example-buttons"><div class="title">Creating 2 buttons</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Button</span> button1 = <span class="keyword">new</span> <span class="predefined-type">Button</span>();
+button1.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">press me</span><span class="delimiter">&quot;</span></span>);
+<span class="predefined-type">Button</span> button2 = <span class="keyword">new</span> <span class="predefined-type">Button</span>();
+button1.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">click me</span><span class="delimiter">&quot;</span></span>);</code></pre></div></div></section>
+<section><div class="paragraph"><p>But what if you need to have a setting common to all buttons?</p></div>
+<div class="paragraph"><p>For example, having the text of <strong>all buttons</strong> in CAPITALIZED letters, whatever the text?</p></div>
+<div class="paragraph"><p>To achieve this effect, the creators of the class <code>Button</code> added a <code><strong>static method</strong></code> to their code: a method which applies to all buttons which will be instantiated.</p></div>
+<div class="paragraph"><p>And you use it like this:</p></div></section>
+<section><div class="listingblock" id="example-static-method"><div class="title">Using a static method</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Button</span>.setCapsTextDefault(<span class="predefined-constant">true</span>);</code></pre></div></div></section>
+<section><div class="paragraph"><p>Notice that the button is not instantiated (there is no <code>new Button()</code>). The method <code>setCapsTextDefault</code> is ran directly from the class Button (don&#8217;t forget the capital B here), and will apply to all future Buttons that you will instantiate.</p></div></section>
+<section><div class="paragraph"><p>You can create such methods yourself just by adding the keyword <code>static</code> in front of the title of your method.</p></div>
+<div class="paragraph"><p>Each time you see a line of code looking like <code>Example.method()</code>, this means a static method of the class <code>Example</code> is being used.</p></div>
+<div class="paragraph"><p>The most famous example of a static method is this one:</p></div></section>
+<section><div class="listingblock" id="system-out-println"><div class="title">Showing something in the console</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">oh hey!</span><span class="delimiter">&quot;</span></span>);</code></pre></div></div>
+<div class="paragraph"><p>This line will write "oh hey" in the console of your app.</p></div></section>
+<section><div class="paragraph"><p>But we discuss here some technical details that will make much more sense when we will actually code an app.</p></div></section>
+<section><div class="paragraph"><p>You just finished an important lesson on the fundamentals of coding, congratulations!</p></div>
+<div class="paragraph"><p>Don&#8217;t hesitate to come back often and re-read it, it is really a fundamental part of the course.</p></div></section>
+<section><div class="paragraph"><p>If you feel that some things remain unclear, or could be better explained: just <a href="https://github.com/seinecle/codapps/issues">open an issue on Github</a>, it will be a pleasure exchanging with you.</p></div></section>
+<section id="_the_end"><h2>The end</h2></section>
+<section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p></div></section>
+<section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>
+<section><div class="paragraph"><p>Licence: Creative Commons, <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Attribution 4.0 International</a> (CC BY 4.0).
+You are free to:</p></div>
+<div class="ulist"><ul><li><p>copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li></ul></div>
+<div class="paragraph"><p>&#8658; for any purpose, even commercially.</p></div></section>
+<section><div class="paragraph"><p><span class="image right"><img src="images/round_portrait_mini_150.png" alt="round portrait mini 150" /></span>
+This course is designed by Clement Levallois.</p></div>
+<div class="paragraph"><p>Discover my other courses in data / tech for business: <a href="http://www.clementlevallois.net" class="bare">http://www.clementlevallois.net</a></p></div>
+<div class="paragraph"><p>Or get in touch via Twitter: <a href="https://www.twitter.com/seinecle">@seinecle</a>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11592657;
+        var sc_invisible = 1;
+        var sc_security = "11592657";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11592657/0/11592657/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide --></p></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'white',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 10.0,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>

@@ -14,6 +14,7 @@ last modified: {docdate}
 [.stretch]
 image::EMLyon_logo_corp.png[width="242" align="center"]
 
+
 ==  'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes
 
 ==  1. Installing NetBeans
@@ -28,7 +29,8 @@ https://support.apple.com/en-us/HT201260[Find out the OS X version of your MAC].
 
 ==  !
 [.stretch]
-image::https://docs.google.com/drawings/d/e/2PACX-1vQj6It5ey-sjCqbebt0HfFLw4HFlLHFOoxDoN9hp2DkXOtMHzTvAYr1uQckD86LHCc_0mbzmaoBPNOe/pub?w=1440&h=1080[align="center",title="Downloading NetBeans for a MAC"]
+image::Downloading-NetBeans-for-a-MAC.png[align="center",title="Downloading NetBeans for a MAC"]
+
 
 ==  !
 - Find the file you downloaded on your computer and click on it to install.
