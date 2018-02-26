@@ -111,6 +111,44 @@ Also, note: <span class="underline">no</span> double quote!! Double quotes are j
 dateStartOfTheGame = <span class="keyword">new</span> <span class="predefined-type">Date</span>(); <i class="conum" data-value="2"></i><b>(2)</b>
 <span class="predefined-type">Date</span> dateEndOfTheGame = <span class="keyword">new</span> <span class="predefined-type">Date</span>();  <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
 <div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>An object <code>dateStartOfTheGame</code> of type <code>Date</code> is <span class="underline">declared</span>. It is <code>null</code> at the moment.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><code>dateStartOfTheGame</code> is <span class="underline">instantiated</span>: an instance of it is created.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Shortcut: a variable can be <span class="underline">declared</span> and <span class="underline">instantiated</span> in one line of code.</td></tr></table></div>
+<h3>Creating (defining) a method</h3></section>
+<section><div class="listingblock" id="method-creation"><div class="title">Creating a method adding the VAT to a price</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) { <i class="conum" data-value="1"></i><b>(1)</b>
+   <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="comment">//the regular rate of the VAT in France is 20% so we multiply the price by 1.20 to find the new price </span><i class="conum" data-value="3"></i><b>(3)</b>
+   priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="keyword">return</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+}<i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>title of the method you create, then the method start at the opening curly brace <code>{</code>.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>the method itself</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>an explanation, not some code! The line starts with <code>//</code> to show this is some explanations for humans like you and me, not some code in our app.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>this closing curly brace signals the end of the definition of the method.</td></tr></table></div>
+<div class="listingblock" id="creating-a-method-without-return"><div class="title">Creating a method which returns nothing</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> price = <span class="float">5.99f</span>;  <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">private</span> <span class="type">void</span> addFrenchVAT() {  <i class="conum" data-value="2"></i><b>(2)</b>
+   price = price * <span class="float">1.20</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+} <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>we have created a variable named <code>price</code></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>now we define a method like the one before in this lesson, except that:</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>the method does one thing: it multiplies the value of the variable <code>price</code> by 1.20</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>this is the end of the method. There is no "return" statement.</td></tr></table></div>
+<div class="paragraph"><p>A class is just a file in your app.
+It contains the variables and the methods that you want.
+It looks like:</p></div>
+<div class="listingblock" id="class-example"><div class="title">A simple example of what a class looks like</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.codapps.myfirstapp</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="namespace">public</span> <span class="namespace">class</span> <span class="namespace">Form1</span> { <i class="conum" data-value="2"></i><b>(2)</b>
+
+<span class="namespace">Integer</span> <span class="namespace">scorePlayer</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+
+  <span class="directive">public</span> <span class="type">void</span> addOneToScore() {
+    scorePlayer = scorePlayer + <span class="integer">1</span>;
+  }
+
+}  <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>a class always starts with the name of the package where it belongs</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>the name of the class (<code>Form1</code>) should have the same name as your file where it is writte (here the file would be Form1.java)</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>this is a variable which can be used anywhere in the class.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>don&#8217;t forget the closing curly brace of the class!</td></tr></table></div></section>
+<section><div class="listingblock" id="example-instantiation"><div class="title">Instantiating a Form in MyApplication.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+    Form1 myForm1 = <span class="keyword">new</span> Form1(); <i class="conum" data-value="1"></i><b>(1)</b>
+    myForm1.show(); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We instantiate our Form1</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><strong>And now we can use methods of this Form1</strong>. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td></tr></table></div>
+<div class="paragraph"><p>Another common way to instantiate an object is this one:</p></div></section>
+<section><div class="listingblock" id="example-instantiaton-with-static-method"><div class="title">Getting the present time and storing it in a variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+  LocalTime timeNow = LocalTime.now(); <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>This stores the time at the moment when this line of code is executed, in the variable <code>timeNow</code></td></tr></table></div>
 <h3>conditional statements for numbers</h3><div class="listingblock" id="if-example"><div class="title">Different kinds of conditional statements about numbers</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
 priceItemInEuros = <span class="float">5.99f</span>;
 <span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();

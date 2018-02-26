@@ -69,7 +69,7 @@ How does one create or define method? Let's create one that adds the French VAT 
 
 //ST: !
 [[method-creation]]
-.Creating a variable for the price of an item
+.Creating a method adding the VAT to the price of an item
 [source,java]
 ----
 private Float addFrenchVAT(Float priceWithoutVAT) { // <1>
@@ -82,7 +82,7 @@ private Float addFrenchVAT(Float priceWithoutVAT) { // <1>
 <1> title of the method you create, then the method start at the opening curly brace `{`.
 <2> the method itself
 <3> an explanation, not some code! The line starts with `//` to show this is some explanations for humans like you and me, not some code in our app.
-<5> this closing curly brace signals the end of the definition of the method.
+<4> this closing curly brace signals the end of the definition of the method.
 
 //ST: !
 The first line (title of the method) is pretty intimidating, the rest is pretty clear. So let's have closer look:

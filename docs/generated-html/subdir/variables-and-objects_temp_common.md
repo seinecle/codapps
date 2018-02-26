@@ -46,10 +46,18 @@ So in this lesson, you will see plenty of interactive screens like this one:
 ++++
 
 
+[TIP]
+====
+if you follow this lesson on a pdf, you will not see the interactive screen in your document.
 
+You can open a web browser and do the interactive exercise here:
 
+https://repl.exploreyourdata.com/ui/console.html
 
+or here:
 
+http://www.javarepl.com/term.html
+====
 
 //ST: !
 "Interactive screen" means that *you can write directly on it* and see your code in action - yes, right here: click next to "java", a cursor will blink to show that you can write:

@@ -103,7 +103,7 @@ priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value
 <section><div class="paragraph"><p>Each of this action is a <strong>method</strong>. A method needs first to be defined (created), then only it can be applied.</p></div></section>
 <section><h3>a. Defining a method</h3></section>
 <section><div class="paragraph"><p>How does one create or define method? Let&#8217;s create one that adds the French VAT to the price of the item:</p></div></section>
-<section><div class="listingblock" id="method-creation"><div class="title">Creating a variable for the price of an item</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) { <i class="conum" data-value="1"></i><b>(1)</b>
+<section><div class="listingblock" id="method-creation"><div class="title">Creating a method adding the VAT to the price of an item</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) { <i class="conum" data-value="1"></i><b>(1)</b>
    <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
    <span class="comment">//the regular rate of the VAT in France is 20% so we multiply the price by 1.20 to find the new price </span><i class="conum" data-value="3"></i><b>(3)</b>
    priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>

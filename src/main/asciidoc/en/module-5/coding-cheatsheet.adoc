@@ -104,6 +104,99 @@ Date dateEndOfTheGame = new Date();  //<3>
 <2> `dateStartOfTheGame` is [underline]#instantiated#: an instance of it is created.
 <3> Shortcut: a variable can be [underline]#declared# and [underline]#instantiated# in one line of code.
 
+== Methods
+
+==== Creating (defining) a method
+
+//ST: !
+[[method-creation]]
+.Creating a method adding the VAT to a price
+[source,java]
+----
+private Float addFrenchVAT(Float priceWithoutVAT) { // <1>
+   Float priceWithVAT; // <2>
+   //the regular rate of the VAT in France is 20% so we multiply the price by 1.20 to find the new price <3>
+   priceWithVAT = priceWithoutVAT * 1.20; // <2>
+   return priceWithVAT; // <2>
+}// <4>
+----
+<1> title of the method you create, then the method start at the opening curly brace `{`.
+<2> the method itself
+<3> an explanation, not some code! The line starts with `//` to show this is some explanations for humans like you and me, not some code in our app.
+<4> this closing curly brace signals the end of the definition of the method.
+
+[[creating-a-method-without-return]]
+.Creating a method which returns nothing
+[source,java]
+----
+Float price = 5.99f;  // <1>
+private void addFrenchVAT() {  // <2>
+   price = price * 1.20; // <3>
+} // <4>
+----
+<1> we have created a variable named `price`
+<2> now we define a method like the one before in this lesson, except that:
+
+- `Float` has been replaced by `void`, which is an English term meaning "nothing"
+- it has no parameter: there is nothing in the parenthesis `(  )`
+
+<3> the method does one thing: it multiplies the value of the variable `price` by 1.20
+<4> this is the end of the method. There is no "return" statement.
+
+== Classes
+
+A class is just a file in your app.
+It contains the variables and the methods that you want.
+It looks like:
+
+[[class-example]]
+.A simple example of what a class looks like
+[source,java]
+----
+package net.clementlevallois.codapps.myfirstapp // <1>
+
+public class Form1 { // <2>
+
+Integer scorePlayer; // <3>
+
+  public void addOneToScore() {
+    scorePlayer = scorePlayer + 1;
+  }
+
+}  // <4>
+----
+<1> a class always starts with the name of the package where it belongs
+<2> the name of the class (`Form1`) should have the same name as your file where it is writte (here the file would be Form1.java)
+<3> this is a variable which can be used anywhere in the class.
+<4> don't forget the closing curly brace of the class!
+
+
+//ST: !
+[[example-instantiation]]
+.Instantiating a Form in MyApplication.java
+[source,java]
+----
+public void start() {
+    Form1 myForm1 = new Form1(); // <1>
+    myForm1.show(); // <2>
+}
+----
+<1> We instantiate our Form1
+<2> *And now we can use methods of this Form1*. Here, we use the method `show()` which has for effect to display the `Form` on screen.
+
+Another common way to instantiate an object is this one:
+
+//ST: !
+[[example-instantiaton-with-static-method]]
+.Getting the present time and storing it in a variable
+[source,java]
+----
+public void start() {
+  LocalTime timeNow = LocalTime.now(); //<1>
+}
+----
+<1> This stores the time at the moment when this line of code is executed, in the variable `timeNow`
+
 == If... conditional statements
 
 ==== conditional statements for numbers

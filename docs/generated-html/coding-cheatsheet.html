@@ -526,7 +526,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
 <span id="revnumber">version 1.0,</span>
 <span id="revdate">last modified</span>
-<br><span id="revremark">2018-02-25</span>
+<br><span id="revremark">2018-02-26</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -541,6 +541,12 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_code_objects_code_to_create_and_store_a_variety_of_things"><code>Objects</code>: to create and store a variety of things</a></li>
 </ul>
 </li>
+<li><a href="#_methods">Methods</a>
+<ul class="sectlevel3">
+<li><a href="#_creating_defining_a_method">Creating (defining) a method</a></li>
+</ul>
+</li>
+<li><a href="#_classes">Classes</a></li>
 <li><a href="#_if_conditional_statements">If&#8230;&#8203; conditional statements</a>
 <ul class="sectlevel3">
 <li><a href="#_conditional_statements_for_numbers">conditional statements for numbers</a></li>
@@ -713,6 +719,170 @@ dateStartOfTheGame = <span class="keyword">new</span> <span class="predefined-ty
 </tr>
 </table>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_methods">Methods</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_creating_defining_a_method">Creating (defining) a method</h4>
+<div id="method-creation" class="listingblock">
+<div class="title">Creating a method adding the VAT to a price</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) { <i class="conum" data-value="1"></i><b>(1)</b>
+   <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="comment">//the regular rate of the VAT in France is 20% so we multiply the price by 1.20 to find the new price </span><i class="conum" data-value="3"></i><b>(3)</b>
+   priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="keyword">return</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+}<i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>title of the method you create, then the method start at the opening curly brace <code>{</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the method itself</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>an explanation, not some code! The line starts with <code>//</code> to show this is some explanations for humans like you and me, not some code in our app.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>this closing curly brace signals the end of the definition of the method.</td>
+</tr>
+</table>
+</div>
+<div id="creating-a-method-without-return" class="listingblock">
+<div class="title">Creating a method which returns nothing</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Float</span> price = <span class="float">5.99f</span>;  <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">private</span> <span class="type">void</span> addFrenchVAT() {  <i class="conum" data-value="2"></i><b>(2)</b>
+   price = price * <span class="float">1.20</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+} <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>we have created a variable named <code>price</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>now we define a method like the one before in this lesson, except that:
+<div class="ulist">
+<ul>
+<li>
+<p><code>Float</code> has been replaced by <code>void</code>, which is an English term meaning "nothing"</p>
+</li>
+<li>
+<p>it has no parameter: there is nothing in the parenthesis <code>(  )</code></p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>the method does one thing: it multiplies the value of the variable <code>price</code> by 1.20</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>this is the end of the method. There is no "return" statement.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_classes">Classes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A class is just a file in your app.
+It contains the variables and the methods that you want.
+It looks like:</p>
+</div>
+<div id="class-example" class="listingblock">
+<div class="title">A simple example of what a class looks like</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.codapps.myfirstapp</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="namespace">public</span> <span class="namespace">class</span> <span class="namespace">Form1</span> { <i class="conum" data-value="2"></i><b>(2)</b>
+
+<span class="namespace">Integer</span> <span class="namespace">scorePlayer</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+
+  <span class="directive">public</span> <span class="type">void</span> addOneToScore() {
+    scorePlayer = scorePlayer + <span class="integer">1</span>;
+  }
+
+}  <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>a class always starts with the name of the package where it belongs</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the name of the class (<code>Form1</code>) should have the same name as your file where it is writte (here the file would be Form1.java)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>this is a variable which can be used anywhere in the class.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>don&#8217;t forget the closing curly brace of the class!</td>
+</tr>
+</table>
+</div>
+<div id="example-instantiation" class="listingblock">
+<div class="title">Instantiating a Form in MyApplication.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+    Form1 myForm1 = <span class="keyword">new</span> Form1(); <i class="conum" data-value="1"></i><b>(1)</b>
+    myForm1.show(); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We instantiate our Form1</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><strong>And now we can use methods of this Form1</strong>. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Another common way to instantiate an object is this one:</p>
+</div>
+<div id="example-instantiaton-with-static-method" class="listingblock">
+<div class="title">Getting the present time and storing it in a variable</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+  LocalTime timeNow = LocalTime.now(); <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This stores the time at the moment when this line of code is executed, in the variable <code>timeNow</code></td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -929,7 +1099,7 @@ priceItemInEuros = <span class="float">5.99f</span>;
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-02-25 21:48:28 CET
+Last updated 2018-02-26 08:06:41 CET
 </div>
 </div>
 </body>

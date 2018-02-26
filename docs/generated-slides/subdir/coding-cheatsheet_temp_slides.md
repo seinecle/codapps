@@ -83,7 +83,7 @@ __ This seems not very useful but actually we use it quite often __
 ----
 Boolean hasAStudentCard = true; //<1>
 ----
-<1> A classic mistake is to write "true" (with double quotes, which is incorrect). Boolean values are `true` or `false` [underline]#without double quotes " "#.
+<1> A classic mistake is to write `"true"` (with double quotes, which is incorrect). Boolean values are `true` or `false` [underline]#without double quotes " "#.
 `boolean` can be used instead of `Boolean`: less memory but also less convenient to use in some cases.
 
 ==== `Objects`: to create and store a variety of things
@@ -131,6 +131,23 @@ if (priceItemInEuros >= 7) {
 ----
 
 ==== conditional statements about text
+
+It would be a *mistake* to write:
+
+[[if-text-example-mistake]]
+.Mistake! Don't do this!
+[source,java]
+----
+String playerName1 = "Tristan";
+String playerName2 = "Tristan";
+
+if (playerName1 == playerName2) { //<1>
+  messageLabel.setText("the two players have the same name!");
+}
+----
+<1> Using `==` to compare two Strings is incorrect.
+- Your build will not fail, but even if the two players have the same name it might say it's false!
+- when comparing two String, you should do like below:
 
 [[if-text-example]]
 .Different kinds of conditional statements about text
@@ -181,27 +198,29 @@ if (priceItemInEuros < 6 | priceItem > 2) { // <1>
 .Writing a loop
 [source,java]
 ----
-for ( int i = 0; i<100; i = i+1){
-  System.out.println("I looped " + i);
+for (int i = 0; i<100; i = i+1){
+  System.out.println("I looped " + i) +" times.";
 }
-
 ----
 
 ==  !
-[[using-lists-with-if]]
-.A loop with an if to get all small balloons
+[[using-loop-with-if]]
+.A loop with several ifs inside
 [source,java]
 ----
-ArrayList<Balloon> smallBalloons = new ArrayList();
-for (Balloon myBalloon: balloons){ // <1>
-
-  if (myBalloon.getDiameter() < 3){
-    smallBalloons.add(myBalloon);
+for (int i = 0; i<100; i = i+1){
+  System.out.println("I looped " + i + " times.");
+  if (i == 0) {
+    System.out.println("We just started the loops. This is going to be a long journey.");
   }
-
+  if (i == 50) {
+    System.out.println("Half way already!");
+  }
+  if (i == 99) {
+    System.out.println("This was the last loop. Bye!");
+  }
 }
 ----
-<1> here we assume that we had created a `List` of balloons before. See below for lists.
 
 
 [[lists]]
@@ -226,7 +245,7 @@ for (String player: playerNames) { //<1>
   myForm.add(myLabel)
 }
 ----
-<1> here we assume that we had created an ArrayList of player names.
+<1> here we assume that we had created before an ArrayList of player names.
 pass:[    <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
         var sc_project = 11592657;
