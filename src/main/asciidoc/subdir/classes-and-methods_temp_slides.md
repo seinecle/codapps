@@ -118,7 +118,7 @@ We have defined a method called `addFrenchVAT` which takes a Float variable as p
 
 Defining a method does nothing in itself, a bit like a recipe does nothing as long as nobody uses it. How do we use a method?
 
-Very simply:
+*If the method was defined in the same file where we are coding*, then it is very simple:
 
 ==  !
 [[executing-a-method]]
@@ -219,7 +219,7 @@ Ok, this was quite dense but we are almost there. Now, we are going to see how t
 - where to write code?
 - how does one part of the code affects another?
 
-==  3. Classes: to code in an organized and methodic way.
+==  3. Classes: to code in an organized and methodical way.
 
 ==  !
 Writing code is like cooking: you can do it in the small kitchen of your apartment, by improvising as you go, or you can do it in in the big kitchens of a large restaurant, with a team of cooks and a strict organization about who does what.
@@ -321,7 +321,7 @@ myForm.addTwiceToScore(); // <3>
 Let's provide an example. Do you remember the code we put in `MyApplication.java` to show the Form we created at the start of our app?
 
 ==  !
-[[example-instantiaton]]
+[[example-instantiation]]
 .Instantiating a Form in MyApplication.java
 [source,java]
 ----
@@ -332,6 +332,20 @@ public void start() {
 ----
 <1> We instantiate our Form
 <2> And now we can use methods of this Form. Here, we use the method `show()` which has for effect to display the `Form` on screen.
+
+Another common way to instantiate an object is this one:
+
+==  !
+[[example-instantiaton-with-static-method]]
+.Getting the present time and storing it in a variable
+[source,java]
+----
+public void start() {
+  LocalTime timeNow = LocalTime.now(); //<1>
+}
+----
+<1> This stores the time at the moment when this line of code is executed, in the variable `timeNow`
+
 
 ==  !
 ==== c. ... but not always: static methods

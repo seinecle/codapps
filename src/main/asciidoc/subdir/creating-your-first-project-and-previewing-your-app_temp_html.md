@@ -85,7 +85,9 @@ The package name should contain at least three parts separated by dots. The defa
 ====
 
 //ST: !
-You should absolutely have a correct package name as you can't change it later[https://github.com/seinecle/codapps/issues/9]. You will have to delete your app and start again from zero.
+You should absolutely have a correct package name as https://github.com/seinecle/codapps/issues/9[you can't change it later].
+
+(you will have to delete your app and start again from zero.)
 
 //ST: !
 How can we find a unique package name for an app?

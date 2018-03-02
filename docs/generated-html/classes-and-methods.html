@@ -539,7 +539,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_c_the_case_of_methods_which_don_t_return_a_result">c. The case of methods which don&#8217;t return a result</a></li>
 </ul>
 </li>
-<li><a href="#_3_classes_to_code_in_an_organized_and_methodic_way">3. Classes: to code in an organized and methodic way.</a>
+<li><a href="#_3_classes_to_code_in_an_organized_and_methodical_way">3. Classes: to code in an organized and methodical way.</a>
 <ul class="sectlevel3">
 <li><a href="#_a_the_code_is_written_inside_classes">a. The code is written inside "classes"</a></li>
 <li><a href="#_b_classes_need_to_be_instantiated">b. Classes need to be instantiated</a></li>
@@ -724,7 +724,7 @@ priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value
 <p>Defining a method does nothing in itself, a bit like a recipe does nothing as long as nobody uses it. How do we use a method?</p>
 </div>
 <div class="paragraph">
-<p>Very simply:</p>
+<p><strong>If the method was defined in the same file where we are coding</strong>, then it is very simple:</p>
 </div>
 <div id="executing-a-method" class="listingblock">
 <div class="title">Executing a method</div>
@@ -882,7 +882,7 @@ priceItemsInEurosWithVAT = addFrenchVAT(priceItemInEuros); <i class="conum" data
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_classes_to_code_in_an_organized_and_methodic_way">3. Classes: to code in an organized and methodic way.</h2>
+<h2 id="_3_classes_to_code_in_an_organized_and_methodical_way">3. Classes: to code in an organized and methodical way.</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Writing code is like cooking: you can do it in the small kitchen of your apartment, by improvising as you go, or you can do it in in the big kitchens of a large restaurant, with a team of cooks and a strict organization about who does what.</p>
@@ -1040,7 +1040,7 @@ myForm.addTwiceToScore(); <i class="conum" data-value="3"></i><b>(3)</b></code><
 <div class="paragraph">
 <p>Let&#8217;s provide an example. Do you remember the code we put in <code>MyApplication.java</code> to show the Form we created at the start of our app?</p>
 </div>
-<div id="example-instantiaton" class="listingblock">
+<div id="example-instantiation" class="listingblock">
 <div class="title">Instantiating a Form in MyApplication.java</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
@@ -1058,6 +1058,25 @@ myForm.addTwiceToScore(); <i class="conum" data-value="3"></i><b>(3)</b></code><
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>And now we can use methods of this Form. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Another common way to instantiate an object is this one:</p>
+</div>
+<div id="example-instantiaton-with-static-method" class="listingblock">
+<div class="title">Getting the present time and storing it in a variable</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+  LocalTime timeNow = LocalTime.now(); <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This stores the time at the moment when this line of code is executed, in the variable <code>timeNow</code></td>
 </tr>
 </table>
 </div>
@@ -1196,7 +1215,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-02-26 07:16:18 CET
+Last updated 2018-02-26 18:06:09 CET
 </div>
 </div>
 </body>

@@ -123,7 +123,7 @@ priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value
 <section><h3>b. Executing a method</h3></section>
 <section><div class="paragraph"><p>We have defined a method called <code>addFrenchVAT</code> which takes a Float variable as parameter (the price without VAT), and returns a price with VAT.</p></div>
 <div class="paragraph"><p>Defining a method does nothing in itself, a bit like a recipe does nothing as long as nobody uses it. How do we use a method?</p></div>
-<div class="paragraph"><p>Very simply:</p></div></section>
+<div class="paragraph"><p><strong>If the method was defined in the same file where we are coding</strong>, then it is very simple:</p></div></section>
 <section><div class="listingblock" id="executing-a-method"><div class="title">Executing a method</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
 <span class="predefined-type">Float</span> priceItemsInEurosWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
 priceItemsInEurosWithVAT = addFrenchVAT(priceItemInEuros); <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
@@ -156,7 +156,7 @@ priceItemsInEurosWithVAT = addFrenchVAT(priceItemInEuros); <i class="conum" data
 <div class="paragraph"><p>Then remember it is probably a method that impacts some variables somewhere else in the code, without returning a variable.</p></div></section>
 <section><div class="paragraph"><p>Ok, this was quite dense but we are almost there. Now, we are going to see how to <strong>organize</strong> the ingredients (the variables) and the cooking instructions (the methods) in our recipe (our app!).</p></div>
 <div class="ulist"><ul><li><p>where to write code?</p></li><li><p>how does one part of the code affects another?</p></li></ul></div></section>
-<section id="_3_classes_to_code_in_an_organized_and_methodic_way"><h2>3. Classes: to code in an organized and methodic way.</h2></section>
+<section id="_3_classes_to_code_in_an_organized_and_methodical_way"><h2>3. Classes: to code in an organized and methodical way.</h2></section>
 <section><div class="paragraph"><p>Writing code is like cooking: you can do it in the small kitchen of your apartment, by improvising as you go, or you can do it in in the big kitchens of a large restaurant, with a team of cooks and a strict organization about who does what.</p></div></section>
 <section><div class="paragraph"><p>Different programming languages have different "styles of cooking":</p></div></section>
 <section><div class="ulist"><ul><li><p>most allow you to "cook as you go": just open an empty text file, write the variables you want, create your methods, then write another line of code to run your methods, and you&#8217;re launched! But that can be messy.</p></li><li><p>other programming languages oblige you to have what is called an <strong>"object-oriented"</strong> way of cooking: it is a style where you need to classify your code in smaller, different parts, according to some strict rules. This is less fun for beginners, but it leads to writing some code which is easier to understand and work with in the long term.</p></li></ul></div></section>
@@ -190,11 +190,16 @@ myForm = <span class="keyword">new</span> Form4(); <i class="conum" data-value="
 myForm.addTwiceToScore(); <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
 <div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Form4 is the class where my code is. I create a variable called "myForm". <strong><code>Form4</code> is the type of my variable</strong></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>I instantiate this variable: I create a new instance of it.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Now I can use / run / execute the code inside my file Form4.java, by writing: <code>myForm.xxxxx</code></td></tr></table></div></section>
 <section><div class="paragraph"><p>Let&#8217;s provide an example. Do you remember the code we put in <code>MyApplication.java</code> to show the Form we created at the start of our app?</p></div></section>
-<section><div class="listingblock" id="example-instantiaton"><div class="title">Instantiating a Form in MyApplication.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+<section><div class="listingblock" id="example-instantiation"><div class="title">Instantiating a Form in MyApplication.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
     Form1 myForm1 = <span class="keyword">new</span> Form1(); <i class="conum" data-value="1"></i><b>(1)</b>
     myForm1.show(); <i class="conum" data-value="2"></i><b>(2)</b>
 }</code></pre></div></div>
-<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We instantiate our Form</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>And now we can use methods of this Form. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td></tr></table></div></section>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We instantiate our Form</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>And now we can use methods of this Form. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td></tr></table></div>
+<div class="paragraph"><p>Another common way to instantiate an object is this one:</p></div></section>
+<section><div class="listingblock" id="example-instantiaton-with-static-method"><div class="title">Getting the present time and storing it in a variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+  LocalTime timeNow = LocalTime.now(); <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>This stores the time at the moment when this line of code is executed, in the variable <code>timeNow</code></td></tr></table></div></section>
 <section><h3>c. &#8230;&#8203; but not always: static methods</h3></section>
 <section><div class="paragraph"><p>In some cases, you don&#8217;t want or don&#8217;t need to go through the instantiation step. For example:</p></div>
 <div class="ulist"><ul><li><p>you can create 2 Buttons and set the text on them:</p></li></ul></div></section>
