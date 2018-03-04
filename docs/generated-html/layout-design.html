@@ -526,18 +526,22 @@ table.CodeRay td.code>pre{padding:0}
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
 <span id="revnumber">version 1.0,</span>
 <span id="revdate">last modified</span>
-<br><span id="revremark">2018-03-02</span>
+<br><span id="revremark">2018-03-04</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_1_create_a_new_project">1. Create a new project</a></li>
-<li><a href="#_1_creating_the_main_screen_of_the_app">1. Creating the main screen of the app</a>
-<ul class="sectlevel2">
-<li><a href="#_a_create_a_form_with_by_coding_not_with_the_gui_builder">a. Create a Form with by coding (not with the GUI Builder!)</a></li>
-<li><a href="#_b_creating_the_layout_of_the_form">b. Creating the layout of the Form</a></li>
+<li><a href="#_2_creating_the_main_screen_of_the_app">2. Creating the main screen of the app</a></li>
+<li><a href="#_3_creating_variables">3. Creating Variables</a>
+<ul class="sectlevel3">
+<li><a href="#_a_error_signal_when_creating_a_new_variable">a. Error signal when creating a new variable</a></li>
+<li><a href="#_b_creating_variables_for_the_images_we_added_to_code_theme_res_code">b. Creating variables for the images we added to <code>theme.res</code></a></li>
 </ul>
 </li>
+<li><a href="#_4_creating_a_special_method_the_constructor">4. Creating a special method: the "Constructor"</a></li>
+<li><a href="#_5_creating_the_layout_of_the_form_in_the_constructor">5. Creating the layout of the Form in the constructor</a></li>
+<li><a href="#_6_instantiating_this_form_when_the_app_launches">6. Instantiating this Form when the app launches</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -578,7 +582,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_1_creating_the_main_screen_of_the_app">1. Creating the main screen of the app</h2>
+<h2 id="_2_creating_the_main_screen_of_the_app">2. Creating the main screen of the app</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The main action of the game takes place on a single screen:</p>
@@ -595,8 +599,6 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph">
 <p>So the first step is to create this screen. <strong>We will not use the GUI Builder for this</strong> (contrary to previous lessons) as it is too slow and unpractical for a complex app like this one.</p>
 </div>
-<div class="sect2">
-<h3 id="_a_create_a_form_with_by_coding_not_with_the_gui_builder">a. Create a Form with by coding (not with the GUI Builder!)</h3>
 <div class="paragraph">
 <p>Follow these steps:</p>
 </div>
@@ -628,7 +630,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>If you remember the lesson on <code>methods and classes</code> in Module 5, you should realize we just created a <code>class</code>.</p>
 </div>
 <div class="paragraph">
-<p>The role of classes is to organize the code in different files and subunits, for a cleaner style of coding.</p>
+<p>The role of classes is to organize the code in different files and sub-units, for a cleaner style of coding.</p>
 </div>
 <div class="paragraph">
 <p>At the moment the class is almost empty:</p>
@@ -643,72 +645,14 @@ table.CodeRay td.code>pre{padding:0}
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>In this class, <strong>write or copy paste</strong> 2 lines of code, so that the entire file looks like:</p>
+<p>Let&#8217;s add a last element to the definition of this class:</p>
 </div>
-<div id="constructor" class="listingblock">
-<div class="title">Creating a function which runs when the Form is instantiated</div>
+<div id="extend" class="listingblock">
+<div class="title">Adding an info that our class extends another class</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
 
-<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> {
-
-    <span class="directive">public</span> Form1() {  <i class="conum" data-value="2"></i><b>(2)</b>
-    } <i class="conum" data-value="3"></i><b>(3)</b>
-
-} <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>of course your package name will be different</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>the function should have the same name as your class: Form1 in this case.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Don&#8217;t forget that there are two <code>}</code> to close at the end!</td>
-</tr>
-</table>
-</div>
-<div id="constructor-extract-1" class="listingblock">
-<div class="title">What are these two lines we added</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">    <span class="directive">public</span> Form1() {  <i class="conum" data-value="1"></i><b>(1)</b>
-
-    } <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>anything we write between these 2 curly braces <strong>will be executed when <code>Form1</code> is instantiated</strong>.</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>So this is a special method: when the class is instantiated, it will run (just once).</p>
-</div>
-<div class="paragraph">
-<p>Another way to say it is: "when the objet <code>Form1</code> is built, this method defines how it is constructed." For this reason it is called a <code>constructor</code>.</p>
-</div>
-<div class="paragraph">
-<p>Next, let&#8217;s add our first variable:</p>
-</div>
-<div id="constructor" class="listingblock">
-<div class="title">Creating a function which runs when the Form is instantiated</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>; <i class="conum" data-value="1"></i><b>(1)</b>
-
-<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> {
-    Resources theme;  <i class="conum" data-value="1"></i><b>(1)</b>
-
-    <span class="directive">public</span> Form1() {
-    }
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {  <i class="conum" data-value="1"></i><b>(1)</b>
 
 }</code></pre>
 </div>
@@ -717,10 +661,50 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>our first variable! It is an object useful to access the pics we need in the app. We&#8217;ll use it later</td>
+<td>we added <code>extends com.codename1.ui.Form</code> before the <code>{</code></td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>What does it mean? We just said that the class we created (<code>Form1</code>) <strong>extends</strong> another class, named  <code>com.codename1.ui.Form</code></p>
+</div>
+<div class="paragraph">
+<p>&#8594; our class <code>Form1</code> just inherited of all the methods of the class <code>Form</code>!
+&#8594; <strong>inherited</strong> means that whatever a <code>Form</code> is capable of doing (having Labels in it, be in a BorderLayout or GridLayout, have a title, a background color, etc.), <strong>our class <code>Form1</code> inherited these methods and so, it can do it as well!</strong></p>
+</div>
+<div class="paragraph">
+<p>With all this setup done, we can define the variables we need for our screen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_creating_variables">3. Creating Variables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next, let&#8217;s add our first variables:</p>
+</div>
+<div id="constructor" class="listingblock">
+<div class="title">Creating a function which runs when the Form is instantiated</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
+
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {
+
+  Resources theme = Resources.getGlobalResources();  <i class="conum" data-value="1"></i><b>(1)</b>
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>our first variable! It is an object useful to access the pics we imported in the file <code>themes.res</code>. It is instantiated with a <a href="https://emlyon.github.io/codapps/generated-html/classes-and-methods.html#_c_but_not_always_static_methods">static method</a>.</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_a_error_signal_when_creating_a_new_variable">a. Error signal when creating a new variable</h4>
 <div class="paragraph">
 <p>You should have the same error signal as this one <span class="image"><img src="images/error-lightbulb.png" alt="error lightbulb"></span>:</p>
 </div>
@@ -746,16 +730,29 @@ table.CodeRay td.code>pre{padding:0}
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>The result is a new line added on top: see line 3 here:</p>
+<p>The result is a new line <code>import com.codename1.ui.util.Resources;</code> near the top of our file:</p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="listingblock">
+<div class="title">Adding the import line</div>
 <div class="content">
-<img src="images/import-result.png" alt="import result">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
+
+<span class="keyword">import</span> <span class="include">com.codename1.ui.util.Resources</span>;   <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {
+
+  Resources theme = Resources.getGlobalResources();
+
+}</code></pre>
 </div>
-<div class="title">Figure 7. a line telling where the type is coming from</div>
 </div>
-<div class="paragraph">
-<p>&#160;<br></p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the line NetBeans just added fo us.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>What you did is simple:</p>
@@ -769,25 +766,64 @@ table.CodeRay td.code>pre{padding:0}
 <p>We must tell Java <strong>where to find it so that it can import it</strong>:</p>
 </li>
 <li>
-<p>we chose <code>import com.codename1.ui.util.Resources</code> because the type <code>Resources</code> comes from Codename One, indeed.</p>
+<p>we chose <code>Add import for com.codename1.ui.util.Resources</code> because the type <code>Resources</code> comes from Codename One, indeed.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Finally, let&#8217;s add a last element:</p>
+<p>This error icon will appear each time you use a new type in your code: just click on it and pick "Add import for&#8230;&#8203;"
+If you don&#8217;t see this option available, it probably means there is an error in your code.</p>
 </div>
-<div id="extend" class="listingblock">
-<div class="title">Adding an info that our class extends another class</div>
+</div>
+<div class="sect3">
+<h4 id="_b_creating_variables_for_the_images_we_added_to_code_theme_res_code">b. Creating variables for the images we added to <code>theme.res</code></h4>
+<div class="paragraph">
+<p>So we&#8217;ll have pictures in our app.
+We import them as usual (see <a href="https://emlyon.github.io/codapps/#Module%202">Module 2</a> via the file <code>themes.res</code>:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/theme-add-pictures.png" alt="theme add pictures">
+</div>
+<div class="title">Figure 7. The pictures to add to theme.res</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Here is the list of pictures to download so that you can import them:</p>
+</div>
+<div class="paragraph">
+<p>link::../resources/click_50x64.png[click_50x64.png]</p>
+</div>
+<div class="paragraph">
+<p>link::../resources/cookie_200x200.png[cookie_200x200.png]</p>
+</div>
+<div class="paragraph">
+<p>link::../resources/farm_50x37.png[farm_50x37.png]</p>
+</div>
+<div class="paragraph">
+<p>link::../resources/grandma_50x50.png[grandma_50x50.png]</p>
+</div>
+<div class="paragraph">
+<p>Once you have imported these pictures, how can we use them in our code?
+By creating variables:</p>
+</div>
+<div class="listingblock">
+<div class="title">Adding the import line</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
 
 <span class="keyword">import</span> <span class="include">com.codename1.ui.util.Resources</span>;
+<span class="keyword">import</span> <span class="include">com.codename1.ui.Image</span>;   <i class="conum" data-value="1"></i><b>(1)</b>
 
-<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {  <i class="conum" data-value="1"></i><b>(1)</b>
-    Resources theme;
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {
 
-    <span class="directive">public</span> Form1() {
-    }
+  Resources theme = Resources.getGlobalResources();
+  <span class="predefined-type">Image</span> farmPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">farm_50x37.png</span><span class="delimiter">&quot;</span></span>);
+  <span class="predefined-type">Image</span> clickPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">click_50x64.png</span><span class="delimiter">&quot;</span></span>);
+  <span class="predefined-type">Image</span> cookieCentraPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">cookie_200x200.png</span><span class="delimiter">&quot;</span></span>);
+  <span class="predefined-type">Image</span> cookiePressedPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">cookie_200x200_star.png</span><span class="delimiter">&quot;</span></span>);
 
 }</code></pre>
 </div>
@@ -796,23 +832,77 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>we added <code>extends com.codename1.ui.Form</code> before the <code>{</code></td>
+<td>fixing the error signs in the margin <span class="image"><img src="images/error-lightbulb.png" alt="error lightbulb"></span> adds this line</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_creating_a_special_method_the_constructor">4. Creating a special method: the "Constructor"</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Still In this class, below the variables we just created, <strong>write 2 lines of code</strong>, so that the entire file looks like:</p>
+</div>
+<div id="constructor" class="listingblock">
+<div class="title">Creating a function which runs when the Form is instantiated</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
+
+<span class="keyword">import</span> <span class="include">com.codename1.ui.util.Resources</span>;
+<span class="keyword">import</span> <span class="include">com.codename1.ui.Image</span>;
+
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {
+
+    <span class="comment">// here  are our variables, I don't rewrite them to save space</span>
+
+    <span class="directive">public</span> Form1() {  <i class="conum" data-value="1"></i><b>(1)</b>
+    } <i class="conum" data-value="2"></i><b>(2)</b>
+
+} <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the function should have the same name as your class: <code>Form1</code> in this case.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Don&#8217;t forget that there are two <code>}</code> to close at the end!</td>
+</tr>
+</table>
+</div>
+<div id="constructor-extract-1" class="listingblock">
+<div class="title">What are these two lines we added: a special method</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">    <span class="directive">public</span> Form1() {  <i class="conum" data-value="1"></i><b>(1)</b>
+
+    } <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>anything we write between these 2 curly braces <strong>will be executed when <code>Form1</code> is instantiated</strong>.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>What does it mean? We just said that the class we created (<code>Form1</code>) <strong>extends</strong> another class, named  <code>com.codename1.ui.Form</code></p>
+<p>You recognized this as a method. It is a method of a special kind: when the class is instantiated, it will run (just once).</p>
 </div>
 <div class="paragraph">
-<p>&#8594; our class <code>Form1</code> just inherited of all the methods of the class <code>Form</code>!
-&#8594; <strong>inherited</strong> means that whatever a <code>Form</code> is capable of doing (having Labels in it, be in a BorderLayout or GridLayout, have a title, a background color, etc.), <strong>our class <code>Form1</code> inherited these powers and so, it can do it as well!</strong></p>
-</div>
-<div class="paragraph">
-<p>With all this setup done, we can work on the layout we want for our screen.</p>
+<p>Another way to say it is: "when the objet <code>Form1</code> is built, this method defines how it is constructed."
+For this reason this method is called a <code>constructor</code>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_b_creating_the_layout_of_the_form">b. Creating the layout of the Form</h3>
+</div>
+<div class="sect1">
+<h2 id="_5_creating_the_layout_of_the_form_in_the_constructor">5. Creating the layout of the Form in the constructor</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>I mentioned that anything written here would be executed when the Form is instantiated:</p>
 </div>
@@ -848,7 +938,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Putting the Form in a BorderLayout</strong> (see <a href="https://emlyon.github.io/codapps/generated-html/using-layouts.html#_6_the_border_layout">the lesson on the BorderLayout</a>) will help us divide the screen in these three regions. GridLayout might be another option.</p>
+<p><strong>Putting the Form in a GridLayout</strong> (see <a href="https://emlyon.github.io/codapps/generated-html/using-layouts.html#_5_the_grid_layout">the lesson on the GridLayout</a>) will help us divide the screen in these three regions. BorderLayout might have been another option.</p>
 </div>
 <div class="paragraph">
 <p>The idea is to have something like this:</p>
@@ -870,39 +960,30 @@ table.CodeRay td.code>pre{padding:0}
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// these lines of code should go inside  public Form1() { }</span>
 
-<span class="comment">//we create the different layouts we will need in this Form:</span>
-<span class="predefined-type">BorderLayout</span> borderLayout = <span class="keyword">new</span> <span class="predefined-type">BorderLayout</span>();
-<span class="predefined-type">BoxLayout</span> boxYLayout = <span class="predefined-type">BoxLayout</span>.y(); <i class="conum" data-value="1"></i><b>(1)</b>
-<span class="predefined-type">BoxLayout</span> boxXLayout = <span class="predefined-type">BoxLayout</span>.x(); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<span class="predefined-type">GridLayout</span> gridLayoutThreeByOne = <span class="keyword">new</span> <span class="predefined-type">GridLayout</span>(<span class="integer">3</span>, <span class="integer">1</span>); <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="local-variable">this</span>.setLayout(gridLayoutThreeByOne); <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="local-variable">this</span>.setScrollable(<span class="predefined-constant">false</span>); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>weird looking code: what is <code>BoxLayout.y()</code> and <code>BoxLayout.x()</code>? These are <a href="https://emlyon.github.io/codapps/generated-html/classes-and-methods.html#_c_but_not_always_static_methods">static methods</a>, used in a fancy way to do the equivalent of <code>new BoxLayout()</code></td>
+<td>we create a Grid layout: 3 rows, to divide the screen in three equal spaces.</td>
 </tr>
-</table>
-</div>
-<div id="put-form-to-border-layout" class="listingblock">
-<div class="title">Choose a BorderLayout for the Form</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// these lines of code should go inside  public Form1() { }</span>
-
-<span class="local-variable">this</span>.setLayout(borderLayout); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
 <tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>the Form is the file where this code is being written, so we can name it with the keyword <code>this</code>. The Form has a method <code>setLayout</code> which we can use to switch the Form to a BorderLayout.</td>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>Form1</code> is the file where this code is being written, so we can name it with the keyword <code>this</code>. The Form has a method <code>setLayout</code> which we can use to assign a layout to the Form.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>this method says the Form can&#8217;t be navigated outside of the screen.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>We now have a Form, set in a BorderLayout.
-We must put many things in each of the North, Center and South region of the layout.</p>
+<p>We now have a Form, set in a GridLayout.
+We must put many things in each of the three rows of the Grid.</p>
 </div>
 <div class="paragraph">
 <p><strong>To organize things, we&#8217;ll add a container for each region, and our Components will go inside these containers</strong>:</p>
@@ -916,19 +997,17 @@ We must put many things in each of the North, Center and South region of the lay
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
-<div class="paragraph">
-<p>[[adding-container-north]
-.Adding a container to the North region of the Form</p>
-</div>
-<div class="listingblock">
+<div id="adding-container-north" class="listingblock">
+<div class="title">Adding a container to the North region of the Form</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// these lines of code should go inside  public Form1() { }</span>
 
 <span class="comment">//we create a Container that will contain everything in the &quot;North&quot; part of the BorderLayout:</span>
 <span class="predefined-type">Container</span> northRegion = <span class="keyword">new</span> <span class="predefined-type">Container</span>();
 
-<span class="comment">//we choose a BoxY Layout for this container:</span>
-northRegion.setLayout(boxYLayout);</code></pre>
+<span class="comment">//we choose a BorderLayout for this container:</span>
+<span class="predefined-type">BorderLayout</span> borderLayoutNorth = <span class="keyword">new</span> <span class="predefined-type">BorderLayout</span>();
+northRegion.setLayout(borderLayoutNorth);</code></pre>
 </div>
 </div>
 <div id="adding-container-center" class="listingblock">
@@ -936,11 +1015,15 @@ northRegion.setLayout(boxYLayout);</code></pre>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// these lines of code should go inside  public Form1() { }</span>
 
-<span class="comment">//we create a Container that will contain everything in the &quot;Center&quot; part of the BorderLayout:</span>
+<span class="comment">//we create a Container that will contain everything in the 2nd row of the screen:</span>
 <span class="predefined-type">Container</span> centerRegion = <span class="keyword">new</span> <span class="predefined-type">Container</span>();
 
-<span class="comment">//we put this center region in a Box X Layout:</span>
-centerRegion.setLayout(boxXLayout);</code></pre>
+<span class="comment">//we choose a Grid Layout for this container:</span>
+<span class="predefined-type">GridLayout</span> gridLayoutFourByOne = <span class="keyword">new</span> <span class="predefined-type">GridLayout</span>(<span class="integer">4</span>, <span class="integer">1</span>);
+centerRegion.setLayout(gridLayoutFourByOne);
+
+<span class="comment">//we set this region to be scrollable, because there is too much content to fit</span>
+centerRegion.setScrollableY(<span class="predefined-constant">true</span>);</code></pre>
 </div>
 </div>
 <div id="adding-container-south" class="listingblock">
@@ -948,25 +1031,172 @@ centerRegion.setLayout(boxXLayout);</code></pre>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// these lines of code should go inside  public Form1() { }</span>
 
-<span class="comment">//we create a Container that will contain everything in the &quot;South&quot; part of the BorderLayout:</span>
+<span class="comment">//we create a Container that will enclose everything in the 3rd row:</span>
 <span class="predefined-type">Container</span> southRegion = <span class="keyword">new</span> <span class="predefined-type">Container</span>();
 
-<span class="comment">//we put this container in the south region in a BoxX Layout:</span>
-southRegion.setLayout(boxXLayout);</code></pre>
+<span class="comment">//we choose a Border Layout for this container:</span>
+<span class="predefined-type">BorderLayout</span> blSouth = <span class="keyword">new</span> <span class="predefined-type">BorderLayout</span>();
+southRegion.setLayout(blSouth);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>We created several containers, <strong>but it doesn&#8217;t mean they are in our Form yet</strong>. We need to add them, and tell where they should go:</p>
+<p>We created several containers, <strong>but it doesn&#8217;t mean they are in our Form yet</strong>.</p>
+</div>
+<div class="paragraph">
+<p>We need to add them:</p>
 </div>
 <div id="adding-containers-to-the-form" class="listingblock">
 <div class="title">Adding the containers to the Form</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// these lines of code should go inside  public Form1() { }</span>
-<span class="local-variable">this</span>.addComponent(<span class="predefined-type">BorderLayout</span>.NORTH, northRegion);
-<span class="local-variable">this</span>.addComponent(<span class="predefined-type">BorderLayout</span>.SOUTH, southRegion);
-<span class="local-variable">this</span>.addComponent(<span class="predefined-type">BorderLayout</span>.CENTER, centerRegion);</code></pre>
+<span class="local-variable">this</span>.addComponent(northRegion);
+<span class="local-variable">this</span>.addComponent(centerRegion);
+<span class="local-variable">this</span>.addComponent(southRegion);</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>While you write all of this, the new variable types have not been imported yet, so you will see error signals all the way.</p>
+</div>
+<div class="paragraph">
+<p>Simply click on the error icons and select the first line "Add import for &#8230;&#8203;" :</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/import-2.png" alt="import 2">
+</div>
+<div class="title">Figure 11. Error signals - just import the type</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>With all this code we have written, the entire file <code>Form1.java</code> should look like:</p>
+</div>
+<div class="paragraph">
+<p>(for your convenience you can also download the file of this Form <a href="../resources/form-with-layout.txt">here</a>)</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div id="Form1-layout" class="listingblock">
+<div class="title">Our Form with the code for the layout</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
+
+<span class="keyword">import</span> <span class="include">com.codename1.ui.Container</span>;
+<span class="keyword">import</span> <span class="include">com.codename1.ui.Image</span>;
+<span class="keyword">import</span> <span class="include">com.codename1.ui.layouts.BorderLayout</span>;
+<span class="keyword">import</span> <span class="include">com.codename1.ui.layouts.GridLayout</span>;
+<span class="keyword">import</span> <span class="include">com.codename1.ui.util.Resources</span>;
+
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {
+
+    Resources theme;
+
+
+    <span class="directive">public</span> Form1() {
+
+        theme = Resources.getGlobalResources();
+
+        <span class="predefined-type">Image</span> grandmaPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">grandma_50x50.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> grandmaBoostIcon = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">oven_30x35.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> farmPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">farm_50x37.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> farmBoostIcon = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">farm_boost_30x23.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> clickPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">click_50x64.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> clickBoostIcon = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">click_30x30.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> cookieCentraPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">cookie_200x200.png</span><span class="delimiter">&quot;</span></span>);
+        <span class="predefined-type">Image</span> cookiePressedPic = theme.getImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">cookie_200x200_star.png</span><span class="delimiter">&quot;</span></span>);
+
+        <span class="comment">//we put the Form in a Grid layout: 3 rows, to divide the screen in three equal spaces.</span>
+        <span class="predefined-type">GridLayout</span> gridLayoutThreeByOne = <span class="keyword">new</span> <span class="predefined-type">GridLayout</span>(<span class="integer">3</span>, <span class="integer">1</span>);
+        <span class="local-variable">this</span>.setLayout(gridLayoutThreeByOne);
+
+        <span class="comment">//we don't want the screen to be scrollable: everything should fit in it.</span>
+        <span class="local-variable">this</span>.setScrollable(<span class="predefined-constant">false</span>);
+
+        <span class="comment">//we create a Container that will contain everything in the &quot;North&quot; part of the BorderLayout:</span>
+        <span class="predefined-type">Container</span> northRegion = <span class="keyword">new</span> <span class="predefined-type">Container</span>();
+
+        <span class="comment">//we choose a Border Layout for this container:</span>
+        <span class="predefined-type">BorderLayout</span> borderLayoutNorth = <span class="keyword">new</span> <span class="predefined-type">BorderLayout</span>();
+        northRegion.setLayout(borderLayoutNorth);
+
+
+        <span class="comment">//we create a Container that will contain everything in the &quot;Center&quot; part of the screen:</span>
+        <span class="predefined-type">Container</span> centerRegion = <span class="keyword">new</span> <span class="predefined-type">Container</span>();
+
+        <span class="comment">//we choose a Grid Layout for this container:</span>
+        <span class="predefined-type">GridLayout</span> gridLayoutFourByOne = <span class="keyword">new</span> <span class="predefined-type">GridLayout</span>(<span class="integer">4</span>, <span class="integer">1</span>);
+        centerRegion.setLayout(gridLayoutFourByOne);
+
+        <span class="comment">//we set this region to be scrollable, because there is too much content to fit</span>
+        centerRegion.setScrollableY(<span class="predefined-constant">true</span>);
+
+        <span class="comment">//we create a Container that will contain everything in the &quot;South&quot; part of the BorderLayout:</span>
+        <span class="predefined-type">Container</span> southRegion = <span class="keyword">new</span> <span class="predefined-type">Container</span>();
+
+        <span class="comment">//we choose a Border Layout for this container:</span>
+        <span class="predefined-type">BorderLayout</span> blSouth = <span class="keyword">new</span> <span class="predefined-type">BorderLayout</span>();
+        southRegion.setLayout(blSouth);
+
+        <span class="comment">// we add the three containers to the Form, which is in a Gridlayout (three rows)</span>
+
+        <span class="comment">// The northRegion will be in the top row because we add it first,</span>
+        <span class="comment">// The centerRegion will be in the 2nd row because we add it in second</span>
+        <span class="comment">// The southRegion will be in the 3rd row because we add it last.</span>
+        <span class="local-variable">this</span>.addComponent(northRegion);
+        <span class="local-variable">this</span>.addComponent(centerRegion);
+        <span class="local-variable">this</span>.addComponent(southRegion);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_instantiating_this_form_when_the_app_launches">6. Instantiating this Form when the app launches</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just like we did since the beginning of this course, we need now to add a couple of lines of code in MyApplication.java so that our <code>Form1</code> opens when the app starts:</p>
+</div>
+<div id="instantiating-the-form" class="listingblock">
+<div class="title">Instantiating the Form with 2 lines in MyApplication.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
+    <span class="keyword">if</span>(current != <span class="predefined-constant">null</span>){
+        current.show();
+        <span class="keyword">return</span>;
+    }
+    Form1 mainScreen = <span class="keyword">new</span> Form1();<i class="conum" data-value="1"></i><b>(1)</b>
+    mainScreen.show();<i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>we instantiante <code>Form1</code> ! This will trigger the constructor of Form1, so our layout defined with code in it will be created!</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>we show the Form on the screen.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you click on the preview <span class="image"><img src="images/green-arrow.jpg" alt="green arrow"></span> you will see your app:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/layout-preview-1.png" alt="layout preview 1">
+</div>
+<div class="title">Figure 12. Previewing your app- the layout is there but still nothing in it!</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Still empty?
+Yes, but it is ready to include pictures, buttons and text! Let&#8217;s do this in the next lesson.</p>
 </div>
 </div>
 </div>
@@ -974,7 +1204,7 @@ southRegion.setLayout(boxXLayout);</code></pre>
 <h2 id="_the_end">The end</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/seinecle/codapps/issues">here</a> (need a free Github account).</p>
+<p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/emlyon/codapps/issues">here</a> (need a free Github account).</p>
 </div>
 <div class="paragraph">
 <p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p>
@@ -1029,7 +1259,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-03-02 18:21:41 CET
+Last updated 2018-03-04 21:38:37 CET
 </div>
 </div>
 </body>

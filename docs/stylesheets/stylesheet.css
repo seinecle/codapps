@@ -239,9 +239,29 @@ Full-Width Styles
   border: none;
 }
 
+#issue_banner {
+  display: block;
+  position: absolute;
+  top:0;
+  left: 10px;
+  z-index: 10;
+  padding: 10px 20px 10px 50px;
+  color: #fff;
+  background: url('../images/blacktocat.svg') #0090ff no-repeat 8% 50%;
+  background-size: 25px;
+  font-weight: 700;
+  border: none;
+}
+
+
 #forkme_banner:hover {
   background-color: #1883ed;
 }
+
+#issue_banner:hover {
+  background-color: #1883ed;
+}
+
 
 header {
   color: #f2f2f2;

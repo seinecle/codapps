@@ -491,7 +491,7 @@ Label titleOfMyApp = new Label(welcomeMessage);
 //ST: !
 Let's now try to create an object in the interactive screen?
 
-`Form`, `Label` and `Button` are objects provided by the plugin we installed in NetBeans, so they are not included in the interactive screen.
+`Form`, `Label` and `Button` are objects provided by the plugin we installed in NetBeans, so they are not included in the interactive console here.
 
 Instead, let's create another object. The object of type `Date` specializes in storing dates:
 

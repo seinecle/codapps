@@ -1,0 +1,69 @@
+package net.clementlevallois.net.cookieclicker.ultimate;
+
+import com.codename1.ui.Container;
+import com.codename1.ui.Image;
+import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.layouts.GridLayout;
+import com.codename1.ui.util.Resources;
+
+public class Form1 extends com.codename1.ui.Form {
+
+    Resources theme;
+
+
+    public Form1() {
+
+        theme = Resources.getGlobalResources();
+
+        Image grandmaPic = theme.getImage("grandma_50x50.png");
+        Image grandmaBoostIcon = theme.getImage("oven_30x35.png");
+        Image farmPic = theme.getImage("farm_50x37.png");
+        Image farmBoostIcon = theme.getImage("farm_boost_30x23.png");
+        Image clickPic = theme.getImage("click_50x64.png");
+        Image clickBoostIcon = theme.getImage("click_30x30.png");
+        Image cookieCentraPic = theme.getImage("cookie_200x200.png");
+        Image cookiePressedPic = theme.getImage("cookie_200x200_star.png");
+
+        //we put the Form in a Grid layout: 3 rows, to divide the screen in three equal spaces.
+        GridLayout gridLayoutThreeByOne = new GridLayout(3, 1);
+        this.setLayout(gridLayoutThreeByOne);
+
+        //we don't want the screen to be scrollable: everything should fit in it.
+        this.setScrollable(false);
+
+        //we create a Container that will contain everything in the "North" part of the BorderLayout:
+        Container northRegion = new Container();
+
+        //we choose a Border Layout for this container:
+        BorderLayout borderLayoutNorth = new BorderLayout();
+        northRegion.setLayout(borderLayoutNorth);
+
+
+        //we create a Container that will contain everything in the "Center" part of the screen:
+        Container centerRegion = new Container();
+
+        //we choose a Grid Layout for this container:
+        GridLayout gridLayoutFourByOne = new GridLayout(4, 1);
+        centerRegion.setLayout(gridLayoutFourByOne);
+
+        //we set this region to be scrollable, because there is too much content to fit
+        centerRegion.setScrollableY(true);
+
+        //we create a Container that will contain everything in the "South" part of the BorderLayout:
+        Container southRegion = new Container();
+
+        //we choose a Border Layout for this container:
+        BorderLayout blSouth = new BorderLayout();
+        southRegion.setLayout(blSouth);
+
+        // we add the three containers to the Form, which is in a Gridlayout (three rows)
+        // The northRegion will be in the top row because we add it first,
+        // The centerRegion will be in the 2nd row because we add it in second
+        // The southRegion will be in the 3rd row because we add it last.
+        this.addComponent(northRegion);
+        this.addComponent(centerRegion);
+        this.addComponent(southRegion);
+
+    }
+
+}

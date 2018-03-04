@@ -81,7 +81,7 @@ The package name should contain at least three parts separated by dots. The defa
 ====
 
 //ST: !
-You should absolutely have a correct package name as https://github.com/seinecle/codapps/issues/9[you can't change it later].
+You should absolutely have a correct package name as https://github.com/emlyon/codapps/issues/9[you can't change it later].
 
 (you will have to delete your app and start again from zero.)
 
@@ -157,7 +157,7 @@ Congratulations, you started creating your first app and you can already preview
 //ST: The end
 
 //ST: !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
