@@ -109,7 +109,7 @@ Good! We have finished the top row. If you launch the preview, your app should l
 image::top-row.png[align="center",title="The app with the top row designed"]
 
 
-==  2. Working on the middle row
+==  3. Working on the middle row
 
 ==  !
 The middle row of the app will receive the tools that the player can buy to speed up the cookie production.
@@ -185,7 +185,7 @@ centerRegion.add(farmButton);
 ----
 
 ==  !
-Launch the preview,your app should now look about like this (except for the color and a few details).
+Launch the preview: your app should now look about like this (except for the color and a few details).
 
 ==  !
 [.stretch]

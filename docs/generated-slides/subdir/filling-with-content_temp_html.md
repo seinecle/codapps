@@ -110,8 +110,8 @@ Good! We have finished the top row. If you launch the preview, your app should l
 image::top-row.png[align="center",title="The app with the top row designed"]
 {nbsp} +
 
-== 2. Working on the middle row
-//ST: 2. Working on the middle row
+== 3. Working on the middle row
+//ST: 3. Working on the middle row
 
 //ST: !
 The middle row of the app will receive the tools that the player can buy to speed up the cookie production.
@@ -187,7 +187,7 @@ centerRegion.add(farmButton);
 ----
 
 //ST: !
-Launch the preview,your app should now look about like this (except for the color and a few details).
+Launch the preview: your app should now look about like this (except for the color and a few details).
 
 //ST: !
 image::screenshot-cookie-clicker.png[align="center",title="The Cookie Cliker design"]
@@ -199,7 +199,7 @@ Notice that the cookie can be clicked, and the panel for tools is scrollable ver
 //ST: !
 Your app is now correctly designed, congrats! Yet, the "logic" of the app is still missing! This will be for our last module.
 
-If you need the entire code we have written in  `Form1.java` so far, you can download it link::../resources/form-with-layout--and-components.txt[here].
+If you need the entire code we have written in  `Form1.java` so far, you can download it link:../resources/form-with-layout-and-components.txt[here].
 
 
 == The end
