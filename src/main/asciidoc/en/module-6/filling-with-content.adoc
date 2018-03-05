@@ -186,7 +186,7 @@ centerRegion.add(farmButton);
 ----
 
 //ST: !
-Launch the preview,your app should now look about like this (except for the color and a few details).
+Launch the preview: your app should now look about like this (except for the color and a few details).
 
 //ST: !
 image::screenshot-cookie-clicker.png[align="center",title="The Cookie Cliker design"]
