@@ -182,13 +182,13 @@ image::theme-add-pictures.png[align="center",title="The pictures to add to theme
 Here is the list of pictures to download so that you can import them:
 
 ==  !
-link::../resources/click_50x64.png[click_50x64.png]
+link:../resources/click_50x64.png[click_50x64.png]
 
-link::../resources/cookie_200x200.png[cookie_200x200.png]
+link:../resources/cookie_200x200.png[cookie_200x200.png]
 
-link::../resources/farm_50x37.png[farm_50x37.png]
+link:../resources/farm_50x37.png[farm_50x37.png]
 
-link::../resources/grandma_50x50.png[grandma_50x50.png]
+link:../resources/grandma_50x50.png[grandma_50x50.png]
 
 ==  !
 Once you have imported these pictures, how can we use them in our code?
