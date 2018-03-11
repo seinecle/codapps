@@ -115,10 +115,10 @@ priceItemInEuros = <span class="float">5.99f</span>; <i class="conum" data-value
 <section><div class="paragraph"><p>The three lines inside the method itself are pretty simple:</p></div></section>
 <section><div class="listingblock" id="method-creation"><div class="title">The three lines of the method</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) {
    <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="1"></i><b>(1)</b>
-   priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+   priceWithVAT = priceWithoutVAT * <span class="float">1.20f</span>; <i class="conum" data-value="2"></i><b>(2)</b>
    <span class="keyword">return</span> priceWithVAT; <i class="conum" data-value="3"></i><b>(3)</b>
 }<i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
-<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>create a Float variable that will contain the price with VAT</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>assign the value <code>priceWithoutVAT * 1.20</code> to it
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>create a Float variable that will contain the price with VAT</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>assign the value <code>priceWithoutVAT * 1.20f</code> to it (the <code>f</code> means this number is a <code>float</code> - a decimal)
 ==  !</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>"Return" means that the method is finished and gives back a result, here: a Float variable which is the price with VAT.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>Don&#8217;t forget the closing curly brace <code>}</code> when finishing the definition of a method.</td></tr></table></div></section>
 <section><h3>b. Executing a method</h3></section>
 <section><div class="paragraph"><p>We have defined a method called <code>addFrenchVAT</code> which takes a Float variable as parameter (the price without VAT), and returns a price with VAT.</p></div>
@@ -144,10 +144,10 @@ priceItemsInEurosWithVAT = addFrenchVAT(priceItemInEuros); <i class="conum" data
 <div class="paragraph"><p>Let&#8217;s define such a method:</p></div></section>
 <section><div class="listingblock" id="creating-a-method-without-return"><div class="title">Creating a method which returns nothing</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> price = <span class="float">5.99f</span>;  <i class="conum" data-value="1"></i><b>(1)</b>
 <span class="directive">private</span> <span class="type">void</span> addFrenchVAT() {  <i class="conum" data-value="2"></i><b>(2)</b>
-   price = price * <span class="float">1.20</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+   price = price * <span class="float">1.20f</span>; <i class="conum" data-value="3"></i><b>(3)</b>
 } <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
 <div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>we have created a variable named <code>price</code></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>now we define a method like the one before in this lesson, except that:</td></tr></table></div></section>
-<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the method does one thing: it multiplies the value of the variable <code>price</code> by 1.20</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>this is the end of the method. There is no "return" statement.</td></tr></table></div></section>
+<section><div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the method does one thing: it multiplies the value of the variable <code>price</code> by 1.20 (don&#8217;t forget the <code>f</code> in <code>1.20f</code> to say it&#8217;s a <code>float</code>!)</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>this is the end of the method. There is no "return" statement.</td></tr></table></div></section>
 <section><div class="paragraph"><p>Now, if we want to apply this method, we can just write:</p></div>
 <div class="listingblock"><div class="content"><pre class="CodeRay"><code>addFrenchVAT();</code></pre></div></div>
 <div class="paragraph"><p>and this will have for effect to multiply the value of the variable <code>price</code> by 1.20.</p></div></section>

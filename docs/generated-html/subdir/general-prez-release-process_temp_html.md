@@ -209,7 +209,7 @@ The next lessons will guide you through the process of testing and releasing you
 //ST: The end
 
 //ST: !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

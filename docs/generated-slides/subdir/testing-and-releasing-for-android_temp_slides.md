@@ -268,7 +268,7 @@ When all these parameters will be set, your app will become publishable.
 ==  The end
 
 ==  !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

@@ -134,7 +134,7 @@ We are going to create a very simple action to illustrate the principle: *pressi
 
 - Delete your button and create a new one
 - Follow the steps carefully, without taking shortcuts
-- Only if you have tried several times and things still don't work, then you can report https://github.com/seinecle/codapps/issues[an issue here].
+- Only if you have tried several times and things still don't work, then you can report https://github.com/emlyon/codapps/issues[an issue here].
 ====
 
 
@@ -250,7 +250,7 @@ In the next lesson of this module, we are going to learn how to insert a picture
 ==  The end
 
 ==  !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

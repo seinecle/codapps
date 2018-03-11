@@ -114,7 +114,7 @@ Because you just deleted the "keystore.ks" file, you will start from a clean sta
 //ST: 3. Still stuck with a failed build?
 
 //ST: !
-If none of the above proved useful, https://github.com/seinecle/codapps/issues?q=is%3Aissue+is%3Aclosed[go on Github] and review issues posted by the other participants to this course.
+If none of the above proved useful, https://github.com/emlyon/codapps/issues?q=is%3Aissue+is%3Aclosed[go on Github] and review issues posted by the other participants to this course.
 
 If you can't find an answer to your problem on Github, post a new issue describing your problem and you will get some help!
 
@@ -123,7 +123,7 @@ If you can't find an answer to your problem on Github, post a new issue describi
 //ST: The end
 
 //ST: !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
