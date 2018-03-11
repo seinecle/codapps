@@ -70,7 +70,7 @@ image::Choosing-the-name-and-location-of-your-project.png[align="center",title="
 We will explain in turn what package name, theme and template you should choose:
 
 ==  !
-==== 1. The "package name"
+==== a. The "package name"
 
 This is the official id of your app. Basically, this is the way for Google or Apple to give an ID card to your app.
 
@@ -88,7 +88,7 @@ The package name should contain at least three parts separated by dots. The defa
 ====
 
 ==  !
-You should absolutely have a correct package name as https://github.com/seinecle/codapps/issues/9[you can't change it later].
+You should absolutely have a correct package name as https://github.com/emlyon/codapps/issues/9[you can't change it later].
 
 (you will have to delete your app and start again from zero.)
 
@@ -105,7 +105,7 @@ If you don’t own a website, you can use the reverse of your email address. If 
 `com.gmail.barackobama.myfirstapp`
 
 ==  !
-==== 2. The "theme"
+==== b. The "theme"
 
 This defines the general colors and appearance of your app, how it will look like (you’ll be able to modify that later).
 
@@ -113,7 +113,7 @@ This defines the general colors and appearance of your app, how it will look lik
 Please choose `Native` in the dropdown menu: this means that your app will have an Apple look on iOS, look like Android style on Android phones, etc.
 
 ==  !
-==== 3. The "template"
+==== c. The "template"
 
 In the dropdown menu, choose the template « Hello World (Bare Bones) ».
 
@@ -125,7 +125,7 @@ Other templates would provide us with apps already prebuilt in some ways, we don
 Click on `Finish` and your app will be created.
 
 ==  !
-==== 4. Done! Preview your app.
+==  2. Done! Preview your app.
 
 ==  !
 [.stretch]
@@ -142,6 +142,65 @@ It should show a blank screen with "Hi World" in the title, and "Hi World" again
 ==  !
 [.stretch]
 image::Previewing-your-app.png[align="center",title="Previewing your app"]
+
+
+==  !
+==  3. Previewing your app on different kinds of phones
+
+==  !
+By default, the preview shows how your app would look like on an iPhone 3. It is possible to preview it on any phone you like.
+
+==  !
+==== a. Downloading new "skins"
+
+==  !
+A phone's appearance is called a `skin`. To add new skins for previewing your apps:
+
+1. Launch the preview
+2. Choose the menu "skins"
+3. Choose "More..."
+
+==  !
+[.stretch]
+image::Opening-the-preview-and-the-skins-menu.png[align="center",title="Opening the preview and the skins menu"]
+
+
+==  !
+Then:
+1. wait a couple of seconds for the list of available skins to appear
+2. Select the one you need. *You can pick several at once*.
+3. Click on `download`
+
+==  !
+[.stretch]
+image::Choosing-the-skins-to-donwload.png[align="center",title="Choosing the skins to donwload"]
+
+
+==  !
+The skin(s) you downloaded are now available. Pick the one you want from the skins menu:
+
+==  !
+[.stretch]
+image::Applying-a-skin-to-the-preview.png[align="center",title="Applying a skin to the preview"]
+
+
+==  !
+==== b. Adjusting the size of the skin to the screen
+
+==  !
+The skins you will choose might be show a preview which is too large to fit on the screen of your computer:
+
+==  !
+[.stretch]
+image::skins-add-4.png[align="center",title="Most skins don't fit on your computer screen"]
+
+
+==  !
+The solution is *simply to de-select the zoom option* in the menu of the preview:
+
+==  !
+[.stretch]
+image::skins-dezoom.png[align="center",title="De-select the zoom option in the menu to make your app fit on screen"]
 
 
 
@@ -167,7 +226,7 @@ Congratulations, you started creating your first app and you can already preview
 ==  The end
 
 ==  !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

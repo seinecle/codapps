@@ -261,8 +261,6 @@ You recognized this as a method. It is a method of a special kind: when the clas
 Another way to say it is: "when the objet `Form1` is built, this method defines how it is constructed."
 For this reason this method is called a `constructor`.
 
-
-==  !
 ==  5. Creating the layout of the Form in the constructor
 
 ==  !
@@ -488,6 +486,7 @@ public class Form1 extends com.codename1.ui.Form {
 }
 ----
 
+==  6. Instantiating this Form when the app launches
 
 ==  !
 Just like we did since the beginning of this course, we need now to add a couple of lines of code in MyApplication.java so that our `Form1` opens when the app starts:

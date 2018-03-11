@@ -274,7 +274,7 @@ We leave here the different layouts and move on to the next lesson on how to hav
 ==  The end
 
 ==  !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

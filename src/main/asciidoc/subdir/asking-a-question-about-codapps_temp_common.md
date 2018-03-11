@@ -63,7 +63,7 @@ image::creating-an-account-on-Github.png[align="center",title="creating an accou
 Once you are logged in Github, simply go here:
 
 //ST: !
-https://github.com/seinecle/codapps/issues
+https://github.com/emlyon/codapps/issues
 
 - You will see the list of questions already asked and the answers. You can search for questions with the search bar!
 - *You can ask a new question by hitting the green button "New issue"*
@@ -90,7 +90,7 @@ If you spot a question you have the answer for, or if you know the question has 
 //ST: The end
 
 //ST: !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

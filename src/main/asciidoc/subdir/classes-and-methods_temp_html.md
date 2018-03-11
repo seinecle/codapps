@@ -411,13 +411,13 @@ You just finished an important lesson on the fundamentals of coding, congratulat
 Don't hesitate to come back often and re-read it, it is really a fundamental part of the course.
 
 //ST: !
-If you feel that some things remain unclear, or could be better explained: just https://github.com/seinecle/codapps/issues[open an issue on Github], it will be a pleasure exchanging with you.
+If you feel that some things remain unclear, or could be better explained: just https://github.com/emlyon/codapps/issues[open an issue on Github], it will be a pleasure exchanging with you.
 
 == The end
 //ST: The end
 
 //ST: !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

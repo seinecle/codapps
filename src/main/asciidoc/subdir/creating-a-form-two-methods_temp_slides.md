@@ -194,7 +194,7 @@ image::Previewing-the-Form-you-created!.png[align="center",title="Previewing the
 ==  The end
 
 ==  !
-Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/seinecle/codapps/issues[here] (need a free Github account).
+Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
 Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].

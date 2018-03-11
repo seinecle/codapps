@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Clément Levallois" /><title>CODAPPS: Coding Cheatsheet</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js-3.6.0/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><style>/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Coding Cheatsheet</h2><div class="preamble"><div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
+<section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2><div class="paragraph"><p>General rules:</p></div>
+<div class="ulist"><ul><li><p>The type of the variable (String, Long, Boolean&#8230;&#8203;) start <span class="underline">with</span> a capital letter.</p></li><li><p>variable names start <span class="underline">without</span> a capital letter.</p></li></ul></div>
+<h3><strong>String</strong> variables store <strong>text</strong></h3><div class="listingblock" id="string"><div class="title">Creating a String variable and giving it a value</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> title = <span class="string"><span class="delimiter">&quot;</span><span class="content">Welcome to my app</span><span class="delimiter">&quot;</span></span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Don&#8217;t forget the double quotes <code>" "</code>!</td></tr></table></div>
+<h3><strong>Integer</strong> variables store <strong>round numbers</strong></h3><div class="listingblock" id="integer"><div class="title">Creating an Integer variable and giving it a value</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Integer</span> classSize = <span class="integer">32</span>;
+<span class="type">int</span> anotherClassSize = <span class="integer">25</span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td><code>int</code> is like <code>Integer</code>. It takes less memory but is sometimes less convenient to use.
+Also, note: <span class="underline">no</span> double quote!! Double quotes are just for <code>String</code>.</td></tr></table></div>
+<h3><strong>Float</strong> and <strong>Double</strong> variables store <strong>decimals</strong></h3><div class="paragraph"><p><em> <strong>Double</strong> is like <strong>Float</strong> but can store <strong>decimals with a lot more precision</strong> </em></p></div>
+<div class="listingblock" id="Float-and-Double"><div class="title">Creating Float and Double variables</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> pi = <span class="float">3.14f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="predefined-type">Double</span> piVeryPrecise = <span class="float">3.141592653589793238462643383279502884197169d</span>; <i class="conum" data-value="2"></i><b>(2)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Don&#8217;t forget the <code>f</code> letter at the end of your number. <code>float</code> or <code>Float</code> can be used, <code>float</code> takes less memory than <code>Float</code>.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>Don&#8217;t forget the <code>d</code> letter at the end of your number. <code>double</code> or <code>Double</code> can be used, <code>double</code> takes less memory than <code>Double</code>.</td></tr></table></div>
+<h3><strong>Long</strong> stores <strong>big round numbers</strong></h3><div class="paragraph"><p><em> <strong>Long</strong> is like <strong>Integer</strong> but can store <strong>bigger numbers</strong> </em></p></div>
+<div class="listingblock" id="Long"><div class="title">Creating a Long variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Long</span> millisecondsSinceLastMonth = <span class="integer">364434030430414l</span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Don&#8217;t forget the <code>l</code> letter at the end of your number. <code>long</code> or <code>Long</code> can be used, <code>long</code> takes less memory than Long but can be inconvenient to use.</td></tr></table></div>
+<h3><strong>Boolean</strong> stores <strong>true / false values</strong></h3><div class="paragraph"><p><em> This seems not very useful but actually we use it quite often </em></p></div>
+<div class="listingblock" id="Boolean"><div class="title">Creating a Boolean variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Boolean</span> hasAStudentCard = <span class="predefined-constant">true</span>; <i class="conum" data-value="1"></i><b>(1)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>A classic mistake is to write <code>"true"</code> (with double quotes, which is incorrect). Boolean values are <code>true</code> or <code>false</code> <span class="underline">without double quotes " "</span>.
+<code>boolean</code> can be used instead of <code>Boolean</code>: less memory but also less convenient to use in some cases.</td></tr></table></div>
+<h3><code>Objects</code>: to create and store a variety of things</h3><div class="paragraph"><p><em> A variety of objects exist - use them to create and store things </em></p></div>
+<div class="listingblock" id="object"><div class="title">Creating an Object storing a Date</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Date</span> dateStartOfTheGame;  <i class="conum" data-value="1"></i><b>(1)</b>
+dateStartOfTheGame = <span class="keyword">new</span> <span class="predefined-type">Date</span>(); <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="predefined-type">Date</span> dateEndOfTheGame = <span class="keyword">new</span> <span class="predefined-type">Date</span>();  <i class="conum" data-value="3"></i><b>(3)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>An object <code>dateStartOfTheGame</code> of type <code>Date</code> is <span class="underline">declared</span>. It is <code>null</code> at the moment.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><code>dateStartOfTheGame</code> is <span class="underline">instantiated</span>: an instance of it is created.</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Shortcut: a variable can be <span class="underline">declared</span> and <span class="underline">instantiated</span> in one line of code.</td></tr></table></div>
+<h3>Creating (defining) a method</h3></section>
+<section><div class="listingblock" id="method-creation"><div class="title">Creating a method adding the VAT to a price</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">private</span> <span class="predefined-type">Float</span> addFrenchVAT(<span class="predefined-type">Float</span> priceWithoutVAT) { <i class="conum" data-value="1"></i><b>(1)</b>
+   <span class="predefined-type">Float</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="comment">//the regular rate of the VAT in France is 20% so we multiply the price by 1.20 to find the new price </span><i class="conum" data-value="3"></i><b>(3)</b>
+   priceWithVAT = priceWithoutVAT * <span class="float">1.20</span>; <i class="conum" data-value="2"></i><b>(2)</b>
+   <span class="keyword">return</span> priceWithVAT; <i class="conum" data-value="2"></i><b>(2)</b>
+}<i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>title of the method you create, then the method start at the opening curly brace <code>{</code>.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>the method itself</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>an explanation, not some code! The line starts with <code>//</code> to show this is some explanations for humans like you and me, not some code in our app.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>this closing curly brace signals the end of the definition of the method.</td></tr></table></div>
+<div class="listingblock" id="creating-a-method-without-return"><div class="title">Creating a method which returns nothing</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> price = <span class="float">5.99f</span>;  <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">private</span> <span class="type">void</span> addFrenchVAT() {  <i class="conum" data-value="2"></i><b>(2)</b>
+   price = price * <span class="float">1.20</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+} <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>we have created a variable named <code>price</code></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>now we define a method like the one before in this lesson, except that:</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>the method does one thing: it multiplies the value of the variable <code>price</code> by 1.20</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>this is the end of the method. There is no "return" statement.</td></tr></table></div>
+<div class="paragraph"><p>A class is just a file in your app.
+It contains the variables and the methods that you want.
+It looks like:</p></div>
+<div class="listingblock" id="class-example"><div class="title">A simple example of what a class looks like</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.codapps.myfirstapp</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="namespace">public</span> <span class="namespace">class</span> <span class="namespace">Form1</span> { <i class="conum" data-value="2"></i><b>(2)</b>
+
+<span class="namespace">Integer</span> <span class="namespace">scorePlayer</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+
+  <span class="directive">public</span> <span class="type">void</span> addOneToScore() {
+    scorePlayer = scorePlayer + <span class="integer">1</span>;
+  }
+
+}  <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>a class always starts with the name of the package where it belongs</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>the name of the class (<code>Form1</code>) should have the same name as your file where it is writte (here the file would be Form1.java)</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>this is a variable which can be used anywhere in the class.</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>don&#8217;t forget the closing curly brace of the class!</td></tr></table></div></section>
+<section><div class="listingblock" id="example-instantiation"><div class="title">Instantiating a Form in MyApplication.java</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+    Form1 myForm1 = <span class="keyword">new</span> Form1(); <i class="conum" data-value="1"></i><b>(1)</b>
+    myForm1.show(); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>We instantiate our Form1</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td><strong>And now we can use methods of this Form1</strong>. Here, we use the method <code>show()</code> which has for effect to display the <code>Form</code> on screen.</td></tr></table></div>
+<div class="paragraph"><p>Another common way to instantiate an object is this one:</p></div></section>
+<section><div class="listingblock" id="example-instantiaton-with-static-method"><div class="title">Getting the present time and storing it in a variable</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="directive">public</span> <span class="type">void</span> start() {
+  LocalTime timeNow = LocalTime.now(); <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>This stores the time at the moment when this line of code is executed, in the variable <code>timeNow</code></td></tr></table></div>
+<h3>conditional statements for numbers</h3><div class="listingblock" id="if-example"><div class="title">Different kinds of conditional statements about numbers</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">cheap product!</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros == <span class="float">5.99</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is exactly 5.99</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros != <span class="float">5.99</span>) { <i class="conum" data-value="2"></i><b>(2)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is different from 5.99</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros =&lt; <span class="integer">6</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is under or equal to 6!</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (priceItemInEuros &gt;= <span class="integer">7</span>) {
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the price is above or equal to 6!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<h3>conditional statements about text</h3><div class="paragraph"><p>It would be a <strong>mistake</strong> to write:</p></div>
+<div class="listingblock" id="if-text-example-mistake"><div class="title">Mistake! Don&#8217;t do this!</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName1 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Tristan</span><span class="delimiter">&quot;</span></span>;
+<span class="predefined-type">String</span> playerName2 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Tristan</span><span class="delimiter">&quot;</span></span>;
+
+<span class="keyword">if</span> (playerName1 == playerName2) { <i class="conum" data-value="1"></i><b>(1)</b>
+  messageLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the two players have the same name!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>Using <code>==</code> to compare two Strings is incorrect.</td></tr></table></div>
+<div class="listingblock" id="if-text-example"><div class="title">Different kinds of conditional statements about text</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">String</span> playerName1 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Tristan</span><span class="delimiter">&quot;</span></span>;
+<span class="predefined-type">String</span> playerName2 = <span class="string"><span class="delimiter">&quot;</span><span class="content">Touni</span><span class="delimiter">&quot;</span></span>;
+
+<span class="keyword">if</span> (playerName1.equals(playerName2)) {
+  messageLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the two players have the same name!</span><span class="delimiter">&quot;</span></span>);
+}
+<span class="keyword">if</span> (!playerName1.equals(playerName2)) { <i class="conum" data-value="1"></i><b>(1)</b>
+  messageLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">the two players have different names!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>note the <code>!</code> in front</td></tr></table></div>
+<h3>conditional statements about several items</h3><div class="listingblock" id="several-and-conditionals-example"><div class="title">A statement with two conditions which need both to be true</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span> &amp; priceItem &gt; <span class="integer">2</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">relatively cheap product!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the <code>&amp;</code> means "and". The two conditions: <code>priceItemInEuros &lt; 6</code> <strong>and</strong> <code>priceItem &gt; 2</code> both need to be true for the statement <code>productLabel.setText("relatively cheap product!");</code> to be executed.</td></tr></table></div>
+<div class="listingblock" id="several-and-conditionals-example"><div class="title">A statement with two conditions where just either one of the two needs to be true</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">Float</span> priceItemInEuros;
+priceItemInEuros = <span class="float">5.99f</span>;
+<span class="predefined-type">Label</span> productLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+<span class="keyword">if</span> (priceItemInEuros &lt; <span class="integer">6</span> | priceItem &gt; <span class="integer">2</span>) { <i class="conum" data-value="1"></i><b>(1)</b>
+  productLabel.setText(<span class="string"><span class="delimiter">&quot;</span><span class="content">relatively cheap product!</span><span class="delimiter">&quot;</span></span>);
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the <code>|</code> means "or". Just one of the two conditions: <code>priceItemInEuros &lt; 6</code> <strong>or</strong> <code>priceItem &gt; 2</code> needs to be true for the statement <code>productLabel.setText("relatively cheap product!");</code> to be executed.</td></tr></table></div>
+<div class="listingblock" id="loop"><div class="title">Writing a loop</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">100</span>; i = i+<span class="integer">1</span>){
+  <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">I looped </span><span class="delimiter">&quot;</span></span> + i) +<span class="string"><span class="delimiter">&quot;</span><span class="content"> times.</span><span class="delimiter">&quot;</span></span>;
+}</code></pre></div></div></section>
+<section><div class="listingblock" id="using-loop-with-if"><div class="title">A loop with several ifs inside</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">100</span>; i = i+<span class="integer">1</span>){
+  <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">I looped </span><span class="delimiter">&quot;</span></span> + i + <span class="string"><span class="delimiter">&quot;</span><span class="content"> times.</span><span class="delimiter">&quot;</span></span>);
+  <span class="keyword">if</span> (i == <span class="integer">0</span>) {
+    <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">We just started the loops. This is going to be a long journey.</span><span class="delimiter">&quot;</span></span>);
+  }
+  <span class="keyword">if</span> (i == <span class="integer">50</span>) {
+    <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">Half way already!</span><span class="delimiter">&quot;</span></span>);
+  }
+  <span class="keyword">if</span> (i == <span class="integer">99</span>) {
+    <span class="predefined-type">System</span>.out.println(<span class="string"><span class="delimiter">&quot;</span><span class="content">This was the last loop. Bye!</span><span class="delimiter">&quot;</span></span>);
+  }
+}</code></pre></div></div>
+<div class="listingblock" id="lists"><div class="title">Creating a list and adding objects to it</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="predefined-type">ArrayList</span>&lt;Balloon&gt; balloons = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>();
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i&lt;<span class="integer">20000</span>;i = i+<span class="integer">1</span>){
+  Balloon myBalloon = <span class="keyword">new</span> Balloon();
+  balloons.add(myBalloon);
+}</code></pre></div></div></section>
+<section><div class="listingblock" id="using-ArrayLists"><div class="title">Looping through a list to show the names of all players</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">for</span> (<span class="predefined-type">String</span> player: playerNames) { <i class="conum" data-value="1"></i><b>(1)</b>
+  <span class="predefined-type">Label</span> myLabel = <span class="keyword">new</span> <span class="predefined-type">Label</span>();
+  myLabel.setText(player);
+  myForm.add(myLabel)
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>here we assume that we had created before an ArrayList of player names.
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11592657;
+        var sc_invisible = 1;
+        var sc_security = "11592657";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="site stats"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="//c.statcounter.com/11592657/0/11592657/1/" alt="site
+    stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide --></td></tr></table></div></section></div></div><script src="reveal.js-3.6.0/lib/js/head.min.js"></script><script src="reveal.js-3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'white',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 10.0,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>
