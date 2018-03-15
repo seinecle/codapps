@@ -101,12 +101,12 @@ The three lines inside the method itself are pretty simple:
 ----
 private Float addFrenchVAT(Float priceWithoutVAT) {
    Float priceWithVAT; // <1>
-   priceWithVAT = priceWithoutVAT * 1.20; // <2>
+   priceWithVAT = priceWithoutVAT * 1.20f; // <2>
    return priceWithVAT; // <3>
 }// <4>
 ----
 <1> create a Float variable that will contain the price with VAT
-<2> assign the value `priceWithoutVAT * 1.20` to it
+<2> assign the value `priceWithoutVAT * 1.20f` to it (the `f` means this number is a `float` - a decimal)
 //ST: !
 <3> "Return" means that the method is finished and gives back a result, here: a Float variable which is the price with VAT.
 <4> Don't forget the closing curly brace `}` when finishing the definition of a method.
@@ -183,7 +183,7 @@ Let's define such a method:
 ----
 Float price = 5.99f;  // <1>
 private void addFrenchVAT() {  // <2>
-   price = price * 1.20; // <3>
+   price = price * 1.20f; // <3>
 } // <4>
 ----
 <1> we have created a variable named `price`
@@ -193,7 +193,7 @@ private void addFrenchVAT() {  // <2>
 - it has no parameter: there is nothing in the parenthesis `(  )`
 
 //ST: !
-<3> the method does one thing: it multiplies the value of the variable `price` by 1.20
+<3> the method does one thing: it multiplies the value of the variable `price` by 1.20 (don't forget the `f` in `1.20f` to say it's a `float`!)
 <4> this is the end of the method. There is no "return" statement.
 
 //ST: !

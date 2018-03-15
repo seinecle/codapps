@@ -23,158 +23,26 @@ image::EMLyon_logo_corp.png[width="242" align="center"]
 Before we start, it is good to have an overview of where we stand so far:
 
 //ST: !
-==== a. The main screen is created and we have a method in it
+==== a. The screen is created and we have a method in it
 
 //ST: !
-1. We created a class called `Form1`.
-2. In it, we have created some variables and a special method called `Form1`
-
-[TIP]
-====
-yes, the method has the same name as the class itself, that's confusing.
-====
+1. We created a class called `Form1`, this is the screen of the app.
+2. In it, we have created a special method called `Form1` (same name as the class). This method will execute when the screen is instantiated
+3. In this method, we have created variables for our images.
 
 //ST: !
-[start=3]
-3. In the method, we add Containers, each with their different layout.
-4. In the container at the top of the screen, we add the image of the cookie, a Label showing the score and a Label showing the cookies per second.
+[start=4]
+4. We have also created containers and given them a layout. Our screen is organized in three regions.
+5. We have created Labels, ScaleImageButton and MultiButtons and added them to the screen.
+6. The interface is ready, it should look like:
 
 //ST: !
-[start=5]
-3. In the method, we add Containers, each with their different layout.
-4. In the container at the top of the screen, we add the image of the cookie, a Label showing the score and a Label showing the cookies per second.
-
-
+image::https://docs.google.com/drawings/d/e/2PACX-1vTrCTrKm1WwYztiahJ6Wxksc4n05uQhHJZAogLVCZ2OUBcb68PN9fPJszJmp74jzOGFtBb5d3N_QsJF/pub?w=757&h=615[align="center",title="How your app should look like so far"]
 
 //ST: !
-=== b. The main screen has a layout and visual elements
+Now we need that the app "does something" when the player clicks on different parts of the screen.
 
 
-
-//ST: !
-image::cookie-brand.jpg[align="center",title="The cookie clicker"]
-
-//ST: !
-We are going to create an app which replicates a game called http://orteil.dashnet.org/cookieclicker/["The Cookie Clicker"].
-
-//ST: !
-It is an addictive game where you try to produce as many cookies as you can. For this, you can:
-
-1. mouse click on the cookie itself.
-2. spend cookies you produced to buy devices which will increase your cookie production.
-
-The more cookies you produce, the more options become available to speed up your cookie production.
-
-//ST: !
-==== b. Why is it so addictive?
-
-//ST: !
-This game offers periodic gratifications (sounds, pics, new game features) which reward the player for its continuous engagement.
-
-//ST: !
-This pushes the player to continue playing, to receive new gratifications.
-This is a well established mechanism in psychology and game design:
-
-//ST: !
-video::tWtvrPTbQ_c[youtube, width=100%, height=400px]
-
-//ST: !
-Players can easily play an hour (on and off) on it, and some seem to have played weeks or months (check the number of cookies):
-
-//ST: !
-video::sIsA9U4EXrA[youtube,width=100%, height=400px]
-
-//ST: !
-==== c. Why replicating this game as a mobile app?
-
-//ST: !
-Mobile app development is a never ending experience.
-When you will continue coding lessons after this introductory course, you will realize that there is so much to learn:
-
-//ST: !
-1. how can I make my mobile app share something to Facebook?
-2. how can I display maps in my app?
-3. how can my app send push notifications?
-4. how can I animate the app / make it react to the user's actions?
-
-Etc...
-
-//ST: !
-It is hard to say which of these features is more important than the other.
-
-*So in this course, we replicate a game, because we will learn something essential from this list, AND we will have some fun.*
-
-//ST: !
-Choosing a game will put the focus on the feature number 4. in the list above:
-
- 4. How can I animate the app / make it react to the user's actions?
-
-//ST: !
-Let's see the essential steps we are going to follow:
-
-== 2. The steps in making the Cookie clicker app
-//ST: 2. The steps in making the Cookie clicker app
-
-//ST: !
-=== a. Creating the interface (the screen)
-
-//ST: !
-The end result should look like this:
-
-//ST: !
-image::https://docs.google.com/drawings/d/e/2PACX-1vSpaX0J6mxUin41q_xdsOowZVBrCor3OWVZK3RRWBbhOH9su5SX-IOddZe5qwknDkJV51T1ZHPWh5Jn/pub?w=1440&h=1080[align="center",title="The design of the cookie clicker mobile app"]
-
-//ST: !
-We will *not* use the GUI Builder to create this interface.
-
-Indeed, now that you covered the basics of coding, we will be able to create the Form, the Labels, Buttons... directly with some lines of code, and the layout ("how to place things where I want?) will be also managed by writing code.
-
-//ST: !
-We could have used the GUIBuilder for this, but the process of creating containers and placing things inside them (Buttons, Labels, ScaledLabels...) is too slow and annoying for an app of this complexity.
-
-//ST: !
-=== b. Coding the "logic" of the game.
-
-//ST: !
-- Clicking on the cookie should increase the score!
-- Whe should be able to buy grandmas, farms, etc... with cookies!
-- the score should take into account everything we have (grandmas bake more cookies!), and every expense the player make (buying a grandma should decrease the score).
-
-//ST: !
-We will define these differents functions of the game with some lines of code.
-
-//ST: !
-=== c. Polishing the design
-
-//ST: !
-Even with all the buttons and pictures on screen, working correctly, we'll need to make the app more beautiful and cleanly designed.
-
-//ST: !
-For this, you will refer to the lesson on "styling" in Module 3 (the talents of this lecturer are quite limited in terms of designing a beautiful interface, you'll surely do better than him).
-
-== 3. Let' start
-//ST: 3. Let' start
-
-//ST: !
-Note: you must have worked and understood the content of Module 5 about coding before you can follow the next lessons.
-
-//ST: !
-A last word, as we start: creating an app takes some time.
-
-[INFO]
-====
-Companies typically invest in a *team* of 2 to 5 developers working several months to create an app.
-
-Not because it is complicated, but because there are so many features to create in an app.
-====
-
-//ST: !
-So in comparison to the apps you download and use on your phones, our cookie clicker app will be much simpler (yet impressive!)
-
--> it doesn't mean we can't do better, just that with more time, we could have achieved much more :-)
-
-//ST: !
-Let's dive in with the next lesson of this Module!
 
 == The end
 //ST: The end
