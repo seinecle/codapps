@@ -151,6 +151,7 @@
                         <!-- Shared configurations across `executions`. Can be overwritten if needed by an executions -->
                         <configuration>
                             <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
+                            <sourceDirectory>${source.directory}</sourceDirectory>
 
                             <requires>
                                 <require>asciidoctor-diagram</require>
@@ -182,7 +183,6 @@
                                 </goals>
                                 <configuration>
                                     <outputDirectory>${basedir}/docs/generated-slides</outputDirectory>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <backend>revealjs</backend>
                                     <templateDir>${basedir}/docs/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -223,7 +223,6 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-pdf</outputDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -253,7 +252,6 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDocumentName>${doc.to.process.full.path}</sourceDocumentName>
                                     <outputDirectory>${basedir}/docs/generated-html</outputDirectory>
                                     <backend>html</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
@@ -433,7 +431,6 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <!--<sourceDirectory></sourceDirectory>-->
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>
                                     <doctype>book</doctype>
@@ -467,8 +464,8 @@
                                     <goal>process-asciidoc</goal>
                                 </goals>
                                 <configuration>
-                                    <sourceDirectory>${basedir}/src/main/asciidoc/</sourceDirectory>
                                     <sourceDocumentName>${collated-adocs}</sourceDocumentName>
+                                    <sourceDirectory>${source.directory}</sourceDirectory> 
                                     <outputDirectory>${basedir}/docs/generated-book</outputDirectory>
                                     <backend>pdf</backend>
                                     <sourceHighlighter>coderay</sourceHighlighter>

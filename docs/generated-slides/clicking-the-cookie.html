@@ -89,58 +89,58 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .head .head{color:#f4f}</style><link href="reveal.js-3.6.0/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js-3.6.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section class="title"><h1>CODAPPS</h1><h2>Making the cookie click</h2><div class="preamble"><div class="imageblock stretch" style="text-align: center"><img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242" /></div></div><p class="author"><small>Clément Levallois</small></p></section>
 <section id="_escape_or_o_to_see_all_sides_f11_for_full_screen_s_for_speaker_notes"><h2>'Escape' or 'o' to see all sides, F11 for full screen, 's' for speaker notes</h2></section>
 <section id="_1_recap_of_the_app_so_far"><h2>1. Recap of the app so far</h2><div class="paragraph"><p>Before we start, it is good to have an overview of where we stand so far:</p></div></section>
-<section><h3>a. The main screen is created and we have a method in it</h3></section>
-<section><div class="olist arabic"><ol class="arabic"><li><p>We created a class called <code>Form1</code>.</p></li><li><p>In it, we have created some variables and a special method called <code>Form1</code></p></li></ol></div>
-<div class="admonitionblock tip"><table><tr><td class="icon"><i class="fa fa-lightbulb-o"></i></td><td class="content"><div class="paragraph"><p>yes, the method has the same name as the class itself, that&#8217;s confusing.</p></div></td></tr></table></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="3"><li><p>In the method, we add Containers, each with their different layout.</p></li><li><p>In the container at the top of the screen, we add the image of the cookie, a Label showing the score and a Label showing the cookies per second.</p></li></ol></div></section>
-<section><div class="olist arabic"><ol class="arabic" start="5"><li><p>In the method, we add Containers, each with their different layout.</p></li><li><p>In the container at the top of the screen, we add the image of the cookie, a Label showing the score and a Label showing the cookies per second.</p></li></ol></div></section>
-<section><section></section><section id="_b_the_main_screen_has_a_layout_and_visual_elements"><h2>b. The main screen has a layout and visual elements</h2></section></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/cookie-brand.jpg" alt="cookie brand" height="100%" /></div><div class="title">Figure 1. The cookie clicker</div></section>
-<section><div class="paragraph"><p>We are going to create an app which replicates a game called <a href="http://orteil.dashnet.org/cookieclicker/">"The Cookie Clicker"</a>.</p></div></section>
-<section><div class="paragraph"><p>It is an addictive game where you try to produce as many cookies as you can. For this, you can:</p></div>
-<div class="olist arabic"><ol class="arabic"><li><p>mouse click on the cookie itself.</p></li><li><p>spend cookies you produced to buy devices which will increase your cookie production.</p></li></ol></div>
-<div class="paragraph"><p>The more cookies you produce, the more options become available to speed up your cookie production.</p></div></section>
-<section><h3>b. Why is it so addictive?</h3></section>
-<section><div class="paragraph"><p>This game offers periodic gratifications (sounds, pics, new game features) which reward the player for its continuous engagement.</p></div></section>
-<section><div class="paragraph"><p>This pushes the player to continue playing, to receive new gratifications.
-This is a well established mechanism in psychology and game design:</p></div></section>
-<section><div class="videoblock"><iframe width="100%" height="400px" src="https://www.youtube.com/embed/tWtvrPTbQ_c?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
-<section><div class="paragraph"><p>Players can easily play an hour (on and off) on it, and some seem to have played weeks or months (check the number of cookies):</p></div></section>
-<section><div class="videoblock"><iframe width="100%" height="400px" src="https://www.youtube.com/embed/sIsA9U4EXrA?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
-<section><h3>c. Why replicating this game as a mobile app?</h3></section>
-<section><div class="paragraph"><p>Mobile app development is a never ending experience.
-When you will continue coding lessons after this introductory course, you will realize that there is so much to learn:</p></div></section>
-<section><div class="olist arabic"><ol class="arabic"><li><p>how can I make my mobile app share something to Facebook?</p></li><li><p>how can I display maps in my app?</p></li><li><p>how can my app send push notifications?</p></li><li><p>how can I animate the app / make it react to the user&#8217;s actions?</p></li></ol></div>
-<div class="paragraph"><p>Etc&#8230;&#8203;</p></div></section>
-<section><div class="paragraph"><p>It is hard to say which of these features is more important than the other.</p></div>
-<div class="paragraph"><p><strong>So in this course, we replicate a game, because we will learn something essential from this list, AND we will have some fun.</strong></p></div></section>
-<section><div class="paragraph"><p>Choosing a game will put the focus on the feature number 4. in the list above:</p></div>
-<div class="olist arabic"><ol class="arabic"><li><p>How can I animate the app / make it react to the user&#8217;s actions?</p></li></ol></div></section>
-<section><div class="paragraph"><p>Let&#8217;s see the essential steps we are going to follow:</p></div></section>
-<section id="_2_the_steps_in_making_the_cookie_clicker_app"><h2>2. The steps in making the Cookie clicker app</h2></section>
-<section><section></section><section id="_a_creating_the_interface_the_screen"><h2>a. Creating the interface (the screen)</h2></section></section>
-<section><div class="paragraph"><p>The end result should look like this:</p></div></section>
-<section><div class="imageblock stretch" style="text-align: center"><img src="images/The-design-of-the-cookie-clicker-mobile-app.png" alt="The design of the cookie clicker mobile app" height="100%" /></div><div class="title">Figure 2. The design of the cookie clicker mobile app</div></section>
-<section><div class="paragraph"><p>We will <strong>not</strong> use the GUI Builder to create this interface.</p></div>
-<div class="paragraph"><p>Indeed, now that you covered the basics of coding, we will be able to create the Form, the Labels, Buttons&#8230;&#8203; directly with some lines of code, and the layout ("how to place things where I want?) will be also managed by writing code.</p></div></section>
-<section><div class="paragraph"><p>We could have used the GUIBuilder for this, but the process of creating containers and placing things inside them (Buttons, Labels, ScaledLabels&#8230;&#8203;) is too slow and annoying for an app of this complexity.</p></div></section>
-<section><section></section><section id="_b_coding_the_logic_of_the_game"><h2>b. Coding the "logic" of the game.</h2></section></section>
-<section><div class="ulist"><ul><li><p>Clicking on the cookie should increase the score!</p></li><li><p>Whe should be able to buy grandmas, farms, etc&#8230;&#8203; with cookies!</p></li><li><p>the score should take into account everything we have (grandmas bake more cookies!), and every expense the player make (buying a grandma should decrease the score).</p></li></ul></div></section>
-<section><div class="paragraph"><p>We will define these differents functions of the game with some lines of code.</p></div></section>
-<section><section></section><section id="_c_polishing_the_design"><h2>c. Polishing the design</h2></section></section>
-<section><div class="paragraph"><p>Even with all the buttons and pictures on screen, working correctly, we&#8217;ll need to make the app more beautiful and cleanly designed.</p></div></section>
-<section><div class="paragraph"><p>For this, you will refer to the lesson on "styling" in Module 3 (the talents of this lecturer are quite limited in terms of designing a beautiful interface, you&#8217;ll surely do better than him).</p></div></section>
-<section id="_3_let_start"><h2>3. Let' start</h2></section>
-<section><div class="paragraph"><p>Note: you must have worked and understood the content of Module 5 about coding before you can follow the next lessons.</p></div></section>
-<section><div class="paragraph"><p>A last word, as we start: creating an app takes some time.</p></div>
-<div class="exampleblock"><div class="content"><div class="paragraph"><p>Companies typically invest in a <strong>team</strong> of 2 to 5 developers working several months to create an app.</p></div>
-<div class="paragraph"><p>Not because it is complicated, but because there are so many features to create in an app.</p></div></div></div></section>
-<section><div class="paragraph"><p>So in comparison to the apps you download and use on your phones, our cookie clicker app will be much simpler (yet impressive!)</p></div>
-<div class="paragraph"><p>&#8594; it doesn&#8217;t mean we can&#8217;t do better, just that with more time, we could have achieved much more :-)</p></div></section>
-<section><div class="paragraph"><p>Let&#8217;s dive in with the next lesson of this Module!</p></div></section>
+<section><div class="olist arabic"><ol class="arabic"><li><p>We created a class called <code>Form1</code>, this is the screen of the app.</p></li><li><p>In it, we have created a special method called <code>Form1</code> (same name as the class). This method will execute when the screen is instantiated</p></li><li><p>In this method, we have created variables for our images.</p></li></ol></div></section>
+<section><div class="olist arabic"><ol class="arabic" start="4"><li><p>We have also created containers and given them a layout. Our screen is organized in three regions.</p></li><li><p>We have created Labels, ScaleImageButton and MultiButtons and added them to the screen.</p></li><li><p>The interface is ready, it should look like:</p></li></ol></div></section>
+<section><div class="imageblock stretch" style="text-align: center"><img src="images/How-your-app-should-look-like-so-far.png" alt="How your app should look like so far" height="100%" /></div><div class="title">Figure 1. How your app should look like so far</div></section>
+<section><div class="paragraph"><p>If you are lost or unsure about the code you have written so far, <a href="../resources/form-with-layout-and-components.txt">here is a file with the complete code</a>. You should of course place it in a file named <code>Form1</code> (to create this file, <a href="https://emlyon.github.io/codapps/generated-html/layout-design.html#_2_creating_the_main_screen_of_the_app">follow these instructions</a>).</p></div></section>
+<section><div class="paragraph"><p>Now we need that the app "do something" when the player clicks on different parts of the screen. This is what we are going to write now.</p></div></section>
+<section id="_2_increasing_the_score_when_the_cookie_is_clicked"><h2>2. Increasing the score when the cookie is clicked</h2></section>
+<section><div class="paragraph"><p>First, we need a variable to store the value of the score. We will put this variable near the top of our file:</p></div></section>
+<section><div class="listingblock" id="score-variable"><div class="title">Adding a variable to keep track of the score</div><div class="content"><pre class="CodeRay"><code class="java language-java"><span class="keyword">package</span> <span class="namespace">net.clementlevallois.net.cookieclicker.ultimate</span>;
+
+<span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form {
+
+  Resources theme = Resources.getGlobalResources();
+  <span class="type">float</span> score = <span class="float">0f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+
+}</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>we create a new variable. The <code>f</code> after the zero is to indicate the number is a decimal, <a href="https://emlyon.github.io/codapps/generated-html/variables-and-objects.html#_c_strong_float_strong_strong_double_strong_and_strong_long_strong_variables_to_store_decimal_numbers_and_big_numbers">see this lesson</a>.</td></tr></table></div></section>
+<section><div class="paragraph"><p>Then we add lines of code <strong>in the constructor method <code>public Form1 () {</code> where we have written everything so far</strong>:</p></div></section>
+<section><div class="listingblock" id="coockie-listener"><div class="title">Adding an action listener to the cookie ScaleImageButton</div><div class="content"><pre class="CodeRay"><code class="java language-java">centerRegion.add(autoclickButton); <i class="conum" data-value="1"></i><b>(1)</b>
+centerRegion.add(grandmaButton); <i class="conum" data-value="1"></i><b>(1)</b>
+centerRegion.add(farmButton); <i class="conum" data-value="1"></i><b>(1)</b>
+
+cookieCentral.addActionListener(  <i class="conum" data-value="2"></i><b>(2)</b>
+                (event) -&gt; { }  <i class="conum" data-value="3"></i><b>(3)</b>
+        ); <i class="conum" data-value="4"></i><b>(4)</b></code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>The last lines we have written in the previous lesson.</td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>we use the method <code>addActionListener</code> for the variable <code>cookieCentral</code> (which is the picture of our cookie).</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>Anything written between the curly braces <code>{ }</code> will be executed when the user touches the cookie on sreen!</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>this parenthesis closes the <code>addActionListener</code> method, and the <code>;</code> ends the line.</td></tr></table></div></section>
+<section><div class="paragraph"><p>The lines of code above are typically <strong>hard to understand the first time</strong>, because there are brackets, curly braces and semicolons to put at the right place.</p></div>
+<div class="paragraph"><p>You don&#8217;t need to memorize everything but should still take some time to understand the logic, instead of copying this code without thoughts.</p></div></section>
+<section><div class="paragraph"><p>These lines of code <strong>do nothing yet</strong>, because we haven&#8217;t written anything between the curly braces in the line <code>(event) &#8594; { }</code>.</p></div>
+<div class="paragraph"><p>Let&#8217;s had lines of code which will increase the score by one (+ 1) when the player hits the cookie:</p></div></section>
+<section><div class="paragraph"><p>The lines will be:</p></div>
+<div class="paragraph"><p><code>score = score + 1;</code></p></div>
+<div class="paragraph"><p><code>scoreLabel.setText(score + " cookies");</code></p></div>
+<div class="paragraph"><p>And they should be placed between the curly braces. What they do is simple:</p></div></section>
+<section><div class="paragraph"><p><code>score = score + 1;</code></p></div>
+<div class="paragraph"><p>&#8594; the variable score gets incremented by one</p></div></section>
+<section><div class="paragraph"><p><code>scoreLabel.setText(score + " cookies");</code></p></div>
+<div class="paragraph"><p>&#8594; the text of the Label showing the score on screen gets updated and will show the score followed by the word "cookies".</p></div>
+<div class="paragraph"><p>Let&#8217;s place these 2 lines where they should be:</p></div></section>
+<section><div class="listingblock" id="cookie-listener"><div class="title">Adding an action listener to the cookie ScaleImageButton</div><div class="content"><pre class="CodeRay"><code class="java language-java">cookieCentral.addActionListener(
+                (event) -&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+                  score = score + <span class="integer">1</span>;
+                  scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>);
+                } <i class="conum" data-value="1"></i><b>(1)</b>
+        );</code></pre></div></div>
+<div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>don&#8217;t forget the opening and closing curly braces!</td></tr></table></div></section>
+<section><div class="paragraph"><p>Now, when the user will touch / press the picture of the cookie, the score will increase by one and this new score will be visible on screen:</p></div></section>
+<section><div class="videoblock"><iframe width="100%" height="400px" src="https://www.youtube.com/embed/pCo-wKIDc0M?rel=0" frameborder="0" allowfullscreen=""></iframe></div></section>
+<section><div class="paragraph"><p>Congratulations, your app has started coming alive! 🎉</p></div>
+<div class="paragraph"><p>In the next lesson, we will learn how to make the other buttons of the app "do something" when the player clicks on them.</p></div></section>
 <section id="_the_end"><h2>The end</h2></section>
 <section><div class="paragraph"><p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/emlyon/codapps/issues">here</a> (need a free Github account).</p></div></section>
-<section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p></div></section>
+<section><div class="paragraph"><p>Find references for this lesson, and other lessons, <a href="https://emlyon.github.io/codapps/">here</a>.</p></div></section>
 <section><div class="paragraph"><p>Licence: Creative Commons, <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Attribution 4.0 International</a> (CC BY 4.0).
 You are free to:</p></div>
 <div class="ulist"><ul><li><p>copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li></ul></div>

@@ -21,11 +21,8 @@ public class Form1 extends com.codename1.ui.Form {
         theme = Resources.getGlobalResources();
 
         Image grandmaPic = theme.getImage("grandma_50x50.png");
-        Image grandmaBoostIcon = theme.getImage("oven_30x35.png");
         Image farmPic = theme.getImage("farm_50x37.png");
-        Image farmBoostIcon = theme.getImage("farm_boost_30x23.png");
         Image clickPic = theme.getImage("click_50x64.png");
-        Image clickBoostIcon = theme.getImage("click_30x30.png");
         Image cookieCentraPic = theme.getImage("cookie_200x200.png");
         Image cookiePressedPic = theme.getImage("cookie_200x200_star.png");
 

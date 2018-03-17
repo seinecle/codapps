@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="author" content="Clément Levallois">
-<title>CODAPPS: Testing and releasing your app for Android</title>
+<title>CODAPPS: Animating the score and the count of cookies produced per second</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -520,26 +520,23 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article">
 <div id="header">
-<h1>CODAPPS: Testing and releasing your app for Android</h1>
+<h1>CODAPPS: Animating the score and the count of cookies produced per second</h1>
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
-<span id="revdate">2018-01-22</span>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">last modified</span>
+<br><span id="revremark">2018-03-17</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_1_preliminary_setup">1. Preliminary setup</a>
-<ul class="sectlevel3">
-<li><a href="#_b_create_a_developer_account_on_google_s_play_store_25">b. Create A developer account on Google&#8217;s Play Store (25$)</a></li>
-<li><a href="#_c_set_up_your_phone_to_accept_apps_from_unknown_sources">c. Set up your phone to accept apps from unknown sources</a></li>
-<li><a href="#_e_connect_netbeans_to_your_codename_one_account">e. Connect NetBeans to your Codename One account</a></li>
-<li><a href="#_f_generate_a_google_certificate_for_the_app">f. Generate a Google certificate for the app</a></li>
-</ul>
-</li>
-<li><a href="#_2_launching_the_build">2. Launching the build</a></li>
-<li><a href="#_3_testing_the_app_on_an_android_phone">3. Testing the app on an Android Phone</a></li>
-<li><a href="#_4_publishing_your_app_on_google_s_play_store">4. Publishing your app on Google&#8217;s Play Store</a></li>
+<li><a href="#_1_the_starting_point">1. The starting point</a></li>
+<li><a href="#_2_introducing_the_method_code_animate_code">2. Introducing the method <code>animate()</code></a></li>
+<li><a href="#_3_what_should_be_animated_the_computation_of_the_score_and_its_display">3. What should be animated? The computation of the score and its display</a></li>
+<li><a href="#_4_what_should_be_animated_the_computation_of_number_of_cookies_produced_per_second">4. What should be animated? The computation of number of cookies produced per second</a></li>
+<li><a href="#_4_fine_tuning_slowing_down_the_animation">4. Fine-tuning: slowing down the animation</a></li>
+<li><a href="#_5_congratulations">5. Congratulations!</a></li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -547,9 +544,6 @@ table.CodeRay td.code>pre{padding:0}
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>last modified: 2018-03-03</p>
-</div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242">
@@ -561,8 +555,88 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_1_preliminary_setup">1. Preliminary setup</h2>
+<h2 id="_1_the_starting_point">1. The starting point</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The files of the app so far:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../resources/form-with-layout-and-components-and-actionevents.txt">the code of Form1.java</a></p>
+</li>
+<li>
+<p><a href="../resources/class-parameters.txt">the code of Parameters.java</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>What we have done so far is simple: a player touching the cookie to add one to the score, or touching buttons to buy tools (auto click, grandma, farm).</p>
+</div>
+<div class="paragraph">
+<p>But we want an app which is more dynamic: the screen should change "by itself" when time is passing.</p>
+</div>
+<div class="paragraph">
+<p>For example, when the player buys a grandma, the grandma produces one new cookie per second, automatically.</p>
+</div>
+<div class="paragraph">
+<p><strong>The score should update every second to show new cookie added, without the player clicking anywhere of course.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_introducing_the_method_code_animate_code">2. Introducing the method <code>animate()</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>How should this automatic update happen? <strong>Forms have a special method</strong> we can use for this, called <code>animate()</code>;</p>
+</div>
+<div class="paragraph">
+<p>This function is triggered every millisecond.
+This means that anything we write in this method will happen, every millisecond.</p>
+</div>
+<div class="paragraph">
+<p>So if we write in it "compute the score and refresh the score on screen", it will happen even if the player did not click on anything.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s what we need! Let&#8217;s do this:</p>
+</div>
+<div id="animate-method" class="listingblock">
+<div class="title">Adding the "animate()" method</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Override</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">public</span> <span class="type">boolean</span> animate() {
+    <span class="comment">// write anything you want here</span>
+    <span class="keyword">return</span> <span class="predefined-constant">true</span>;  <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This strange <code>@Override</code> annotation means that our custom <code>animate()</code> method will replace the original <code>animate()</code> method of basic forms.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the method will execute every millisecond <strong>if it returns <code>true</code> value</strong>. If it returns false, nothing is updated.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Where should this method be written?</strong></p>
+</div>
+<div class="paragraph">
+<p>Still in our class <code>Form1</code>, write before the curly brace <code>}</code> closing the class:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/animate-method-1.png" alt="animate method 1">
+</div>
+<div class="title">Figure 1. The animate method should be written in the class Form1</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -571,376 +645,312 @@ table.CodeRay td.code>pre{padding:0}
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Before doing this lesson you must have completed the first lesson of this module, because it includes essential steps.</p>
+<p>Please note the last curly brace in line 138! This is the one closing the class, after the method.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Testing and releasing mobile apps for Android phones and tablets is fairly simple, and made even simpler by Codename One, the tool we use in this course.</p>
+<p>For this method to be executed every millisecond, we need one last thing.</p>
 </div>
 <div class="paragraph">
-<p>Here is the list of what you&#8217;ll need:</p>
+<p>&#8594; we must add a line of code at the beginning of the constructor (the method <code>Form1</code> where we have written most of our code so far):</p>
 </div>
-<div class="sect3">
-<h4 id="_b_create_a_developer_account_on_google_s_play_store_25">b. Create A developer account on Google&#8217;s Play Store (25$)</h4>
-<div class="paragraph">
-<p>You don&#8217;t need this step if you just want to test your app on your own Android phone.</p>
+<div id="registrating-animation" class="listingblock">
+<div class="title">A line of code to "activate" the <code>animate()</code> method</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> Form1() { <i class="conum" data-value="1"></i><b>(1)</b>
+    registerAnimated(<span class="local-variable">this</span>);  <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
-<div class="admonitionblock note">
+</div>
+<div class="colist arabic">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>em <strong>lyon business school</strong> students: we provide you with a free access to a Google Play Store account.</p>
-</div>
-<div class="paragraph">
-<p>You will receive the invitation by email. You can ignore this and move on to the next part of this lesson.</p>
-</div>
-</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Don&#8217;t write this again, this is is just to show you where the code is</td>
 </tr>
-</table>
-</div>
-<div class="paragraph">
-<p>To release your app on the Play Store, you need to create an account.</p>
-</div>
-<div class="paragraph">
-<p>Visit the webpage to sign up for a Google Play developer account: <a href="https://play.google.com/apps/publish/signup">https://play.google.com/apps/publish/signup</a>.</p>
-</div>
-<div class="paragraph">
-<p>A one-time <strong>25$ fee for a lifetime membership</strong> to the Google Developer Program is requested.</p>
-</div>
-<div class="paragraph">
-<p>With this fee you can distribute an unlimited number of apps, without limit of time.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_c_set_up_your_phone_to_accept_apps_from_unknown_sources">c. Set up your phone to accept apps from unknown sources</h4>
-<div class="paragraph">
-<p>This step is necessary only for testing the app on your phone.
-For security reasons, your phone accepts to install only apps coming from the Google Play Store.</p>
-</div>
-<div class="paragraph">
-<p><strong>You must unlock this feature so that you can test your own app.</strong></p>
-</div>
-<div class="paragraph">
-<p>The latest versions of Android will invite you to unlock when you are installing your app, but on older phones you need to do it beforehand:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>go to the parameters of your phone</p>
-</li>
-<li>
-<p>in the security settings, switch on the "install from unknown sources".</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This website provides an illustration:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.softwarert.com/install-apps-unknown-sources-android-phones/">https://www.softwarert.com/install-apps-unknown-sources-android-phones/</a></p>
-</div>
-<div class="paragraph">
-<p>(<em>Depending on your phone and version of Android, your screens will look slightly different</em>)</p>
-</div>
-<div class="admonitionblock warning">
-<table>
 <tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Make sure to switch off this parameter after you installed your app.</p>
-</div>
-</td>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><strong>The line of code you should add.</strong></td>
 </tr>
 </table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_e_connect_netbeans_to_your_codename_one_account">e. Connect NetBeans to your Codename One account</h4>
-<div class="paragraph">
-<p>In NetBeans, <strong>right click</strong> on the name of your project and select <code>Properties</code>:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Accessing-the-properties-of-your-project.png" alt="Accessing the properties of your project">
-</div>
-<div class="title">Figure 1. Accessing the properties of your project</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Codename-One-properties.png" alt="Codename One properties">
-</div>
-<div class="title">Figure 2. Codename One properties</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>A login window opens. You should enter <strong>the email and password of the account you created on the Codename One website</strong> (see above in the lesson).</p>
-</div>
-<div class="paragraph">
-<p>This is how NetBeans will be able to send the app you created to the Codename One website!</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/testing-android-3.png" alt="testing android 3">
-</div>
-<div class="title">Figure 3. Entering your Codename One credentials</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Then close all the windows we opened by clicking on <code>OK</code>.
-You are almost ready to send your app to Codename One.</p>
-</div>
-<div class="paragraph">
-<p>The last step consists in generating a Google certificate for your app.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_f_generate_a_google_certificate_for_the_app">f. Generate a Google certificate for the app</h4>
-<div class="paragraph">
-<p>A certificate is the unique and "tamperproof" ID of your app. It is used by Google to make sure that your app is indeed the one it claims to be, and not one corrupted by a third party.</p>
-</div>
-<div class="paragraph">
-<p>Generating certificates can be a long and painful process (watch the lesson on certificates for iPhone apps and cry&#8230;&#8203;). Luckily, Google&#8217;s process is simpler, and Codename One makes it even simpler.</p>
-</div>
-<div class="paragraph">
-<p>Follow these steps:</p>
-</div>
-<div class="paragraph">
-<p>Return to the <code>Properties</code> of your project:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Accessing-the-properties-of-your-project.png" alt="Accessing the properties of your project">
-</div>
-<div class="title">Figure 4. Accessing the properties of your project</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>You can now access the Android settings of your project. <strong>Be extra careful in following these instructions</strong> as mistakes are particularly frustrating to debug:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Android-properties-of-your-project.png" alt="Android properties of your project">
-</div>
-<div class="title">Figure 5. Android properties of your project</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Generating-a-certificate.png" alt="Generating a certificate">
-</div>
-<div class="title">Figure 6. Generating a certificate</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>Your Google certificate is now generated! Close the properties of the project by clicking on <code>OK</code> and be ready to create the Android version of your app!</p>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_launching_the_build">2. Launching the build</h2>
+<h2 id="_3_what_should_be_animated_the_computation_of_the_score_and_its_display">3. What should be animated? The computation of the score and its display</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>With all the setup completed, we are nearly finished.</p>
+<p>The app should update the score: compute the new score and show it on screen.</p>
 </div>
 <div class="paragraph">
-<p>Launch the build of the Android app by right clicking on your project&#8217;s name:</p>
+<p>How to compute the score?</p>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Launching-the-Android-build.png" alt="Launching the Android build">
-</div>
-<div class="title">Figure 7. Launching the Android build</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>If you get a "Build failed" message at the end, don&#8217;t worry this is very common not to succeed at the first time.</p>
-</div>
-<div class="paragraph">
-<p>Read the lesson in this module about possible causes and solutions.</p>
-</div>
-<div class="paragraph">
-<p>If you get a successful build, continue here:</p>
-</div>
-<div class="paragraph">
-<p>Now you should open your web browser, go to <a href="http://www.codenameone.com">http://www.codenameone.com</a> and login to your account.</p>
-</div>
-<div class="paragraph">
-<p>Then go to the Dashboard:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Checking-the-result-on-the-website-of-Codename-One.png" alt="Checking the result on the website of Codename One">
-</div>
-<div class="title">Figure 8. Checking the result on the website of Codename One</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>If the build is green and successful, you can go ahead and follow the next instructions below.</p>
-</div>
-<div class="paragraph">
-<p>If it is red, again this is quite usual the first times. You can read the special lesson in this module to help you diagnostic and solve the error.</p>
-</div>
-<div class="paragraph">
-<p>Ok, assuming your build was successful and "green", click on <strong>the date and time</strong> shown on it:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Revealing-the-QR-code-and-the-download-options.png" alt="Revealing the QR code and the download options">
-</div>
-<div class="title">Figure 9. Revealing the QR code and the download options</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>And now, you can simply test your app on your Android phone, or publish it on Google&#8217;s Play Store.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s see how:</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_testing_the_app_on_an_android_phone">3. Testing the app on an Android Phone</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Take your phone and open the QR code reader app that you installed on it.</p>
+<p>grandmas bake a number of cookies per second</p>
 </li>
 <li>
-<p>Flash the QR code displayed on your successful build on www.codenameone.com.</p>
+<p>farms harvest a number of cookies per second</p>
 </li>
 <li>
-<p>Your app should install on your phone (follow the steps / confirm)</p>
-</li>
-<li>
-<p>go and find the icon of your app on your phone, open it and enjoy it!</p>
+<p>auto clicks produce a new cookie every 10 seconds (let&#8217;s leave this one for the moment)</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>&#8594; <strong>So we should measure when one second has passed and add the numbers of cookies produced.</strong></p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s create a method dedicated to this computation:</p>
+</div>
+<div id="compute-score" class="listingblock">
+<div class="title">A method to compute the score every second</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">long</span> lastTimeScoreWasComputed; <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="directive">private</span> <span class="type">void</span> computeScore() { <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="type">long</span> currentTimeInSeconds = <span class="predefined-type">System</span>.currentTimeMillis() / <span class="integer">1000</span>; <i class="conum" data-value="3"></i><b>(3)</b>
+    <span class="type">long</span> lastTimeScoreWasComputedInSeconds = lastTimeScoreWasComputed / <span class="integer">1000</span>;  <i class="conum" data-value="4"></i><b>(4)</b>
+
+    <span class="keyword">if</span> (currentTimeInSeconds != lastTimeScoreWasComputedInSeconds) {  <i class="conum" data-value="5"></i><b>(5)</b>
+        score = score + myParameters.grandmaOwned * myParameters.grandmaProd + myParameters.farmOwned * myParameters.farmProd;  <i class="conum" data-value="6"></i><b>(6)</b>
+        scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>);  <i class="conum" data-value="7"></i><b>(7)</b>
+        lastTimeScoreWasComputed = <span class="predefined-type">System</span>.currentTimeMillis();  <i class="conum" data-value="8"></i><b>(8)</b>
+    }
+}</code></pre>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_4_publishing_your_app_on_google_s_play_store">4. Publishing your app on Google&#8217;s Play Store</h2>
-<div class="sectionbody">
-<div class="admonitionblock warning">
+<div class="colist arabic">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The app, once published on the Google Play, will be public. <span class="underline">Make sure your app does not include personal content</span> (pictures, personal details&#8230;&#8203;) that you do not want to get public!</p>
-</div>
-</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>we will need a variable that will keep track of the last time the score was computed. <strong>Write this variable at the top of the class</strong></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the beginning of the method</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>there is a static method which provides the time as it is now in milliseconds. We divide it by 1000 to have the time in seconds, and store it in <code>currentTimeInSeconds</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>we take the last time we computed the score (in milliseconds) and divide it by 1000 to have it in seconds</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>if the current time is different from the last time we computed the score, it means a second has passed&#8230;&#8203;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>&#8230;&#8203; and so we can add to the score: how many grandmas we have x how many cookies each grandma produces + how many farms we have x how many cookies each farm produces</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>&#8230;&#8203; and we can update the <code>Label</code> showing the score. We had declared this Label  <code>scoreLabel</code> in the constructor method <code>Form1</code>. <strong>We must displace the declaration of this variable to the top of the file so that it can be referenced from this method</strong>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>&#8230;&#8203; and before we leave the method, we update the value for <code>lastTimeScoreWasComputed</code>, so that a new full second will need to elapse before the score is computed again.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Download the "apk" file on your computer. This file is your Android app!</p>
+<p>How can this method be executed? Simply by calling it from the <code>animate()</code> method:</p>
 </div>
-<div class="paragraph">
-<p>(if you are curious, <code>apk</code> stands for <code>Android package</code>)</p>
-</div>
-<div class="imageblock" style="text-align: center">
+<div id="animate-method-with-compute-score" class="listingblock">
+<div class="title">Making the method computeScore part of the animation</div>
 <div class="content">
-<img src="images/Downloading-the-apk-file-to-your-computer.png" alt="Downloading the apk file to your computer">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Override</span>
+<span class="directive">public</span> <span class="type">boolean</span> animate() {
+    computeScore();  <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="keyword">return</span> <span class="predefined-constant">true</span>;
+}</code></pre>
 </div>
-<div class="title">Figure 10. Downloading the apk file to your computer</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the method <code>computeScore()</code> will be executed every millisecond!</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_what_should_be_animated_the_computation_of_number_of_cookies_produced_per_second">4. What should be animated? The computation of number of cookies produced per second</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s create a method dedicated to this computation.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>That&#8217;s very easy: we simply take the number of cookies produced per second by the grandmas and farms we own.</p>
+</div>
+<div id="compute-cookies-per-second" class="listingblock">
+<div class="title">A method to compute the number of cookies produced per second</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">float</span> cookiesPerSecond; <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="directive">private</span> <span class="type">void</span> computeCookiesPerSecond() {
+    cookiesPerSecond =  myParameters.grandmaOwned * myParameters.grandmaProd + myParameters.farmOwned * myParameters.farmProd;
+    cookiesPerSecondLabel.setText(cookiesPerSecond + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies per second</span><span class="delimiter">&quot;</span></span>); <i class="conum" data-value="2"></i><b>(2)</b>
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>we will need a variable that will keep track of the cookies per second. <strong>Write this variable at the top of the class</strong></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>we had declared a variable called <code>cookiesPerSecondLabel</code> in the constructor method <code>Form1</code>. <strong>We must displace the declaration of this variable to the top of the file so that it can be referenced from this method</strong>.
+How can this method be executed? Simply by calling it from the <code>animate()</code> method, just like we did with <code>computeScore()</code>:</td>
+</tr>
+</table>
+</div>
+<div id="animate-method-with-compute-score-and-cookies-per-second" class="listingblock">
+<div class="title">Making the method computeCookiesPerSecond part of the animation</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Override</span>
+<span class="directive">public</span> <span class="type">boolean</span> animate() {
+    computeScore();  <i class="conum" data-value="1"></i><b>(1)</b>
+    computeCookiesPerSecond();  <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="keyword">return</span> <span class="predefined-constant">true</span>;
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the methods <code>computeScore()</code> and <code>computeCookiesPerSecond()</code> will be executed every millisecond!</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_fine_tuning_slowing_down_the_animation">4. Fine-tuning: slowing down the animation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The method <code>animate()</code> runs in loop continuously as fast as it can, so it will be executing the calculus included in <code>computeScore()</code> non stop.</p>
 </div>
 <div class="paragraph">
-<p>Now, login to your Google Play Developer account at <a href="https://play.google.com/apps/publish">https://play.google.com/apps/publish</a></p>
+<p>That is a bit unnecessary and the phones risk to heat or to slow down. We don&#8217;t need to compute the score every millisecond, once every 100 milliseconds (this is 10 times per second!) is largely enough.</p>
+</div>
+<div class="paragraph">
+<p>So let&#8217;s slow it down:</p>
+</div>
+<div id="animate-method-with-compute-score-and-delay" class="listingblock">
+<div class="title">Adding a delay to animate only every 100 milliseconds</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">long</span> lastAnimatedTime; <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="annotation">@Override</span>
+<span class="directive">public</span> <span class="type">boolean</span> animate() {
+    <span class="keyword">if</span> (<span class="predefined-type">System</span>.currentTimeMillis() / <span class="integer">100</span> &gt; lastAnimatedTime / <span class="integer">100</span>) { <i class="conum" data-value="2"></i><b>(2)</b>
+        computeScore(); <i class="conum" data-value="3"></i><b>(3)</b>
+        computeCookiesPerSecond(); <i class="conum" data-value="4"></i><b>(4)</b>
+        lastAnimatedTime = <span class="predefined-type">System</span>.currentTimeMillis();
+        <span class="keyword">return</span> <span class="predefined-constant">true</span>;
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> <span class="predefined-constant">false</span>;  <i class="conum" data-value="5"></i><b>(5)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>we will need a variable that will keep track of the last time the animation was performed. <strong>Write this variable at the top of the class</strong></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>if 100 milliseconds have passed since we last animated&#8230;&#8203;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>&#8230;&#8203; compute the score</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>&#8230;&#8203; compute the cookies per second</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>&#8230;&#8203; if not, return <code>false</code> (no animation takes place)</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This is the final version of our code in the file <code>Form1</code>: <a href="../resources/form1-final">you can check it here</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_congratulations">5. Congratulations!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That&#8217;s it! You now have a fully functional cookie clicker mobile app!</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>we created this Google Play Console account in one of the steps above</p>
+<p>it remains to add how to get the auto click added (it adds a score point every 10 seconds, so that&#8217;s a bit tricky)</p>
 </li>
 <li>
-<p><strong>em lyon business school students</strong>: log in to your account by following the instuctions you received by email.</p>
+<p>you could add many other tools, new features, sound, visual animations&#8230;&#8203; it&#8217;s up to you!</p>
+</li>
+<li>
+<p>and many details could be improved (removing the decimals of the score for instance)</p>
 </li>
 </ul>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Creating-a-new-app-on-your-Google-Play-Console.png" alt="Creating a new app on your Google Play Console">
+<div class="paragraph">
+<p>All this work which remains to be done make you realize that the harder might not be the coding itself, but a management issue:</p>
 </div>
-<div class="title">Figure 11. Creating a new app on your Google Play Console</div>
+<div class="ulist">
+<ul>
+<li>
+<p>how can I invest all the time and money necessary to develop the app?</p>
+</li>
+<li>
+<p>what kind of revenues could pay for this cost of development?</p>
+</li>
+<li>
+<p>how do I manage my team of developers?</p>
+</li>
+<li>
+<p>what are the critical features my users or customers want? (a better design of the app? A better game play? a tablet version of the app?)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>This sort of questions are best answered by getting an education in business and management.</p>
 </div>
 <div class="paragraph">
-<p>You now have access to the menu for your app.</p>
+<p><strong>But</strong> the experience you gained in mobile development in this course, even very modest, will help you address these questions in a much better way - because you understand better what "mobile development" covers.</p>
 </div>
 <div class="paragraph">
-<p>Upload your apk here:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Upload-your-apk-here.png" alt="Upload your apk here">
-</div>
-<div class="title">Figure 12. Upload your apk here</div>
+<p>This is the end of this course. I hope you enjoyed it. As always, your questions and suggestions for improvement of the course are welcome.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p><a href="https://github.com/emlyon/codapps/issues">Open an issue on Github and ask!</a></p>
 </div>
 <div class="paragraph">
-<p>The Play Store now requires that you add screenshots of your app to market it.</p>
+<p>Happy coding!</p>
 </div>
 <div class="paragraph">
-<p>There are a number of screenshots of you app to create and upload, each at  precise pixel size. You will find <a href="https://support.google.com/googleplay/android-developer/answer/1078870?hl=en">help and indications here</a>.</p>
-</div>
-<div class="paragraph">
-<p>This website might also be useful to create the screenshots: <a href="http://www.appscreenshot.me/" class="bare">http://www.appscreenshot.me/</a></p>
-</div>
-<div class="paragraph">
-<p>Finally, there are a number of parameters for you to set. They are shown with an "alert sign" icon on your page:</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Visit-and-set-every-parameter-flagged-with-an-icon.png" alt="Visit and set every parameter flagged with an icon">
-</div>
-<div class="title">Figure 13. Visit and set every parameter flagged with an icon</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="paragraph">
-<p>When all these parameters will be set, your app will become publishable.</p>
+<p><em>Clement Levallois</em></p>
 </div>
 </div>
 </div>
@@ -951,7 +961,7 @@ You are almost ready to send your app to Codename One.</p>
 <p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/emlyon/codapps/issues">here</a> (need a free Github account).</p>
 </div>
 <div class="paragraph">
-<p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p>
+<p>Find references for this lesson, and other lessons, <a href="https://emlyon.github.io/codapps/">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>Licence: Creative Commons, <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Attribution 4.0 International</a> (CC BY 4.0).
@@ -1003,7 +1013,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-03-03 13:49:06 CET
+Last updated 2018-03-17 08:49:50 CET
 </div>
 </div>
 </body>

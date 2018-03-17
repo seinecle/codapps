@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="author" content="Clément Levallois">
-<title>CODAPPS: Creating a Form with two different approaches</title>
+<title>CODAPPS: Making the cookie click</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -520,17 +520,25 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article">
 <div id="header">
-<h1>CODAPPS: Creating a Form with two different approaches</h1>
+<h1>CODAPPS: Making the cookie click</h1>
 <div class="details">
 <span id="author" class="author">Clément Levallois</span><br>
 <span id="email" class="email"><a href="mailto:levallois@em-lyon.com">levallois@em-lyon.com</a></span><br>
-<span id="revdate">2018-01-11</span>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">last modified</span>
+<br><span id="revremark">2018-03-17</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_1_creating_a_form_and_a_label_by_writing_some_code_dyi_approach">1. Creating a Form and a Label by writing some code (DYI approach)</a></li>
-<li><a href="#_2_another_possibility_creating_a_form_without_coding_with_the_gui">2. Another possibility: creating a form without coding - with the GUI</a></li>
+<li><a href="#_1_storing_the_numbers_about_the_price_and_productivity_of_cookie_production_tools">1. Storing the numbers about the price and productivity of cookie production tools</a></li>
+<li><a href="#_2_making_the_auto_click_the_grandma_and_the_farm_buttons_clickable">2. Making the Auto click, the grandma and the farm buttons "clickable"</a>
+<ul class="sectlevel3">
+<li><a href="#_a_making_the_autoclick_button_work">a. Making the AutoClick button work</a></li>
+<li><a href="#_b_making_the_grandma_and_farm_buttons_work">b. Making the Grandma and Farm buttons work</a></li>
+<li><a href="#_c_the_result_so_far">c. The result so far</a></li>
+</ul>
+</li>
 <li><a href="#_the_end">The end</a></li>
 </ul>
 </div>
@@ -538,9 +546,6 @@ table.CodeRay td.code>pre{padding:0}
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>last modified: 2018-03-03</p>
-</div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/EMLyon_logo_corp.png" alt="EMLyon logo corp" width="242">
@@ -552,240 +557,367 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_1_creating_a_form_and_a_label_by_writing_some_code_dyi_approach">1. Creating a Form and a Label by writing some code (DYI approach)</h2>
+<h2 id="_1_storing_the_numbers_about_the_price_and_productivity_of_cookie_production_tools">1. Storing the numbers about the price and productivity of cookie production tools</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Not sure what a Form is? Have a look at the previous lesson!</p>
+<p>In the following, we are going to work on adding the auto-click, grandma, and farms tools in the game.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the autoclick clicks on the cookie once every 10 seconds</p>
+</li>
+<li>
+<p>grandmas bake 1 cookie per second</p>
+</li>
+<li>
+<p>farms produce 3 cookies per second</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Ok so if we are supposed to create our app by writing some code, where should this code be written?</p>
+<p>Autoclick, grandmas and farms have a price: you need to spend your cookies to buy them.
+So if a grandma costs 100 cookies and your score is 100, you go back to zero cookie when you buy a grandma.</p>
 </div>
 <div class="paragraph">
-<p>NetBeans is a software with many functionalities, including text editing: you can write code directly into the files of your app, in NetBeans. These files are visible here:</p>
+<p>Also: <strong>the price and productivity of these tools is evolving</strong>: the more grandmas you buy, the more expensive they get. Each new grandma is also more productive than the preceding one you bought.</p>
+</div>
+<div class="paragraph">
+<p>Same for auto-clicks and farms.</p>
+</div>
+<div class="paragraph">
+<p>So that makes a long list of variables to track!</p>
+</div>
+<div class="paragraph">
+<p>&#8594; price and productivity for each tool, and number of tools owned.</p>
+</div>
+<div class="paragraph">
+<p>We could create all these variables in our class <code>Form1</code>, but it will be more convenient to store all this in a separate class (a separate file). Let&#8217;s call it "Parameters" and create it:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/The-files-of-your-app-visible-in-NetBeans.png" alt="The files of your app visible in NetBeans">
+<img src="images/Creating-a-Form-with-code.png" alt="Creating a Form with code">
 </div>
-<div class="title">Figure 1. The files of your app visible in NetBeans</div>
+<div class="title">Figure 1. Creating a Form with code</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Double click</strong> on the file <code>MyApplication.java</code> to display its content in the right panel in NetBeans:</p>
+<p>In the window which opens, leave every parameter unchanged <strong>except for the <span class="underline">"Class Name"</span> where you write <code>Parameters</code></strong>, and click <code>Finish</code></p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Opening-the-content-of-MyApplication.java-for-editing.png" alt="Opening the content of MyApplication.java for editing">
+<img src="images/parameters-class-creation.png" alt="parameters class creation">
 </div>
-<div class="title">Figure 2. Opening the content of MyApplication.java for editing</div>
+<div class="title">Figure 2. Creating a new class called Parameters</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p>When we created the project in the previous lesson, a Form was added to this new app by default, with a Label saying "Hi World" in it.</p>
+<p>This creates an empty class like this one:</p>
 </div>
-<div class="paragraph">
-<p>How was this Form and this Label added to the app?</p>
-</div>
-<div class="paragraph">
-<p>Simply with 3 lines of code included in the file <code>MyApplication.java</code>:</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-we will now show some lines of code <strong>but you are not supposed to understand them at this stage</strong>. It is simply to illustrate that Forms can be created with code.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>(scroll down a bit in NetBeans, as these lines are in the middle of the file):</p>
-</div>
-<div id="anchor-1" class="listingblock">
-<div class="title">MyApplication.java</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
-    <span class="keyword">if</span>(current != <span class="predefined-constant">null</span>){
-        current.show();
-        <span class="keyword">return</span>;
-    }
-    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y()); <i class="conum" data-value="1"></i><b>(1)</b>
-    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>)); <i class="conum" data-value="2"></i><b>(2)</b>
-    hi.show(); <i class="conum" data-value="3"></i><b>(3)</b>
-}</code></pre>
+<img src="images/parameters-class-empty.png" alt="parameters class empty">
+</div>
+<div class="title">Figure 3. The class Parameters, still empty</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>In this class, we will define all the variables that will store the numbers we need:</p>
+</div>
+<div id="parameters-variables" class="listingblock">
+<div class="title">Parameters for the cookie clicker app</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// for grandmas: their productivity per second, price, and number owned by the player</span>
+<span class="type">float</span> grandmaProd = <span class="float">1f</span>;
+<span class="type">float</span> grandmaPrice = <span class="float">100f</span>;
+<span class="type">int</span> grandmaOwned = <span class="integer">0</span>;
+
+<span class="comment">// for autoclicks: their productivity per second, price, number owned by the player, and seconds between each auto-click</span>
+<span class="type">float</span> autoclickProd = <span class="float">1f</span>;
+<span class="type">float</span> autoclickPrice = <span class="float">15f</span>;
+<span class="type">int</span> autoclickOwned = <span class="integer">0</span>;
+<span class="type">float</span> autoclickPeriod = <span class="float">10f</span>;
+
+<span class="comment">// for farms: their productivity per second, price, and number owned by the player</span>
+<span class="type">float</span> farmProd = <span class="float">3f</span>;
+<span class="type">float</span> farmPrice = <span class="float">500f</span>;
+<span class="type">int</span> farmOwned = <span class="integer">0</span>;
+
+<span class="comment">// for all tools: when the player buys a new one, what is the rate of increase of their price and productivity?</span>
+<span class="type">float</span> rateIncreasePrice = <span class="float">1.3f</span>;
+<span class="type">float</span> rateIncreaseProd = <span class="float">1.2f</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The entire file will look like this:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/parameters-class-with-variables.png" alt="parameters class with variables">
+</div>
+<div class="title">Figure 4. variables added to the class Parameters</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Nice! How can our code in the file <code>Form1</code> use these variables?
+Very simply:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>We go back to our class <code>Form1</code></p>
+</li>
+<li>
+<p>We define a variable <code>myParameters</code> of type <code>Parameters</code>, and we instantiate it.</p>
+</li>
+<li>
+<p>That&#8217;s it. If we need to use the number of farms owned by the players, we will simply write <code>myParameters.farmOwned</code>. Done!</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>See below:</p>
+</div>
+<div id="using-parameters-in-Form1" class="listingblock">
+<div class="title">Using parameters in Form1</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">Form1</span> <span class="directive">extends</span> com.codename1.ui.Form { <i class="conum" data-value="1"></i><b>(1)</b>
+    Resources theme = Resources.getGlobalResources(); <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="type">float</span> score = <span class="float">0f</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+    Parameters myParameters = <span class="keyword">new</span> Parameters(); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This line creates the screen with a title "Hi World".</td>
+<td>the lines we have already written at the beginning of the file Form1</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This line adds a Label saying ("Hi World") in the Form!</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The Form was created but was invisible. With this line, the Form appears on the screen of the phone. So you see it when the app launches!</td>
+<td>* the line we add*</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>So this is how you add a Form by writing some code in a file. But in this course, <strong>we will first use almost no coding at all</strong>. We will use instead a simpler approach:</p>
+<p>With all these parameters defined and available to use in <code>Form1</code>, we can now add some code to make our buttons click and do stuff:</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_another_possibility_creating_a_form_without_coding_with_the_gui">2. Another possibility: creating a form without coding - with the GUI</h2>
+<h2 id="_2_making_the_auto_click_the_grandma_and_the_farm_buttons_clickable">2. Making the Auto click, the grandma and the farm buttons "clickable"</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the previous lesson we had called this method the "Ikea approach": we just assemble pre-existing blocks, without designing the whole furniture ourself.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s see how it works:</p>
+<p>Just to recap, this is our app so far:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/Creating-a-Form-with-the-GUI---first-step.png" alt="Creating a Form with the GUI   first step">
+<img src="images/cookie-clicker-screenshot-1.png" alt="cookie clicker screenshot 1" width="350px">
 </div>
-<div class="title">Figure 3. Creating a Form with the GUI - first step</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Creating-a-Form-with-the-GUI---second-step.png" alt="Creating a Form with the GUI   second step">
-</div>
-<div class="title">Figure 4. Creating a Form with the GUI - second step</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Creating-a-Form-with-the-GUI---third-step.png" alt="Creating a Form with the GUI   third step">
-</div>
-<div class="title">Figure 5. Creating a Form with the GUI - third step</div>
+<div class="title">Figure 5. Our app so far</div>
 </div>
 <div class="paragraph">
 <p>&#160;<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Clicking on 'Finish' did not show you any 'Form', so what happened?</strong> Where do I find my 'Form' and how do I use it?</p>
+<p>The player can click on the cookie and this will increase the score by one.
+<strong>But when the player clicks on any of the tools (auto-click, grandma, farm), nothing happens</strong>.</p>
 </div>
 <div class="paragraph">
-<p>A file with the same name as your Form as been created, ending with ".java"</p>
+<p>To make the cookie clickable, we had added an addActionListener method to the <code>ScaleImageButton</code> of the cookie. <strong>We&#8217;ll do the same for each of the tools.</strong></p>
 </div>
 <div class="paragraph">
-<p>So if you named your Form <code>Form1</code>, you should see a new file called <code>Form1.java</code>. <strong>Open it in this following manner</strong>:</p>
+<p><strong>The difference is that tools have more features:</strong></p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the player must have enough cookies to buy them.</p>
+</li>
+<li>
+<p>since the player buys one tool, we must increase by one the number of this tool owned by the player</p>
+</li>
+<li>
+<p>the score of the player must be decreased when the tool is bought (if the player has 100 cookies and the grandma costs 100, the score must go to zero).</p>
+</li>
+<li>
+<p>the price and productivity of <strong>the next tool</strong> that the player will purchase must increase</p>
+</li>
+<li>
+<p>we must be update the label showing how many tools the player owns and the price of the next copy of the tool</p>
+</li>
+<li>
+<p>we must update the label showing the score</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s do this for the Auto click tool first:</p>
+</div>
+<div class="sect3">
+<h4 id="_a_making_the_autoclick_button_work">a. Making the AutoClick button work</h4>
+<div class="paragraph">
+<p>All of this can be done with these lines of code:</p>
+</div>
+<div id="actionListener-autoclick" class="listingblock">
+<div class="title">Adding an action listener to the autoclick button</div>
 <div class="content">
-<img src="images/Opening-the-Form-we-created-to-work-on-it.png" alt="Opening the Form we created to work on it">
+<pre class="CodeRay highlight"><code data-lang="java">cookieCentral.addActionListener( <i class="conum" data-value="1"></i><b>(1)</b>
+        (event) -&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+            score = score + <span class="integer">1</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+            scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>); <i class="conum" data-value="1"></i><b>(1)</b>
+        } <i class="conum" data-value="1"></i><b>(1)</b>
+); <i class="conum" data-value="1"></i><b>(1)</b>
+
+autoclickButton.addActionListener( <i class="conum" data-value="2"></i><b>(2)</b>
+        (event) -&gt; {
+            <span class="keyword">if</span> (score &gt;= myParameters.autoclickPrice) {
+                myParameters.autoclickOwned = myParameters.autoclickOwned + <span class="integer">1</span>;
+                score = score - myParameters.autoclickPrice;
+                myParameters.autoclickProd = myParameters.autoclickProd * myParameters.rateIncreaseProd;
+                myParameters.autoclickPrice = myParameters.autoclickPrice * myParameters.rateIncreasePrice;
+                autoclickButton.setTextLine4(<span class="string"><span class="delimiter">&quot;</span><span class="content">price: </span><span class="delimiter">&quot;</span></span> + myParameters.autoclickPrice + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies. Owned: </span><span class="delimiter">&quot;</span></span> + myParameters.autoclickOwned + <span class="string"><span class="delimiter">&quot;</span><span class="content">.</span><span class="delimiter">&quot;</span></span>);
+                scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>);
+            }
+        }
+); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
-<div class="title">Figure 6. Opening the Form we created to work on it</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the code we had already written to make the cookie clickable, for reference (don&#8217;t write it again!)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><strong>all the lines we add to make the autoclick button working</strong></td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p><strong>Notes: of course these lines are intimidating.</strong></p>
 </div>
 <div class="paragraph">
-<p>The window which opens now is called the <strong>"GUI Builder". This window shows a preview of the <code>Form</code> you just created.</strong></p>
+<p>But have a careful look at them, taking note of where the curly braces open and close: you will see that they do exactly what the points 1. to 4. above have described:</p>
 </div>
-<div class="paragraph">
-<p>It provides simple tools to add text, picture, buttons&#8230;&#8203; to the <code>Form</code>, without coding!</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s examine the GUI Builder in detail:</p>
-</div>
-<div class="imageblock" style="text-align: center">
+<div id="actionListener-autoclick-details" class="listingblock">
+<div class="title">Adding an action listener to the autoclick button - with comments</div>
 <div class="content">
-<img src="images/Discovering-the-GUI-Builder.png" alt="Discovering the GUI Builder">
+<pre class="CodeRay highlight"><code data-lang="java">autoclickButton.addActionListener(
+        (event) -&gt; {
+            <span class="keyword">if</span> (score &gt;= myParameters.autoclickPrice) {  <i class="conum" data-value="1"></i><b>(1)</b>
+                myParameters.autoclickOwned = myParameters.autoclickOwned + <span class="integer">1</span>;  <i class="conum" data-value="2"></i><b>(2)</b>
+                score = score - myParameters.autoclickPrice;  <span class="comment">// &lt;3&gt;                }</span>
+                myParameters.autoclickProd = myParameters.autoclickProd * myParameters.rateIncreaseProd;  <i class="conum" data-value="4"></i><b>(4)</b>
+                myParameters.autoclickPrice = myParameters.autoclickPrice * myParameters.rateIncreasePrice;  <i class="conum" data-value="4"></i><b>(4)</b>
+                autoclickButton.setTextLine4(<span class="string"><span class="delimiter">&quot;</span><span class="content">price: </span><span class="delimiter">&quot;</span></span> + myParameters.autoclickPrice + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies. Owned: </span><span class="delimiter">&quot;</span></span> + myParameters.autoclickOwned + <span class="string"><span class="delimiter">&quot;</span><span class="content">.</span><span class="delimiter">&quot;</span></span>);  <i class="conum" data-value="5"></i><b>(5)</b>
+                scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>); <i class="conum" data-value="6"></i><b>(6)</b>
+            }
+        }
+);</code></pre>
 </div>
-<div class="title">Figure 7. Discovering the GUI Builder</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the player must have enough cookies to buy them. If not, the button does nothing (the lines of code following the <code>{</code> will not be executed).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>since the player buys one tool, we must increase by one the number of this tool owned by the player</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>the score of the player must be decreased when the tool is bought (if the player has 100 cookies and the grandma costs 100, the score must go to zero).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>we increase the price and productivity of <strong>the next tool</strong> that the player will purchase</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>we must be update the label showing how many tools the player owns and the price of the next copy of the tool</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>we must update the label showing the score</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>&#160;<br></p>
+<p>Launch the preview, and test the app: the player can now buy an auto-clicker for the price of 15 cookies:</p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="videoblock">
 <div class="content">
-<img src="images/Save-before-you-quit!.png" alt="Save before you quit!">
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/sjH6PZ5HcqQ?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
-<div class="title">Figure 8. Save before you quit!</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
-</div>
-<div id="anchor-2" class="paragraph">
-<p>And&#8230;&#8203; that&#8217;s almost it! Whatever you create with the GUI Builder will be included in your app.</p>
 </div>
 <div class="paragraph">
-<p><strong>Except that</strong> if you preview your app (clicking the usual big green arrow icon <span class="image"><img src="images/green-arrow.jpg" alt="green arrow"></span> in NetBeans) to admire your work, you don&#8217;t see your screen but another one that says "Hi World". Why?</p>
+<p>Exactly the same logic applies for the grandma button and the farm button.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_b_making_the_grandma_and_farm_buttons_work">b. Making the Grandma and Farm buttons work</h4>
 <div class="paragraph">
-<p>Even if you can create a Form with the GUI Builder, so without coding, <strong>you still need a couple of lines of code to trigger the opening of the Form when the app launches</strong>.</p>
+<p>Just add these lines of code:</p>
 </div>
-<div class="paragraph">
-<p>Where should these lines of code be written? As we have seen <a href="#anchor-1">just above</a>, it happens in the file 'MyApplication.java'. Here is how it looks by default:</p>
-</div>
-<div class="listingblock">
-<div class="title">MyApplication.java</div>
+<div id="actionListener-grandma-and-farm" class="listingblock">
+<div class="title">Adding an action listener to the grandma button and the farm button</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">void</span> start() {
-    <span class="keyword">if</span>(current != <span class="predefined-constant">null</span>){
-        current.show();
-        <span class="keyword">return</span>;
-    }
-    Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y());
-    hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>));
-    hi.show();
-}</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java">grandmaButton.addActionListener(
+        (event) -&gt; {
+            <span class="keyword">if</span> (score &gt;= myParameters.grandmaPrice) {
+                myParameters.grandmaOwned = myParameters.grandmaOwned + <span class="integer">1</span>;
+                score = score - myParameters.grandmaPrice;
+                myParameters.grandmaProd = myParameters.grandmaProd * myParameters.rateIncreaseProd;
+                myParameters.grandmaPrice = myParameters.grandmaPrice * myParameters.rateIncreasePrice;
+                grandmaButton.setTextLine4(<span class="string"><span class="delimiter">&quot;</span><span class="content">price: </span><span class="delimiter">&quot;</span></span> + myParameters.grandmaPrice + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies. Owned: </span><span class="delimiter">&quot;</span></span> + myParameters.grandmaOwned + <span class="string"><span class="delimiter">&quot;</span><span class="content">.</span><span class="delimiter">&quot;</span></span>);
+                scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>);
+            }
+        }
+);
+
+farmButton.addActionListener(
+        (event) -&gt; {
+            <span class="keyword">if</span> (score &gt;= myParameters.farmPrice) {
+                myParameters.farmOwned = myParameters.farmOwned + <span class="integer">1</span>;
+                score = score - myParameters.farmPrice;
+                myParameters.farmProd = myParameters.farmProd * myParameters.rateIncreaseProd;
+                myParameters.farmPrice = myParameters.farmPrice * myParameters.rateIncreasePrice;
+                farmButton.setTextLine4(<span class="string"><span class="delimiter">&quot;</span><span class="content">price: </span><span class="delimiter">&quot;</span></span> + myParameters.farmPrice + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies. Owned: </span><span class="delimiter">&quot;</span></span> + myParameters.farmOwned + <span class="string"><span class="delimiter">&quot;</span><span class="content">.</span><span class="delimiter">&quot;</span></span>);
+                scoreLabel.setText(score + <span class="string"><span class="delimiter">&quot;</span><span class="content"> cookies</span><span class="delimiter">&quot;</span></span>);
+            }
+        }
+);</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_c_the_result_so_far">c. The result so far</h4>
 <div class="paragraph">
-<p>As you see, at no point is Form1 (the Form we created with the GUI builder) mentioned. No wonder it is not used in our app!</p>
+<p>The result is a game app where the player can buy three tools to increase the cookie production - if they have enough cookies!</p>
 </div>
-<div class="paragraph">
-<p>We just need to replace the Form currently mentioned in the code, by our Form called 'Form1'.</p>
-</div>
-<div class="paragraph">
-<p>So, <strong>replace</strong> this 3 lines:</p>
-</div>
-<div class="listingblock">
+<div class="videoblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">Form hi = <span class="keyword">new</span> Form(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>, <span class="predefined-type">BoxLayout</span>.y());
-hi.add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hi World</span><span class="delimiter">&quot;</span></span>));
-hi.show();</code></pre>
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/424CS-oUt38?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 <div class="paragraph">
-<p>with these 2 lines:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">Form1 myForm1 = <span class="keyword">new</span> Form1();
-myForm1.show();</code></pre>
-</div>
+<p>Congratulations, all the buttons of your app are now working and "do something"!</p>
 </div>
 <div class="paragraph">
-<p>Now, launching the app preview will show our Form1! It still empty but it is a good start! 🎉🎉</p>
+<p>In the next and last lesson, we will see how the score of the player can update on screen.</p>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="images/Previewing-the-Form-you-created!.png" alt="Previewing the Form you created!">
-</div>
-<div class="title">Figure 9. Previewing the Form you created!</div>
-</div>
-<div class="paragraph">
-<p>&#160;<br></p>
 </div>
 </div>
 </div>
@@ -796,7 +928,7 @@ myForm1.show();</code></pre>
 <p>Questions? Want to open a discussion on this lesson? Visit the forum <a href="https://github.com/emlyon/codapps/issues">here</a> (need a free Github account).</p>
 </div>
 <div class="paragraph">
-<p>Find references for this lesson, and other lessons, <a href="https://seinecle.github.io/codapps/">here</a>.</p>
+<p>Find references for this lesson, and other lessons, <a href="https://emlyon.github.io/codapps/">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>Licence: Creative Commons, <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Attribution 4.0 International</a> (CC BY 4.0).
@@ -848,7 +980,7 @@ This course is designed by Clement Levallois.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2018-03-03 13:49:06 CET
+Last updated 2018-03-17 08:56:06 CET
 </div>
 </div>
 </body>

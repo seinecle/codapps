@@ -1,0 +1,201 @@
+package net.clementlevallois.net.cookieclicker.ultimate;
+
+import com.codename1.components.MultiButton;
+import com.codename1.components.ScaleImageButton;
+import com.codename1.ui.Component;
+import com.codename1.ui.Container;
+import com.codename1.ui.Image;
+import com.codename1.ui.Label;
+import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.layouts.GridLayout;
+import com.codename1.ui.plaf.Style;
+import com.codename1.ui.util.Resources;
+
+public class Form1 extends com.codename1.ui.Form {
+
+    Resources theme = Resources.getGlobalResources();
+    float score = 0f;
+    float cookiesPerSecond = 0f;
+    Parameters myParameters = new Parameters();
+
+    long lastTimeScoreWasComputed;
+    long lastAnimatedTime;
+
+    Label scoreLabel = new Label();
+    Label cookiesPerSecondLabel = new Label();
+
+    public Form1() {
+        registerAnimated(this);
+
+        Image grandmaPic = theme.getImage("grandma_50x50.png");
+        Image farmPic = theme.getImage("farm_50x37.png");
+        Image clickPic = theme.getImage("click_50x64.png");
+        Image cookieCentraPic = theme.getImage("cookie_200x200.png");
+        Image cookiePressedPic = theme.getImage("cookie_200x200_star.png");
+
+        //we put the Form in a Grid layout: 3 rows, to divide the screen in three equal spaces.
+        GridLayout gridLayoutThreeByOne = new GridLayout(3, 1);
+        this.setLayout(gridLayoutThreeByOne);
+
+        //we don't want the screen to be scrollable: everything should fit in it.
+        this.setScrollable(false);
+
+        //we create a Container that will contain everything in the "North" part of the BorderLayout:
+        Container northRegion = new Container();
+
+        //we choose a Border Layout for this container:
+        BorderLayout borderLayoutNorth = new BorderLayout();
+        northRegion.setLayout(borderLayoutNorth);
+
+        //we create a Container that will contain everything in the "Center" part of the screen:
+        Container centerRegion = new Container();
+
+        //we choose a Grid Layout for this container:
+        GridLayout gridLayoutFourByOne = new GridLayout(4, 1);
+        centerRegion.setLayout(gridLayoutFourByOne);
+
+        //we set this region to be scrollable, because there is too much content to fit
+        centerRegion.setScrollableY(true);
+
+        //we create a Container that will contain everything in the "South" part of the BorderLayout:
+        Container southRegion = new Container();
+
+        //we choose a Border Layout for this container:
+        BorderLayout blSouth = new BorderLayout();
+        southRegion.setLayout(blSouth);
+
+        // we add the three containers to the Form, which is in a Gridlayout (three rows)
+        // The northRegion will be in the top row because we add it first,
+        // The centerRegion will be in the 2nd row because we add it in second
+        // The southRegion will be in the 3rd row because we add it last.
+        this.addComponent(northRegion);
+        this.addComponent(centerRegion);
+        this.addComponent(southRegion);
+
+        // creating the cookie central button
+        ScaleImageButton cookieCentral = new ScaleImageButton();
+        cookieCentral.setIcon(cookieCentraPic);
+        cookieCentral.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FIT);
+        cookieCentral.getPressedStyle().setBgImage(cookiePressedPic);
+
+        //creating the score Label
+        scoreLabel.setText("0 cookies");
+        scoreLabel.getStyle().setAlignment(Component.CENTER); //centering the text
+
+        //creating the Label for the score per second 
+        cookiesPerSecondLabel.setText("0 per second");
+        cookiesPerSecondLabel.getStyle().setAlignment(Component.CENTER); //centering the text
+
+        //adding the cookie pic and the score to the north region
+        northRegion.add(BorderLayout.NORTH, scoreLabel);
+
+        northRegion.add(BorderLayout.CENTER, cookieCentral);
+
+        northRegion.add(BorderLayout.SOUTH, cookiesPerSecondLabel);
+
+        //now dealing with the central region of the screen: buy tools to speed up the cookie production
+        // The autoclick tool
+        MultiButton autoclickButton = new MultiButton("Auto click");
+        autoclickButton.setIcon(clickPic);
+
+        autoclickButton.setTextLine2("\"Get your fingers some rest\"");
+        autoclickButton.setTextLine3("clicks 1 times every 10 seconds");
+        autoclickButton.setTextLine4("price: 15 cookies. Owned: 0");
+
+        // The grandma
+        MultiButton grandmaButton = new MultiButton("Grandma");
+        grandmaButton.setIcon(grandmaPic);
+        grandmaButton.setTextLine2("\"Bake cookies with love\"");
+        grandmaButton.setTextLine3("each grandma produces 1 cookie per second");
+        grandmaButton.setTextLine4("price: 100 cookies. Owned: 0");
+
+        //The farm
+        MultiButton farmButton = new MultiButton("Farm");
+        farmButton.setIcon(farmPic);
+        farmButton.setTextLine2("\"Harvest cookies every summer!\"");
+        farmButton.setTextLine3("each farm produces 3 cookies per second");
+        farmButton.setTextLine4("price: 500 cookies. Owned: 0");
+
+        //we add the three buttons to the central region of the screen
+        centerRegion.add(autoclickButton);
+        centerRegion.add(grandmaButton);
+        centerRegion.add(farmButton);
+
+        cookieCentral.addActionListener(
+                (event) -> {
+                    score = score + 1;
+                    scoreLabel.setText(score + " cookies");
+                }
+        );
+
+        autoclickButton.addActionListener(
+                (event) -> {
+                    if (score >= myParameters.autoclickPrice) {
+                        myParameters.autoclickOwned = myParameters.autoclickOwned + 1;
+                        score = score - myParameters.autoclickPrice;
+                        myParameters.autoclickProd = myParameters.autoclickProd * myParameters.rateIncreaseProd;
+                        myParameters.autoclickPrice = myParameters.autoclickPrice * myParameters.rateIncreasePrice;
+                        autoclickButton.setTextLine4("price: " + myParameters.autoclickPrice + " cookies. Owned: " + myParameters.autoclickOwned + ".");
+                        scoreLabel.setText(score + " cookies");
+                    }
+                }
+        );
+
+        grandmaButton.addActionListener(
+                (event) -> {
+                    if (score >= myParameters.grandmaPrice) {
+                        myParameters.grandmaOwned = myParameters.grandmaOwned + 1;
+                        score = score - myParameters.grandmaPrice;
+                        myParameters.grandmaProd = myParameters.grandmaProd * myParameters.rateIncreaseProd;
+                        myParameters.grandmaPrice = myParameters.grandmaPrice * myParameters.rateIncreasePrice;
+                        grandmaButton.setTextLine4("price: " + myParameters.grandmaPrice + " cookies. Owned: " + myParameters.grandmaOwned + ".");
+                        scoreLabel.setText(score + " cookies");
+                    }
+                }
+        );
+
+        farmButton.addActionListener(
+                (event) -> {
+                    if (score >= myParameters.farmPrice) {
+                        myParameters.farmOwned = myParameters.farmOwned + 1;
+                        score = score - myParameters.farmPrice;
+                        myParameters.farmProd = myParameters.farmProd * myParameters.rateIncreaseProd;
+                        myParameters.farmPrice = myParameters.farmPrice * myParameters.rateIncreasePrice;
+                        farmButton.setTextLine4("price: " + myParameters.farmPrice + " cookies. Owned: " + myParameters.farmOwned + ".");
+                        scoreLabel.setText(score + " cookies");
+                    }
+                }
+        );
+
+    }
+
+    @Override
+    public boolean animate() {
+        if (System.currentTimeMillis() / 100 > lastAnimatedTime / 100) {
+            computeScore();
+            computeCookiesPerSecond();
+            lastAnimatedTime = System.currentTimeMillis();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void computeScore() {
+        long currentTimeInSeconds = System.currentTimeMillis() / 1000;
+        long lastTimeScoreWasComputedInSeconds = lastTimeScoreWasComputed / 1000;
+
+        if (currentTimeInSeconds != lastTimeScoreWasComputedInSeconds) {
+            score = score + myParameters.grandmaOwned * myParameters.grandmaProd + myParameters.farmOwned * myParameters.farmProd;
+            lastTimeScoreWasComputed = System.currentTimeMillis();
+            scoreLabel.setText(score + " cookies");
+        }
+    }
+
+    private void computeCookiesPerSecond() {
+        cookiesPerSecond = myParameters.farmOwned * myParameters.farmProd + myParameters.grandmaOwned * myParameters.grandmaProd;
+        cookiesPerSecondLabel.setText(cookiesPerSecond + " cookies per second");
+
+    }
+
+}

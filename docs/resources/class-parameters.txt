@@ -1,0 +1,34 @@
+/*
+ * Copyright 2017 Clement Levallois
+ * http://wwww.clementlevallois.net
+ */
+package net.clementlevallois.net.cookieclicker.ultimate;
+
+/**
+ *
+ * @author LEVALLOIS
+ */
+public class Parameters {
+    
+    // for grandmas: their productivity per second, price, and number owned by the player
+float grandmaProd = 1f;
+float grandmaPrice = 100f;
+int grandmaOwned = 0;
+
+// for autoclicks: their productivity per second, price, number owned by the player, and seconds between each auto-click
+float autoclickProd = 1f;
+float autoclickPrice = 15f;
+int autoclickOwned = 0;
+float autoclickPeriod = 10f;
+
+// for farms: their productivity per second, price, and number owned by the player
+float farmProd = 3f;
+float farmPrice = 500f;
+int farmOwned = 0;
+
+// for all tools: when the player buys a new one, what is the rate of increase of their price and productivity?
+float rateIncreasePrice = 1.3f;
+float rateIncreaseProd = 1.2f;
+
+    
+}
