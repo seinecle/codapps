@@ -46,10 +46,18 @@ So in this lesson, you will see plenty of interactive screens like this one:
 ++++
 
 
+[TIP]
+====
+if you follow this lesson on a pdf, you will not see the interactive screen in your document.
 
+You can open a web browser and do the interactive exercise here:
 
+https://repl.exploreyourdata.com/ui/console.html
 
+or here:
 
+http://www.javarepl.com/term.html
+====
 
 //ST: !
 "Interactive screen" means that *you can write directly on it* and see your code in action - yes, right here: click next to "java", a cursor will blink to show that you can write:
@@ -524,7 +532,7 @@ Look at the line in green: it gives the value stored in your variable `dateOfSub
 Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
-Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+Find references for this lesson, and other lessons, https://emlyon.github.io/codapps/[here].
 
 //ST: !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).

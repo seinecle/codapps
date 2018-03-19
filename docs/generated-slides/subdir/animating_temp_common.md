@@ -91,7 +91,7 @@ For this method to be executed every millisecond, we need one last thing.
 ----
 public Form1() { //<1>
     registerAnimated(this);  //<2>
-}
+
 ----
 <1> Don't write this again, this is is just to show you where the code is
 <2> *The line of code you should add.*
@@ -203,7 +203,7 @@ public boolean animate() {
 //ST: !
 The method `animate()` runs in loop continuously as fast as it can, so it will be executing the calculus included in `computeScore()` non stop.
 
-That is a bit unnecessary and the phones risk to heat or to slow down. We don't need to compute the score every millisecond, once every 100 milliseconds is largely enough.
+That is a bit unnecessary and the phones risk to heat or to slow down. We don't need to compute the score every millisecond, once every 100 milliseconds (this is 10 times per second!) is largely enough.
 
 So let's slow it down:
 
@@ -232,7 +232,7 @@ public boolean animate() {
 <4> ... compute the cookies per second
 <5> ... if not, return `false` (no animation takes place)
 
-This is the final version of our code in the file `Form1`: - link:../resources/form1-final[you can check it here].
+This is the final version of our code in the file `Form1`: link:../resources/form1-final[you can check it here].
 
 == 5. Congratulations!
 //ST: 5. Congratulations!
@@ -266,7 +266,7 @@ https://github.com/emlyon/codapps/issues[Open an issue on Github and ask!]
 //ST: !
 Happy coding!
 
-[underline]#Clement Levallois#
+_Clement Levallois_
 
 == The end
 //ST: The end

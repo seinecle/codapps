@@ -182,6 +182,8 @@ link:../resources/click_50x64.png[click_50x64.png]
 
 link:../resources/cookie_200x200.png[cookie_200x200.png]
 
+link:../resources/cookie_200x200_star.png[cookie_200x200_star.png]
+
 link:../resources/farm_50x37.png[farm_50x37.png]
 
 link:../resources/grandma_50x50.png[grandma_50x50.png]
@@ -428,11 +430,8 @@ public class Form1 extends com.codename1.ui.Form {
         theme = Resources.getGlobalResources();
 
         Image grandmaPic = theme.getImage("grandma_50x50.png");
-        Image grandmaBoostIcon = theme.getImage("oven_30x35.png");
         Image farmPic = theme.getImage("farm_50x37.png");
-        Image farmBoostIcon = theme.getImage("farm_boost_30x23.png");
         Image clickPic = theme.getImage("click_50x64.png");
-        Image clickBoostIcon = theme.getImage("click_30x30.png");
         Image cookieCentraPic = theme.getImage("cookie_200x200.png");
         Image cookiePressedPic = theme.getImage("cookie_200x200_star.png");
 
@@ -522,7 +521,7 @@ Yes, but it is ready to include pictures, buttons and text! Let's do this in the
 Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
-Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+Find references for this lesson, and other lessons, https://emlyon.github.io/codapps/[here].
 
 //ST: !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).

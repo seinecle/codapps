@@ -191,7 +191,7 @@ image::Previewing-the-Form-you-created!.png[align="center",title="Previewing the
 Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 //ST: !
-Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+Find references for this lesson, and other lessons, https://emlyon.github.io/codapps/[here].
 
 //ST: !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).
