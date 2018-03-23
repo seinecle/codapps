@@ -277,7 +277,7 @@ We leave here the different layouts and move on to the next lesson on how to hav
 Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
-Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+Find references for this lesson, and other lessons, https://emlyon.github.io/codapps/[here].
 
 ==  !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).

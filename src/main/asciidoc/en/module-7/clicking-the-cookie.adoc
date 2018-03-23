@@ -82,7 +82,7 @@ cookieCentral.addActionListener(  //<2>
                 (event) -> { }  //<3>
         ); //<4>
 ----
-<1> The last lines we have written in the previous lesson.
+<1> The last lines we have written in the previous lesson, for reference.
 <2> we use the method `addActionListener` for the variable `cookieCentral` (which is the picture of our cookie).
 <3> Anything written between the curly braces `{ }` will be executed when the user touches the cookie on sreen!
 <4> this parenthesis closes the `addActionListener` method, and the `;` ends the line.
@@ -128,10 +128,10 @@ cookieCentral.addActionListener(
                   score = score + 1;
                   scoreLabel.setText(score + " cookies");
                 } // <1>
-        );
+        ); // <2>
 ----
 <1> don't forget the opening and closing curly braces!
-
+<2> don't forget to close the parenthesis and the semicolon `;` !
 //ST: !
 Now, when the user will touch / press the picture of the cookie, the score will increase by one and this new score will be visible on screen:
 

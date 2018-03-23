@@ -197,8 +197,8 @@ public boolean animate() {
 ----
 <1> the methods `computeScore()` and `computeCookiesPerSecond()` will be executed every millisecond!
 
-== 4. Fine-tuning: slowing down the animation
-//ST: 4. Fine-tuning: slowing down the animation
+== 5. Fine-tuning: slowing down the animation
+//ST: 5. Fine-tuning: slowing down the animation
 
 //ST: !
 The method `animate()` runs in loop continuously as fast as it can, so it will be executing the calculus included in `computeScore()` non stop.
@@ -234,8 +234,8 @@ public boolean animate() {
 
 This is the final version of our code in the file `Form1`: link:../resources/form1-final[you can check it here].
 
-== 5. Congratulations!
-//ST: 5. Congratulations!
+== 6. Congratulations!
+//ST: 6. Congratulations!
 
 //ST: !
 That's it! You now have a fully functional cookie clicker mobile app!

@@ -88,7 +88,7 @@ Just check if there is a bubble at the bottom right corner when you open NetBean
 Questions? Want to open a discussion on this lesson? Visit the forum https://github.com/emlyon/codapps/issues[here] (need a free Github account).
 
 ==  !
-Find references for this lesson, and other lessons, https://seinecle.github.io/codapps/[here].
+Find references for this lesson, and other lessons, https://emlyon.github.io/codapps/[here].
 
 ==  !
 Licence: Creative Commons, https://creativecommons.org/licenses/by/4.0/legalcode[Attribution 4.0 International] (CC BY 4.0).
