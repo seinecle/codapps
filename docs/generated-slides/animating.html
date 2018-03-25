@@ -162,7 +162,7 @@ How can this method be executed? Simply by calling it from the <code>animate()</
     <span class="keyword">return</span> <span class="predefined-constant">true</span>;
 }</code></pre></div></div>
 <div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>the methods <code>computeScore()</code> and <code>computeCookiesPerSecond()</code> will be executed every millisecond!</td></tr></table></div></section>
-<section id="_4_fine_tuning_slowing_down_the_animation"><h2>4. Fine-tuning: slowing down the animation</h2></section>
+<section id="_5_fine_tuning_slowing_down_the_animation"><h2>5. Fine-tuning: slowing down the animation</h2></section>
 <section><div class="paragraph"><p>The method <code>animate()</code> runs in loop continuously as fast as it can, so it will be executing the calculus included in <code>computeScore()</code> non stop.</p></div>
 <div class="paragraph"><p>That is a bit unnecessary and the phones risk to heat or to slow down. We don&#8217;t need to compute the score every millisecond, once every 100 milliseconds (this is 10 times per second!) is largely enough.</p></div>
 <div class="paragraph"><p>So let&#8217;s slow it down:</p></div></section>
@@ -180,8 +180,8 @@ How can this method be executed? Simply by calling it from the <code>animate()</
     }
 }</code></pre></div></div>
 <div class="colist arabic"><table><tr><td><i class="conum" data-value="1"></i><b>1</b></td><td>we will need a variable that will keep track of the last time the animation was performed. <strong>Write this variable at the top of the class</strong></td></tr><tr><td><i class="conum" data-value="2"></i><b>2</b></td><td>if 100 milliseconds have passed since we last animated&#8230;&#8203;</td></tr><tr><td><i class="conum" data-value="3"></i><b>3</b></td><td>&#8230;&#8203; compute the score</td></tr><tr><td><i class="conum" data-value="4"></i><b>4</b></td><td>&#8230;&#8203; compute the cookies per second</td></tr><tr><td><i class="conum" data-value="5"></i><b>5</b></td><td>&#8230;&#8203; if not, return <code>false</code> (no animation takes place)</td></tr></table></div>
-<div class="paragraph"><p>This is the final version of our code in the file <code>Form1</code>: <a href="../resources/form1-final">you can check it here</a>.</p></div></section>
-<section id="_5_congratulations"><h2>5. Congratulations!</h2></section>
+<div class="paragraph"><p>This is the final version of our code in the file <code>Form1</code>: <a href="../resources/form1-final.txt">you can check it here</a>.</p></div></section>
+<section id="_6_congratulations"><h2>6. Congratulations!</h2></section>
 <section><div class="paragraph"><p>That&#8217;s it! You now have a fully functional cookie clicker mobile app!</p></div></section>
 <section><div class="ulist"><ul><li><p>it remains to add how to get the auto click added (it adds a score point every 10 seconds, so that&#8217;s a bit tricky)</p></li><li><p>you could add many other tools, new features, sound, visual animations&#8230;&#8203; it&#8217;s up to you!</p></li><li><p>and many details could be improved (removing the decimals of the score for instance)</p></li></ul></div></section>
 <section><div class="paragraph"><p>All this work which remains to be done make you realize that the harder might not be the coding itself, but a management issue:</p></div>

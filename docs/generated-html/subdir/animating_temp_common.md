@@ -232,7 +232,7 @@ public boolean animate() {
 <4> ... compute the cookies per second
 <5> ... if not, return `false` (no animation takes place)
 
-This is the final version of our code in the file `Form1`: link:../resources/form1-final[you can check it here].
+This is the final version of our code in the file `Form1`: link:../resources/form1-final.txt[you can check it here].
 
 == 6. Congratulations!
 //ST: 6. Congratulations!
